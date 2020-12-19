@@ -16,3 +16,5 @@ Config_Example.ecf
 BAIConfig.ecf
 Animations.ecf
 Factions.ecf
+*.bin
+Content/Configuration/GalaxyConfig.ecf

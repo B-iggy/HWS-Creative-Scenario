@@ -12,14 +12,14 @@ Difficulty: 5
 SunFlare: EnvironmentalEffects/SunFlareRedSpace
 Build: 1666
 Radiation: 700
-PvP: True
+PvP: False
 UseFixed: True
 UseRandom: True
-AllowBA: False
+AllowBA: True
 AllowCV: True
 AllowSV: True
 AllowHV: True
-AllowBlueprintBA: False
+AllowBlueprintBA: True
 AllowBlueprintCV: True
 AllowBlueprintSV: True
 AllowBlueprintHV: True

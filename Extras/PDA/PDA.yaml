@@ -17,9 +17,10 @@ Chapters:
           - ActionTitle: pda_qeCKm
             Description: pda_08KKi
             Check: WaitAction
-            Amount: 360
+            Amount: 30
             AllowManualCompletion: true
-            CompletedMessage: mbox;20|pda_GGXqM
+            CompletedMessage: mbox;30|pda_GGXqM
+        StartMessage: norm;30|pda_0m4aq
     StartMessage: mbox;20|pda_maOW4
     Description: pda_OuGgu
     CompletedMessage: ''
