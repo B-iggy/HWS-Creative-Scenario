@@ -4,24 +4,23 @@
 # -------
 Creator: RexXxuS | HWS
 Chapters:
-  - ChapterTitle: Chp54
-    Category: FactionMission
-    Description: Chp54_desc
-    PictureFile: WelcomeBack.jpg
-    PlayerLevel: 1
-    Visibility: Always
-    Activatable: Always
-    CompletedMessage: Chp54_cplMsg
-    Tasks:
-      - TaskTitle: Chp_Chp54_tskTit_0
-        PictureFile: WelcomeBack.jpg
-        Actions:
-          - ActionTitle: Chp_Chp54_tskTit_0_actTit_0
-            AllowManualCompletion: true
-            CompletedMessage: Chp_Chp54_tskTit_0_actTit_0_cplMsg
-            Description: Chp_Chp54_tskTit_0_actTit_0_desc
-          - ActionTitle: Chp_Chp54_tskTit_0_actTit_1
-            AllowManualCompletion: true
-            CompletedMessage: Chp_Chp54_tskTit_0_actTit_1_cplMsg
-            Description: Chp_Chp54_tskTit_0_actTit_1_desc
+  - ChapterTitle: pda_i8uQm
+    Category: Tutorial
     NoSkip: true
+    PlayerLevel: 1
+    Activatable: Always
+    Visibility: Always
+    Preamble: pda_mGCnS
+    Tasks:
+      - TaskTitle: pda_4GSiW
+        Actions:
+          - ActionTitle: pda_qeCKm
+            Description: pda_08KKi
+            Check: WaitAction
+            Amount: 360
+            AllowManualCompletion: true
+            CompletedMessage: mbox;20|pda_GGXqM
+    StartMessage: mbox;20|pda_maOW4
+    Description: pda_OuGgu
+    CompletedMessage: ''
+    AutoActivateOnGameStart: true

@@ -238,7 +238,7 @@ POIs:
    FixedPlayerStart:
    -  Mode: Survival
       Spawn: Structure
-      Structure: Clone Academy
+      Structure: Gold
       Items: ['50Caliber:350, PistolT2, Sniper, 12.7mmBullet:30, AssaultRifleEpic, 5.8mmBullet:45, BioFuel:3, PowerBar, Medikit04, EnergyCell, NightVision, MultiBoost, AlienContainerRare, SnakeStatue, ArmorLight', 'BioFuel:3, PistolT2, 50Caliber:350, Sniper, 12.7mmBullet:30, AssaultRifleEpic, 5.8mmBullet:45, PowerBar, Medikit04, EnergyCell, NightVision, MultiBoost, AlienContainerRare, SnakeStatue, ArmorLight', 'BioFuel:3, PistolT2, 50Caliber:350, Sniper, 12.7mmBullet:30, AssaultRifleEpic, 5.8mmBullet:45, PowerBar, Medikit04, EnergyCell, NightVision, MultiBoost, AlienContainerRare, SnakeStatue, ArmorLight', '#FreshStart: PowerBar, Bandages, BioFuel:2, AssaultRifle, 5.8mmBullet:45, ArmorLight']
       Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
       Armor: ArmorHeavyEpic

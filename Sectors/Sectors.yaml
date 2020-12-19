@@ -29,9 +29,7 @@ SolarSystems:
         Playfields:
           - ['0,0,0', 'Black Hole System [Sun Right]', SpaceEmpty PvP, '']
         Allow: []
-        Deny:
-          - Eton Sector
-          - Nirvana
+        Deny: []
       - Coordinates:
           - -7
           - 0
@@ -41,9 +39,7 @@ SolarSystems:
         Playfields:
           - ['0,0,0', 'Black Hole System [Sun Left]', SpaceEmpty PvP, '']
         Allow: []
-        Deny:
-          - Eton Sector
-          - Nirvana
+        Deny: []
       - Coordinates:
           - 0
           - 7
@@ -53,9 +49,7 @@ SolarSystems:
         Playfields:
           - ['0,0,0', 'Black Hole System [Sun Top]', SpaceEmpty PvP, '']
         Allow: []
-        Deny:
-          - Eton Sector
-          - Nirvana
+        Deny: []
       - Coordinates:
           - -3
           - -3
@@ -65,9 +59,7 @@ SolarSystems:
         Playfields:
           - ['0,0,0', 'Black Hole System [Sun Bottom]', SpaceEmpty PvP, '']
         Allow: []
-        Deny:
-          - Eton Sector
-          - Nirvana
+        Deny: []
       - Coordinates:
           - 0
           - 0
@@ -77,9 +69,7 @@ SolarSystems:
         Playfields:
           - ['0,0,0', 'Black Hole System [Sun Front]', SpaceEmpty PvP, '']
         Allow: []
-        Deny:
-          - Eton Sector
-          - Nirvana
+        Deny: []
       - Coordinates:
           - 0
           - 0
@@ -89,9 +79,7 @@ SolarSystems:
         Playfields:
           - ['0,0,0', 'Black Hole System [Sun Back]', SpaceEmpty PvP, '']
         Allow: []
-        Deny:
-          - Eton Sector
-          - Nirvana
+        Deny: []
       - Coordinates:
           - 1
           - 1
@@ -102,15 +90,7 @@ SolarSystems:
           - ['0,0,0', Golden Globe PvP, Golden Globe Desert PvP, 'Freelancer:0']
           - ['0,0,0', Black Hole PvP, Black Hole Sector PvP, '']
         Allow: []
-        Deny:
-          - Atlantis Sector
-          - Binomi Sector
-          - Triton Sector
-          - DZG Federation
-          - Cross Server Warp
-          - Pandora Sector
-          - Eton Sector
-          - Nirvana
+        Deny: []
       - Coordinates:
           - 10
           - 10
@@ -121,12 +101,4 @@ SolarSystems:
           - ['0,0,0', Golden Globe PvE, Golden Globe Desert PvE, 'Freelancer:0']
           - ['0,0,0', Black Hole PvE, Black Hole Sector PvE, '']
         Allow: []
-        Deny:
-          - Atlantis Sector
-          - Binomi Sector
-          - Triton Sector
-          - DZG Federation
-          - Cross Server Warp
-          - Pandora Sector
-          - Eton Sector
-          - Nirvana
+        Deny: []
