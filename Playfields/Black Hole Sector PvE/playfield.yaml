@@ -1,0 +1,292 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v2.0.6.4794, Playfield Version: 1.1.5 [3077] (V1.1.5)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -270
+PlayfieldLevel: 10
+Music: Hyperion
+PlanetType: Space
+PlayfieldType: Space
+PfServerWeight: 100
+Difficulty: 5
+SunFlare: EnvironmentalEffects/SunFlareRedSpace
+Build: 1666
+Radiation: 700
+PvP: True
+UseFixed: True
+UseRandom: True
+AllowBA: False
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: False
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+POIs:
+   Fixed:
+   -  Type: AsteroidFieldRingOld
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [10, 0, 0]
+   -  Type: AsteroidFieldBoxExclude
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [0, 0, 0]
+   -  Type: AsteroidFieldFewBoxExclude
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [0, 15, 0]
+   -  Type: AsteroidVoxel02Cobalt
+      Prefab: AsteroidVoxel02Cobalt
+      Name: Cobalt Asteroid
+      Pos: [-12524, -5127, -11104]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidFieldBoxExclude
+      Name: Asteroid Field
+      Pos: [0, 0, 0]
+      Rot: [-70, 83, 163]
+   -  Type: AsteroidVoxel01Silicon
+      Prefab: AsteroidVoxel01Silicon
+      Name: Silicon Asteroid
+      Pos: [11080, -4005, -12634]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Silicon
+      Prefab: AsteroidVoxel01Silicon
+      Name: Silicon Asteroid
+      Pos: [12568, 8884, -9187]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel03Silicon
+      Prefab: AsteroidVoxel03Silicon
+      Name: Silicon Asteroid
+      Pos: [-17331, -443, -1048]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel02Silicon
+      Prefab: AsteroidVoxel02Silicon
+      Name: Silicon Asteroid
+      Pos: [-14166, -10225, -2392]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel02Cobalt
+      Prefab: AsteroidVoxel02Cobalt
+      Name: Cobalt Asteroid
+      Pos: [5535, -15343, 6939]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel02Neodymium
+      Prefab: AsteroidVoxel02Neodymium
+      Name: Neodymium Asteroid
+      Pos: [-14385, 7408, -6117]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Neodymium
+      Prefab: AsteroidVoxel01Neodymium
+      Name: Neodymium Asteroid
+      Pos: [3673, -12161, -11569]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Neodymium
+      Prefab: AsteroidVoxel01Neodymium
+      Name: Neodymium Asteroid
+      Pos: [-6571, -9208, 12825]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel03Promethium
+      Prefab: AsteroidVoxel03Promethium
+      Name: Promethium Asteroid
+      Pos: [-953, 14389, -10271]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Promethium
+      Prefab: AsteroidVoxel01Promethium
+      Name: Promethium Asteroid
+      Pos: [11516, -2481, 12728]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Promethium
+      Prefab: AsteroidVoxel01Promethium
+      Name: Promethium Asteroid
+      Pos: [969, 14476, 10565]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel03Zascosium
+      Prefab: AsteroidVoxel03Zascosium
+      Name: Zascosium Asteroid
+      Pos: [6935, 10930, -11160]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Zascosium
+      Prefab: AsteroidVoxel01Zascosium
+      Name: Zascosium Asteroid
+      Pos: [-12947, 10830, 4617]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Gold
+      Prefab: AsteroidVoxel01Gold
+      Name: Gold Asteroid
+      Pos: [-13878, 4476, -8626]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel02Gold
+      Prefab: AsteroidVoxel02Gold
+      Name: Gold Asteroid
+      Pos: [8606, -14738, 4581]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Iron
+      Prefab: AsteroidVoxel01Iron
+      Name: Iron Asteroid
+      Pos: [6836.031, 7187.05, 7271.953]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Iron
+      Prefab: AsteroidVoxel01Iron
+      Name: Iron Asteroid
+      Pos: [6936.1, 7116.75, 7128.202]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Iron
+      Prefab: AsteroidVoxel01Iron
+      Name: Iron Asteroid
+      Pos: [6732.985, 6936.15, 7364.774]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel03Erestrum
+      Prefab: AsteroidVoxel03Erestrum
+      Name: Erestrum Asteroid
+      Pos: [3333, 3333.05, -3333]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Erestrum
+      Prefab: AsteroidVoxel01Erestrum
+      Name: Erestrum Asteroid
+      Pos: [3394.97, 3153.05, -3306.983]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel02Erestrum
+      Prefab: AsteroidVoxel02Erestrum
+      Name: Erestrum Asteroid
+      Pos: [3217.922, 3023.05, -3237.779]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel02Sathium
+      Prefab: AsteroidVoxel02Sathium
+      Name: Sathium Asteroid
+      Pos: [3333, -3332.95, -3333]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel03Sathium
+      Prefab: AsteroidVoxel03Sathium
+      Name: Sathium Asteroid
+      Pos: [3441.099, -3472.95, -3584.66]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+      -  Key: MapDistance
+         Value: 5000
+   -  Type: AsteroidVoxel01Sathium
+      Prefab: AsteroidVoxel01Sathium
+      Name: Sathium Asteroid
+      Pos: [3483.845, -3592.95, -3306.08]
+      Rot: [0, 0, 0]
+      Properties:
+      -  Key: RegenAfter
+         Value: 180
+DroneBaseSetup: {}

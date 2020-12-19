@@ -1,0 +1,65 @@
+Options:
+- ValidFor:
+  - SP
+  - Survival
+  DecayTime: 6
+  WipeTime: 360
+  ProtectTime: 25
+  ProtectDelay: 1800
+  MaxStructures: 700
+  AntiGriefOresZone: All
+  AntiGriefDistancePvE: 30
+  AntiGriefDistancePvP: 300
+  GroundedStructureSpawn: false
+  TurretUndergroundCheck: true
+  OriginDefault: Freelancer
+  OriginAutoAlliance: false
+  DespawnEscapePod: true
+  RegeneratePOIs: true
+  DSLUnloadSecs: 180
+  DSLDistancePlanet: 1700
+  DSLDistanceSpace: 3500
+  DiffAttackStrength: Hard
+  DiffDronePresence: High
+  DiffDroneBaseAttack: High
+  DiffBpProdTime: Faster
+  ThrustersNeedOpenSpace: false
+  DiffRadiationTemperature: Normal
+  EnableVolumeWeight: true
+  EnableCPUPoints: true
+  MaxSpawnedEnemies: 30
+  UndergroundBpSpawn: PvE
+  DiffPlayerBackpackDrop: DropBagOnly     # to allow switching off the dropping of backpacks on death [DropEverything, DropNothing, DropBagOnly]
+  DiffSpawnLocal: PvE # Always - as before, always show the "local spawn" option, PvP - show it only in PvP, PvE - show it only in PvE, Never - never show it
+- ValidFor:
+  - MP
+  - Survival
+  DecayTime: 6
+  WipeTime: 360
+  ProtectTime: 25
+  ProtectDelay: 1800
+  MaxStructures: 700
+  AntiGriefOresZone: All
+  AntiGriefDistancePvE: 30
+  AntiGriefDistancePvP: 300
+  GroundedStructureSpawn: false
+  TurretUndergroundCheck: true
+  OriginDefault: Freelancer
+  OriginAutoAlliance: false
+  DespawnEscapePod: true
+  RegeneratePOIs: true
+  DSLUnloadSecs: 180
+  DSLDistancePlanet: 1700
+  DSLDistanceSpace: 3500
+  DiffAttackStrength: Hard
+  DiffDronePresence: High
+  DiffDroneBaseAttack: High
+  DiffBpProdTime: Faster
+  ThrustersNeedOpenSpace: false
+  DiffRadiationTemperature: Normal
+  EnableVolumeWeight: true
+  EnableCPUPoints: true
+  MaxSpawnedEnemies: 30
+  UndergroundBpSpawn: PvE
+  DiffPlayerBackpackDrop: DropBagOnly     # to allow switching off the dropping of backpacks on death [DropEverything, DropNothing, DropBagOnly]<
+  DiffSpawnLocal: PvE # Always - as before, always show the "local spawn" option, PvP - show it only in PvP, PvE - show it only in PvE, Never - never show it

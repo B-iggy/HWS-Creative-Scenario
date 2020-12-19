@@ -1,0 +1,4 @@
+HWS Config Scenario
+For testing HWS Configs in a test Scenario to build ships etc. for HWS.
+More information at:
+https://forum.empyrion-homeworld.net/t/hws-config-effectiveness-weapon-system-ews/9161

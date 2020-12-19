@@ -1,0 +1,247 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v2.0.6.4794, Playfield Version: 1.1.5 [3077] (V1.1.5)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+Seed: 7
+PlanetSize: 2
+PlanetAxis: 30
+PlayfieldLevel: 10
+TemperatureMinMax: [10, 55]
+TemperatureNight: 45
+HumidityMinMax: [0.05, 0.35]
+TerrainLevel: 50
+BaseLevel: 0
+TemperatureHeightRange: [154, 113]
+TemperatureGradientRange: [0.75, 0.03]
+TemperatureNoiseFac: 0.59999999999999998
+HumidityHeightFac: [10, 390]
+HumidityNoiseFac: 0.96999999999999997
+Gravity: -13
+AtmosphereDensity: 1
+AtmosphereBreathable: False
+AtmosphereO2: 0.20000000000000001
+Water: WaterGreen
+Music: Eden
+TerrainHeightMapMax: 377
+BiomeStampTries: 200
+Biome:
+-  BiomeClusterData:
+   -  Name: Pole
+      Weather: PoleFog
+      AmbientSound: ArcticLowPlains
+      IgnoreForcedBiome: True
+      Texture: [5, 5, 1]
+      SelectionCriteria:
+      - +Lat > 0.975
+      Color: [0.8, 0.7, 0.4]
+      StampProb: 1
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+   -  Name: Gold Cliff
+      AmbientSound: ArcticLowPlains
+      IgnoreForcedBiome: True
+      Texture: [5, 4, 0.55, 5, 10, 0.5, -0.2]
+      UndergroundLayers:
+      - [7, 1]
+      - [10, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height > 190
+      - Height < 220
+      - Temperature > 15
+      - Temperature < 40
+      Color: [0.6, 1, 0.6]
+      StampProb: 1
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+   -  Name: Gold Mountains
+      AmbientSound: Mountains
+      IgnoreForcedBiome: True
+      Texture: [3, 3, 0.7, 10, 10, 0.5, 0.2]
+      UndergroundLayers:
+      - [3, 1]
+      - [10, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height > 270
+      Color: [0.6, 0.6, 0.6]
+      StampProb: 0.90000000000000002
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+      Stamps:
+      - _Valley_1, 0.9
+      - _Valley_2, 0.9
+      - _Valley_3, 0.9
+   -  Name: Gold
+      AmbientSound: DesertLowPlains
+      Texture: [4, 5, -0.43]
+      UndergroundLayers:
+      - [5, 1]
+      - [10, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height < 130
+      - Height > 62
+      - Humidity > 0.3
+      - Temperature > 32
+      Color: [1, 0.2, 0.7]
+      StampProb: 1
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+      Temperature: -8
+   -  Name: Gold Plains
+      AmbientSound: DesertLowPlains
+      Texture: [3, 5, -0.65]
+      UndergroundLayers:
+      - [1, 1]
+      - [10, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Height < 130
+      - Height > 60
+      - Humidity > 0.25
+      - Temperature > 32
+      Color: [0.9, 0.1, 0.6]
+      StampProb: 1
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+      Temperature: -4
+   -  Name: Battleground of Greed
+      AmbientSound: ArcticLowPlains
+      Texture: [6, 6, 1]
+      UndergroundLayers:
+      - [6, 1]
+      - [10, -1]
+      - [15, 1]
+      SelectionCriteria:
+      - Temperature > 19
+      - Height < 260
+      Color: [1, 0.8, 0]
+      StampProb: 1
+      StampForcesBiome: True
+      StampForcesBiomeType: OverlapOff
+      Stamps:
+      - Mountain_10_ADD, 0.5
+      - DunesSea_01_BM2, 0.1
+      StampTries: 15
+   -  Name: Battle Scarfs
+      AmbientSound: DesertLowPlains
+      Texture: [6, 5, 0.5, 7, 6, 0.5, -0.35]
+      UndergroundLayers:
+      - [6, 1]
+      - [10, -1]
+      - [10, 1]
+      SelectionCriteria:
+      - true
+      Color: [0.8, 0.7, 0.4]
+      StampProb: 0.29999999999999999
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+      UndergroundLayersDefault: True
+   -  Name: Red Gold Alpha [d41313]Guilty Zone!![-]
+      SpecialBiome:
+         FixedPosition: [-1650, 300]
+         IsStarterBiome: True
+         CountMinMax: [1, 1]
+      IgnoreForcedBiome: False
+      Texture: [2, 2, 1, 2, 2, 1, 1]
+      UndergroundLayers:
+      - [2, 0]
+      - [2, -1]
+      - [15, 1]
+      Color: [0.7, 0.2, 0.2]
+      StampProb: 0.5
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+      Stamps:
+      - Cliff_3
+      StampTries: 2
+      Radiation: 5
+      Temperature: 700
+   -  Name: Red Gold Beta [d41313]Guilty Zone!![-]
+      SpecialBiome:
+         FixedPosition: [1700, 200]
+         IsStarterBiome: True
+         CountMinMax: [1, 1]
+      IgnoreForcedBiome: False
+      Texture: [2, 2, 1, 2, 2, 1, 1]
+      UndergroundLayers:
+      - [2, 0]
+      - [2, -1]
+      - [15, 1]
+      Color: [0.7, 0.2, 0.2]
+      StampProb: 0.5
+      StampForcesBiome: False
+      StampForcesBiomeType: OverlapAll
+      Stamps:
+      - Cliff_3
+      StampTries: 2
+      Radiation: 5
+      Temperature: 700
+PlanetType: Desert
+PlayfieldType: Planet
+PfServerWeight: 100
+AtmosphereEnabled: True
+Difficulty: 5
+LandClaimZone: Device
+SpecialEffectsGlobal:
+-  Name: Clear
+   Type: Weather
+   Delay: 2
+   Lifetime: 1200
+AtmosphereColor: 0.99, 0.56, 0.15
+SkyColor: 0.94,0.97,1
+SkyHorizonColor: 0.94, 0.97, 1
+AtmosphereParams: [3, 1.7]
+LightZenithColor: 0.94,0.97,1
+LightHorizonColor: 0.94,0.97,1
+DayLightIntensity: 1.375
+NightLightIntensity: 0.68999999999999995
+NightLightColor: 0.78, 0.78, 1
+SunFlare: EnvironmentalEffects/SunFlareWhite
+FogColor: 0.94,0.97,1
+CloudsDensity: 0.29999999999999999
+CloudsSharpness: 0.34000000000000002
+CloudsBrightness: 0.68999999999999995
+CloudsOpacity: 0.68999999999999995
+CloudsZenithColor: 0.93, 0.98, 1.1
+CloudsHorizonColor: 1, 0.3, 0.1
+CloudsNightZenithColor: 0.04, 0.041, 0.065
+CloudsNightHorizonColor: 0.04, 0.041, 0.065
+WindSpeed: 3
+Build: 2072
+Radiation: 40
+PvP: False
+BaseAttackCount: 0
+UseFixed: True
+UseRandom: True
+AllowBA: True
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: True
+AllowBlueprintCV: True
+AllowBlueprintSV: True
+AllowBlueprintHV: True
+RandomResources:
+-  Name: GoldResource
+   IsScalingCount: False
+   IsImportant: True
+   CountMinMax: [15, 30]
+   SizeMinMax: [17, 30]
+   DepthMinMax: [1, 3]
+AsteroidResources:
+-  Name: GoldResource
+   Threshold: 0.10000000000000001
+   Amount: 1
+POIs:
+   FixedPlayerStart:
+   -  Mode: Survival
+      Spawn: Structure
+      Structure: Clone Academy
+      Items: ['50Caliber:350, PistolT2, Sniper, 12.7mmBullet:30, AssaultRifleEpic, 5.8mmBullet:45, BioFuel:3, PowerBar, Medikit04, EnergyCell, NightVision, MultiBoost, AlienContainerRare, SnakeStatue, ArmorLight', 'BioFuel:3, PistolT2, 50Caliber:350, Sniper, 12.7mmBullet:30, AssaultRifleEpic, 5.8mmBullet:45, PowerBar, Medikit04, EnergyCell, NightVision, MultiBoost, AlienContainerRare, SnakeStatue, ArmorLight', 'BioFuel:3, PistolT2, 50Caliber:350, Sniper, 12.7mmBullet:30, AssaultRifleEpic, 5.8mmBullet:45, PowerBar, Medikit04, EnergyCell, NightVision, MultiBoost, AlienContainerRare, SnakeStatue, ArmorLight', '#FreshStart: PowerBar, Bandages, BioFuel:2, AssaultRifle, 5.8mmBullet:45, ArmorLight']
+      Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500']
+      Armor: ArmorHeavyEpic
+DroneBaseSetup: {}
+DroneSpawning:
+   Random: []

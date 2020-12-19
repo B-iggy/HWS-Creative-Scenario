@@ -1,0 +1,25 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v2.0.2.4325, Playfield Version: 1.1.5 [3067] (V1.1.5)
+# --------------------------------------------------------------------------------------------------------------------------
+#
+TemperatureDay: -150
+Music: DistantWorlds
+Description: "Warp Initiated..."
+PlanetType: Empty
+PlayfieldType: Space
+AtmosphereEnabled: False
+Difficulty: 1
+Build: 3067
+Radiation: 10.810000000000001
+PvP: False
+UseFixed: True
+AllowBA: False
+AllowCV: True
+AllowSV: True
+AllowHV: True
+AllowBlueprintBA: False
+AllowBlueprintCV: False
+AllowBlueprintSV: False
+AllowBlueprintHV: False
+POIs: {}
+DroneBaseSetup: {}

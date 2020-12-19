@@ -1,0 +1,82 @@
+ManifestFileVersion: 0
+CRC: 2181835021
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f408f2291f10f58df76b67a669a82bb2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f15947db40187737b37350c852350ef3
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8396afed7c1a1d5498e6e8b2a5f94443, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f9b3dcbe4c5cab840a4a714cb35d0d24, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+Assets:
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Meshes/Cube.002.asset
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/ElementalStone.asset
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Materials/Spikes.asset
+- Assets/BlockModels/BigFlower/AlienFlora/Models/BigFlower.fbx
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.004.asset
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Light.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/water.png
+- Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Color.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Parent.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Darkness.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Fire.asset
+- Assets/BlockModels/HWSBlockSpikeTrap/HWSBlockSpikeTrap.prefab
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Textures/Foundation.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.003.asset
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Meshes/Cube.001.asset
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Materials/SpikesFoundation.asset
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Earth.asset
+- Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Emissive.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Earth.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.002.asset
+- Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Occlusion.png
+- Assets/BlockModels/BigFlower/AlienFlora/Models/EmpShader-Example Block Colored.shader
+- Assets/BlockModels/BigFlower/BigFlowerPrefab2.prefab
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Light.asset
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.005.asset
+- Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Normal.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.006.asset
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.prefab
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Textures/SpikesFoundation.png
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.prefab
+- Assets/BlockModels/white.jpg
+- Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Textures/Spikes.png
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Darkness.asset
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Water.asset
+- Assets/BlockModels/BigFlower/AlienFlora/Materials/Particle.mat
+- Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.001.asset
+- Assets/BlockModels/HWSBlockElementalStone/HWSBlockElementalStone.prefab
+- Assets/BlockModels/BigFlower/AlienFlora/Materials/BigFlower_MAT.mat
+Dependencies:
+- C:/Program Files (x86)/Steam/steamapps/common/Empyrion - Galactic Survival/BlockModelsAndSuitPropsModding/Bundles/suitpropsext
