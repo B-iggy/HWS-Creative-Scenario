@@ -2,7 +2,7 @@
 # Created by EPD v2.0.6.4794, Playfield Version: 1.1.5 [3077] (V1.1.5)
 # --------------------------------------------------------------------------------------------------------------------------
 #
-TemperatureDay: -270
+TemperatureDay: -70
 PlayfieldLevel: 10
 Music: Hyperion
 PlanetType: Space
@@ -11,7 +11,7 @@ PfServerWeight: 100
 Difficulty: 5
 SunFlare: EnvironmentalEffects/SunFlareRedSpace
 Build: 1666
-Radiation: 700
+Radiation: 10
 PvP: False
 UseFixed: True
 UseRandom: True

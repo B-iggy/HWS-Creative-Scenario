@@ -210,7 +210,7 @@ CloudsNightZenithColor: 0.04, 0.041, 0.065
 CloudsNightHorizonColor: 0.04, 0.041, 0.065
 WindSpeed: 3
 Build: 2072
-Radiation: 40
+Radiation: 5
 PvP: True
 BaseAttackCount: 0
 UseFixed: True

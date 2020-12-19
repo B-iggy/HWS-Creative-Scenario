@@ -9,7 +9,7 @@ I value feedback, so the Config files are constantly changing based on the Commu
 
 The main intention for this repository is for HWS players to test and work with the HWS Configs for HWS - in form of an easy to use Scenario.
 
-Other Server Owners may use my HWS Configs by giving proper credit!
+Other Server Owners may use my HWS Configs by giving proper credit! (hence I removed the Github LICENCE for now. [Read more about it here:](https://choosealicense.com/no-permission/))
 Especially the use of my own custom created content (hwsmodels in SharedData/Content/Bundles) needs explicit permission from me!
 
 ### Effectiveness Weapon System (EWS)
