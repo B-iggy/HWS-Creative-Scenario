@@ -13426,6 +13426,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Deco Blocks
   ShowUser: No
 }
+# Everything from here on is not included in the HWS Creative Scenario
 { +Item Id: 1151, Name: SantaClausHat, Ref: SuitPropsTemplate
   Info: bkiSantaClausHat, display: true
   PropHead: SantaClausHat
