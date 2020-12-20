@@ -12,7 +12,7 @@ Options:
   AntiGriefDistancePvP: 300
   GroundedStructureSpawn: false
   TurretUndergroundCheck: true
-  OriginDefault: Freelancer
+  OriginDefault: PvE
   OriginAutoAlliance: false
   DespawnEscapePod: true
   RegeneratePOIs: true
@@ -44,7 +44,7 @@ Options:
   AntiGriefDistancePvP: 300
   GroundedStructureSpawn: false
   TurretUndergroundCheck: true
-  OriginDefault: Freelancer
+  OriginDefault: PvE
   OriginAutoAlliance: false
   DespawnEscapePod: true
   RegeneratePOIs: true

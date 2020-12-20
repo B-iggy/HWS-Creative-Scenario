@@ -87,7 +87,7 @@ SolarSystems:
         Color: '0.30,0.13,0.30'
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Golden Globe PvP, Golden Globe Desert PvP, 'Freelancer:0']
+          - ['0,0,0', Golden Globe PvP, Golden Globe Desert PvP, 'PvE:0']
           - ['0,0,0', Black Hole PvP, Black Hole Sector PvP, '']
         Allow: []
         Deny: []
@@ -98,7 +98,7 @@ SolarSystems:
         Color: '0.30,0.13,0.30'
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Golden Globe PvE, Golden Globe Desert PvE, 'Freelancer:0']
+          - ['0,0,0', Golden Globe PvE, Golden Globe Desert PvE, 'PvP:1']
           - ['0,0,0', Black Hole PvE, Black Hole Sector PvE, '']
         Allow: []
         Deny: []
