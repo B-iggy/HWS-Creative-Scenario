@@ -575,8 +575,8 @@ HullCombatSmallBlocks
   Group: resource
   { Child DropOnDestroy
     Item: SathiumOre
-    Count: "2,4"
-    Prob: 0.3
+    Count: "1,2"
+    Prob: 0.5
   }
 }
 /* Used for iron resource */
@@ -618,13 +618,13 @@ HullCombatSmallBlocks
   { Child DropOnDestroy
     Item: CrushedStone
     Count: "1,3"
-    Prob: 0.08
+    Prob: 0.18
   }
 }
 
 /* Asteroids */
 { Block Id: 57, Name: RockAsteroids
-  Material: stone, display: true
+  Material: resourcehard
   Shape: Terrain
   Mesh: terrain
   Texture: "194,180,180,180,180,180"
@@ -633,7 +633,7 @@ HullCombatSmallBlocks
   { Child DropOnDestroy
     Item: CrushedStone
     Count: "2,4"
-    Prob: 0.2      # higher probability
+    Prob: 0.4      # higher probability
   }
 }
 
@@ -913,6 +913,7 @@ HullCombatSmallBlocks
   Shape: Terrain
   Mesh: terrain
   Texture: 169   /* rock_grey */
+  AutoMinerFactor: 0.3
   ShowUser: No
   Group: resource
   { Child DropOnDestroy
@@ -1517,7 +1518,7 @@ HullCombatSmallBlocks
   Info: bkiDecalsControlBlock, display: true
   IndexName: DecalControl
   Class: DecalControl
-  Group: cpgLCD
+  Group: "Media Control Block"
   Material: metallight, display: true
   Shape: New
   Model: Cube
@@ -2104,7 +2105,7 @@ HullCombatSmallBlocks
   EnergyIn: 1, type: int, display: true, formatter: Watt
   Category: Deco Blocks
 
-  BlastParticleIndex: 1
+  BlastParticleIndex: 10
   BlastRadius: 3
   BlastDamage: 100
 }
@@ -2159,7 +2160,7 @@ HullCombatSmallBlocks
   Place: Free
   Info: bkiConsoleTrading, display: true
   Category: Deco Blocks
-  # AllowedInBlueprint: false, display: true
+  AllowedInBlueprint: true, display: true
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
@@ -2174,7 +2175,7 @@ HullCombatSmallBlocks
   # BlockColor: "0,64,255"
   BlockColor: "170,5,5"
 
-  BlastParticleIndex: 11
+  BlastParticleIndex: 14
   BlastRadius: 2
   BlastDamage: 80
 }
@@ -2185,6 +2186,7 @@ HullCombatSmallBlocks
   IndexName: FuelTank
   Group: cpgFuelTank
   EssentialCategory: cpgFuelTank
+  MarketPrice: 520, display: true
   # LootList: 22   # 10 slots
   Material: metallight, display: true
   Shape: ModelEntity
@@ -2214,12 +2216,12 @@ HullCombatSmallBlocks
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
   CPUIn: 300, type: int, display: true
-  HitPoints: 50, type: int, display: true
+  HitPoints: 75, type: int, display: true
   FuelAccept: "EnergyCell, EnergyCellLarge, EnergyCellHydrogen, FusionCell, BioFuel"
-  FuelCapacity: 1200, type: int, display: true
-  BlastParticleIndex: 10
-  BlastRadius: 5
-  BlastDamage: 500
+  FuelCapacity: 2400, type: int, display: true
+  BlastParticleIndex: 8
+  BlastRadius: 10
+  BlastDamage: 2500
 
   Radiation: 1.25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
 
@@ -2230,10 +2232,10 @@ HullCombatSmallBlocks
 { +Block Id: 260, Name: FuelTankMSLarge, Ref: FuelTankMSSmall
   # LootList: 23    # 20 slots
   Model: @models/Blocks/Mothership/FuelTankMSLargePrefab
-  Material: metal, display: true
-  HitPoints: 80, type: int, display: true
+  MarketPrice: 1995, display: true
+  HitPoints: 125, type: int, display: true
   FuelAccept: "EnergyCell, EnergyCellLarge, EnergyCellHydrogen, FusionCell, BioFuel"
-  FuelCapacity: 2700, type: int, display: true
+  FuelCapacity: 5400, type: int, display: true
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,2,1", display: true
   SizeInBlocksLocked: "Base,MS"
@@ -2241,6 +2243,8 @@ HullCombatSmallBlocks
   Volume: 180, type: float, display: true, formatter: Liter
   Info: bkiFuelTank, display: true
   CPUIn: 675, type: int, display: true
+  BlastRadius: 10
+  BlastDamage: 5000
 
   Radiation: 1.4, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
 
@@ -2312,6 +2316,7 @@ HullCombatSmallBlocks
   Class: O2Tank
   IndexName: O2Tank
   Group: cpgO2Tank
+  MarketPrice: 1262, display: true
   EssentialCategory: cpgO2Tank
   # LootList: 24     # 10 slots
   Material: metallight, display: true
@@ -2342,13 +2347,13 @@ HullCombatSmallBlocks
   CPUIn: 200, type: int, display: true
   O2Capacity: 2000, type: int, display: true
   O2Accept: "OxygenBottleLarge,OxygenBottleSmall,RespiratorCharge"
-  BlastParticleIndex: 4
+  BlastParticleIndex: 9
   BlastRadius: 4
   BlastDamage: 100
 
   UnlockCost: 7, display: true
   UnlockLevel: 10, display: true
-  TechTreeParent: OxygenTankSmallMS
+  TechTreeParent: OxygenStation
   TechTreeNames: "Base,Capital Vessel"
 }
 
@@ -2385,7 +2390,7 @@ HullCombatSmallBlocks
   EnergyDynamicGroup: Constructor
   BlastParticleIndex: 4
   BlastRadius: 3
-  BlastDamage: 100
+  BlastDamage: 1000
   UpgradeTo: ConstructorT2, display: true
 }
 
@@ -2434,6 +2439,7 @@ HullCombatSmallBlocks
   Group: cpgPassengerSeat
   Material: metal, display: true
   Shape: ModelEntity
+  MarketPrice: 615, display: true
   ShowBlockName: true
   Model: @models/Blocks/Mothership/passengerSeatMSPrefab
   Mesh-Damage-1: Mesh/D0
@@ -2662,6 +2668,7 @@ HullCombatSmallBlocks
   Material: metal, display: true
   Shape: ModelEntity
   ShowBlockName: true
+  MarketPrice: 1093, display: true
   Model: @models/Blocks/Mothership/RCS_BlockPrefab
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
@@ -2691,7 +2698,7 @@ HullCombatSmallBlocks
 
   UnlockCost: 4, display: true
   UnlockLevel: 5, display: true
-  TechTreeParent: GeneratorSV
+  TechTreeParent: GeneratorSVSmall
   TechTreeNames: Small Vessel
 }
 # Container Block - Obsolete but do not delete
@@ -2811,6 +2818,7 @@ HullCombatSmallBlocks
   Material: metal, display: true
   Shape: ModelEntity
   ShowBlockName: true
+  MarketPrice: 13210, display: true
   # ModelOffset: "0,0.5,0"
   Model: @models/Blocks/Mothership/gravitygeneratorMSPrefab
   Mesh-Damage-1: Mesh/D0
@@ -2835,13 +2843,13 @@ HullCombatSmallBlocks
   CPUIn: 50, type: int, display: true
 
 
-  BlastParticleIndex: 4
-  BlastRadius: 5
-  BlastDamage: 100
+  BlastParticleIndex: 10
+  BlastRadius: 10
+  BlastDamage: 1000
 
   UnlockCost: 11, display: true
   UnlockLevel: 7, display: true
-  # TechTreeParent: GeneratorBA
+  TechTreeParent: ElevatorMS
   TechTreeNames: "Base,Capital Vessel"
 
   Radiation: 5, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
@@ -2851,14 +2859,16 @@ HullCombatSmallBlocks
   Class: Light
   Group: cpgLight
   IndexName: Light
+  MarketPrice: 40, display: true
   CanSetColor: true
   Material: metallight, display: true
   Shape: ModelEntity
   Place: Face
   Collide: "bullet,rocket"
+  TemplateRoot: LightLargeBlocks
   Model: @models/Blocks/Spaceship/lightSS01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
-  AllowPlacingAt: "SS,GV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   Mass: 0.2, type: float, display: true, formatter: Kilogram
   Volume: 0.2, type: float, display: true, formatter: Liter
   StackSize: 50000
@@ -2878,6 +2888,7 @@ HullCombatSmallBlocks
   Class: Light
   Group: cpgLight
   IndexName: Light
+  MarketPrice: 40, display: true
   CanSetColor: true
   Shape: ModelEntity
   Place: Face
@@ -2886,10 +2897,10 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Mothership/LightMS01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   BlockColor: "110,110,110"
-  AllowPlacingAt: "Base,MS", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   IsDuplicateable: false
   SizeInBlocks: "1,1,1", display: true
-  ModelScaleLocked: true
+  ModelScaleLocked: false
   Volume: 1, type: float, display: true, formatter: Liter
   StackSize: 50000
   IsActivateable: true
@@ -3007,6 +3018,8 @@ HullCombatSmallBlocks
   SoundRotate: Weapons/Turret/TurretRotateVeryFast
   CPUIn: 9700, type: int, display: true
   EnergyIn: 90, type: int, display: true, formatter: Watt
+  BlastRadius: 6
+  BlastDamage: 1800
 }
 
 # Obsolete but dont delete
@@ -3092,6 +3105,7 @@ HullCombatSmallBlocks
 { +Block Id: 289, Name: TurretRadar
   /* Class: Turret   */
   Material: metal, display: true
+  MarketPrice: 2270, display: true
   Shape: ModelEntity
   Model: @models/Blocks/Misc/RadarPrefab
   Mesh-Damage-1: Mesh/D0
@@ -3293,7 +3307,7 @@ HullCombatSmallBlocks
   Class: CropsGrown
   { Child DropOnHarvest
     Item: PlantProtein
-    Count: 2
+    Count: 1
   }
   { Child CropsGrown
     OnHarvest: AlienPlant07Harvested
@@ -3496,9 +3510,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   StackSize: 50000
   MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastParticleIndex: 8
+  BlastRadius: 4
+  BlastDamage: 350
   EnergyDynamicGroup: DrillTurret
   EnergyIn: 1150, type: int, display: true, formatter: Watt
   EnergyInIdle: 33, type: int, display: true, formatter: Watt
@@ -3570,6 +3584,9 @@ HullCombatSmallBlocks
   Mass: 15960, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
   EnergyIn: 800, type: int, display: true, formatter: Watt
+  BlastParticleIndex: 8
+  BlastRadius: 4
+  BlastDamage: 500
 }
 { +Block Id: 324, Name: TurretMSPlasmaRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSPlasmaRetractPrefab
@@ -3590,6 +3607,9 @@ HullCombatSmallBlocks
   Mass: 16140, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
   EnergyIn: 1000, type: int, display: true, formatter: Watt
+  BlastParticleIndex: 1
+  BlastRadius: 5
+  BlastDamage: 1800
 }
 { +Block Id: 325, Name: TurretMSFlakRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSFlakRetractPrefab
@@ -3608,6 +3628,9 @@ HullCombatSmallBlocks
   Mass: 13660, type: float, display: true, formatter: Kilogram
   Volume: 6250, type: float, display: true, formatter: Liter
   EnergyIn: 120, type: int, display: true, formatter: Watt
+  BlastParticleIndex: 8
+  BlastRadius: 7
+  BlastDamage: 750
 }
 { +Block Id: 326, Name: TurretMSCannonRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSCannonRetractPrefab
@@ -3650,9 +3673,12 @@ HullCombatSmallBlocks
   RotSpeed: 60, type: int, display: true
   CPUIn: 21600, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateSlow
+  BlastParticleIndex: 9
+  BlastRadius: 9
+  BlastDamage: 2800
 }
 { +Block Id: 328, Name: NPCAlienTemplate
-  Material: human           # do not use "alien" because it will show dirt effect, display: true
+  Material: human, display: true           # do not use "alien" because it will show dirt effect
   Shape: ModelEntity
   Model: @models2/Entities/Decorations/HomeSweetHome/BedPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -3673,6 +3699,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 14
   BlastRadius: 1
   BlastDamage: 0
+  MarketPrice: 40000
   Mass: 80, type: float, display: true, formatter: Kilogram
 }
 
@@ -3698,6 +3725,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 14
   BlastRadius: 1
   BlastDamage: 0
+  MarketPrice: 40000
   Mass: 80, type: float, display: true, formatter: Kilogram
 }
 
@@ -3706,6 +3734,7 @@ HullCombatSmallBlocks
   Material: metallight, display: true
   Shape: Invisible
   ShowBlockName: true
+  MarketPrice: 1375, display: true
   # Model: @models/Blocks/Mothership/AntennaPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -3770,6 +3799,7 @@ HullCombatSmallBlocks
   Group: cpgEquipment
   IndexName: OP
   Material: metal, display: true
+  MarketPrice: 26283, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Mothership/OfflineProtectorPrefab
@@ -3792,9 +3822,9 @@ HullCombatSmallBlocks
   BlockColor: "26,50,90"
   HitPoints: 100, type: int, display: true
   EnergyIn: 10, type: int, display: true, formatter: Watt
-  BlastParticleIndex: 4
-  BlastRadius: 4
-  BlastDamage: 100
+  BlastParticleIndex: 8
+  BlastRadius: 5
+  BlastDamage: 1500
 
   UnlockCost: 12, display: true
   UnlockLevel: 7, display: true
@@ -3805,6 +3835,7 @@ HullCombatSmallBlocks
 { +Block Id: 336, Name: PentaxidTank
   Class: WarpDriveTank
   Group: cpgWarp
+  MarketPrice: 11170, display: true
   IndexName: WarpDriveTank
   LootList: 3   /*  lootcontainer Warp Drive Tank */
   Material: metal, display: true
@@ -3872,21 +3903,22 @@ HullCombatSmallBlocks
 }
 
 # Still needed?
-#  { Block Id: 338, Name: OutsideBlock
-#    Material: hull, display: true
-#    Texture: 26
-#    BlockColor: "255,247,0"
-#    Shape: New
-#    Model: Cube
-#    AllowPlacingAt: Base, display: true
-#    Place: Free
-#    ShowUser: No
-#  }
+{ Block Id: 338, Name: OutsideBlock
+  Material: hull
+  Texture: 26
+  BlockColor: "255,247,0"
+  Shape: New
+  Model: Cube
+  AllowPlacingAt: Base, display: true
+  Place: Free
+  ShowUser: No
+}
 
 { +Block Id: 339, Name: SurvivalTent
   Class: Sleeping
   Material: woodblock, display: true
   Shape: Invisible
+  MarketPrice: 43, display: true
   # Model: @models/Blocks/Terrain/SurvivalTent01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   SizeInBlocks: "4,2,4", display: true
@@ -3986,7 +4018,7 @@ HullCombatSmallBlocks
   ChildShapes: "LadderVert, LadderVertNoAttachPoints, LadderVertHalfNoAttachPoints"
   UnlockCost: 0
   UnlockLevel: 1
-  TechTreeNames: Misc
+  TechTreeNames: "Base,Capital Vessel"
 }
 
 { +Block Id: 344, Name: GeneralPurposeConsole, Ref: DecoTemplate
@@ -4023,6 +4055,7 @@ HullCombatSmallBlocks
   Group: cpgTurret
   CustomIcon: TurretGVMinigun
   Material: metalhard
+  MarketPrice: 51865, display: true
   Shape: Turret
   Place: Face
   Model: @models/Blocks/Turrets/TurretGVMinigunV2Prefab
@@ -4060,7 +4093,7 @@ HullCombatSmallBlocks
   TechTreeParent: WeaponSV02
   TechTreeNames: Small Vessel
 
-  # Showuser: No
+  # ShowUser: No
 }
 
 #{ Block Id: 344, Name: RockFormationESnow, Ref: RockFormationO
@@ -4355,6 +4388,7 @@ HullCombatSmallBlocks
 /* Steel Blocks (small blocks) - block group */
 { +Block Id: 380, Name: HullSmallBlocks
   Material: hull, display: true
+  MarketPrice: 45, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   # do not change - block used in old structures
   Texture: 50
@@ -4537,6 +4571,7 @@ HullCombatSmallBlocks
 /* Hardened Steel Blocks (small blocks) - block group  */
 { +Block Id: 393, Name: HullArmoredSmallBlocks
   Material: hull, display: true
+  MarketPrice: 150, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 54
   BlockColor: "170,170,170"
@@ -4591,6 +4626,7 @@ HullCombatSmallBlocks
 { +Block Id: 396, Name: WoodBlocks  # rename: WoodFullBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: woodblock, display: true
+  MarketPrice: 5, display: true
   Texture: 70
   TextureTable: 1    /* 1 = wood table */
   BlockColor: "187,135,90"
@@ -4641,6 +4677,7 @@ HullCombatSmallBlocks
 /* Standard Concrete Block */
 { +Block Id: 399, Name: ConcreteBlocks
   Material: concrete, display: true
+  MarketPrice: 25, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 92
   TextureTable: 2    /* 2 = concrete table */
@@ -4694,6 +4731,7 @@ HullCombatSmallBlocks
 /* Steel Block (large) - block group */
 { +Block Id: 402, Name: HullLargeBlocks
   Material: hullarmored, display: true
+  MarketPrice: 240, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 50
   BlockColor: "110,110,110"
@@ -4744,6 +4782,7 @@ HullCombatSmallBlocks
 /* Hardened Steel Block (large) - block group */
 { +Block Id: 405, Name: HullArmoredLargeBlocks
   Material: hullarmored, display: true
+  MarketPrice: 800, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 54
   BlockColor: "170,170,170"
@@ -4840,6 +4879,7 @@ HullCombatSmallBlocks
 /* Combat Steel Blocks (large blocks) - block group */
 { +Block Id: 411, Name: HullCombatLargeBlocks
   Material: hullcombat, display: true
+  MarketPrice: 860, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 56
   BlockColor: "170,170,170"
@@ -4996,7 +5036,7 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   TemplateRoot: LandinggearBlocksSV
   Place: Free
-  AllowPlacingAt: SS, display: true
+  AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,1,2", display: true
   Mass: 171, type: float, display: true, formatter: Kilogram
   Info: bkiLandinggearSV, display: true
@@ -5011,6 +5051,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 418, Name: GeneratorSV
   IndexName: Generator
+  MarketPrice: 871, display: true
   Class: Generator
   Group: cpgGenerator
   EssentialCategory: cpgGenerator
@@ -5055,6 +5096,7 @@ HullCombatSmallBlocks
 { +Block Id: 419, Name: FuelTankSV
   Class: FuelTank
   IndexName: FuelTank
+  MarketPrice: 260, display: true
   Group: cpgFuelTank
   EssentialCategory: cpgFuelTank
   # LootList: 26   # 10 slots
@@ -5104,6 +5146,7 @@ HullCombatSmallBlocks
   IndexName: RCS
   Group: cpgRCS
   Material: metal, display: true
+  MarketPrice: 10200, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Mothership/RCS_BlockPrefab
@@ -5133,7 +5176,7 @@ HullCombatSmallBlocks
   CPUIn: 75000, type: int, display: true
   BlastParticleIndex: 4
   BlastRadius: 3
-  BlastDamage: 80
+  BlastDamage: 480
 
   UnlockCost: 5, display: true
   UnlockLevel: 7, display: true
@@ -5165,6 +5208,7 @@ HullCombatSmallBlocks
   Class: O2Tank
   IndexName: O2Tank
   Group: cpgO2Tank
+  MarketPrice: 168, display: true
   LootList: 25     # 5 slots
   Material: metallight, display: true
   Shape: ModelEntity
@@ -5207,6 +5251,7 @@ HullCombatSmallBlocks
   Class: Container
   IndexName: Fridge
   Group: cpgFridge
+  MarketPrice: 177, display: true
   LootList: 1   /* empty medium */
   DontDecayFood: true   /* now this loot container is a fridge */
   Material: metal, display: true
@@ -5382,6 +5427,7 @@ HullCombatSmallBlocks
   IndexName: WeaponShip
   Group: cpgWeapon
   Material: metalhard, display: true
+  MarketPrice: 41976, display: true
   Shape: ModelEntity
   ShowBlockName: true
   WeaponItem: RailgunSSWeapon
@@ -5414,8 +5460,8 @@ HullCombatSmallBlocks
   StackSize: 50000
   MaxCount: 4, type: int, display: true
   BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastRadius: 4
+  BlastDamage: 500
   EnergyIn: 20, type: int, display: true, formatter: Watt
   CPUIn: 2490, type: int, display: true
   HitPoints: 700, type: int, display: true
@@ -5436,6 +5482,7 @@ HullCombatSmallBlocks
   IndexName: WeaponShip
   Group: cpgWeapon
   Material: metalhard, display: true
+  MarketPrice: 1205, display: true
   Shape: ModelEntity
   ShowBlockName: true
   WeaponItem: MinigunSSWeapon
@@ -5464,8 +5511,8 @@ HullCombatSmallBlocks
   StackSize: 50000
   MaxCount: 6, type: int, display: true
   BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastRadius: 3
+  BlastDamage: 100
   EnergyIn: 7, type: int, display: true, formatter: Watt
   CPUIn: 720, type: int, display: true
   HitPoints: 530, type: int, display: true
@@ -5538,6 +5585,7 @@ HullCombatSmallBlocks
   Class: Weapon
   IndexName: WeaponShip
   Group: cpgWeapon
+  MarketPrice: 46787, display: true
   Material: metalhard, display: true
   Shape: ModelEntity
   ShowBlockName: true
@@ -5571,8 +5619,8 @@ HullCombatSmallBlocks
   StackSize: 50000
   MaxCount: 4, type: int, display: true
   BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastRadius: 4
+  BlastDamage: 350
   EnergyIn: 50, type: int, display: true, formatter: Watt
   CPUIn: 1300, type: int, display: true
   HitPoints: 770, type: int, display: true
@@ -5595,6 +5643,7 @@ HullCombatSmallBlocks
   Material: metalhard, display: true
   Shape: ModelEntity
   ShowBlockName: true
+  MarketPrice: 2110, display: true
   WeaponItem: RocketLauncherSSWeapon
   Model: @models/Blocks/WeaponsShip/WeaponSSMissileRetractPrefab
   # Model: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
@@ -5624,8 +5673,8 @@ HullCombatSmallBlocks
   StackSize: 50000
   MaxCount: 4, type: int, display: true
   BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastRadius: 7
+  BlastDamage: 400
   EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 1050, type: int, display: true
   HitPoints: 800, type: int, display: true
@@ -5703,9 +5752,9 @@ HullCombatSmallBlocks
   ShowUser: No
 }
 # Obsolete but dont delete
-{ Block Id: 435, Name: InteriorBlock01, Ref: Hull
-  Texture: "12,29,32,32,32,32"
-}
+#{ Block Id: 435, Name: InteriorBlock01, Ref: Hull
+#  Texture: "12,29,32,32,32,32"
+#}
 # Obsolete but dont delete
 { Block Id: 436, Name: InteriorBlock02, Ref: Hull
   Texture: "12,29,30,30,30,30"
@@ -5730,21 +5779,21 @@ HullCombatSmallBlocks
 { Block Id: 441, Name: InteriorBlock03, Ref: Hull
   Texture: "12,29,15,15,15,15"
 }
-# Obsolete but dont delete FREE
-{ Block Id: 442, Name: InteriorLight, Ref: Hull
-  Texture: 14
-  ShowUser: NoButCSV    # reported by HWS
-}
 # Obsolete but dont delete
-{ Block Id: 443, Name: RampTop, Ref: Hull
-  Texture: 13
-  Model: RampA
-}
+#{ Block Id: 442, Name: InteriorLight, Ref: Hull
+#  Texture: 14
+#  ShowUser: NoButCSV    # reported by HWS
+#}
 # Obsolete but dont delete
-{ Block Id: 444, Name: RampBottom, Ref: Hull
-  Model: RampCMedium
-  Mass: 60, type: float, display: true, formatter: Kilogram
-}
+#{ Block Id: 443, Name: RampTop, Ref: Hull
+#  Texture: 13
+#  Model: RampA
+#}
+# Obsolete but dont delete
+#{ Block Id: 444, Name: RampBottom, Ref: Hull
+#  Model: RampCMedium
+#  Mass: 60, type: float, display: true, formatter: Kilogram
+#}
 # retractable landinggear
 { +Block Id: 445, Name: LandinggearMSHeavy
   Class: LandingGear              # for retractable landinggears
@@ -5831,9 +5880,9 @@ HullCombatSmallBlocks
   CPUIn: 123, type: int, display: true
   Temperature: 287, display: true
   Category: Devices
-  BlastParticleIndex: 4
-  BlastRadius: 3
-  BlastDamage: 100
+  BlastParticleIndex: 6
+  BlastRadius: 5
+  BlastDamage: 300
   UpgradeTo: ThrusterSVRoundNormalT2, display: false
 }
 { +Block Id: 450, Name: ThrusterSVRoundArmored, Ref: ThrusterSVRoundNormal
@@ -5889,9 +5938,10 @@ HullCombatSmallBlocks
   EnergyDynamicGroup: Thruster
   CPUIn: 13340, type: int, display: true
   Category: Devices
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 100
+  BlastParticleIndex: 1
+  BlastRadius: 7
+  BlastDamage: 2500
+
 
   Radiation: 5, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 892, display: true
@@ -5906,6 +5956,7 @@ HullCombatSmallBlocks
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
+  MarketPrice: 853, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: metalhard, display: true
@@ -5942,7 +5993,7 @@ HullCombatSmallBlocks
   Category: Devices
   BlastParticleIndex: 4
   BlastRadius: 2
-  BlastDamage: 50
+  BlastDamage: 150
 
   UnlockCost: 7, display: true
   UnlockLevel: 5, display: true
@@ -5955,6 +6006,7 @@ HullCombatSmallBlocks
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
+  MarketPrice: 12910, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: metalhard, display: true
@@ -5989,8 +6041,8 @@ HullCombatSmallBlocks
   CPUIn: 5336, type: int, display: true
   Category: Devices
   BlastParticleIndex: 11
-  BlastRadius: 2
-  BlastDamage: 100
+  BlastRadius: 4
+  BlastDamage: 1500
 
   BlockColor: "110,110,110"
 
@@ -6041,9 +6093,9 @@ HullCombatSmallBlocks
   EnergyDynamicGroup: Thruster
   CPUIn: 133400, type: int, display: true
   Category: Devices
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 100
+  BlastParticleIndex: 1
+  BlastRadius: 12
+  BlastDamage: 8500
 
   Radiation: 8, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 977, display: true
@@ -6139,6 +6191,7 @@ HullCombatSmallBlocks
   Material: fertile, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: "6,31,31,31,31,31"
+  MarketPrice: 798, display: true
   Shape: New
   Place: Free
   Model: Cube
@@ -6153,7 +6206,6 @@ HullCombatSmallBlocks
   Category: BuildingBlocks
   /* IsColorable: false   */
   IsTextureable: false
-  MarketPrice: 325.61
 
   UnlockCost: 70, display: true
   UnlockLevel: 7, display: true
@@ -6255,6 +6307,8 @@ HullCombatSmallBlocks
   Class: CropsGrown
   AllowedInBlueprint: false, display: true
   IndexName: Plant
+  CropYield: 2, display: true
+  CropType: Vegetables, display: true
   { Child DropOnHarvest
     Item: Vegetables
     Count: 2
@@ -6282,6 +6336,7 @@ HullCombatSmallBlocks
   Class: Elevator
   Material: metal, display: true
   Shape: Ext3dModel
+  MarketPrice: 390, display: true
   Mesh: models
   Model: Mothership/Elevator, param1: ElevatorBlock
   /* Model: Mothership/Elevator, param1: Collider_Mesh  */
@@ -6305,13 +6360,14 @@ HullCombatSmallBlocks
   UnlockCost: 4, display: true
   UnlockLevel: 5, display: true
   TechTreeParent: LadderBlocks
-  TechTreeNames: Misc
+  TechTreeNames: "Base,Capital Vessel"
 }
 
 { +Block Id: 469, Name: GeneratorMS
   IndexName: Generator
   Class: Generator
   Group: cpgGenerator
+  MarketPrice: 30090, display: true
   EssentialCategory: cpgGenerator
   Material: metalhard, display: true
   Shape: ModelEntity
@@ -6340,9 +6396,9 @@ HullCombatSmallBlocks
   HitPoints: 250, type: int, display: true
   IsActivateable: true
 
-  BlastParticleIndex: 4
-  BlastRadius: 5
-  BlastDamage: 200
+  BlastParticleIndex: 1
+  BlastRadius: 10
+  BlastDamage: 15000
 
   UnlockCost: 14, display: true
   UnlockLevel: 10, display: true
@@ -6358,6 +6414,7 @@ HullCombatSmallBlocks
   Class: FuelTank
   IndexName: FuelTank
   Group: cpgFuelTank
+  MarketPrice: 140, display: true
   EssentialCategory: cpgFuelTank
   # LootList: 26   # 10 slots
   Material: metallight, display: true
@@ -6403,6 +6460,7 @@ HullCombatSmallBlocks
   IndexName: Generator
   Class: Generator
   Group: cpgGenerator
+  MarketPrice: 871, display: true
   EssentialCategory: cpgGenerator
   LootList: 1
   Material: metalhard, display: true
@@ -6429,9 +6487,9 @@ HullCombatSmallBlocks
   EnergyOut: 770, type: int, display: true, formatter: Watt
   CPUIn: 90, type: int, display: true
   Category: Devices
-  BlastParticleIndex: 2
-  BlastRadius: 3
-  BlastDamage: 200
+  BlastParticleIndex: 9
+  BlastRadius: 5
+  BlastDamage: 500
 
   UnlockCost: 0, display: true
   UnlockLevel: 1, display: true
@@ -6678,6 +6736,7 @@ HullCombatSmallBlocks
 # Rocket Launcher Homing
 { +Block Id: 489, Name: WeaponSV05Homing, Ref: WeaponSV05
   WeaponItem: RocketLauncherSSHomingWeapon
+  MarketPrice: 24315, display: true
   # Model: @models/Blocks/WeaponsShip/WeaponSSMissileHomingPrefab
   Model: @models/Blocks/WeaponsShip/WeaponSSMissileHomingRetractPrefab
   SizeInBlocks: "1,3,1", display: true
@@ -6699,6 +6758,7 @@ HullCombatSmallBlocks
 { Block Id: 490, Name: DurianRoot   # Stage 1
   Class: PlantGrowing
   AllowedInBlueprint: false, display: true
+  Marketprice: 165, display: true
   IndexName: Plant
   Material: plants, display: true
   Shape: ModelEntity
@@ -6787,6 +6847,7 @@ HullCombatSmallBlocks
 
 { Block Id: 493, Name: ArtMassBlocks
   Material: hull, display: true
+  MarketPrice: 300, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 31
   BlockColor: "110,110,110"
@@ -6868,9 +6929,9 @@ HullCombatSmallBlocks
   EnergyDynamicGroup: Thruster
   CPUIn: 533600, type: int, display: true
   Category: Devices
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 100
+  BlastParticleIndex: 1
+  BlastRadius: 15
+  BlastDamage: 15000
   Voxelize: false
 
   Radiation: 15, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
@@ -6881,6 +6942,7 @@ HullCombatSmallBlocks
   IndexName: Generator
   Class: Generator
   Group: cpgGenerator
+  MarketPrice: 4885, display: true
   EssentialCategory: cpgGenerator
   Material: metalhard, display: true
   Shape: ModelEntity
@@ -6910,9 +6972,9 @@ HullCombatSmallBlocks
   HitPoints: 250, type: int, display: true
   IsActivateable: true
 
-  BlastParticleIndex: 4
-  BlastRadius: 5
-  BlastDamage: 200
+  BlastParticleIndex: 8
+  BlastRadius: 7
+  BlastDamage: 7500
 
   UnlockCost: 4, display: true
   UnlockLevel: 3, display: true
@@ -7501,6 +7563,7 @@ HullCombatSmallBlocks
   Material: metalhard, display: true
   Shape: Invisible
   Place: Free
+  MarketPrice: 1137, display: true
   # Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterSSRoundNormalPrefab
   # Mesh-Damage-1: Mesh/D0
   # Mesh-Damage-2: Mesh/D1
@@ -7600,6 +7663,7 @@ HullCombatSmallBlocks
   Material: hullcombat, display: true
   Shape: Invisible
   Mesh: models
+  MarketPrice: 1460, display: true
   # Model: Mothership/windowVertMS, param1: window_nontransparent
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Info: bkiBlockGroup, display: true
@@ -7626,6 +7690,7 @@ HullCombatSmallBlocks
 { +Block Id: 546, Name: ThrusterSVRoundNormalT2, Ref: ThrusterSVRoundNormal
   Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterGVRoundNormalT2Prefab
   SizeInBlocks: "1,2,1", display: true
+  MarketPrice: 3373, display: true
   HitPoints: 100, type: int, display: true
   Mass: 520, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
@@ -7646,6 +7711,7 @@ HullCombatSmallBlocks
 { +Block Id: 547, Name: ThrusterSVRoundLarge, Ref: ThrusterSVRoundNormal
   Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterGVRoundLargePrefab
   SizeInBlocks: "1,3,1", display: true
+  MarketPrice: 2207, display: true
   HitPoints: 350, type: int, display: true
   Volume: 93.75, type: float, display: true, formatter: Liter
   Mass: 406, type: float, display: true, formatter: Kilogram
@@ -7664,6 +7730,7 @@ HullCombatSmallBlocks
 { +Block Id: 548, Name: ThrusterSVRoundLargeT2, Ref: ThrusterSVRoundNormal
   Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterGVRoundLargeT2Prefab
   SizeInBlocks: "1,3,1", display: true
+  MarketPrice: 6233, display: true
   HitPoints: 400, type: int, display: true
   Volume: 93.75, type: float, display: true, formatter: Liter
   Mass: 842, type: float, display: true, formatter: Kilogram
@@ -7687,6 +7754,7 @@ HullCombatSmallBlocks
   Info: bkiAlienBlock, display: true
   # Class: Devices
   Group: cpgCore
+  MarketPrice: 3500000, display: true
   #IndexName: CFGenerator
   Category: Devices
   Model: @models/Blocks/Misc/CoreBlockNPCPrefab
@@ -7722,6 +7790,7 @@ HullCombatSmallBlocks
   Class: TurretManual
   IndexName: Turret
   Group: cpgTurret
+  MarketPrice: 205850, display: true
   Category: Weapons/Items
   AllowedInBlueprint: false, display: true
   Info: bkiTurretZiraxMSLaser, display: true
@@ -7748,9 +7817,9 @@ HullCombatSmallBlocks
   #IsAccessible: true
   StackSize: 50000
   # MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 8
+  BlastRadius: 7
+  BlastDamage: 2800
   EnergyIn: 25, type: int, display: true, formatter: Watt
   CPUIn: 15100, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
@@ -7763,6 +7832,7 @@ HullCombatSmallBlocks
 { +Block Id: 551, Name: TurretZiraxMSPlasma
   Class: TurretManual
   IndexName: Turret
+  MarketPrice: 299720, display: true
   Group: cpgTurret
   Category: Weapons/Items
   AllowedInBlueprint: false, display: true
@@ -7794,9 +7864,9 @@ HullCombatSmallBlocks
   #IsAccessible: true
   StackSize: 50000
   # MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 1
+  BlastRadius: 7
+  BlastDamage: 2800
   EnergyIn: 15, type: int, display: true, formatter: Watt
   CPUIn: 20700, type: int, display: true
   HitPoints: 3450, type: int, display: true
@@ -7817,6 +7887,7 @@ HullCombatSmallBlocks
   Group: cpgTurret
   Category: Weapons/Items
   AllowedInBlueprint: false, display: true
+  MarketPrice: 201960, display: true
   Info: bkiTurretZiraxMSRocket, display: true
   PickupTarget: TurretMSRocketBlocks
   Material: metalhard, display: true
@@ -7893,6 +7964,7 @@ HullCombatSmallBlocks
   Class: O2Generator
   Material: metal
   Shape: ModelEntity
+  MarketPrice: 1291, display: true
   Model: @models/Blocks/Terrain/OxygenGeneratorPrefab
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
@@ -7959,9 +8031,9 @@ HullCombatSmallBlocks
   StackSize: 50000
   IsActivateable: true
   Category: Weapons/Items
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 100
+  BlastParticleIndex: 1
+  BlastRadius: 8
+  BlastDamage: 3500
   HitPoints: 10000, type: int, display: true
   RotSpeed: 150, type: int, display: true
   EnergyIn: 5, type: int, display: true, formatter: Watt
@@ -8018,6 +8090,7 @@ HullCombatSmallBlocks
   Class: Core
   Group: cpgCore
   IndexName: Core
+  MarketPrice: 2267, display: true
   EssentialCategory: cpgCore
   Material: metal, display: true
   Shape: ModelEntity
@@ -8060,12 +8133,12 @@ HullCombatSmallBlocks
   #UpgradeTo: CoreNoCPU, display: true
 }
 # obsolete - do not remove
-{ Block Id: 559, Name: Artificialmass, Ref: ArtMassLight
-  Mass: 2500, type: float, display: true, formatter: Kilogram
-  Volume: 15, type: float, display: true, formatter: Liter
-  AllowPlacingAt: "Base,MS,SS,GV", display: true
-  ShowUser: No
-}
+#{ Block Id: 559, Name: Artificialmass, Ref: ArtMassLight
+#  Mass: 2500, type: float, display: true, formatter: Kilogram
+#  Volume: 15, type: float, display: true, formatter: Liter
+#  AllowPlacingAt: "Base,MS,SS,GV", display: true
+#  ShowUser: No
+#}
 /* Alien Core */
 { +Block Id: 560, Name: CoreNPC
   AllowedInBlueprint: false, display: true
@@ -8182,6 +8255,7 @@ HullCombatSmallBlocks
   IndexName: Light
   Group: cpgGrowingLight
   Material: metallight, display: true
+  MarketPrice: 262, display: true
   Shape: ModelEntity
   Tag: GrowingLight
   Place: Face
@@ -8238,7 +8312,7 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   BlastParticleIndex: 4
   BlastRadius: 2
-  BlastDamage: 20
+  BlastDamage: 175
   HitPoints: 150, type: int, display: true
   EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 140, type: int, display: true
@@ -8250,6 +8324,7 @@ HullCombatSmallBlocks
   XpFactor: 2
   AboveTerrainCheck: false
   TurretTargetIgnore: true
+  IsAntiInfantryWeapon: true
 }
 # Alien sentry gun
 { +Block Id: 566, Name: SentryGun02
@@ -8292,6 +8367,7 @@ HullCombatSmallBlocks
   XpFactor: 2
   AboveTerrainCheck: false
   TurretTargetIgnore: true
+  IsAntiInfantryWeapon: true
 }
 # Player used Sentry Gun
 { +Block Id: 567, Name: SentryGun03
@@ -8334,6 +8410,7 @@ HullCombatSmallBlocks
   Zoom: 2, type: float
   AboveTerrainCheck: false
   TurretTargetIgnore: true
+  IsAntiInfantryWeapon: true
 
   # UnlockCost: 5, display: true
   # UnlockLevel: 3, display: true
@@ -8369,7 +8446,7 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   BlastParticleIndex: 4
   BlastRadius: 2
-  BlastDamage: 20
+  BlastDamage: 500
   HitPoints: 40, type: int, display: true
   EnergyIn: 5, type: int, display: true, formatter: Watt
   CPUIn: 180, type: int, display: true
@@ -8380,12 +8457,14 @@ HullCombatSmallBlocks
   XpFactor: 2
   AboveTerrainCheck: false
   TurretTargetIgnore: true
+  IsAntiInfantryWeapon: true
   ShowUser: NoButCSV
 }
 { +Block Id: 569, Name: LightWork
   /* Class: Light   */
   IndexName: Light
   Material: metallight, display: true
+  MarketPrice: 127, display: true
   Shape: ModelEntity
   Model: @models/Blocks/Terrain/LightWorkPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -8722,6 +8801,7 @@ HullCombatSmallBlocks
 { +Block Id: 588, Name: WaterGenerator
   Class: WaterGenerator
   Material: metal, display: true
+  MarketPrice: 1091, display: true
   Shape: ModelEntity
   Model: @models/Blocks/Terrain/WaterGeneratorPrefab
   # Mesh-Damage-1: Mesh/D0
@@ -8751,8 +8831,8 @@ HullCombatSmallBlocks
   FuelAccept: "EnergyCell, EnergyCellLarge, FusionCell, BioFuel"
 
   BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastRadius: 7
+  BlastDamage: 250
 
   UnlockCost: 0, display: true
   UnlockLevel: 1, display: true
@@ -8767,6 +8847,7 @@ HullCombatSmallBlocks
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
+  MarketPrice: 833, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: metalhard, display: true
@@ -8803,7 +8884,7 @@ HullCombatSmallBlocks
   Category: Devices
   BlastParticleIndex: 4
   BlastRadius: 2
-  BlastDamage: 50
+  BlastDamage: 225
 
   UnlockCost: 4, display: true
   UnlockLevel: 3, display: true
@@ -8848,7 +8929,7 @@ HullCombatSmallBlocks
   Category: Devices
   BlastParticleIndex: 4
   BlastRadius: 3
-  BlastDamage: 100
+  BlastDamage: 350
 
   Temperature: 90, display: true
   UpgradeTo: ThrusterGVRoundNormalT2, display: true
@@ -8856,6 +8937,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 591, Name: WheatStage1
   Class: PlantGrowing
+  MarketPrice: 153, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   Material: plants, display: true
@@ -8946,6 +9028,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 594, Name: TomatoStage1
   Class: PlantGrowing
+  MarketPrice: 240, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   Material: plants, display: true
@@ -9128,6 +9211,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 600, Name: CornStage1
   Class: PlantGrowing
+  MarketPrice: 275, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   Material: plants, display: true
@@ -9217,6 +9301,7 @@ HullCombatSmallBlocks
 { +Block Id: 603, Name: HoverBooster
   IndexName: HoverBooster
   Group: cpgHoverEngine
+  MarketPrice: 2625, display: true
   Material: metal, display: true
   Shape: ModelEntity
   ShowBlockName: true
@@ -9244,7 +9329,7 @@ HullCombatSmallBlocks
   Category: Devices
   BlastParticleIndex: 4
   BlastRadius: 3
-  BlastDamage: 100
+  BlastDamage: 150
 
   UnlockCost: 7, display: true
   UnlockLevel: 5, display: true
@@ -9255,6 +9340,7 @@ HullCombatSmallBlocks
   IndexName: RCS
   Group: cpgRCS
   Material: metal, display: true
+  MarketPrice: 1093, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Mothership/RCS_BlockPrefab
@@ -9334,6 +9420,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 607, Name: PearthingStage1
   Class: PlantGrowing
+  MarketPrice: 165, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   Material: plants, display: true
@@ -9570,6 +9657,7 @@ HullCombatSmallBlocks
   IsLockable: true
   # BuffNamesActivate: "ReduceRadiation,DecreaseBodyTemp,IncreaseBodyTemp", display: StatusEffect
   BuffNamesActivate: "ReduceRadiation,NeutralBodyTemp", display: StatusEffect
+  DebuffNamesActivate: "Fire"
   SfxBuffActivate: UseActions/BlockShower
   ShowUser: Yes
 }
@@ -9603,13 +9691,13 @@ HullCombatSmallBlocks
   Texture: "90,80,89,89,89,89"
   BlockColor: "187,135,90"
 }
-{ Block Id: 627, Name: InteriorLiving02, Ref: InteriorKitchen
-  Texture: "90,85,80,80,80,80"
-  BlockColor: "187,135,90"
-}
-{ Block Id: 628, Name: InteriorBath, Ref: InteriorKitchen
-  Texture: "87,85,81,81,83,83"
-}
+#{ Block Id: 627, Name: InteriorLiving02, Ref: InteriorKitchen
+#  Texture: "90,85,80,80,80,80"
+#  BlockColor: "187,135,90"
+#}
+#{ Block Id: 628, Name: InteriorBath, Ref: InteriorKitchen
+#  Texture: "87,85,81,81,83,83"
+#}
 
 { +Block Id: 629, Name: IndoorPlant01
   Material: metallight, display: true
@@ -9799,6 +9887,7 @@ HullCombatSmallBlocks
 # Rename: CoffePlantStage1
 { Block Id: 639, Name: InsanityPepperStage1
   Class: PlantGrowing
+  MarketPrice: 142, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   { Child PlantGrowing
@@ -9867,6 +9956,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 641, Name: DesertPlant20Stage1
   Class: PlantGrowing
+  MarketPrice: 134, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   { Child PlantGrowing
@@ -9958,6 +10048,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 644, Name: AlienPlantTube2Stage1
   Class: PlantGrowing
+  MarketPrice: 178, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   { Child PlantGrowing
@@ -10022,6 +10113,7 @@ HullCombatSmallBlocks
 # Rocket Launcher
 { +Block Id: 646, Name: WeaponMS01
   Class: Weapon
+  MarketPrice: 63605, display: true
   IndexName: WeaponShip
   Group: cpgWeapon
   Material: metalhard, display: true
@@ -10051,9 +10143,9 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   StackSize: 50000
   MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastParticleIndex: 1
+  BlastRadius: 9
+  BlastDamage: 8500
   EnergyIn: 100, type: int, display: true, formatter: Watt
   CPUIn: 4800, type: int, display: true
   HitPoints: 7000, type: int, display: true
@@ -10099,9 +10191,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   StackSize: 50000
   MaxCount: 6, type: int, display: true
-  BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastParticleIndex: 1
+  BlastRadius: 5
+  BlastDamage: 500
   EnergyIn: 250, type: int, display: true, formatter: Watt
   CPUIn: 7200, type: int, display: true
   HitPoints: 5000, type: int, display: true
@@ -10146,8 +10238,8 @@ HullCombatSmallBlocks
   StackSize: 50000
   # MaxCount: 6, type: int, display: true
   BlastParticleIndex: 11
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastRadius: 4
+  BlastDamage: 250
   EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 900, type: int, display: true
   HitPoints: 2160, type: int, display: true
@@ -10219,9 +10311,9 @@ HullCombatSmallBlocks
   Mass: 1050, type: float, display: true, formatter: Kilogram
   StackSize: 50000
   # MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastParticleIndex: 8
+  BlastRadius: 4
+  BlastDamage: 350
   EnergyIn: 50, type: int, display: true, formatter: Watt
   CPUIn: 1500, type: int, display: true
   HitPoints: 5184, type: int, display: true
@@ -10243,6 +10335,7 @@ HullCombatSmallBlocks
   IndexName: Light
   Material: metallight, display: true
   Shape: ModelEntity
+  MarketPrice: 176, display: true
   Model: @models/Blocks/Terrain/LightWork02Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   IsTerrainDecoration: true
@@ -10485,6 +10578,7 @@ HullCombatSmallBlocks
   IndexName: WeaponShip
   Group: cpgHarvest
   Material: metalhard, display: true
+  MarketPrice: 785, display: true
   Shape: ModelEntity
   ShowBlockName: true
   WeaponItem: SawAttachmentWeapon
@@ -10508,9 +10602,9 @@ HullCombatSmallBlocks
   HitPoints: 150, type: int, display: true
   CPUIn: 180, type: int, display: true
   StackSize: 50000
-  BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastParticleIndex: 9
+  BlastRadius: 3
+  BlastDamage: 90
 
   UnlockCost: 4, display: true
   UnlockLevel: 3, display: true
@@ -10668,6 +10762,7 @@ HullCombatSmallBlocks
   IndexName: WeaponShip
   Group: cpgHarvest
   Material: metalhard, display: true
+  MarketPrice: 1025, display: true
   Shape: ModelEntity
   ShowBlockName: true
   WeaponItem: DrillAttachmentWeapon
@@ -10846,6 +10941,7 @@ HullCombatSmallBlocks
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
+  MarketPrice: 19310, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: metalhard, display: true
@@ -10879,9 +10975,9 @@ HullCombatSmallBlocks
   Category: Devices
   Voxelize: false     # do not allow to place blocks in the middle
 
-  BlastParticleIndex: 4
-  BlastRadius: 3
-  BlastDamage: 100
+  BlastParticleIndex: 1
+  BlastRadius: 8
+  BlastDamage: 650
 
   UnlockCost: 15, display: true
   UnlockLevel: 15, display: true
@@ -10892,6 +10988,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 695, Name: ThrusterJetRound3x10x3, Ref: ThrusterJetRound3x7x3
   Model: @models/Blocks/Thrusters/ThrusterJetRound3x10x3Prefab
+  MarketPrice: 23850, display: true
   SizeInBlocks: "3,10,3", display: true
   Volume: 2812.5, type: float, display: true, formatter: Liter
   Mass: 3060, type: float, display: true, formatter: Kilogram
@@ -10899,6 +10996,8 @@ HullCombatSmallBlocks
   ThrusterForce: 11040, type: int, display: true, formatter: Newton
   EnergyIn: 425, type: int, display: true, formatter: Watt
   CPUIn: 6750, type: int, display: true
+  BlastRadius: 9
+  BlastDamage: 800
 
   UnlockCost: 15, display: true
   UnlockLevel: 17, display: true
@@ -10916,6 +11015,8 @@ HullCombatSmallBlocks
   ThrusterForce: 15290, type: int, display: true, formatter: Newton
   EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 8870, type: int, display: true
+  BlastRadius: 10
+  BlastDamage: 900
 
   UnlockCost: 25, display: true
   UnlockLevel: 25, display: true
@@ -10926,6 +11027,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 697, Name: ThrusterJetRound1x3x1, Ref: ThrusterJetRound3x7x3
   Model: @models/Blocks/Thrusters/ThrusterJetRound1x3x1Prefab
+  MarketPrice: 6135, display: true
   SizeInBlocks: "1,3,1", display: true
   Volume: 93.75, type: float, display: true, formatter: Liter
   Mass: 743, type: float, display: true, formatter: Kilogram
@@ -10933,6 +11035,9 @@ HullCombatSmallBlocks
   ThrusterForce: 300, type: int, display: true, formatter: Newton
   EnergyIn: 70, type: int, display: true, formatter: Watt
   CPUIn: 220, type: int, display: true
+  BlastParticleIndex: 8
+  BlastRadius: 5
+  BlastDamage: 350
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
@@ -10944,6 +11049,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 698, Name: ThrusterJetRound2x5x2, Ref: ThrusterJetRound3x7x3
   Model: @models/Blocks/Thrusters/ThrusterJetRound2x5x2Prefab
+  MarketPrice: 9430, display: true
   SizeInBlocks: "2,5,2", display: true
   Volume: 625, type: float, display: true, formatter: Liter
   Mass: 1240, type: float, display: true, formatter: Kilogram
@@ -10951,6 +11057,9 @@ HullCombatSmallBlocks
   ThrusterForce: 2075, type: int, display: true, formatter: Newton
   EnergyIn: 216, type: int, display: true, formatter: Watt
   CPUIn: 1470, type: int, display: true
+  BlastParticleIndex: 8
+  BlastRadius: 6
+  BlastDamage: 500
 
   UnlockCost: 14, display: true
   UnlockLevel: 12, display: true
@@ -11015,9 +11124,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   StackSize: 50000
   # MaxCount: 6, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 8
+  BlastRadius: 7
+  BlastDamage: 350
   EnergyIn: 45, type: int, display: true, formatter: Watt
   CPUIn: 11000, type: int, display: true
   HitPoints: 19600, type: int, display: true
@@ -11097,9 +11206,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   StackSize: 50000
   # MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 1
+  BlastRadius: 5
+  BlastDamage: 1800
   CPUIn: 20700, type: int, display: true
   HitPoints: 17800, type: int, display: true
   RotSpeed: 100, type: int, display: true
@@ -11272,6 +11381,7 @@ HullCombatSmallBlocks
 /* Current SurvConstructor - with recursive capabilities: currently used */
 { +Block Id: 711, Name: ConstructorSurvival
   Class: ConstructorSurvivalV2
+  MarketPrice: 200, display: true
   Material: metalhard, display: true
   Shape: ModelEntity
   Model: @models/Blocks/Terrain/ConstructorSurvivalPrefab
@@ -11316,6 +11426,7 @@ HullCombatSmallBlocks
   Class: PassengerSeat
   Group: cpgPassengerSeat
   Material: metalhard, display: true
+  MarketPrice: 732, display: true
   Shape: ModelEntity
   ShowBlockName: true
   # ModelOffset: "0,0.5,0"
@@ -11336,7 +11447,7 @@ HullCombatSmallBlocks
   Info: bkiPassengerSeat, display: true
   StackSize: 50000
   Category: Devices
-  BlastParticleIndex: 4
+  BlastParticleIndex: 7
   BlastRadius: 2
   BlastDamage: 50
   HitPoints: 250, type: int, display: true
@@ -11392,6 +11503,7 @@ HullCombatSmallBlocks
   Class: ConstructorRecursive
   IndexName: Constructor
   Group: cpgConstructor
+  MarketPrice: 18857, display: true
   Material: metalhard, display: true
   Shape: ModelEntity
   ShowBlockName: true
@@ -11437,6 +11549,7 @@ HullCombatSmallBlocks
   Class: PassengerSeat
   Group: cpgPassengerSeat
   Material: metalhard, display: true
+  MarketPrice: 615, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Spaceship/PassengerSeat2SVPrefab
@@ -11513,6 +11626,7 @@ HullCombatSmallBlocks
   Class: O2Tank
   IndexName: O2Tank
   Group: cpgO2Tank
+  MarketPrice: 321, display: true
   EssentialCategory: cpgO2Tank
   LootList: 25     # 5 slots
   Material: metallight, display: true
@@ -11544,9 +11658,9 @@ HullCombatSmallBlocks
   CPUIn: 100, type: int, display: true
   O2Capacity: 1000, type: int, display: true
   O2Accept: "OxygenBottleLarge,OxygenBottleSmall,RespiratorCharge"
-  BlastParticleIndex: 4
-  BlastRadius: 4
-  BlastDamage: 100
+  BlastParticleIndex: 9
+  BlastRadius: 8
+  BlastDamage: 800
 
   UnlockCost: 0, display: true
   UnlockLevel: 1, display: true
@@ -11605,6 +11719,7 @@ HullCombatSmallBlocks
   IndexName: WarpDrive
   Material: metal, display: true
   Shape: ModelEntity
+  MarketPrice: 61502, display: true
   ShowBlockName: true
   Model: @models/Blocks/Mothership/WarpDriveT1Prefab
   Mesh-Damage-1: Mesh/D0
@@ -11635,9 +11750,9 @@ HullCombatSmallBlocks
 
   UpgradeTo: WarpDriveT2, display: true
 
-  BlastParticleIndex: 4
-  BlastRadius: 5
-  BlastDamage: 200
+  BlastParticleIndex: 1
+  BlastRadius: 9
+  BlastDamage: 15000
 
   ItemPerAU: PentaxidCrystal, display: true
   CostPerAU: 1, display: true
@@ -11660,6 +11775,7 @@ HullCombatSmallBlocks
   Class: O2Station
   Group: cpgO2Station
   Material: metallight, display: true
+  MarketPrice: 937, display: true
   Shape: ModelEntity
   /*BuffName: OxygenStationSS DONE DIFFERENT NOW /*/
   ShowBlockName: true
@@ -11711,7 +11827,7 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   TemplateRoot: LandinggearBlocksSV
   Place: Free
-  AllowPlacingAt: "SS", display: true
+  AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,1,2", display: true
   Mass: 200, type: float, display: true, formatter: Kilogram
   StackSize: 50000
@@ -11735,6 +11851,7 @@ HullCombatSmallBlocks
   Class: Container
   Group: cpgAmmo
   IndexName: AmmoCntr
+  MarketPrice: 762, display: true
   LootList: 70
   Material: metal, display: true
   Shape: ModelEntity
@@ -11766,9 +11883,9 @@ HullCombatSmallBlocks
   Category: Devices
   HitPoints: 150, type: int, display: true
 
-  BlastParticleIndex: 4
-  BlastRadius: 5
-  BlastDamage: 500
+  BlastParticleIndex: 1
+  BlastRadius: 7
+  BlastDamage: 3250
 
   UnlockCost: 4, display: true
   UnlockLevel: 3, display: true
@@ -11872,6 +11989,7 @@ HullCombatSmallBlocks
   Material: metallight, display: true
   Info: bkiLandinggearHV, display: true
   AllowPlacingAt: "GV", display: true
+  MarketPrice: 125, display: true
   TemplateRoot: DockingPad
   Mass: 122, type: float, display: true, formatter: Kilogram
   Volume: 32.5, type: float, display: true, formatter: Liter
@@ -11947,6 +12065,7 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/SpeedTrees/HollywoodJuniperPrefab
   DecoParticle: hollywoodjuniper
   SizeInBlocks: "1,3,1"
+  Collide: "bullet,rocket,melee,sight"
   { Child DropOnDestroy
     Item: WoodLogs
     Count: "1,3"
@@ -11957,6 +12076,7 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/SpeedTrees/HollywoodJuniperBarePrefab
   DecoParticle: hollywoodjuniperbare
   SizeInBlocks: "1,3,1"
+  Collide: "bullet,rocket,melee,sight"
   { Child DropOnDestroy
     Item: WoodLogs
     Count: "1,2"
@@ -12644,6 +12764,7 @@ HullCombatSmallBlocks
 { +Block Id: 772, Name: ThrusterMSRoundBlocks
   IndexName: Thruster
   Material: metalhard, display: true
+  MarketPrice: 23480, display: true
   Shape: Invisible
   Place: Free
   # Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterCVRoundArmoredPrefab
@@ -12689,9 +12810,9 @@ HullCombatSmallBlocks
   HitPoints: 1, type: int, display: true
   Category: Weapons/Items
   # ModelOffset: "0,0.5,0"
-  BlastParticleIndex: 4
+  BlastParticleIndex: 9
   BlastRadius: 1
-  BlastDamage: 1
+  BlastDamage: 1000
 }
 
 { Block Id: 774, Name: CrystalFormation
@@ -12736,6 +12857,7 @@ HullCombatSmallBlocks
   Material: metalhard, display: true
   Shape: Invisible
   Place: Free
+  MarketPrice: 81090, display: true
   # Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterCVRoundNormal2x2Prefab
   # Mesh-Damage-1: Mesh/D0
   # Mesh-Damage-2: Mesh/D1
@@ -12788,7 +12910,7 @@ HullCombatSmallBlocks
   TemplateRoot: LandinggearBlocksSV
   Place: Free
   Info: bkiLandinggearSV, display: true
-  AllowPlacingAt: SS, display: true
+  AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,2,2", display: true
   Mass: 150, type: float, display: true, formatter: Kilogram
   StackSize: 50000
@@ -12805,6 +12927,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Landinggears/LandinggearDoubleRetractPrefab
   # Model: @models/Blocks/Landinggears/LandinggearDoublePrefab
   IsRetractable: true, display: true
+  AllowPlacingAt: "SS,GV", display: true
   SizeInBlocks: "1,2,4", display: true
   Mass: 240, type: float, display: true, formatter: Kilogram
   HitPoints: 175, type: int, display: false
@@ -12815,6 +12938,7 @@ HullCombatSmallBlocks
   Group: cpgMedic
   Material: metal, display: true
   Shape: ModelEntity
+  MarketPrice: 2131, display: true
   ShowBlockName: true
   Model: @models/Blocks/Mothership/CloneChamberSmallPrefab
   #Mesh-Damage-1: Mesh/D0
@@ -13046,6 +13170,7 @@ HullCombatSmallBlocks
   SoundClose: UseActions/DOOROpen01
   /* PlayerTriggersOpen: true     */
   ShowUser: No
+  AllowWander: true
   DoorClosesOnPower: false
   IsPhysicsColliders: false    /* ramps are too thin and also might pose problems when SV/HV are on the ramp while physics colliders are on */
   Voxelize: false     # do not allow to place blocks inside of bounding box
@@ -13132,6 +13257,7 @@ HullCombatSmallBlocks
   Material: metalhard, display: true
   Shape: Invisible
   Place: Free
+  MarketPrice: 145985, display: true
   # Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterCVRoundNormal3x3Prefab
   # Mesh-Damage-1: Mesh/D0
   # Mesh-Damage-2: Mesh/D1
@@ -13167,6 +13293,7 @@ HullCombatSmallBlocks
 { +Block Id: 836, Name: WindowSmallBlocks
   Material: hull, display: true
   Shape: Invisible
+  MarketPrice: 92, display: true
   # Model: @models/Blocks/Windows/Standard/Window_v1x1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Info: bkiBlockGroup, display: true
@@ -13191,6 +13318,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 837, Name: TrussSmallBlocks
   Material: metallight, display: true
+  MarketPrice: 35, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Shape: Invisible
   Place: Free
@@ -13218,6 +13346,7 @@ HullCombatSmallBlocks
 # obsolete but do not remove
 { +Block Id: 838, Name: WalkwayBlocks
   Material: metallight, display: true
+  MarketPrice: 60, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Shape: Invisible
   Place: Free
@@ -13350,6 +13479,7 @@ HullCombatSmallBlocks
   LootList: 37   /* still used? */
   IndexName: WeaponShip
   Group: cpgHarvest
+  MarketPrice: 23326, display: true
   Material: metalhard
   Shape: ModelEntity
   ShowBlockName: true
@@ -13479,6 +13609,7 @@ HullCombatSmallBlocks
 { Block Id: 868, Name: DesertRockMedium1
   Material: rockhard, display: true
   Shape: Deco
+  XpFactor: 116.0
   IsTerrainDecoration: true
   IsDeco: true
   CanDecorateOnSlopes: false
@@ -13511,6 +13642,7 @@ HullCombatSmallBlocks
 { Block Id: 869, Name: DesertRockMedium2, Ref: DesertRockMedium1
   Model: @models2/Environment/Rocks/DesertRocks/DesertRockMedium2Prefab
   SizeInBlocks: "14,14,14"     # reality: "14,30,14"
+  XpFactor: 160.0
   HitPoints: 5206, type: int, display: false
   { Child DropOnDestroy_1
     Item: CrushedStone
@@ -13536,6 +13668,7 @@ HullCombatSmallBlocks
 { Block Id: 870, Name: DesertRockLarge, Ref: DesertRockMedium1
   Model: @models2/Environment/Rocks/DesertRocks/DesertRockLargePrefab
   SizeInBlocks: "14,14,14"     # reality: "14,40,14"
+  XpFactor: 220.0
   HitPoints: 7053, type: int, display: false
   { Child DropOnDestroy_1
     Item: CrushedStone
@@ -13567,6 +13700,7 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/SpeedTrees/BlueSpruceWinterPrefab
   DecoParticle: bluesprucewinter
   ShowUser: No
+  XpFactor: 3.5
   SizeInBlocks: "1,3,1"
   { Child DropOnDestroy
     Item: WoodLogs
@@ -13583,6 +13717,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 3.0
   Model: @models2/Environment/Plants/SpeedTrees/AlienTreeBluePrefab
   DecoParticle: alientreeblue
   ShowUser: No
@@ -13625,6 +13760,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 4.0
   Model: @models2/Environment/Plants/SpeedTrees/AlienTreeBlue02Prefab
   DecoParticle: alientreeblue02
   ShowUser: No
@@ -13756,6 +13892,7 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/DeadTrees/DeadTree01Prefab
   ShowUser: No
   SizeInBlocks: "2,5,2"
+  Collide: "bullet,rocket,melee,sight"
   { Child DropOnDestroy
     Item: WoodLogs
     Count: "1,3"
@@ -13776,6 +13913,11 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/DeadTrees/DeadTree02cPrefab
   SizeInBlocks: "1,3,1"
   ShowUser: No
+  { Child DropOnDestroy
+    Item: WoodLogs
+    Count: "2,5"
+    Prob: 1
+  }
 }
 { Block Id: 894, Name: CrystalStraight
   Class: CropsGrown
@@ -13791,12 +13933,22 @@ HullCombatSmallBlocks
   Shape: Deco
   IsTerrainDecoration: true
   IsDeco: true
+  XpFactor: 1.0
   Model: @models2/Environment/Rocks/Crystals/CrystalStraightPrefab
   ShowUser: No
 }
 # used for Promethium Stone now
 { Block Id: 895, Name: CrystalsPyramidOrange, Ref: CrystalStraight
   Model: @models2/Environment/Rocks/Crystals/CrystalsPyramidOrangePrefab
+  Class: CropsGrown
+  { Child DropOnHarvest
+    Item: PentaxidOre
+    Count: 2
+  }
+  { Child CropsGrown
+    OnHarvest: CrystalsPyramidBlueHarvested
+    OnDeath: PlantDead
+  }
 }
 { Block Id: 896, Name: CrystalsPyramidBlue, Ref: CrystalStraight
   Model: @models2/Environment/Rocks/Crystals/CrystalsPyramidBluePrefab
@@ -13814,6 +13966,7 @@ HullCombatSmallBlocks
   Material: rockhard, display: true
   Shape: Deco
   IsDeco: true
+  XpFactor: 192.0
   Model: @models2/Environment/Rocks/AridRocks/AridRock01Prefab
   SizeInBlocks: "14,14,14"     # reality: "14,40,14"
   HitPoints: 7053, type: int, display: false
@@ -13843,6 +13996,7 @@ HullCombatSmallBlocks
   Material: rockhard, display: true
   Shape: Deco
   IsDeco: true
+  XpFactor: 130.0
   Model: @models2/Environment/Rocks/AridRocks/AridRock02Prefab
   SizeInBlocks: "12,14,12"     # reality: "12,20,12"
   HitPoints: 2411, type: int, display: false
@@ -13872,6 +14026,7 @@ HullCombatSmallBlocks
   Material: rockhard, display: true
   Shape: Deco
   IsDeco: true
+  XpFactor: 136.0
   Model: @models2/Environment/Rocks/AridRocks/AridRock03Prefab
   SizeInBlocks: "12,14,12"     # reality: "12,18,12"
   HitPoints: 2147, type: int, display: false
@@ -13903,6 +14058,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 3.0
   Model: @models2/Environment/Plants/SpeedTrees/WeepingPalm1Prefab
   DecoParticle: weepingpalm1
   ShowUser: No
@@ -14116,6 +14272,7 @@ HullCombatSmallBlocks
 { +Block Id: 927, Name: DecoBlocks
   Material: metallight, display: true
   Shape: Invisible
+  MarketPrice: 40, display: true
   # Model: @models2/Entities/Decorations/Sci-Fi_InteriorPack/ScifiBedPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -14137,6 +14294,7 @@ HullCombatSmallBlocks
 { +Block Id: 928, Name: ConsoleBlocks
   Material: metallight, display: true
   Shape: Invisible
+  MarketPrice: 525, display: true
   ShowBlockName: true
   # Model: @models/Blocks/Mothership/ConsoleMS01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -14162,6 +14320,7 @@ HullCombatSmallBlocks
 { +Block Id: 929, Name: IndoorPlants
   Material: metallight, display: true
   Shape: Invisible
+  MarketPrice: 33, display: true
   # Model: @models2/Entities/Decorations/IndoorPlants/IndoorPlant01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -14223,6 +14382,7 @@ HullCombatSmallBlocks
   IndexName: RCS
   Group: cpgRCS
   Material: metal, display: true
+  MarketPrice: 44845, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Mothership/RCS_BlockT2Prefab
@@ -14268,6 +14428,7 @@ HullCombatSmallBlocks
   IsDeco: true
   Model: @models2/Environment/Rocks/RealRockVol1/RealRock1Prefab
   ShowUser: No
+  XpFactor: 4.0
   HitPoints: 120, type: int, display: true
   { Child DropOnDestroy_1
     Item: CrushedStone
@@ -14330,6 +14491,7 @@ HullCombatSmallBlocks
 { Block Id: 937, Name: RealRock8Water, Ref: RealRock1Water
   Model: @models2/Environment/Rocks/RealRockVol1/RealRock8Prefab
 # SizeInBlocks: "13,10,13"
+  XpFactor: 48.0
   HitPoints: 1332, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -14530,6 +14692,7 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Rocks/DesertRockFormations/Pillar1Prefab
   SizeInBlocks: "7,13,7"
   ShowUser: No
+  XpFactor: 16.0
   HitPoints: 435, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -14595,6 +14758,7 @@ HullCombatSmallBlocks
 { Block Id: 949, Name: DesertRock2, Ref: Boulder1
   Model: @models2/Environment/Rocks/DesertRockFormations/DesertRock2Prefab
   SizeInBlocks: "4,3,3"
+  XpFactor: 4.0
   HitPoints: 107, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -14663,6 +14827,7 @@ HullCombatSmallBlocks
   Shape: Deco
   IsDeco: true
   IsPlant: true
+  XpFactor: 0.6
   Model: @models2/Environment/Plants/SpeedTrees/Cactus1Prefab
   ShowUser: No
 }
@@ -14732,6 +14897,7 @@ HullCombatSmallBlocks
   Group: cpgConstructor
   Material: metalhard, display: true
   Shape: ModelEntity
+  MarketPrice: 6095, display: true
   ShowBlockName: true
   Model: @models/Blocks/Mothership/ConstructorT1Prefab
   Mesh-Damage-1: Mesh/D0
@@ -14791,6 +14957,7 @@ HullCombatSmallBlocks
 { +Block Id: 962, Name: FoodProcessorV2
   Class: FoodProcessorV2
   IndexName: Constructor
+  MarketPrice: 2190, display: true
   Group: cpgFoodProcessor
   DontDecayFood: true   /* now this loot container is a fridge */
   Material: metallight, display: true
@@ -14845,6 +15012,7 @@ HullCombatSmallBlocks
 { +Block Id: 964, Name: OxygenGeneratorSmall
   Class: O2GeneratorSmall
   Material: metal, display: true
+  MarketPrice: 120, display: true
   Shape: ModelEntity
   Model: @models/Blocks/Terrain/OxygenGeneratorSmallPrefab
   Mesh-Damage-1: Mesh/D0
@@ -14856,7 +15024,7 @@ HullCombatSmallBlocks
   Place: Free
   Info: bkiOxygenGeneratorSmall, display: true
   IsTerrainDecoration: true
-  EnergyIn: 10, type: int, display: true, formatter: Watt
+  EnergyIn: 30, type: int, display: true, formatter: Watt
   /* oxygengenerator should run with 1 energycell (FuelValue 10kWh) => 60min */
   StackSize: 50000
   CanPickup: true
@@ -14999,6 +15167,7 @@ HullCombatSmallBlocks
 { +Block Id: 974, Name: WindowArmoredSmallBlocks
   Material: hullarmored, display: true
   Shape: Invisible
+  MarketPrice: 240, display: true
   # Model: @models/Blocks/Windows/Standard/Window_v1x1ThickPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -15056,6 +15225,7 @@ HullCombatSmallBlocks
   Material: hullarmored, display: true
   Shape: Invisible
   Mesh: models
+  MarketPrice: 395, display: true
   # Model: Mothership/windowVertMS, param1: window_nontransparent
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Info: bkiBlockGroup, display: true
@@ -15195,6 +15365,7 @@ HullCombatSmallBlocks
   IndexName: Door
   Group: cpgDoor
   Material: metal, display: true
+  MarketPrice: 393, display: true
   Shape: Invisible
   # Model: @models/Blocks/Mothership/DoorInterior01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -15280,6 +15451,7 @@ HullCombatSmallBlocks
   Class: Door
   IndexName: Door
   Group: cpgDoor
+  MarketPrice: 3465, display: true
   Material: hullarmored, display: true
   Shape: Invisible
   # Model: @models/Blocks/Mothership/HangarDoor10x5Prefab
@@ -15394,8 +15566,10 @@ HullCombatSmallBlocks
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
   HitPoints: 120, type: int, display: true
-  SoundOpen: UseActions/DOOROpen01
-  SoundClose: UseActions/DOOROpen01
+  #SoundOpen: UseActions/DOOROpen01
+  #SoundClose: UseActions/DOOROpen01
+  SoundOpen: UseActions/electric
+  SoundClose: UseActions/electric
   PlayerTriggersOpen: true
 
 }
@@ -15424,6 +15598,8 @@ HullCombatSmallBlocks
   # Volume: 4000, type: float, display: true, formatter: Liter
   HitPoints: 1910, type: int, display: true
   Mass: 560, type: float, display: true, formatter: Kilogram
+  SoundOpen: UseActions/DOOROpen01
+  SoundClose: UseActions/DOOROpen01
   PlayerTriggersOpen: true
 }
 { +Block Id: 1015, Name: ShutterDoor5x5, Ref: ShutterDoor1x1
@@ -15433,6 +15609,8 @@ HullCombatSmallBlocks
   # Volume: 6000, type: float, display: true, formatter: Liter
   HitPoints: 2980, type: int, display: true
   Mass: 700, type: float, display: true, formatter: Kilogram
+  SoundOpen: UseActions/DOOROpen01
+  SoundClose: UseActions/DOOROpen01
   PlayerTriggersOpen: true
 }
 { +Block Id: 1016, Name: ShutterDoorLargeBlocks
@@ -15440,6 +15618,7 @@ HullCombatSmallBlocks
   IndexName: Door
   Material: hullarmored, display: true
   Shape: Invisible
+  MarketPrice: 992, display: true
   # Model: @models/Blocks/Mothership/ShutterDoor1x1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -15486,8 +15665,8 @@ HullCombatSmallBlocks
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
   HitPoints: 30, type: int, display: true
-  SoundOpen: UseActions/DOOROpen01
-  SoundClose: UseActions/DOOROpen01
+  SoundOpen: UseActions/electric
+  SoundClose: UseActions/electric
   PlayerTriggersOpen: false
 }
 { +Block Id: 1018, Name: ShutterDoor2x2SV, Ref: ShutterDoor1x1SV
@@ -15510,6 +15689,7 @@ HullCombatSmallBlocks
   IndexName: Door
   Material: hullarmored, display: true
   Shape: Invisible
+  MarketPrice: 436, display: true
   # Model: @models/Blocks/Spaceship/ShutterDoor1x1SVPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -15523,8 +15703,10 @@ HullCombatSmallBlocks
   IsOxygenTight: true, display: true
   Category: Devices
   # HitPoints: 200, type: int, display: false
-  SoundOpen: UseActions/HangarDoor
-  SoundClose: UseActions/HangarDoor
+  # SoundOpen: UseActions/HangarDoor
+  # SoundClose: UseActions/HangarDoor
+  SoundOpen: UseActions/electric
+  SoundClose: UseActions/electric
   PlayerTriggersOpen: false
   ChildBlocks: "ShutterDoor1x1SV, ShutterDoor2x2SV, ShutterDoor3x3SV, ShutterDoor3x4SV"
 
@@ -15546,6 +15728,8 @@ HullCombatSmallBlocks
   # Volume: 100, type: float, display: true, formatter: Liter
   HitPoints: 100, type: int, display: true
   Mass: 25, type: float, display: true, formatter: Kilogram
+  SoundOpen: UseActions/electric
+  SoundClose: UseActions/electric
   ParentBlocks: "RampSmallBlocks, RampLargeBlocks"
 }
 { +Block Id: 1023, Name: Ramp3x2x1, Ref: RampTemplate
@@ -15586,6 +15770,8 @@ HullCombatSmallBlocks
   Volume: 50, type: float, display: true, formatter: Liter
   HitPoints: 100, type: int, display: true
   Mass: 15, type: float, display: true, formatter: Kilogram
+  SoundOpen: UseActions/electric
+  SoundClose: UseActions/electric
   ParentBlocks: "RampSmallBlocks, RampLargeBlocks"
 }
 { +Block Id: 1028, Name: Ramp1x2x1, Ref: RampTemplate
@@ -15651,12 +15837,17 @@ HullCombatSmallBlocks
 { +Block Id: 1034, Name: GeneratorMST2, Ref: GeneratorMS
   Model: @models/Blocks/Mothership/generatorMST2Prefab
   EnergyOut: 200000, type: int, display: true, formatter: Watt
+  MarketPrice: 178940, display: true
   CPUIn: 22500, type: int, display: true
   SizeInBlocks: "6,2,2", display: true
   Volume: 2668, type: float, display: true, formatter: Liter
   Mass: 37355, type: float, display: true, formatter: Kilogram
   HitPoints: 500, type: int, display: true
   StackSize: 50000
+
+  BlastParticleIndex: 1
+  BlastRadius: 15
+  BlastDamage: 30000
 
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
@@ -15668,13 +15859,17 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1035, Name: FuelTankMSLargeT2, Ref: FuelTankMSLarge
   LootList: 47
+  MarketPrice: 3760, display: true
   Model: @models/Blocks/Mothership/FuelTankMSLargeT2Prefab
   SizeInBlocks: "2,2,1", display: true
   Volume: 255, type: float, display: true, formatter: Liter
   CPUIn: 1500, type: int, display: true
   Mass: 3570, type: float, display: true, formatter: Kilogram
   HitPoints: 80, type: int, display: true
-  FuelCapacity: 6000, type: int, display: true
+  FuelCapacity: 12000, type: int, display: true
+  BlastParticleIndex: 1
+  BlastRadius: 11
+  BlastDamage: 7500
 
   Radiation: 2.8, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
 
@@ -15705,6 +15900,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 7.0
   Model: @models2/Environment/Plants/SpeedTrees/AkuaRainforestPrefab
   DecoParticle: chinesebanyan
   ShowUser: No
@@ -15722,6 +15918,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 3.0
   BigDecorationRadius: 10
   /* Model: @models2/Environment/Plants/SpeedTrees/RiverBirchPrefab   */
   Model: @models2/Environment/Plants/SpeedTrees/AlienBirchPrefab
@@ -15742,6 +15939,7 @@ HullCombatSmallBlocks
   IsDeco: true
   IsPlant: true
   BigDecorationRadius: 10
+  XpFactor: 7.0
   Model: @models2/Environment/Plants/SpeedTrees/AlienOakPrefab
   DecoParticle: chinesebanyan
   ShowUser: No
@@ -15760,6 +15958,7 @@ HullCombatSmallBlocks
   IsDeco: true
   IsPlant: true
   BigDecorationRadius: 10
+  XpFactor: 7.0
   /* Model: @models2/Environment/Plants/SpeedTrees/AmericanElmPrefab   */
   Model: @models2/Environment/Plants/SpeedTrees/AlienElmPrefab
   DecoParticle: chinesebanyan
@@ -15786,6 +15985,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 2.0
   Model: @models2/Environment/Plants/SpeedTrees/AkuaPalmPrefab
   DecoParticle: omicronwaterleaf
   ShowUser: No
@@ -15811,6 +16011,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 2.0
   Model: @models2/Environment/Plants/SpeedTrees/AkuaPlantPrefab
   DecoParticle: omicronwaterleaf
   ShowUser: No
@@ -15848,6 +16049,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 3.0
   Model: @models2/Environment/Plants/SpeedTrees/UmbrellaTreePrefab
   DecoParticle: omicronwaterleaf
   ShowUser: No
@@ -15864,6 +16066,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 3.0
   Model: @models2/Environment/Plants/SpeedTrees/AkuaPlant2Prefab
   DecoParticle: omicronwaterleaf
   ShowUser: No
@@ -15931,6 +16134,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 4.0
   Model: @models2/Environment/Plants/SpeedTrees/SnowTreeRed1Prefab
   DecoParticle: snowtreered
   ShowUser: No
@@ -15947,6 +16151,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 3.0
   Model: @models2/Environment/Plants/SpeedTrees/SnowTreeRed2Prefab
   DecoParticle: snowtreered
   ShowUser: No
@@ -15981,6 +16186,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 2.0
   Model: @models2/Environment/Plants/SpeedTrees/AlienDesertPlantPrefab
   ShowUser: No
   SizeInBlocks: "3,4,3"
@@ -15996,6 +16202,7 @@ HullCombatSmallBlocks
   IsTerrainDecoration: true
   IsDeco: true
   IsPlant: true
+  XpFactor: 3.0
   Model: @models2/Environment/Plants/SpeedTrees/LeafPlantPrefab
   ShowUser: No
   SizeInBlocks: "3,4,3"
@@ -16093,6 +16300,7 @@ HullCombatSmallBlocks
 { +Block Id: 1075, Name: TrussLargeBlocks
   Material: hullarmored, display: true
   Shape: Invisible
+  MarketPrice: 130, display: true
   Place: Free
   # Model: Truss/TrussCube
   Mesh: cutout
@@ -16164,6 +16372,7 @@ HullCombatSmallBlocks
   EnergyIn: 0, type: int, display: true, formatter: Watt
   # BuffNamesActivate: "ReduceRadiation,DecreaseBodyTemp,IncreaseBodyTemp", display: StatusEffect
   BuffNamesActivate: "ReduceRadiation,NeutralBodyTemp", display: StatusEffect
+  DebuffNamesActivate: "Fire"
   SfxBuffActivate: UseActions/BlockShower
   ShowUser: Yes
 }
@@ -16313,6 +16522,7 @@ HullCombatSmallBlocks
   Class: CockpitSS
   IndexName: Cockpit
   Group: cpgCockpit
+  MarketPrice: 2510, display: true
   EssentialCategory: cpgCockpit
   Material: metal, display: true
   Shape: Invisible
@@ -16346,6 +16556,7 @@ HullCombatSmallBlocks
 { +Block Id: 1095, Name: LCDScreenBlocks
   Material: metallight, display: true
   Shape: Invisible
+  MarketPrice: 531, display: true
   # Model: @models/Blocks/Misc/LCDNoFrame1x1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   HitPoints: 50, type: int, display: false
@@ -16461,6 +16672,7 @@ HullCombatSmallBlocks
   Material: metalhard, display: true
   Shape: Invisible
   Place: Free
+  MarketPrice: 1137, display: true
   # Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterSSRoundNormalPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   StackSize: 50000
@@ -16490,6 +16702,7 @@ HullCombatSmallBlocks
   Class: AutoMiner
   Material: metalhard, display: true
   Shape: ModelEntity
+  MarketPrice: 63995, display: true
   Model: @models/Blocks/Terrain/AutoMiningDeviceT1Prefab
   Mesh-Damage-1: Mesh/geo/D0
   Mesh-Damage-2: Mesh/geo/D1
@@ -16519,9 +16732,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   FuelAccept: "EnergyCell, EnergyCellLarge, FusionCell, BioFuel"
 
-  BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastParticleIndex: 8
+  BlastRadius: 9
+  BlastDamage: 500
 
   UnlockCost: 15, display: true
   UnlockLevel: 12, display: true
@@ -16536,6 +16749,7 @@ HullCombatSmallBlocks
 { +Block Id: 1109, Name: AutoMiningDeviceT2, Ref: AutoMiningDeviceT1
   Model: @models/Blocks/Terrain/AutoMiningDeviceT2Prefab
   HitPoints: 6000, type: int, display: true
+  MarketPrice: 97567, display: true
   EnergyIn: 200, type: int, display: true, formatter: Watt
   ItemsPerHour: 200, display: true        # Attention: ItemsPerHour max is hard coded and set to 500
   ItemStorageLimit: 3500, display: true
@@ -16555,6 +16769,7 @@ HullCombatSmallBlocks
 { +Block Id: 1110, Name: AutoMiningDeviceT3, Ref: AutoMiningDeviceT1
   Model: @models/Blocks/Terrain/AutoMiningDeviceT3Prefab
   HitPoints: 7000, type: int, display: true
+  MarketPrice: 174945, display: true
   EnergyIn: 320, type: int, display: true, formatter: Watt
   ItemsPerHour: 400, display: true       # Attention: ItemsPerHour max is hard coded and set to 500
   ItemStorageLimit: 6993, display: true
@@ -16575,6 +16790,7 @@ HullCombatSmallBlocks
   Group: cpgEquipment
   Class: RepairBay
   IndexName: RepairBay
+  MarketPrice: 77657, display: true
   Info: bkiRepairBay, display: true
   Material: metal, display: true
   Shape: ModelEntity
@@ -16599,7 +16815,7 @@ HullCombatSmallBlocks
   CPUIn: 25000, type: int, display: true
   HitPoints: 500, type: int, display: true
   EnergyDynamicGroup: RepairBay
-  RepairPerSecond: 500, display: true
+  RepairPerSecond: 5000, display: true
   Repairs: "MS,SS,GV", display: true
   IsDuplicateable: false
   MaxCount: 1, type: int, display: true
@@ -16617,6 +16833,7 @@ HullCombatSmallBlocks
   Class: Door
   IndexName: Door
   Group: cpgDoor
+  MarketPrice: 1073, display: true
   Material: hullarmored, display: true
   Shape: Invisible
   # Model: @models/Blocks/Mothership/DoorNewArmoredPrefab
@@ -16678,6 +16895,7 @@ HullCombatSmallBlocks
   IndexName: LandingGear
   Material: metalhard, display: true
   Shape: Invisible
+  MarketPrice: 165, display: true
   ShowBlockName: true
   IsPhysicsColliders: false
   # Model: @models/Blocks/Landinggears/LandinggearLightPrefab
@@ -16704,6 +16922,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1119, Name: LandinggearBlocksHeavySV, Ref: LandinggearBlocksSV
   Shape: Invisible
+  MarketPrice: 245, display: true
   # Model: @models/Blocks/Landinggears/LandinggearHeavyPrefab
   Info: bkiBlockGroup, display: true
   SizeInBlocks: "2,1,2", display: false
@@ -16721,6 +16940,7 @@ HullCombatSmallBlocks
   Material: metalhard, display: true
   Shape: Invisible
   ShowBlockName: true
+  MarketPrice: 362, display: true
   # Model: @models/Blocks/Landinggears/LandinggearLightPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -16816,6 +17036,7 @@ HullCombatSmallBlocks
   Group: cpgHoverEngine
   EssentialCategory: cpgHoverEngine
   Material: metal, display: true
+  MarketPrice: 857, display: true
   Shape: ModelEntity
   ShowBlockName: true
   # ModelOffset: "0,0.5,0"
@@ -16849,9 +17070,9 @@ HullCombatSmallBlocks
 
   HitPoints: 100, type: int, display: true
 
-  BlastParticleIndex: 4
+  BlastParticleIndex: 10
   BlastRadius: 2
-  BlastDamage: 50
+  BlastDamage: 90
 
   UnlockCost: 3, display: true
   UnlockLevel: 3, display: true
@@ -16862,6 +17083,7 @@ HullCombatSmallBlocks
 { +Block Id: 1128, Name: WindowLargeBlocks
   Material: hull, display: true
   Shape: Invisible
+  MarketPrice: 555, display: true
   # Model: @models/Blocks/Windows/Standard/Window_v1x1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -16892,6 +17114,7 @@ HullCombatSmallBlocks
 { +Block Id: 1129, Name: WindowArmoredLargeBlocks
   Material: hullcombat, display: true
   Shape: Invisible
+  MarketPrice: 1370, display: true
   # Model: @models/Blocks/Windows/Standard/Window_v1x1ThickPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -16919,6 +17142,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 1130, Name: HoverEngineLarge, Ref: HoverEngineSmall
   SizeInBlocks: "2,1,2", display: true
+  MarketPrice: 1690, display: true
   Model: @models/Blocks/Spaceship/HoverEngineLargePrefab
   Mass: 340, type: float, display: true, formatter: Kilogram
   Volume: 125, type: float, display: true, formatter: Liter
@@ -16938,10 +17162,12 @@ HullCombatSmallBlocks
 
 { +Block Id: 1131, Name: RepairBayCV, Ref: RepairBayBA
   AllowPlacingAt: MS, display: true
+  MarketPrice: 80395, display: true
   EnergyIn: 20000, type: int, display: true, formatter: Watt
   HitPoints: 500, type: int, display: true
   Repairs: "SS,GV", display: true
-  RepairPerSecond: 400, display: true
+  RepairPerSecond: 2000, display: true
+  EnergyDynamicGroup: RepairBay
   UpgradeTo: RepairBayCVT2, display: true
   Mass: 9225, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
@@ -16959,6 +17185,7 @@ HullCombatSmallBlocks
   IndexName: Constructor
   Group: cpgConstructor
   Material: metal, display: true
+  MarketPrice: 39887, display: true
   Shape: ModelEntity
   Model: @models/Blocks/Mothership/FurnacePrefab
   Mesh-Damage-1: Mesh/D0
@@ -16989,9 +17216,9 @@ HullCombatSmallBlocks
   EnergyDynamicGroup: Constructor
   HitPoints: 1500, type: int, display: true
 
-  BlastParticleIndex: 11
-  BlastRadius: 5
-  BlastDamage: 500
+  BlastParticleIndex: 1
+  BlastRadius: 7
+  BlastDamage: 4500
 
   UnlockCost: 15, display: true
   UnlockLevel: 12, display: true
@@ -17035,6 +17262,7 @@ HullCombatSmallBlocks
 { +Block Id: 1134, Name: ATM
   Class: ATM
   Group: cpgTrading
+  MarketPrice: 2305, display: true
   Material: metallight, display: true
   Shape: ModelEntity
   ShowBlockName: true
@@ -17069,6 +17297,7 @@ HullCombatSmallBlocks
 { +Block Id: 1135, Name: WingBlocks
   Material: metallight, display: true
   Texture: 50
+  MarketPrice: 465, display: true
   BlockColor: "110,110,110"
   Shape: Invisible
   # Model: Wings/Wing6x9a
@@ -17091,6 +17320,8 @@ HullCombatSmallBlocks
 
 { +Block Id: 1136, Name: BlastDoorLargeBlocks
   Class: Door
+  MarketPrice: 9555, display: true
+  CustomIcon: BlastShutterDoors1x1x1
   IndexName: Door
   Material: hullcombat, display: true
   Shape: Invisible
@@ -17142,6 +17373,7 @@ HullCombatSmallBlocks
   SoundOpen: UseActions/HangarDoor
   SoundClose: UseActions/HangarDoor
   PlayerTriggersOpen: true
+  AllowWander: true
 }
 { Block Id: 1138, Name: BlastShutterDoors2x1x1, Ref: BlastShutterDoors1x1x1
   Model: @models/Blocks/Mothership/BlastShutterDoors2x1x1Prefab
@@ -17210,9 +17442,9 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   StackSize: 50000
   # MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 8
+  BlastRadius: 5
+  BlastDamage: 280
   EnergyIn: 750, type: int, display: true, formatter: Watt
   CPUIn: 15100, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
@@ -17252,8 +17484,8 @@ HullCombatSmallBlocks
   StackSize: 50000
   MaxCount: 6, type: int, display: true
   BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastRadius: 4
+  BlastDamage: 400
   EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 8600, type: int, display: true
   Mass: 5980, type: float, display: true, formatter: Kilogram
@@ -17288,9 +17520,9 @@ HullCombatSmallBlocks
   # ModelOffset: "0,0.5,0"
   StackSize: 50000
   MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 1
+  BlastRadius: 6
+  BlastDamage: 1800
   EnergyIn: 110, type: int, display: true, formatter: Watt
   CPUIn: 10500, type: int, display: true
   Mass: 5777, type: float, display: true, formatter: Kilogram
@@ -17365,9 +17597,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   StackSize: 50000
   # MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 8
+  BlastRadius: 7
+  BlastDamage: 750
   CPUIn: 10100, type: int, display: true
   Mass: 5777, type: float, display: true, formatter: Kilogram
   HitPoints: 19600, type: int, display: true
@@ -17408,7 +17640,7 @@ HullCombatSmallBlocks
   MaxCount: 6, type: int, display: true
   BlastParticleIndex: 11
   BlastRadius: 3
-  BlastDamage: 80
+  BlastDamage: 400
   EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 2800, type: int, display: true
   Mass: 6000, type: float, display: true, formatter: Kilogram
@@ -17445,9 +17677,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   StackSize: 50000
   MaxCount: 6, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 8
+  BlastRadius: 4
+  BlastDamage: 500
   EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 15100, type: int, display: true
   Mass: 11760, type: float, display: true, formatter: Kilogram
@@ -17486,9 +17718,9 @@ HullCombatSmallBlocks
   BlockColor: "110,110,110"
   StackSize: 50000
   MaxCount: 2, type: int, display: true
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 1
+  BlastRadius: 9
+  BlastDamage: 2800
   EnergyIn: 100, type: int, display: true, formatter: Watt
   CPUIn: 22600, type: int, display: true
   Mass: 19800, type: float, display: true, formatter: Kilogram
@@ -17583,6 +17815,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 1167, Name: ElderberryStage1
   Class: PlantGrowing
+  MarketPrice: 165, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   Material: plants, display: true
@@ -18218,6 +18451,7 @@ HullCombatSmallBlocks
 { +Block Id: 1230, Name: SensorTriggerBlocksSV
   Material: metal, display: true
   Shape: Invisible
+  MarketPrice: 47, display: true
   # Model: @models/Blocks/Misc/LeverPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   # ModelOffset: "0,0.5,0"
@@ -18287,6 +18521,7 @@ HullCombatSmallBlocks
   # Model: @models/Blocks/WeaponsShip/DrillAttachmentT2Prefab
   WeaponItem: DrillAttachmentT2Weapon
   Damage: 30, display: true
+  MarketPrice: 20185, display: true
 
   Volume: 62.5, type: float, display: true, formatter: Liter
   Mass: 1165, type: float, display: true, formatter: Kilogram
@@ -18310,6 +18545,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1238, Name: GrowingPotConcrete, Ref: GrowingPot
   Info: bkiGrowingPotSimple, display: true
+  MarketPrice: 318, display: true
   Texture: "6,93,93,93,93,93"
   TextureTable: 2    /* 2 = concrete table */
   BlockColor: "110,110,110"
@@ -18317,7 +18553,6 @@ HullCombatSmallBlocks
   Mass: 1880, type: float, display: true, formatter: Kilogram
   Volume: 80, type: float, display: true, formatter: Liter
   UpgradeTo: GrowingPot, display: true
-  MarketPrice: 54.15
 
   UnlockCost: 50, display: true
   UnlockLevel: 5, display: true
@@ -18325,6 +18560,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1239, Name: GrowingPotWood, Ref: GrowingPot
   # Material: fertilelow, display: true
+  MarketPrice: 238
   Info: bkiGrowingPotSimple, display: true
   Texture: "6,70,70,70,70,70"
   TextureTable: 1    /* 1 = wood table */
@@ -18332,7 +18568,6 @@ HullCombatSmallBlocks
   AllowPlacingAt: Base, display: true
   Mass: 795, type: float, display: true, formatter: Kilogram
   Volume: 80, type: float, display: true, formatter: Liter
-  MarketPrice: 58.38
   UpgradeTo: GrowingPotConcrete, display: true
 
   UnlockCost: 30, display: true
@@ -18474,6 +18709,7 @@ HullCombatSmallBlocks
   Class: CockpitSS
   IndexName: Cockpit
   Group: cpgCockpit
+  MarketPrice: 13165, display: true
   EssentialCategory: cpgCockpit
   Material: metalhard, display: true
   Shape: Invisible
@@ -18640,21 +18876,21 @@ HullCombatSmallBlocks
   ModelScaleLocked: true
   Sound: UseActions/MotionSensor
 }
-{ Block Id: 1261, Name: SpringGun
-  Class: Weapon
-  Group: cpgSignal
-  IndexName: WeaponShip
-  Material: hull, display: true
-  Shape: ModelEntity
-  Model: @models/Blocks/Turrets/SentryGuns/SentryGunAlienWallPrefab
-  # Model: @models/Blocks/Turrets/SentryGuns/sentryGun01Prefab
-  DropMeshfile: Entities/Misc/BagSmallPrefab
-  Place: Free
-  # ModelOffset: "0,0.5,0"
-  # SizeInBlocks: "1,1,1"
-  AllowPlacingAt: "Base,MS", display: true
-  ShowUser: No
-}
+#{ Block Id: 1261, Name: SpringGun
+#  Class: Weapon
+#  Group: cpgSignal
+#  IndexName: WeaponShip
+#  Material: hull
+#  Shape: ModelEntity
+#  Model: @models/Blocks/Turrets/SentryGuns/SentryGunAlienWallPrefab
+#  # Model: @models/Blocks/Turrets/SentryGuns/sentryGun01Prefab
+#  DropMeshfile: Entities/Misc/BagSmallPrefab
+#  Place: Free
+#  # ModelOffset: "0,0.5,0"
+#  # SizeInBlocks: "1,1,1"
+#  AllowPlacingAt: "Base,MS", display: true
+#  ShowUser: No
+#}
 { +Block Id: 1262, Name: Lever
   Class: Switch
   Group: cpgSignal
@@ -18796,6 +19032,7 @@ HullCombatSmallBlocks
 { Block Id: 1267, Name: RealRock3Dark, Ref: RealRock1
   Model: @models2/Environment/Rocks/RealRockVol1/RealRock3DarkPrefab
   SizeInBlocks: "7,7,7"
+  XpFactor: 4.0
   HitPoints: 224, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -18822,6 +19059,7 @@ HullCombatSmallBlocks
 { Block Id: 1268, Name: RealRock8Dark, Ref: RealRock1
   Model: @models2/Environment/Rocks/RealRockVol1/RealRock8DarkPrefab
   SizeInBlocks: "13,10,13"
+  XpFactor: 68.0
   HitPoints: 1332, type: int, display: true
   # DecoParticle: rocks
   { Child DropOnDestroy_1
@@ -18870,6 +19108,7 @@ HullCombatSmallBlocks
 { +Block Id: 1278, Name: LightLargeBlocks
   Material: metallight, display: true
   Shape: Invisible
+  MarketPrice: 40, display: true
   # Model: @models/Blocks/Mothership/lightMS01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -18901,6 +19140,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1281, Name: DecoBlocks2, Ref: DecoBlocks
   Shape: Invisible
+  MarketPrice: 255, display: true
   # Model: @models2/Entities/Decorations/LaboratoryPack/Scanner3Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   SizeInBlocks: "1,1,1", display: true
@@ -19141,6 +19381,7 @@ HullCombatSmallBlocks
   Info: bkiDetector, display: true
   WeaponItem: DetectorCVWeapon
   WeaponItemRotation: false
+  MarketPrice: 12535, display: true
   IndexName: WeaponShip
   Group: cpgEquipment
   Material: metal, display: true
@@ -19273,6 +19514,7 @@ HullCombatSmallBlocks
   Class: Teleporter
   Group: cpgTransportation
   Category: Devices
+  MarketPrice: 49380, display: true
   IndexName: Teleporter
   Info: bkiTeleporterCV, display: true
   # AllowedInBlueprint: false, display: true
@@ -19360,6 +19602,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1321, Name: SpotlightBlocks, Ref: SpotlightSSCube
   Shape: Invisible
+  MarketPrice: 440, display: true
   # Model: @models/Blocks/Spaceship/spotlightSSCubePrefab
   Mass: 85, type: float, display: true, formatter: Kilogram
   Volume: 12.5, type: float, display: true, formatter: Liter
@@ -19376,6 +19619,7 @@ HullCombatSmallBlocks
 /* Armored Concrete Block */
 { +Block Id: 1322, Name: ConcreteArmoredBlocks
   Material: concretearmored, display: true
+  MarketPrice: 195, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 93
   TextureTable: 2    /* 2 = concrete table */
@@ -19563,6 +19807,7 @@ HullCombatSmallBlocks
   Info: bkiBlockGroup, display: true
   Mass: 1200, type: float, display: true, formatter: Kilogram
   StackSize: 50000
+  MarketPrice: 2833, display: true
   SizeInBlocks: "1,3,1", display: true
   ChildBlocks: "Runestone, StoneBarbarian, CelticCross, DemonHead, DemonicStatue, GothicFountain, GreekHead, MayanStatueSnake, SnakeStatue, StatueSkull, TigerStatue, AncientStatue, DemonicStatueSmall, MayanStatueSnakeSmall, SnakeStatueSmall, TigerStatueSmall"
 }
@@ -19601,6 +19846,7 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/AlienFlora/Mushroom01Prefab
   IsTerrainDecoration: true
   IsDeco: true
+  XpFactor: 1.5
   IsPlant: true
   ShowUser: No
   # SizeInBlocks: "1,1,1"
@@ -19630,6 +19876,7 @@ HullCombatSmallBlocks
 { Block Id: 1345, Name: CthulhuTree02, Ref: Mushroom01
   Material: wood, display: true
   IsPlant: true
+  XpFactor: 8.0
   Model: @models2/Environment/Plants/AlienFlora/CthulhuTree02Prefab
   SizeInBlocks: "3,6,3"
   { Child DropOnDestroy
@@ -19650,6 +19897,7 @@ HullCombatSmallBlocks
   }
   Model: @models2/Environment/Plants/AlienFlora/BigFlowerPrefab
   SizeInBlocks: "3,4,3"
+  XpFactor: 0.25
   { Child DropOnDestroy
     Count: 0
   }
@@ -19665,6 +19913,7 @@ HullCombatSmallBlocks
 { Block Id: 1349, Name: BallFlower01, Ref: Mushroom01
   Model: @models2/Environment/Plants/AlienFlora/BallFlower01Prefab
   SizeInBlocks: "2,4,2"
+  XpFactor: 3.0
   { Child DropOnDestroy
     Item: WoodLogs
     Count: "2,3"
@@ -19735,9 +19984,6 @@ HullCombatSmallBlocks
 # NPCAdminCore
 { +Block Id: 1360, Name: CoreNPCAdmin, Ref: CoreNPC
   Model: @models/Blocks/Misc/CoreBlockNPCAdminPrefab
-  # Special trick
-  # TemplateRoot: CoreNPCAdmin
-  # PickupTarget: CoreNPCAdmin
   IsDestructible: false
   IsKeepContainers: true
   BlockColor: "171,32,161"
@@ -19778,6 +20024,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 1367, Name: SnakeweedStage1
   Class: PlantGrowing
+  MarketPrice: 110, display: true
   AllowedInBlueprint: false, display: true
   IndexName: Plant
   Material: plants, display: true
@@ -19846,6 +20093,7 @@ HullCombatSmallBlocks
   Class: ArmorLocker
   Group: cpgEquipment
   GridSize: "5,3"
+  MarketPrice: 1090, display: true
   Material: metal, display: true
   Shape: ModelEntity
   ShowBlockName: true
@@ -19886,6 +20134,7 @@ HullCombatSmallBlocks
   Class: Deconstructor
   Group: cpgConstructor
   IndexName: Constructor
+  MarketPrice: 20777, display: true
   Material: metalhard, display: true
   Shape: ModelEntity
   Model: @models/Blocks/Mothership/DeconstructorPrefab
@@ -19929,6 +20178,7 @@ HullCombatSmallBlocks
   Class: RepairStation
   IndexName: Container
   Group: cpgEquipment
+  MarketPrice: 13027, display: true
   GridSize: "4,4"
   Material: metal, display: true
   Shape: ModelEntity
@@ -20021,6 +20271,7 @@ HullCombatSmallBlocks
   Class: Door
   IndexName: Door
   Material: metal, display: true
+  MarketPrice: 428, display: true
   Shape: Invisible
   # Model: @models/Blocks/Spaceship/DoorNewSSPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -20054,6 +20305,7 @@ HullCombatSmallBlocks
 { +Block Id: 1377, Name: TeleporterBA
   Info: bkiTeleporterBA, display: true
   Class: Teleporter
+  MarketPrice: 64210, display: true
   Group: cpgTransportation
   Category: Devices
   IndexName: Teleporter
@@ -20083,9 +20335,9 @@ HullCombatSmallBlocks
   CPUIn: 35000, type: int, display: true
   Volume: 480, type: float, display: true, formatter: Liter
   HitPoints: 350, type: int, display: true
-  BlastParticleIndex: 4
-  BlastRadius: 3
-  BlastDamage: 80
+  BlastParticleIndex: 10
+  BlastRadius: 7
+  BlastDamage: 8000
   AttackTimeout: 40
 
   UnlockCost: 20, display: true
@@ -20119,6 +20371,7 @@ HullCombatSmallBlocks
 { +Block Id: 1380, Name: ArmorLockerSV
   Class: ArmorLocker
   Group: cpgEquipment
+  MarketPrice: 587, display: true
   GridSize: "5,1"
   Material: metal, display: true
   Shape: ModelEntity
@@ -20153,51 +20406,51 @@ HullCombatSmallBlocks
   TechTreeParent: OxygenStationSV
   TechTreeNames: "Small Vessel,Hover Vessel"
 }
-{ Block Id: 1381, Name: ArtMassCVBlocks
-  Material: hull, display: true
-  DropMeshfile: Entities/Misc/BagSmallPrefab
-  Texture: 31
-  BlockColor: "110,110,110"
-  Shape: Invisible
-  # Model: Cube
-  Info: bkiArtificialmass, display: true
-  Category: BuildingBlocks
-  AllowPlacingAt: MS, display: true
-  HitPoints: 500, type: int, display: true
-  Mass: 60000, type: float, display: true, formatter: Kilogram
-  Volume: 1000, type: float, display: true, formatter: Liter
-  ChildBlocks: "ArtMassLightCV, ArtMassMediumCV, ArtMassHeavyCV"
+#{ Block Id: 1381, Name: ArtMassCVBlocks
+#  Material: hull
+#  DropMeshfile: Entities/Misc/BagSmallPrefab
+#  Texture: 31
+#  BlockColor: "110,110,110"
+#  Shape: Invisible
+#  # Model: Cube
+#  Info: bkiArtificialmass, display: true
+#  Category: BuildingBlocks
+#  AllowPlacingAt: MS, display: true
+#  HitPoints: 500, type: int, display: true
+#  Mass: 60000, type: float, display: true, formatter: Kilogram
+#  Volume: 1000, type: float, display: true, formatter: Liter
+#  ChildBlocks: "ArtMassLightCV, ArtMassMediumCV, ArtMassHeavyCV"
 
   # UnlockCost: 0
   # UnlockLevel: 1
   # TechTreeNames: ""
 
-  ShowUser: No
-}
-{ Block Id: 1382, Name: ArtMassLightCV
-  Material: hull, display: true
-  DropMeshfile: Entities/Misc/BagSmallPrefab
-  Texture: 31
-  BlockColor: "170,170,170"
-  Shape: New
-  Model: Cube
-  TemplateRoot: ArtMassBlocks
-  Info: bkiArtificialmass, display: true
-  AllowPlacingAt: MS, display: true
-  Category: BuildingBlocks
-  HitPoints: 500, type: int, display: true
-  Mass: 60000, type: float, display: true, formatter: Kilogram
-  Volume: 1000, type: float, display: true, formatter: Liter
-  ShowUser: No
-}
-{ Block Id: 1383, Name: ArtMassMediumCV, Ref: ArtMassLightCV
-  BlockColor: "110,110,110"
-  Mass: 180000, type: float, display: true, formatter: Kilogram
-}
-{ Block Id: 1384, Name: ArtMassHeavyCV, Ref: ArtMassLightCV
-  BlockColor: "10,10,10"
-  Mass: 560000, type: float, display: true, formatter: Kilogram
-}
+#  ShowUser: No
+#}
+#{ Block Id: 1382, Name: ArtMassLightCV
+#  Material: hull
+#  DropMeshfile: Entities/Misc/BagSmallPrefab
+#  Texture: 31
+#  BlockColor: "170,170,170"
+#  Shape: New
+#  Model: Cube
+#  TemplateRoot: ArtMassBlocks
+#  Info: bkiArtificialmass, display: true
+#  AllowPlacingAt: MS, display: true
+#  Category: BuildingBlocks
+#  HitPoints: 500, type: int, display: true
+#  Mass: 60000, type: float, display: true, formatter: Kilogram
+#  Volume: 1000, type: float, display: true, formatter: Liter
+#  ShowUser: No
+#}
+#{ Block Id: 1383, Name: ArtMassMediumCV, Ref: ArtMassLightCV
+#  BlockColor: "110,110,110"
+#  Mass: 180000, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 1384, Name: ArtMassHeavyCV, Ref: ArtMassLightCV
+#  BlockColor: "10,10,10"
+#  Mass: 560000, type: float, display: true, formatter: Kilogram
+#}
 { +Block Id: 1385, Name: PlayerSpawnerPlateThin, Ref: PlayerSpawner
   Texture: 51
   BlockColor: "0,15,100"
@@ -20364,6 +20617,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 1395, Name: AlienLargeBlocks, Ref: AlienBlocks
   Material: alien, display: true
+  MarketPrice: 1282, display: true
   Info: bkiBlockGroup, display: true
   AllowedInBlueprint: true, display: false
   HitPoints: 2750, type: int, display: false
@@ -20379,6 +20633,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1396, Name: AlienFullLarge, Ref: AlienFull
   Material: alien, display: true
+  MarketPrice: 1282, display: true
   AllowedInBlueprint: true, display: false
   HitPoints: 2750, type: int, display: true
   Mass: 1500, type: float, display: true, formatter: Kilogram
@@ -20390,6 +20645,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1397, Name: AlienThinLarge, Ref: AlienThin
   Material: alien, display: true
+  MarketPrice: 1282, display: true
   AllowedInBlueprint: true, display: false
   TemplateRoot: AlienLargeBlocks
   PickupTarget: AlienLargeBlocks
@@ -20423,6 +20679,7 @@ HullCombatSmallBlocks
 }
 
 { +Block Id: 1402, Name: CoreNoCPU, Ref: Core
+  MarketPrice: 100000000, display: true
   #Model: @models/Blocks/Misc/CoreBlockPlayerPrefab
   IsUsingCPUSystem: false
   Info: bkiCoreNoCPU, display: true
@@ -20565,6 +20822,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1417, Name: ThrusterGVJetRound1x3x1, Ref: ThrusterGVRoundNormal
   Model: @models/Blocks/Thrusters/ThrusterJetRound1x3x1Prefab
+  MarketPrice: 6135, display: true
   Mass: 743, type: float, display: true, formatter: Kilogram
   Volume: 93.75, type: float, display: true, formatter: Liter
   HitPoints: 300, type: int, display: true
@@ -20686,6 +20944,7 @@ HullCombatSmallBlocks
 { +Block Id: 1435, Name: WarpDriveSV, Ref: WarpDrive
   Model: @models/Blocks/Spaceship/WarpDriveSVPrefab
   AllowPlacingAt: SS, display: true
+  MarketPrice: 12620, display: true
   SizeInBlocks: "3,2,5", display: true
   Mass: 1490, type: float, display: true, formatter: Kilogram
   Volume: 937.5, type: float, display: true, formatter: Liter
@@ -20709,6 +20968,7 @@ HullCombatSmallBlocks
 { +Block Id: 1436, Name: LandClaimDevice
   Class: LandClaimDevice
   Group: cpgEquipment
+  MarketPrice: 25391, display: true
   IndexName: LCDevice
   Material: metal, display: true
   Shape: ModelEntity
@@ -20742,6 +21002,7 @@ HullCombatSmallBlocks
 { +Block Id: 1437, Name: PentaxidTankSV
   Class: WarpDriveTank
   Group: cpgWarp
+  MarketPrice: 4625, display: true
   IndexName: WarpDriveTank
   LootList: 13   /*  lootcontainer Warp Drive Tank SV*/
   Material: metal, display: true
@@ -20771,9 +21032,9 @@ HullCombatSmallBlocks
   VolumeCapacity: 5000, type: float, display: true, formatter: Liter
   HitPoints: 100, type: int, display: true
   CPUIn: 200, type: int, display: true
-  BlastParticleIndex: 10
+  BlastParticleIndex: 8
   BlastRadius: 5
-  BlastDamage: 300
+  BlastDamage: 900
 
   UnlockCost: 10, display: true
   UnlockLevel: 7, display: true
@@ -20843,6 +21104,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 1440, Name: StairsBlocksConcrete, Ref: StairsBlocks
   Material: concrete, display: true
+  MarketPrice: 12, display: true
   AllowPlacingAt: Base, display: true
   Mass: 200, type: float, display: true, formatter: Kilogram
   Volume: 80, type: float, display: true, formatter: Liter
@@ -20877,6 +21139,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 1443, Name: StairsBlocksWood, Ref: StairsBlocks
   Material: woodblock, display: true
+  MarketPrice: 4, display: true
   AllowPlacingAt: Base, display: true
   Mass: 100, type: float, display: true, formatter: Kilogram
   Volume: 80, type: float, display: true, formatter: Liter
@@ -21196,6 +21459,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: plastic, display: true
   Texture: 77
+  MarketPrice: 8, display: true
   BlockColor: "10,10,10"
   Shape: Invisible
   Place: Free
@@ -21242,6 +21506,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: plastic, display: true
   Texture: 77
+  MarketPrice: 16, display: true
   BlockColor: "10,10,10"
   Shape: New
   Place: Free
@@ -21287,6 +21552,7 @@ HullCombatSmallBlocks
 { +Block Id: 1484, Name: HoverEngineThruster
   IndexName: HoverEngineV2
   Group: cpgHoverEngine
+  MarketPrice: 463, display: true
   EssentialCategory: "cpgHoverEngine, cpgThruster"
   Material: metal, display: true
   Shape: ModelEntity
@@ -21333,6 +21599,7 @@ HullCombatSmallBlocks
 { +Block Id: 1485, Name: MobileAirCon
   Material: metalhard, display: true
   Shape: ModelEntity
+  MarketPrice: 80, display: true
   Model: @models/Blocks/Terrain/MobileAirConPrefab
   # Mesh-Damage-1: Mesh/D0
   # Mesh-Damage-2: Mesh/D1
@@ -21375,12 +21642,13 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1486, Name: RepairBayCVT2, Ref: RepairBayCV
   Model: @models/Blocks/Misc/RepairBayT2Prefab
+  MarketPrice: 99565, display: true
 
   Mass: 11770, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
   IsRepairToBlueprint: true
-  RepairPerSecond: 800, display: true
   Info: bkiRepairBayT2, display: true
+  RepairPerSecond: 4000, display: true
   UnlockCost: 25, display: true
   UnlockLevel: 20, display: true
   TechTreeParent: RepairBayCV
@@ -21435,6 +21703,7 @@ HullCombatSmallBlocks
   Group: cpgEquipment
   Class: RepairBayConsole
   Material: metallight, display: true
+  MarketPrice: 18701, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Info: bkiRepairBayConsole, display: true
@@ -21500,6 +21769,7 @@ HullCombatSmallBlocks
   Class: SolarPanel
   IndexName: SolarPanel
   Group: cpgSolar
+  MarketPrice: 1980, display: true
   PanelAngle: 30
   SolarPanelEfficiency: 3, display: true
   EssentialCategory: cpgFuelTank
@@ -21528,6 +21798,7 @@ HullCombatSmallBlocks
   Class: SolarGenerator
   IndexName: SolarGenerator
   Group: cpgSolar
+  MarketPrice: 962, display: true
   EssentialCategory: cpgGenerator
   IsSolarPanel: true
   Material: metalhard, display: true
@@ -21618,6 +21889,7 @@ HullCombatSmallBlocks
   Material: metallight, display: true
   ShowBlockName: true
   Shape: Invisible
+  MarketPrice: 1842, display: true
   # Model: @models/Blocks/Mothership/ForcefieldEmitter1x1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -21657,7 +21929,7 @@ HullCombatSmallBlocks
   HitPoints: 80, type: int, display: true
   Mass: 40, type: float, display: true, formatter: Kilogram
   BlockColor: "110,110,110"
-  Voxelize: false    # shape has no collider so don't voxelize it
+  # Voxelize: false    # shape has no collider so don't voxelize it
 }
 { +Block Id: 1502, Name: ForcefieldEmitter1x2, Ref: ForcefieldEmitter1x1
   Model: @models/Blocks/Mothership/ForcefieldEmitter1x2Prefab
@@ -21729,6 +22001,7 @@ HullCombatSmallBlocks
   Class: SolarPanel
   IndexName: SolarPanel
   Group: cpgSolar
+  MarketPrice: 801, display: true
   PanelAngle: 30
   SolarPanelEfficiency: 1.5, display: true
   EssentialCategory: cpgFuelTank
@@ -21824,6 +22097,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 1527, Name: MushroomBellBrown01Stage1, Ref: PlantGrowingTemplate
   Model: @models2/Entities/Farming/Misc/MushroomBellBrown01Stage1Prefab
+  MarketPrice: 165, display: true
   { Child PlantGrowing
     Next: MushroomBellBrown01Stage2
     GrowthRate: 15
@@ -22186,6 +22460,7 @@ HullCombatSmallBlocks
 { +Block Id: 1571, Name: MedicalStationBlocks
   Material: metallight, display: true
   Shape: Invisible
+  MarketPrice: 4780, display: true
   # Model: @models/Blocks/Mothership/MedicStationPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -22228,6 +22503,7 @@ HullCombatSmallBlocks
 { +Block Id: 1575, Name: DetectorHVT1
   Info: bkiDetector, display: true
   WeaponItem: DetectorHVWeapon
+  MarketPrice: 587, display: true
   WeaponItemRotation: false
   CustomIcon: DetectorSVT1
   IndexName: WeaponShip
@@ -22359,6 +22635,7 @@ HullCombatSmallBlocks
   IndexName: WeaponShip
   Group: cpgHarvest
   Material: metalhard, display: true
+  MarketPrice: 38982, display: true
   Shape: ModelEntity
   ShowBlockName: true
   WeaponItem: DrillAttachmentCVWeapon
@@ -22395,9 +22672,9 @@ HullCombatSmallBlocks
   Damage: 30, display: true
   StackSize: 50000
   MaxCount: 6, type: int, display: true
-  BlastParticleIndex: 4
-  BlastRadius: 2
-  BlastDamage: 50
+  BlastParticleIndex: 10
+  BlastRadius: 5
+  BlastDamage: 2500
 
   UnlockCost: 20, display: true
   UnlockLevel: 25, display: true
@@ -22410,6 +22687,7 @@ HullCombatSmallBlocks
   Material: metal, display: true
   Shape: ModelEntity
   ShowBlockName: true
+  MarketPrice: 1952, display: true
   Model: @models/Blocks/Spaceship/CloneChamberHVPrefab
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
@@ -22443,6 +22721,7 @@ HullCombatSmallBlocks
   # Class: MedicStation
   # BuffName: MedicStation
   IndexName: SpawnPoint
+  MarketPrice: 2036, display: true
   Group: cpgMedic
   Material: metal, display: true
   Shape: ModelEntity
@@ -22477,6 +22756,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 1585, Name: ThrusterJetRound2x5x2V2, Ref: ThrusterJetRound2x5x2
   Model: @models/Blocks/Thrusters/ThrusterJetRound2x5x2V2Prefab
+  MarketPrice: 9430, display: true
 
   UnlockCost: 14, display: true
   UnlockLevel: 12, display: true
@@ -22515,6 +22795,7 @@ HullCombatSmallBlocks
 { +Block Id: 1588, Name: FridgeBlocks
   Material: metal, display: true
   Shape: Invisible
+  MarketPrice: 555, display: true
   # Model: @models/Blocks/Mothership/FridgeT1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -22594,6 +22875,7 @@ HullCombatSmallBlocks
   Material: hullcombat, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Texture: 56
+  MarketPrice: 161, display: true
   BlockColor: "170,170,170"
   Shape: Invisible
   # Model: Cube
@@ -22639,6 +22921,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 1597, Name: CoffeePlantStage1
   Model: @models2/Entities/Farming/SpeedTrees/CoffeePlantStage1Prefab
+  MarketPrice: 165, display: true
   Class: PlantGrowing
   AllowedInBlueprint: false, display: true
   IndexName: Plant
@@ -22724,6 +23007,7 @@ HullCombatSmallBlocks
 # Sprout
 { Block Id: 1601, Name: BigFlowerStage1
   Model: @models2/Entities/Farming/Misc/BigFlowerStage1Prefab
+  MarketPrice: 153, display: true
   Class: PlantGrowing
   AllowedInBlueprint: false, display: true
   IndexName: Plant
@@ -22953,6 +23237,7 @@ HullCombatSmallBlocks
   ShowUser: NoButCSV
 }
 { +Block Id: 1626, Name: ModularWingBlocks
+  MarketPrice: 247, display: true
   Material: metal, display: true
   Shape: Invisible
   # Model: @models/Blocks/WingsModular/ModWingTaperLPrefab
@@ -22980,6 +23265,7 @@ HullCombatSmallBlocks
 { +Block Id: 1627, Name: RemoteConnection
   Class: RemoteConnector
   IndexName: Connector
+  MarketPrice: 1900, display: true
   Group: cpgEquipment
   Material: metallight, display: true
   Shape: ModelEntity
@@ -23004,9 +23290,9 @@ HullCombatSmallBlocks
   StackSize: 50000
   Range: 100, type: int, display: true
   Category: Devices
-  BlastParticleIndex: 4
-  BlastRadius: 1
-  BlastDamage: 100
+  BlastParticleIndex: 10
+  BlastRadius: 4
+  BlastDamage: 300
 
   UnlockCost: 5, display: true
   UnlockLevel: 3, display: true
@@ -23017,6 +23303,7 @@ HullCombatSmallBlocks
 { +Block Id: 1628, Name: ConstructorT0, Ref: ConstructorT1V2
   Material: metal, display: true
   Class: ConstructorT0
+  MarketPrice: 1830, display: true
   Model: @models/Blocks/Mothership/ConstructorT0Prefab
   SizeInBlocks: "1,1,1", display: true
   Mass: 1660, type: float, display: true, formatter: Kilogram
@@ -23072,6 +23359,7 @@ HullCombatSmallBlocks
   Class: TurretManual
   IndexName: Turret
   Group: cpgTurret
+  MarketPrice: 8140, display: true
   Material: metalhard, display: true
   Shape: Invisible
   Place: Face
@@ -23100,6 +23388,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Material: metalhard, display: true
+  MarketPrice: 44222, display: true
   Shape: Invisible
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSRocketPrefab
@@ -23127,6 +23416,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Material: metalhard, display: true
+  MarketPrice: 34320, display: true
   Shape: Turret
   Place: Face
   Model: @models/Blocks/Turrets/TurretMSPulseLaserPrefab
@@ -23183,6 +23473,7 @@ HullCombatSmallBlocks
   Group: cpgTurret
   Material: metalhard, display: true
   Shape: Invisible
+  MarketPrice: 86411, display: true
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSArtilleryPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -23210,6 +23501,7 @@ HullCombatSmallBlocks
   Info: bkiDetector, display: true
   WeaponItem: DetectorSVWeapon
   WeaponItemRotation: false
+  MarketPrice: 587, display: true
   SizeInBlocks: "1,1,1", display: true
   AllowPlacingAt: "SS", display: true
   MaxCount: 1, type: int, display: true
@@ -23292,6 +23584,7 @@ HullCombatSmallBlocks
   Group: cpgTurret
   Material: metalhard, display: true
   Shape: Invisible
+  MarketPrice: 13053, display: true
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSRocketPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -23317,6 +23610,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Material: metalhard, display: true
+  MarketPrice: 34872, display: true
   Shape: Invisible
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSPulseLaserPrefab
@@ -23345,6 +23639,7 @@ HullCombatSmallBlocks
   Group: cpgTurret
   Material: metalhard, display: true
   Shape: Invisible
+  MarketPrice: 86311, display: true
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSArtilleryPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -23500,6 +23795,7 @@ HullCombatSmallBlocks
   Class: TurretManual
   IndexName: Turret
   Group: cpgTurret
+  MarketPrice: 1786, display: true
   Material: metalhard, display: true
   Shape: Invisible
   Place: Face
@@ -23553,6 +23849,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Material: metalhard, display: true
+  MarketPrice: 18423, display: true
   Shape: Invisible
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSPulseLaserPrefab
@@ -23580,6 +23877,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Material: metalhard, display: true
+  MarketPrice: 23547, display: true
   Shape: Invisible
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSArtilleryPrefab
@@ -23607,6 +23905,7 @@ HullCombatSmallBlocks
   IndexName: Turret
   Group: cpgTurret
   Material: metalhard, display: true
+  MarketPrice: 14787, display: true
   Shape: Invisible
   Place: Face
   # Model: @models/Blocks/Turrets/TurretMSArtilleryPrefab
@@ -23782,6 +24081,7 @@ HullCombatSmallBlocks
   Class: TurretManual
   IndexName: Turret
   Group: cpgTurret
+  MarketPrice: 1223, display: true
   Material: metal, display: true
   Shape: Invisible
   Place: Face
@@ -23940,9 +24240,9 @@ HullCombatSmallBlocks
   Mass: 8500, type: float, display: true, formatter: Kilogram
   StackSize: 50000
   Category: Weapons/Items
-  BlastParticleIndex: 11
-  BlastRadius: 3
-  BlastDamage: 100
+  BlastParticleIndex: 8
+  BlastRadius: 7
+  BlastDamage: 1000
 
   HitPoints: 5000, type: int, display: true
   RotSpeed: 160, type: int, display: true
@@ -23987,6 +24287,7 @@ HullCombatSmallBlocks
   Class: ContainerController
   IndexName: Container
   Group: cpgCargoBox
+  MarketPrice: 687, display: true
   LootList: 76        # 128 slots
   Material: metal, display: true
   Shape: ModelEntity
@@ -24027,6 +24328,7 @@ HullCombatSmallBlocks
   LootList: 68        # 63 slots
   Material: metal, display: true
   Shape: New
+  MarketPrice: 245, display: true
   Place: Free
   Model: Cube
   # Texture: 15
@@ -24069,6 +24371,7 @@ HullCombatSmallBlocks
   Model: @models/Blocks/Spaceship/ContainerControllerSmallPrefab
   Mass: 55, type: float, display: true, formatter: Kilogram
   Volume: 11, type: float, display: true, formatter: Liter
+  MarketPrice: 460, display: true
   HitPoints: 100, type: int, display: true
   StackSize: 50000
   VolumeCapacity: 50000, type: float, display: true, formatter: Liter
@@ -24085,6 +24388,7 @@ HullCombatSmallBlocks
 { +Block Id: 1685, Name: ContainerExtensionSmall, Ref: ContainerExtensionLarge
   Mass: 52, type: float, display: true, formatter: Kilogram
   HitPoints: 100, type: int, display: true
+  MarketPrice: 61, display: true
   Volume: 11, type: float, display: true, formatter: Liter
   StackSize: 50000
   VolumeCapacity: 50000, type: float, display: true, formatter: Liter
@@ -24103,6 +24407,7 @@ HullCombatSmallBlocks
 { +Block Id: 1686, Name: ContainerHarvestControllerSmall, Ref: ContainerControllerLarge
   Class: ContainerController
   Group: cpgHarvest
+  MarketPrice: 465, display: true
   IndexName: HarvestCntr
   Model: @models/Blocks/Spaceship/ContainerHarvestControllerSmallPrefab
   BlockColor: "62,30,10"
@@ -24115,6 +24420,7 @@ HullCombatSmallBlocks
   MaxVolumeCapacity: 500000, type: float, display: true, formatter: Liter
   EnergyIn: 3, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
+  LootList: 54
 
   UnlockCost: 5, display: true
   UnlockLevel: 3, display: true
@@ -24125,11 +24431,13 @@ HullCombatSmallBlocks
   Class: ContainerController
   Group: cpgHarvest
   IndexName: HarvestCntr
+  MarketPrice: 707, display: true
   Model: @models/Blocks/Mothership/ContainerHarvestControllerLargePrefab
   BlockColor: "62,30,10"
   Info: bkiContainerHarvest, display: true                                      # adapt
   EnergyIn: 10, type: int, display: true, formatter: Watt
   AllowPlacingAt: "MS", display: true
+  LootList: 48
 
   UnlockCost: 20, display: true
   UnlockLevel: 20, display: true
@@ -24140,8 +24448,10 @@ HullCombatSmallBlocks
   Class: ContainerController
   Group: cpgAmmo
   IndexName: AmmoCntr
+  MarketPrice: 475, display: true
   Model: @models/Blocks/Spaceship/ContainerAmmoControllerSmallPrefab
   BlockColor: "0,40,0"
+  LootList: 69
   Info: bkiContainerAmmo, display: true                                         # adapt
   Mass: 52, type: float, display: true, formatter: Kilogram
   HitPoints: 100, type: int, display: true
@@ -24151,6 +24461,9 @@ HullCombatSmallBlocks
   MaxVolumeCapacity: 5000000, type: float, display: true, formatter: Liter
   EnergyIn: 3, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
+  BlastParticleIndex: 1
+  BlastRadius: 5
+  BlastDamage: 1000
 
   UnlockCost: 4, display: true
   UnlockLevel: 3, display: true
@@ -24161,11 +24474,16 @@ HullCombatSmallBlocks
   Class: ContainerController
   Group: cpgAmmo
   IndexName: AmmoCntr
+  MarketPrice: 1820, display: true
   Model: @models/Blocks/Mothership/ContainerAmmoControllerLargePrefab
   BlockColor: "0,40,0"
   Info: bkiContainerAmmo, display: true                                      # adapt
   EnergyIn: 10, type: int, display: true, formatter: Watt
   AllowPlacingAt: "Base,MS", display: true
+  BlastParticleIndex: 1
+  BlastRadius: 7
+  BlastDamage: 7500
+  LootList: 70
 
   UnlockCost: 7, display: true
   UnlockLevel: 5, display: true
@@ -24179,6 +24497,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Shape: Invisible
   Place: Free
+  MarketPrice: 15, display: true
   Mesh: cutout
   # Model: Walkway
   Texture: 61
@@ -24209,6 +24528,7 @@ HullCombatSmallBlocks
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Shape: Invisible
   Place: Free
+  MarketPrice: 60, display: true
   Mesh: cutout
   # Model: Walkway
   Texture: 61
@@ -24240,6 +24560,7 @@ HullCombatSmallBlocks
   IndexName: Door
   Material: hullarmored, display: true
   Shape: Invisible
+  MarketPrice: 1425, display: true
   # Model: @models/Blocks/Mothership/Ramp3x1x1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Face
@@ -24271,6 +24592,7 @@ HullCombatSmallBlocks
   Class: Door
   IndexName: Door
   Material: hullarmored, display: true
+  MarketPrice: 433, display: true
   Shape: Invisible
   # Model: @models/Blocks/Mothership/Ramp3x1x1Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -24435,6 +24757,7 @@ HullCombatSmallBlocks
   Group: cpgRamp
   Material: hullarmored, display: true
   Shape: Invisible
+  MarketPrice: 2535, display: true
   # Model: @models/Blocks/Mothership/HangarDoor10x5Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
@@ -24518,6 +24841,7 @@ HullCombatSmallBlocks
   Shape: Invisible
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
+  MarketPrice: 290, display: true
   AllowPlacingAt: "Base,MS", display: true
   Mass: 1250, type: float, display: true, formatter: Kilogram
   Volume: 90, type: float, display: true, formatter: Liter
@@ -24536,6 +24860,7 @@ HullCombatSmallBlocks
 { +Block Id: 1712, Name: ContainerSmallBlocks
   Material: metal, display: true
   Shape: Invisible
+  MarketPrice: 55, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
   AllowPlacingAt: "SS,GV", display: true
@@ -24625,6 +24950,7 @@ HullCombatSmallBlocks
 { +Block Id: 1719, Name: DecoVesselBlocks
   Material: metal, display: true
   Shape: Invisible
+  MarketPrice: 127, display: true
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Face
   Info: bkiBlockGroup, display: true
@@ -24748,6 +25074,7 @@ HullCombatSmallBlocks
 { +Block Id: 1739, Name: DecoTribalBlocks, Ref: DecoBlocks
   AllowPlacingAt: Base, display: true
   SizeInBlocksLocked: "Base,MS"
+  MarketPrice: 400, display: true
   Shape: Invisible
   # Model: @models2/Entities/Decorations/AncientTemple/RunestonePrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -24787,12 +25114,14 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1743, Name: TribalBed1, Ref: DecoTemplate
   Material: woodblock, display: true
+  Class: Sleeping
   Model: @models2/Entities/Decorations/TribalAssets/TribalBed1Prefab
   SizeInBlocks: "1,1,1", display: true
   TemplateRoot: WoodBlocks
 }
 { +Block Id: 1744, Name: TribalBed2, Ref: DecoTemplate
   Material: woodblock, display: true
+  Class: Sleeping
   Model: @models2/Entities/Decorations/TribalAssets/TribalBed2Prefab
   SizeInBlocks: "1,1,1", display: true
   TemplateRoot: WoodBlocks
@@ -24884,6 +25213,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1755, Name: TribalTable1, Ref: DecoTemplate
   Material: woodblock, display: true
+  BuffNameActivate: StaminaRecover, display: StatusEffect
   # Model: @models2/Entities/Decorations/TribalAssets/TribalTable1Prefab
   Model: @models2/Entities/Decorations/TribalAssets/TribalTable4Prefab
   SizeInBlocks: "1,1,1", display: true
@@ -24891,6 +25221,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1756, Name: TribalTable2, Ref: DecoTemplate
   Material: woodblock, display: true
+  BuffNameActivate: StaminaRecover, display: StatusEffect
   # Model: @models2/Entities/Decorations/TribalAssets/TribalTable2Prefab
   Model: @models2/Entities/Decorations/TribalAssets/TribalTable3Prefab
   SizeInBlocks: "1,1,1", display: true
@@ -24938,6 +25269,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1763, Name: TribalChair, Ref: DecoTemplate
   Material: woodblock, display: true
+  BuffNameActivate: StaminaRecover, display: StatusEffect
   # Model: @models2/Entities/Decorations/TribalAssets/TribalChairPrefab
   Model: @models2/Entities/Decorations/TribalAssets/TribalChair2Prefab
   SizeInBlocks: "1,1,1", display: true
@@ -25020,7 +25352,6 @@ HullCombatSmallBlocks
 }
 /* New AI weapons for POI */
 { +Block Id: 1773, Name: TurretEnemyBallista, Ref: TurretIONCannon
-# { +Block Id: 1773, Name: TurretEnemyBallista, Ref: TurretBaseFlak
   Model: @models/Blocks/Turrets/TurretsEnemy/TurretBallistaPrefab
   # Mesh-Damage-1: Mesh/D0
   # Mesh-Damage-2: Mesh/D1
@@ -25030,6 +25361,9 @@ HullCombatSmallBlocks
   WeaponItem: TurretEnemyBallistaWeapon
   RotSpeed: 80, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateSlow
+  Material: hull
+  TemplateRoot: DecoTribalBlocks
+  PickupTarget: DecoTribalBlocks
 
   BlastParticleIndex: 13
   BlastRadius: 3
@@ -25038,6 +25372,7 @@ HullCombatSmallBlocks
 { +Block Id: 1774, Name: ThrusterGVRoundNormalT2, Ref: ThrusterGVRoundNormal
   Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterGVRoundNormalT2Prefab
   SizeInBlocks: "1,2,1", display: true
+  MarketPrice: 2481, display: true
   HitPoints: 220, type: int, display: true
   Mass: 485, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
@@ -25056,6 +25391,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1775, Name: ThrusterGVRoundLarge, Ref: ThrusterGVRoundNormal
   Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterGVRoundLargePrefab
+  MarketPrice: 2123, display: true
   SizeInBlocks: "1,3,1", display: true
   HitPoints: 350, type: int, display: true
   Volume: 96.75, type: float, display: true, formatter: Liter
@@ -25065,6 +25401,7 @@ HullCombatSmallBlocks
   CPUIn: 145, type: int, display: true
   Temperature: 120, display: true
   TemplateRoot: ThrusterGVRoundLarge
+  BlastParticleIndex: 8
 
   UnlockCost: 7, display: true
   UnlockLevel: 7, display: true
@@ -25074,6 +25411,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1776, Name: ThrusterGVRoundLargeT2, Ref: ThrusterGVRoundNormal
   Model: @models/Blocks/Thrusters/RoundThrusters/ThrusterGVRoundLargeT2Prefab
+  MarketPrice: 5235, display: true
   SizeInBlocks: "1,3,1", display: true
   HitPoints: 400, type: int, display: true
   Volume: 96.75, type: float, display: true, formatter: Liter
@@ -25083,6 +25421,7 @@ HullCombatSmallBlocks
   CPUIn: 198, type: int, display: true
   Temperature: 180, display: true
   TemplateRoot: ThrusterGVRoundLargeT2
+  BlastParticleIndex: 8
 
   UnlockCost: 12, display: true
   UnlockLevel: 12, display: true
@@ -25262,6 +25601,7 @@ HullCombatSmallBlocks
   Class: CockpitSS
   IndexName: Cockpit
   Group: cpgCockpit
+  MarketPrice: 5865, display: true
   EssentialCategory: cpgCockpit
   Material: metalhard, display: true
   Shape: Invisible
@@ -25346,6 +25686,7 @@ HullCombatSmallBlocks
   Class: ShieldGenerator
   IndexName: ShieldGenerator
   EnergyDynamicGroup: Shield
+  MarketPrice: 92475, display: true
   Group: cpgEquipment
   Material: metal, display: true
   Shape: ModelEntity
@@ -25381,6 +25722,10 @@ HullCombatSmallBlocks
   ShieldCooldown: 20, type: int, display: true
   ShieldPerCrystal: 37500, type: int, display: true # 400 Pentaxid in total
   UpgradeTo: ShieldGeneratorBAT2, display: true
+  BlastParticleIndex: 8
+  BlastRadius: 5
+  BlastDamage: 8000
+  Radiation: 7, display: RadiationLevel
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
@@ -25389,6 +25734,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1809, Name: ShieldGeneratorCV, Ref: ShieldGeneratorBA
   Model: @models/Blocks/Misc/ShieldGeneratorLargePrefab
+  MarketPrice: 92455, display: true
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
   Mesh-Damage-3: Mesh/D2
@@ -25414,6 +25760,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1810, Name: ShieldGeneratorSV, Ref: ShieldGeneratorBA
   Model: @models/Blocks/Misc/ShieldGeneratorSmallPrefab
+  MarketPrice: 28630, display: true
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
   Mesh-Damage-3: Mesh/D2
@@ -25440,6 +25787,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1811, Name: ShieldGeneratorCVT2, Ref: ShieldGeneratorCV
   Model: @models/Blocks/Misc/ShieldGeneratorLargeT2Prefab
+  MarketPrice: 126750, display: true
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
   Mesh-Damage-3: Mesh/D2
@@ -25467,6 +25815,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1812, Name: ShieldGeneratorBAT2, Ref: ShieldGeneratorBA
   Model: @models/Blocks/Misc/ShieldGeneratorLargeT2Prefab
+  MarketPrice: 126750, display: true
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
   Mesh-Damage-3: Mesh/D2
@@ -25830,6 +26179,7 @@ HullCombatSmallBlocks
 
 { +Block Id: 1876, Name: DrillAttachmentLarge, Ref: DrillAttachment
   Model: @models/Blocks/WeaponsShip/DrillAttachmentLargePrefab
+  MarketPrice: 2487, display: true
   IsRetractable: false, display: true
   WeaponItem: DrillAttachmentLargeWeapon
   SizeInBlocks: "3,8,3", display: true
@@ -25897,6 +26247,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1888, Name: ShieldGeneratorHV, Ref: ShieldGeneratorBA
   Model: @models/Blocks/Misc/ShieldGeneratorSmallPrefab
+  MarketPrice: 28635, display: true
   Mesh-Damage-1: Mesh/D0
   Mesh-Damage-2: Mesh/D1
   Mesh-Damage-3: Mesh/D2
@@ -25915,6 +26266,9 @@ HullCombatSmallBlocks
   ShieldCooldown: 50, type: int, display: true
   ShieldPerCrystal: 13333, type: int, display: true # 300 Pentaxid in total
   UpgradeTo: null
+  BlastParticleIndex: 8
+  BlastRadius: 4
+  BlastDamage: 1000
 
   UnlockCost: 10, display: true
   UnlockLevel: 7, display: true
@@ -26237,6 +26591,7 @@ HullCombatSmallBlocks
 { +Block Id: 1956, Name: VentilatorBlocks
   Material: hull, display: true
   Shape: Invisible
+  MarketPrice: 327, display: true
   # Model: @models/Blocks/Mothership/VentilatorCubePrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   AllowPlacingAt: "Base,MS,SS,GV", display: true
@@ -26702,6 +27057,7 @@ HullCombatSmallBlocks
   IndexName: CPUExtender
   # EssentialCategory: cpgCPUExtender
   Material: metalhard, display: true
+  MarketPrice: 6387, display: true
   Shape: ModelEntity
   ShowBlockName: true
   Model: @models/Blocks/Misc/CPUExtenderSmallT2Prefab
@@ -26745,6 +27101,7 @@ HullCombatSmallBlocks
 { +Block Id: 2024, Name: CPUExtenderHVT3
   # Class: CPUExtender
   Group: cpgCore
+  MarketPrice: 111425, display: true
   IndexName: CPUExtender
   # EssentialCategory: cpgCPUExtender
   Material: metalhard, display: true
@@ -26794,6 +27151,7 @@ HullCombatSmallBlocks
 { +Block Id: 2025, Name: CPUExtenderHVT4, Ref: CPUExtenderHVT3
   Model: @models/Blocks/Misc/CPUExtenderSmallT4Prefab
   SizeInBlocks: "2,1,1", display: true
+  MarketPrice: 260305, display: true
   Mass: 750, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
   MaxCount: 4, type: int, display: true
@@ -26814,6 +27172,7 @@ HullCombatSmallBlocks
   # Class: CPUExtender
   Group: cpgCore
   IndexName: CPUExtender
+  MarketPrice: 6962, display: true
   # EssentialCategory: cpgCPUExtender
   Material: metalhard, display: true
   Shape: ModelEntity
@@ -26859,6 +27218,7 @@ HullCombatSmallBlocks
 { +Block Id: 2027, Name: CPUExtenderSVT3
   # Class: CPUExtender
   Group: cpgCore
+  MarketPrice: 213035, display: true
   IndexName: CPUExtender
   # EssentialCategory: cpgCPUExtender
   Material: metalhard, display: true
@@ -26908,6 +27268,7 @@ HullCombatSmallBlocks
 { +Block Id: 2028, Name: CPUExtenderSVT4, Ref: CPUExtenderSVT3
   Model: @models/Blocks/Misc/CPUExtenderSmallT4Prefab
   SizeInBlocks: "2,1,1", display: true
+  MarketPrice: 361915, display: true
   Mass: 750, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
   MaxCount: 4, type: int, display: true
@@ -26925,6 +27286,7 @@ HullCombatSmallBlocks
  # ShowUser: No
 }
 { +Block Id: 2029, Name: CPUExtenderCVT2
+  MarketPrice: 12910, display: true
   # Class: CPUExtender
   Group: cpgCore
   IndexName: CPUExtender
@@ -26972,6 +27334,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 2030, Name: CPUExtenderCVT3
   # Class: CPUExtender
+  MarketPrice: 522682, display: true
   Group: cpgCore
   IndexName: CPUExtender
   # EssentialCategory: cpgCPUExtender
@@ -27022,6 +27385,7 @@ HullCombatSmallBlocks
 { +Block Id: 2031, Name: CPUExtenderCVT4, Ref: CPUExtenderCVT3
   Model: @models/Blocks/Misc/CPUExtenderCPrefab
   SizeInBlocks: "2,1,1", display: true
+  MarketPrice: 1026085, display: true
   Mass: 3225, type: float, display: true, formatter: Kilogram
   Volume: 1600, type: float, display: true, formatter: Liter
   MaxCount: 4, type: int, display: true
@@ -27039,6 +27403,7 @@ HullCombatSmallBlocks
  # ShowUser: No
 }
 { +Block Id: 2032, Name: CPUExtenderBAT2
+  MarketPrice: 8675, display: true
   # Class: CPUExtender
   Group: cpgCore
   IndexName: CPUExtender
@@ -27086,6 +27451,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 2033, Name: CPUExtenderBAT3
   # Class: CPUExtender
+  MarketPrice: 397380, display: true
   Group: cpgCore
   IndexName: CPUExtender
   # EssentialCategory: cpgCPUExtender
@@ -27136,6 +27502,7 @@ HullCombatSmallBlocks
 { +Block Id: 2034, Name: CPUExtenderBAT4, Ref: CPUExtenderBAT3
   Model: @models/Blocks/Misc/CPUExtenderCPrefab
   SizeInBlocks: "2,1,1", display: true
+  MarketPrice: 1026085, display: true
   Mass: 3225, type: float, display: true, formatter: Kilogram
   Volume: 1600, type: float, display: true, formatter: Liter
   MaxCount: 4, type: int, display: true
