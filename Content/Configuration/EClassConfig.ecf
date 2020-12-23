@@ -114,10 +114,10 @@
   Parent: Backpack
   /*property name=AvatarController value=Enemy /*/
 
-  TimeStayAfterDeath: 1500
+  TimeStayAfterDeath: 3600
   AllowUserInstantiate: false
 
-  VolumeCapacity: 500
+  VolumeCapacity: 1000
 
   IsEnemy: false
   LootListOnDeath: 11
@@ -733,7 +733,7 @@
 
   IsEnemy: false
 
-  MaxHealth: 5000
+  MaxHealth: 1500
   ViewAngle: 180
   Weight: 70
   XpFactor: 0
@@ -1303,7 +1303,7 @@
   /* AITask-5: DronePathPatrol */
   /* AITask-6: DroneSentryPatrol */
 
-  AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
+  #AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
 
   /* General properties */
   HandItem: rocketlauncherDroneSmall
@@ -1312,13 +1312,6 @@
   MaxHealth: 5000
   # XpFactor: 1.5
   XpFactor: 5.0
-
-  WanderSpeed: 10.0
-  ApproachSpeed: 40.0
-  NightWanderSpeed: 10.0
-  NightApproachSpeed: 40.0
-  PanicSpeed: 20.0
-  Speed: 50.0
 
   SpawnYAdd: 30     /* drones shall always spawn 15meters above ground */
 
@@ -1348,23 +1341,12 @@
   AllowUserInstantiate: true
   HudInfo: false
 }
-{ +Entity Name: DroneSmallFast01Stun, Ref: DroneSmallFast01Rocket
-  Mesh: Enemies/Drones/EnemyDroneBluePrefab
-  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
 
-  HandItem: stunDroneSmall
-  ItemsOnEnterGame: stunDroneSmall
-
-  MaxHealth: 300
-  XpFactor: 0.6
-
-  LootListOnDeath: 150
-
-  AllowUserInstantiate: true
-}
 { +Entity Name: DroneSmallFast01Minigun, Ref: DroneSmallFast01Rocket
-  Mesh: Enemies/Drones/EnemyDroneBluePrefab
-  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+#  Mesh: Enemies/Drones/EnemyDroneBluePrefab
+#  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+  Mesh: Enemies/Drones/DroneLarge01LODPrefab
+  MeshDead: Enemies/Drones/DroneLargeDmgPrefab
 
   HandItem: minigunDroneSmall
   ItemsOnEnterGame: minigunDroneSmall
@@ -1656,7 +1638,7 @@
 # ======================================================================
 { +Entity Name: DroneBaseAttackRocket, Ref: DroneSmallFast01Rocket
 
-  DroneType: FastDrone
+  DroneType: BomberDrone
 
   HandItem: DroneBaseAttackRocketWeapon
   ItemsOnEnterGame: DroneBaseAttackRocketWeapon
@@ -1684,11 +1666,11 @@
 
 # heavy drones
 # ======================================================================
-{ +Entity Name: DroneBaseAttackHeavyRocket, Ref: EnemyDroneV2Minigun
+{ +Entity Name: DroneBaseAttackHeavyRocket, Ref: DroneSmallFast01Rocket
   Mesh: Enemies/Drones/EnemyDroneV2RedPrefab
   MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
 
-  DroneType: SlowDrone
+  DroneType: BomberDrone
 
   HandItem: DroneBaseAttackRocketWeapon
   ItemsOnEnterGame: DroneBaseAttackRocketWeapon
@@ -1750,7 +1732,7 @@
   ViewRange: 1000
 
   /* AI properties */
-  AITarget-1: DroneDetection, param1: "BA", param2: EntityShipSV
+  #AITarget-1: DroneDetection, param1: "BA", param2: EntityShipSV
 
   /* General properties */
   HandItem: BombLauncherWeapon
@@ -1806,7 +1788,7 @@
   SurfaceCategory: metal
 
   DroneType: SpaceDrone
-  MaxHealth: 4000
+  MaxHealth: 10000
   # XpFactor: 2
   XpFactor: 12.5
 
@@ -1877,7 +1859,7 @@
 
   MaxHealth: 17500
   # XpFactor: 2
-  XpFactor: 18
+  XpFactor: 10
 
   DroneType: SpaceDroneHard
   HandItem: laserSpaceDrone
@@ -1890,9 +1872,9 @@
   MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
   Faction: Polaris
 
-  MaxHealth: 2000
+  MaxHealth: 11000
   # XpFactor: 2
-  XpFactor: 18
+  XpFactor: 10
 
   DroneType: SpaceDroneHard
   HandItem: laserSpaceDrone
@@ -1907,7 +1889,7 @@
 
   MaxHealth: 14500
   # XpFactor: 2
-  XpFactor: 18
+  XpFactor: 10
 
   DroneType: SpaceDroneHard
   HandItem: laserSpaceDrone
@@ -1922,11 +1904,11 @@
 
   MaxHealth: 25000
   # XpFactor: 2
-  XpFactor: 18
+  XpFactor: 10
 
   DroneType: SpaceDroneHard
   HandItem: laserSpaceDrone
-  ItemsOnEnterGame: laserSpaceDrone
+  ItemsOnEnterGame: plasmaSpaceDrone
 
   AllowUserInstantiate: true
 }
@@ -2372,11 +2354,11 @@
   HandItem: MeleeSpinosaurus
   RotateToGround: true
 
-  WanderSpeed: 0.3
-  ApproachSpeed: 1.3
-  NightWanderSpeed: 0.3
-  NightApproachSpeed: 1.3
-  PanicSpeed: 1.8
+  WanderSpeed: 0.6
+  ApproachSpeed: 1.9
+  NightWanderSpeed: 0.6
+  NightApproachSpeed: 1.9
+  PanicSpeed: 2.2
 
   /* Determines particle effect     */
   SurfaceCategory: human
@@ -2504,10 +2486,10 @@
   HandItem: MeleePlantMonster
   RotateToGround: false
 
-  WanderSpeed: 0.2
-  ApproachSpeed: 0.9
-  NightWanderSpeed: 0.2
-  NightApproachSpeed: 0.9
+  WanderSpeed: 0.5
+  ApproachSpeed: 1.5
+  NightWanderSpeed: 0.5
+  NightApproachSpeed: 1.5
   PanicSpeed: 0.55
 
   /* Determines particle effect  */
@@ -2546,10 +2528,10 @@
   HandItem: MeleeCaveWorm
   RotateToGround: true
 
-  WanderSpeed: 0.3
-  ApproachSpeed: 1.1
-  NightWanderSpeed: 0.3
-  NightApproachSpeed: 1.1
+  WanderSpeed: 0.5
+  ApproachSpeed: 1.3
+  NightWanderSpeed: 0.5
+  NightApproachSpeed: 1.3
   PanicSpeed: 1.8
 
   /* Determines particle effect  */
@@ -2581,7 +2563,7 @@
   # HeadTransform: Spine_bone3
   HeadTransform: Head
 
-  Faction: Alien
+  Faction: Predator
 
   Prefab: AlienLarge
 
@@ -2590,9 +2572,9 @@
   HandItem: MeleeWoodWalker
 
   WanderSpeed: 0.2
-  ApproachSpeed: 1.0
+  ApproachSpeed: 1.5
   NightWanderSpeed: 0.2
-  NightApproachSpeed: 1.0
+  NightApproachSpeed: 1.5
   PanicSpeed: 0.9
 
   /* Determines particle effect  */
@@ -2636,7 +2618,7 @@
   HandItem: MeleeHexapod
   RotateToGround: false
 
-  WanderSpeed: 0.9
+  WanderSpeed: 0.5
   ApproachSpeed: 1.4
   NightWanderSpeed: 0.9
   NightApproachSpeed: 1.4
@@ -2646,9 +2628,9 @@
   SurfaceCategory: human
 
   /* Sound settings */
-  SfxRandomTime: 50.0
+  SfxRandomTime: 240.0
   SfxRandom: Enemies/Hexapod/Hexapod_SfxRandom
-  SfxAlertTime: 25.0
+  SfxAlertTime: 120.0
   SfxAlert: Enemies/Hexapod/Hexapod_SfxRandom
   SfxHurt:  Enemies/Hexapod/Hexapod_SfxHurt
   SfxDeath: Enemies/Hexapod/Hexapod_SfxDeath
@@ -2833,8 +2815,7 @@
   RotateToGround: false
   RotateSpeed: 15
 
-  /* General entity properties */
-  WanderSpeed: 0.2
+  WanderSpeed: 0.8
   ApproachSpeed: 0.5
   NightWanderSpeed: 0.6
   NightApproachSpeed: 0.8
@@ -2874,8 +2855,8 @@
   }
 
   { Child Hints
-	AttackApproachTarget: 0
-	AttackOptimalDistance: 150
+	AttackApproachTarget: 10
+	AttackOptimalDistance: 25
   }
 
   {	Child VisionSensor
@@ -2947,10 +2928,10 @@
   RotateToGround: false
 
   WanderSpeed: 0.1
-  ApproachSpeed: 0.9
+  ApproachSpeed: 1.3
   NightWanderSpeed: 0.1
-  NightApproachSpeed: 0.9
-  PanicSpeed: 0.9
+  NightApproachSpeed: 1.3
+  PanicSpeed: 1.9
 
 
   /* Sound settings */
@@ -3382,10 +3363,10 @@
   RotateSpeed: 6
 
   WanderSpeed: 0.25
-  ApproachSpeed: 0.5
+  ApproachSpeed: 0.9
   NightWanderSpeed: 0.25
-  NightApproachSpeed: 0.5
-  PanicSpeed: 0.8
+  NightApproachSpeed: 0.9
+  PanicSpeed: 1.4
 
   /* AI properties */
   AITask-1: ApproachAttack
@@ -3608,8 +3589,8 @@
   XpFactor: 2.0
   HandItem: MeleeParasaur
   RotateToGround: true
-  RotateSpeed: 50 /*at speed 8 they get stuck.. need new steering for hi speed animals */
-  RotateSpeedMovement: 90
+  RotateSpeed: 220 /*at speed 8 they get stuck.. need new steering for hi speed animals */
+  RotateSpeedMovement: 220
 
   /* AI properties */
 
@@ -3646,15 +3627,15 @@
   }*/
 
   { Child VariableOverride
-    SpeedCalm: 0.12
-    SpeedAlerted: 0.3
-    SpeedAttack: 2.7
-    SpeedFlee: 2.7
+    SpeedCalm: 0.2
+    SpeedAlerted: 0.9
+    SpeedAttack: 3.8
+    SpeedFlee: 4.2
   }
 
   {	Child VisionSensor  /* vision sensor parameters, if absent, vision sensor if off*/
 	VisibleDistance: 90 /* how far can the animal see*/
-	ViewAngle: 200      /* view angle of the animal (vision cone from the head) */
+	ViewAngle: 300      /* view angle of the animal (vision cone from the head) */
   }
 
   {	Child AlertSensor   /* alert sensor parameters, used by behavior selectors*/
@@ -3694,10 +3675,10 @@
 
 
   { Child VariableOverride
-    SpeedCalm: 0.12
+    SpeedCalm: 0.22
     SpeedAlerted: 0.35
-    SpeedAttack: 3.2
-    SpeedFlee: 3.2
+    SpeedAttack: 4.3
+    SpeedFlee: 4.5
   }
 
   {	Child VisionSensor
@@ -3756,7 +3737,7 @@
 
   { Child Hints
 	AttackWaitAfterAttack: 0
-	AttackRoarBeforeAttack: 35
+	AttackRoarBeforeAttack: 10
 	IsHunting:0
 	AttackMaxCount:4
 	AttackRandomDirection:10
@@ -3846,19 +3827,19 @@
 
   { Child VariableOverride
     SpeedCalm: 0.12
-    SpeedAlerted: 0.3
-    SpeedAttack: 1.5
-	SpeedFlee: 1.2
+    SpeedAlerted: 0.5
+    SpeedAttack: 2.25
+	SpeedFlee: 1.8
   }
 
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
-	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -3872,7 +3853,7 @@
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseAlertMultiplier:0.5
   }
 
   {	Child FearSensor /* fear sensor params */
@@ -3939,19 +3920,19 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.12
-    SpeedAlerted: 0.3
-    SpeedAttack: 1.5
-	SpeedFlee: 1.2
+    SpeedAlerted: 0.5
+    SpeedAttack: 2.25
+	SpeedFlee: 1.8
   }
 
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 360
-	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -4105,9 +4086,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.2
-    SpeedAlerted: 0.6
-    SpeedAttack: 2.0
-	SpeedFlee: 2.0
+    SpeedAlerted: 0.8
+    SpeedAttack: 2.6
+	SpeedFlee: 2.3
   }
 
   {	Child FearSensor /* fear sensor params */
@@ -4152,9 +4133,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.2
-    SpeedAlerted: 0.6
-    SpeedAttack: 2.0
-	SpeedFlee: 2.0
+    SpeedAlerted: 0.8
+    SpeedAttack: 2.6
+	SpeedFlee: 2.3
   }
 
   {	Child FearSensor /* fear sensor params */
@@ -4227,7 +4208,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/Spiders/Spider03Prefab
   MeshDead: Enemies/Spiders/Spider03DeadPrefab
 
-  MaxHealth: 2000
+  MaxHealth: 1600
   XpFactor: 6
   RightHandJointName: WeaponPin
   ItemsOnEnterGame: SpiderRangedWeapon
@@ -4250,15 +4231,15 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.2
     SpeedAlerted: 0.6
-    SpeedAttack: 2.0
-	SpeedFlee: 2.0
+    SpeedAttack: 2.5
+	SpeedFlee: 2.5
   }
 }
 { +Entity Name: Spider03Small, Ref: Spider01Small
   Mesh: Enemies/Spiders/Spider03SmallPrefab
   MeshDead: Enemies/Spiders/Spider03SmallDeadPrefab
 
-  MaxHealth: 500
+  MaxHealth: 800
   XpFactor: 3
   HandItem: MeleeSpider03Small
 }
@@ -4266,7 +4247,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/Spiders/Spider03BabyPrefab
   MeshDead: Enemies/Spiders/Spider03BabyDeadPrefab
 
-  MaxHealth: 250
+  MaxHealth: 400
   XpFactor: 1.5
   HandItem: MeleeSpider03Baby
 }
@@ -4482,7 +4463,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.2
     SpeedAlerted: 0.5
-	SpeedAttack: 1.0
+	SpeedAttack: 1.3
   }
 
   { Child Hints
@@ -4500,7 +4481,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,PlayerBike,PlayerDrone"
   }
 
   {	Child AlertSensor
@@ -4537,7 +4518,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RightHandJointName: Bip01_R_Hand
   ItemsOnEnterGame: ZiraxMinigunWeapon
   RotateToGround: false
-  RotateSpeed: 180
+  RotateSpeed: 45
+  RotateSpeedMovement: 180
 
   /* Sound settings */
   SfxRandomTime: 50.0
@@ -4563,9 +4545,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 
   { Child VariableOverride
-    SpeedCalm: 0.2
-    SpeedAlerted: 0.3
-	SpeedAttack: 1.0
+    SpeedCalm: 0.4
+    SpeedAlerted: 1.75
+	SpeedAttack: 2.0
   }
 
   { Child Hints
@@ -4573,19 +4555,19 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AttackOptimalDistance: 40
 	SearchAdvanceTime: 2.0
 	SearchWaitTime: 3
-	SearchRandomDistanceMult: 0.75
+	SearchRandomDistanceMult: 2.75
 	FireWeaponBlendInTime: 0.5
-	FireWeaponDurationMultiplier: 1.0
+	FireWeaponDurationMultiplier: 2.0
   }
 
   {	Child VisionSensor
-	VisibleDistance: 100
+	VisibleDistance: 120
 	ViewAngle: 110
-	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 
   { Child StuckSensor
@@ -4602,8 +4584,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertVisionMaxSpeed:2
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.8
+	NoiseMaxDistance:120
+	NoiseAlertMultiplier:1.5
   }
 }
 
@@ -4619,7 +4601,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AttackOptimalDistance: 90
   }
   {	Child VisionSensor
-	VisibleDistance: 150
+	VisibleDistance: 125
   }
 }
 
@@ -4633,14 +4615,15 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedAlerted: 1.75
+	SpeedAttack: 2.25
   }
   { Child Hints
 	AttackApproachTarget: 90
 	AttackOptimalDistance: 10
 	SearchAdvanceTime: 3.0
 	SearchWaitTime: 0.5
-	SearchRandomDistanceMult: 0.8
-	FireWeaponDurationMultiplier: 0.1
+	SearchRandomDistanceMult: 3.8
+	FireWeaponDurationMultiplier: 1.0
   }
 
 
@@ -4657,13 +4640,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 1.25
-	SpeedAttack: 0.7
+	SpeedAttack: 1.25
   }
 
   { Child Hints
   	FireWeaponDurationMultiplier: 0.3
 	FireWeaponBlendInTime: 0.7
-	AttackOptimalDistance: 110
+	AttackOptimalDistance: 80
   }
   {	Child VisionSensor
 	VisibleDistance: 130
@@ -4680,11 +4663,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   ItemsOnEnterGame: ZiraxSniperWeapon
   { Child Hints
 	AttackApproachTarget: 0
-	AttackOptimalDistance: 130
+	AttackOptimalDistance: 90
+  }
+  { Child VariableOverride
+    SpeedCalm: 0.1
+    SpeedAlerted: 1.5
+	SpeedAttack: 1.5
   }
   {	Child VisionSensor
-	VisibleDistance: 160
-	VisibleTypes: "Player,HV,SV,CV,PlayerBike,PlayerDrone"
+	VisibleDistance: 120
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 
   {	Child TargetSensor
@@ -4716,7 +4704,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 90
+	VisibleDistance: 200
 	ViewAngle: 360
   }
 
@@ -4780,11 +4768,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: false
   RotateSpeed: 180
 
-  WanderSpeed: 0.3
-  ApproachSpeed: 0.7
-  NightWanderSpeed: 0.75
-  NightApproachSpeed: 0.7
-  PanicSpeed: 1
+  WanderSpeed: 0.25
+  ApproachSpeed: 0.5
+  NightWanderSpeed: 0.25
+  NightApproachSpeed: 0.5
+  PanicSpeed: 0.8
 
 
   AITask-1: ApproachAttack
@@ -4887,9 +4875,22 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 ###########################
 # Obsolete - remove when save game break
-{ Entity Name: ZiraxMale, Ref: ZiraxMinigun
+{ Entity Name: ZiraxMale, Ref: ZiraxShotgun
   AllowUserInstantiate: false
-  AllowInSpawners: false
+  Mesh: Enemies/Zirax/ZiraxYellowPrefab
+  MeshDead: Enemies/Zirax/ZiraxYellowDeadPrefab
+  ItemsOnEnterGame: FlamethrowerOLD
+  LootListOnDeath: 105
+  AllowInSpawners: true
+
+  { Child Hints
+	AttackApproachTarget: 80
+	AttackOptimalDistance: 5
+	SearchAdvanceTime: 3.0
+	SearchWaitTime: 0.5
+	SearchRandomDistanceMult: 0.8
+	FireWeaponDurationMultiplier: 3.5
+  }
 }
 
 { Entity Name: ZiraxLeader, Ref: ZiraxLaser
@@ -4935,7 +4936,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   ItemsOnEnterGame: MechanoidWeapon
   RightHandJointName: Bip001 L Hand
   RotateToGround: false
-  RotateSpeed: 15
+  RotateSpeed: 30
 
   /* Determines particle effect  */
   SurfaceCategory: metal
@@ -4966,7 +4967,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.3
     SpeedAlerted: 0.75
-	SpeedAttack: 0.8
+	SpeedAttack: 1.1
   }
 
   { Child Hints
@@ -4976,7 +4977,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 90
+	VisibleDistance: 88
 	ViewAngle: 110
   }
 
@@ -5026,7 +5027,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HandItem: MeleeOverseer
   RotateToGround: true
   RotateSpeedMovement: 180
-  MotionAnimationSpeedMultiplier: 1.5
+  MotionAnimationSpeedMultiplier: 1.25
+  StepHeight: 4.5
 
 
   SurfaceCategory: alien
@@ -5058,20 +5060,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.8
-    SpeedAlerted: 1.5
-    SpeedAttack: 2.0
-	SpeedFlee: 1.5
-	MeleeAttackDistance: 4.0
-	MinimalDistanceToTarget: 3.0
+    SpeedAlerted: 1.65
+    SpeedAttack: 3.5
+	SpeedFlee: 2.25
+	MeleeAttackDistance: 5.0
+	MinimalDistanceToTarget: 2.0
   }
 
   {	Child VisionSensor
-	VisibleDistance: 50
-	ViewAngle: 180
+	VisibleDistance: 150
+	ViewAngle: 320
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -5085,7 +5088,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseAlertMultiplier:0.75
   }
 }
 { +Entity Name: TotalHorror, Ref: PredatorTemplate
@@ -5098,7 +5101,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   /* General entity properties */
   ViewAngle: 180
-  MaxHealth: 700
+  MaxHealth: 1200
   # XpFactor: 2
   XpFactor: 7.6
   HandItem: MeleeTotalHorror
@@ -5109,6 +5112,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   NightWanderSpeed: 0.2
   NightApproachSpeed: 0.9
   PanicSpeed: 0.55
+  StepHeight: 2.0
 
   SurfaceCategory: human
 
@@ -5132,6 +5136,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AllowUserInstantiate: true
   AllowInSpawners: true
   FadingEnabled: false     # otherwise problems when switching to dead model
+
+  {	Child VisionSensor
+	VisibleDistance: 120
+	ViewAngle: 110
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone"
+  }
 }
 # Internal name: CaveCrawler
 { +Entity Name: CaveWormGrey, Ref: PredatorBAITemplate
@@ -5182,20 +5196,20 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child Hints
     AttackUseRetreatRoar: 100
-	AttackMaxCount: 3
+	AttackMaxCount: 5
   }
 
   { Child VariableOverride
-    SpeedCalm: 0.3
-    SpeedAlerted: 1.1
-    SpeedAttack: 1.5
-	SpeedFlee: 1.7
+    SpeedCalm: 0.5
+    SpeedAlerted: 1.4
+    SpeedAttack: 1.75
+	SpeedFlee: 1.8
 	MeleeAttackDistance: 3.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 2.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
   }
 
   {	Child VisionSensor
-	VisibleDistance: 75
+	VisibleDistance: 70
 	ViewAngle: 180
 	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
@@ -5215,7 +5229,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseAlertMultiplier:1.5
   }
 }
 
@@ -5238,15 +5252,15 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HandItem: MeleeCaveWormWhite
   MaxHealth: 800
   XpFactor: 5.0
-  MotionAnimationSpeedMultiplier: 0.5
+  MotionAnimationSpeedMultiplier: 2.0
 
   { Child VariableOverride
-    SpeedCalm: 0.3
-    SpeedAlerted: 0.8
-    SpeedAttack: 1.0
-	SpeedFlee: 1.2
+    SpeedCalm: 0.6
+    SpeedAlerted: 1.6
+    SpeedAttack: 2.0
+	SpeedFlee: 1.8
 	MeleeAttackDistance: 4.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
-	MinimalDistanceToTarget: 3.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
+	MinimalDistanceToTarget: 2.0   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
   }
 }
 
@@ -5335,8 +5349,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.3
-    SpeedAlerted: 1.1
-    SpeedAttack: 1.9
+    SpeedAlerted: 1.3
+    SpeedAttack: 1.8
 	SpeedFlee: 1.5
   }
 
@@ -5346,7 +5360,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -5386,16 +5400,16 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Faction: Kriel
   Prefab: AlienHumanoid
 
-  ViewAngle: 180
-  MaxHealth: 800
-  XpFactor: 6
+  ViewAngle: 240
+  MaxHealth: 700
+  XpFactor: 4
 
   RotateSpeedMovement: 180
-  MotionAnimationSpeedMultiplier: 1.35
+  MotionAnimationSpeedMultiplier: 1.15
   HandItem: MeleeAssassin
 
   /*ViewAngle: 180
-  WanderSpeed: 0.4
+  WanderSpeed: 0.15
   ApproachSpeed: 1
   NightWanderSpeed: 0.4
   NightApproachSpeed: 1
@@ -5412,6 +5426,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
   LootListOnDeath: 29
   JumpHeight: 3.5
+  StepHeight: 3.1
 
   /* AI Properties */
   { Child MainBehavior
@@ -5425,11 +5440,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.4
-    SpeedAlerted: 1.0
-    SpeedAttack: 1.0
-	SpeedFlee: 1.0
-	MeleeAttackDistance: 2.0
-	MinimalDistanceToTarget: 1.5
+    SpeedAlerted: 2.0
+    SpeedAttack: 3.0
+	SpeedFlee: 5.0
+	MeleeAttackDistance: 2.25
+	MinimalDistanceToTarget: 1.25
   }
 
   { Child Hints
@@ -5443,7 +5458,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -5456,8 +5471,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertVisionMaxSpeed:2
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseMaxDistance:75
+	NoiseAlertMultiplier:1.0
   }
   AllowUserInstantiate: true
   AllowInSpawners: true
@@ -5509,7 +5524,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: false
 
   RotateSpeedMovement: 180
-  MotionAnimationSpeedMultiplier: 1.7
+  MotionAnimationSpeedMultiplier: 2.0
 
   SurfaceCategory: human
 
@@ -5542,19 +5557,21 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.3
-    SpeedAlerted: 1.5
-    SpeedAttack: 2.0
-	SpeedFlee: 1.5
-	MeleeAttackDistance: 2.0
+    SpeedAlerted: 2.5
+    SpeedAttack: 3.0
+	SpeedFlee: 4.5
+	MeleeAttackDistance: 2.25
+	MinimalDistanceToTarget: 0.75
   }
 
   {	Child VisionSensor
 	VisibleDistance: 75
 	ViewAngle: 240
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -5567,8 +5584,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertVisionMaxSpeed:2
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseMaxDistance:75
+	NoiseAlertMultiplier:0.65
   }
 
 }
@@ -5598,9 +5615,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.4
-    SpeedAlerted: 2.1
-    SpeedAttack: 2.7
-	SpeedFlee: 1.7
+    SpeedAlerted: 2.5
+    SpeedAttack: 3.0
+	SpeedFlee: 2.5
   }
 
   /* Sound settings */
@@ -5616,7 +5633,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AllowInSpawners: true
 }
 
-{ +Entity Name: Pangolin, Ref: PreyBAITemplate
+{ +Entity Name: Pangolin, Ref: PredatorBAITemplate
   /* Mesh and class properties */
   Mesh: Enemies/Pangolin/PangolinPrefab
   MeshDead: Enemies/Pangolin/PangolinDeadPrefab
@@ -5632,7 +5649,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   RotateSpeedMovement: 200
   AttackWidthAngle:45
-  MotionAnimationSpeedMultiplier: 0.7
+  MotionAnimationSpeedMultiplier: 0.9
 
   /* Determines particle effect  */
   SurfaceCategory: human
@@ -5672,25 +5689,25 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	MinimalDistanceToTarget: 3.0
 	MeleeAttackDistance: 4.5
     SpeedCalm: 0.5
-    SpeedAlerted: 1.2
-    SpeedAttack: 2.3
-	SpeedFlee: 1.0
+    SpeedAlerted: 2.25
+    SpeedAttack: 2.75
+	SpeedFlee: 3.0
   }
 
   {	Child VisionSensor
 	VisibleDistance: 50
-	ViewAngle: 360
-	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+	ViewAngle: 180
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,PlayerBike,BA"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   {	Child AlertSensor
 	AlertLevel1: 15, param1: 0
 	AlertLevel2: 50, param1: 2
-	AlertLevel3: 100, param1: 20
+	AlertLevel3: 80, param1: 20
 	AlertLevel3SwithToOnDmg: true
 	AlertLevelDrop:10 /* slow alert drop */
 	AlertAddFromVisionMinNoMovement:0 /* no alert when not moving */
@@ -5757,8 +5774,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.4
-    SpeedAlerted: 1.0
-    SpeedAttack: 1.0
+    SpeedAlerted: 1.2
+    SpeedAttack: 1.4
 	SpeedFlee: 1.0
   }
 
@@ -5786,8 +5803,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertVisionMaxSpeed:2
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseMaxDistance:80
+	NoiseAlertMultiplier:0.6
   }
 }
 
@@ -5797,7 +5814,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/WormNew/WormNewLargePrefab
   MeshDead: Enemies/WormNew/WormNewLargeDeadPrefab
 
-  MaxHealth: 1200
+  MaxHealth: 1500
   XpFactor: 4.0
   HandItem: MeleeWormLarge
 
@@ -5806,10 +5823,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.5
-    SpeedAlerted: 1.2
-    SpeedAttack: 1.2
-	SpeedFlee: 1.2
-	MinimalDistanceToTarget: 1.5
+    SpeedAlerted: 1.4
+    SpeedAttack: 1.6
+	SpeedFlee: 1.5
+	MinimalDistanceToTarget: 1.2
 	MeleeAttackDistance: 2.5
   }
 }
@@ -5929,13 +5946,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Faction: Predator
   ItemsOnEnterGame: "MeleeOtyugh,OtyughFireBallRangedWeapon,OtyughFlameThrowerWeapon"
   /* General entity properties */
-  MaxHealth: 2000
+  MaxHealth: 8000
   # XpFactor: 1.3
   XpFactor: 5.46
   HandItem: MeleeOtyugh
   RotateToGround: true
   RotateSpeedMovement: 180
-  MotionAnimationSpeedMultiplier: 1.3
+  MotionAnimationSpeedMultiplier: 2.0
 
   /* Determines particle effect  */
   SurfaceCategory: human
@@ -5969,23 +5986,23 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.4
-    SpeedAlerted: 1.5
-    SpeedAttack: 1.5
-	SpeedFlee: 1.5
+    SpeedAlerted: 2.0
+    SpeedAttack: 2.75
+	SpeedFlee: 2.0
 	MeleeAttackDistance: 4.0
 	MinimalDistanceToTarget: 3.0
   }
 
   { Child Hints
 	AttackWaitAfterAttack: 0
-	AttackRoarBeforeAttack: 35
+	AttackRoarBeforeAttack: 15
 	IsHunting:100
 	MeleeWeaponIndex:0
 	RangedWeaponIndex:1
   }
 
   {	Child VisionSensor
-	VisibleDistance: 80
+	VisibleDistance: 90
 	ViewAngle: 180
   }
 
@@ -6003,8 +6020,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertVisionMaxSpeed:2
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseMaxDistance:95
+	NoiseAlertMultiplier:1.0
   }
 }
 
@@ -6024,7 +6041,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateSpeedMovement: 180
   MotionAnimationSpeedMultiplier: 0.5
 
-  PanicSpeed: 2
+  PanicSpeed: 3
 
   /* Determines particle effect  */
   SurfaceCategory: human
@@ -6058,8 +6075,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.36
     SpeedAlerted: 1.75
-    SpeedAttack: 1.7
-    SpeedFlee: 1.7
+    SpeedAttack: 2.5
+    SpeedFlee: 2.5
   }
 
   {	Child GroupDirectionSensor
@@ -6117,7 +6134,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedCalm: 1.0
     SpeedAlerted: 1.6
     SpeedAttack: 2.0
-    SpeedFlee: 1.9
+    SpeedFlee: 2.6
   }
 }
 
@@ -6269,8 +6286,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.4
     SpeedAlerted: 1.5
-    SpeedAttack: 1.5
-	SpeedFlee: 1.5
+    SpeedAttack: 2.0
+	SpeedFlee: 2.0
 	MeleeAttackDistance: 2.0
 	MinimalDistanceToTarget: 1.5
   }
@@ -6421,12 +6438,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   /* Sound settings */
   SfxRandomTime: 50.0
-  SfxRandom: Enemies/Otyugh/Otyugh_SfxRandom
+  SfxRandom: Enemies/Ripperdog/Ripperdog_SfxRandom
 
   SfxAlertTime: 25.0
-  SfxAlert: Enemies/Otyugh/Otyugh_SfxRandom
-  SfxHurt:  Enemies/Otyugh/Otyugh_SfxHurt
-  SfxDeath: Enemies/Otyugh/Otyugh_SfxDeath
+  SfxAlert: Enemies/Ripperdog/Ripperdog_SfxAlert
+  SfxHurt:  Enemies/Ripperdog/Ripperdog_SfxHurt
+  SfxDeath: Enemies/Ripperdog/Ripperdog_SfxDeath
 
   MotionAnimationSpeedMultiplier: 1.8
 
@@ -6455,8 +6472,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.12
     SpeedAlerted: 0.4
-    SpeedAttack: 2.5
-	SpeedFlee: 2.1
+    SpeedAttack: 3.2
+	SpeedFlee: 2.8
 	MeleeAttackDistance: 2.2       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 1.3   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
   }
@@ -6464,10 +6481,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   {	Child VisionSensor
 	VisibleDistance: 125
 	ViewAngle: 360
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,BA,PlayerBike,PlayerDrone"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 
   {	Child AlertSensor
@@ -6480,12 +6498,12 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertVisionMaxSpeed:2
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:80
-	NoiseAlertMultiplier:0.3
+	NoiseMaxDistance:100
+	NoiseAlertMultiplier:2.0
   }
 
   {	Child FearSensor /* fear sensor params */
-    MaxFear: 60 /* maximal fear of the animal*/
+    MaxFear: 100 /* maximal fear of the animal*/
 
 	FearDrop: 20 /* how much fear will drop per frame */
 	FearDropPerFriend: 10 /* fear drop per frame for each group member around */
@@ -6510,7 +6528,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: Head
 
   Prefab: Alien
-  Faction: Alien
+  Faction: Predator
 
   # Faction: Predator
 
@@ -6518,8 +6536,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SurfaceCategory: alien
 
   MaxHealth: 2000
-  # XpFactor: 1.2
-  XpFactor: 6.5
+  XpFactor: 5
   HandItem: MeleeAlienBug02
   RotateToGround: true
   RotateSpeedMovement: 360
@@ -6539,6 +6556,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AllowUserInstantiate: true
   AllowInSpawners: true
   FadingEnabled: false     # otherwise problems when switching to dead model
+  StepHeight: 2.5
 
 
 
@@ -6570,13 +6588,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 50
+	VisibleDistance: 60
 	ViewAngle: 180
-	VisibleTypes: "Player,HV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -6600,7 +6618,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: Head
 
   Prefab: Alien
-  Faction: Alien
+  Faction: Predator
 
   /* Determines particle effect  */
   SurfaceCategory: alien
@@ -6658,13 +6676,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 50
+	VisibleDistance: 60
 	ViewAngle: 180
-	VisibleTypes: "Player,HV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -6689,14 +6707,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   Prefab: Alien
 
-  Faction: Alien
+  Faction: Predator
 
   /* Determines particle effect  */
   SurfaceCategory: alien
 
   MaxHealth: 300
   # XpFactor: 1.2
-  XpFactor: 1.25
+  XpFactor: 1.0
   HandItem: MeleeAlienBug02Baby
   RotateToGround: true
   RotateSpeedMovement: 360
@@ -6816,13 +6834,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.45
-    SpeedAlerted: 1.5
-    SpeedAttack: 2.0
-	SpeedFlee: 1.6
+    SpeedAlerted: 1.75
+    SpeedAttack: 3.0
+	SpeedFlee: 2.6
 	# the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MeleeAttackDistance: 3.3
 	# if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
-	MinimalDistanceToTarget: 2.0
+	MinimalDistanceToTarget: 1.5
   }
 
   {	Child GroupDirectionSensor
@@ -6858,7 +6876,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
 	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseAlertMultiplier:0.5
 	AlertFromFriendDeath: 100
   }
 }
@@ -6889,9 +6907,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.75
-    SpeedAlerted: 1.5
-    SpeedAttack: 2.0
-	SpeedFlee: 1.6
+    SpeedAlerted: 1.65
+    SpeedAttack: 3.0
+	SpeedFlee: 2.6
 	MeleeAttackDistance: 1.5
 	MinimalDistanceToTarget: 1.0
   }
@@ -6982,7 +7000,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 { +Entity Name: GolemDesert, Ref: PredatorBAITemplate
 # { +Entity Name: Shell, Ref: PredatorBAITemplate
-  Faction: Alien
+  Faction: Predator
   Prefab: AlienLarge
   Mesh: Enemies/Shell/ShellPrefab
   MeshDead: Enemies/Shell/ShellDeadPrefab
@@ -7031,7 +7049,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedAlerted: 0.8
     SpeedAttack: 1.2
 	SpeedFlee: 1.0
-	MeleeAttackDistance: 2.8       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
+	MeleeAttackDistance: 2.5       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 1.2   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
   }
 
@@ -7042,11 +7060,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   {	Child VisionSensor
 	VisibleDistance: 70
 	ViewAngle: 180
-	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -7110,7 +7128,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   RotateToGround: false
   RotateSpeed: 5
   RotateSpeedMovement: 180
-  MotionAnimationSpeedMultiplier: 2.0
+  MotionAnimationSpeedMultiplier: 2.75
 
   /* This decides on the particle effect played on hit */
   SurfaceCategory: metal
@@ -7147,7 +7165,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedCalm: 0.3
     SpeedAlerted: 0.75
     SpeedAttack: 1.5
-	SpeedFlee: 1.0
+	SpeedFlee: 1.25
 	MeleeAttackDistance: 3.0       # the animal will attack from this distance, so small value for small animal, bigger for bigger animals, that would clip otherwise
 	MinimalDistanceToTarget: 1.2   # if the animal is closer then this, it will go a bit further, essentially the player is too close for the attack
   }
@@ -7159,11 +7177,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   {	Child VisionSensor
 	VisibleDistance: 50
 	ViewAngle: 180
-	VisibleTypes: "Player,HV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone,PlayerBike"
   }
 
   {	Child AlertSensor
@@ -7364,13 +7382,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.25
-    SpeedAlerted: 0.5
-	SpeedAttack: 0.5
+    SpeedAlerted: 1.5
+	SpeedAttack: 1.5
   }
 
   { Child Hints
 	AttackApproachTarget: 0
-	AttackOptimalDistance: 40
+	AttackOptimalDistance: 90
 	SearchAdvanceTime: 1.0
 	SearchWaitTime: 3
 	SearchRandomDistanceMult: 0.5
@@ -7380,7 +7398,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 80
+	VisibleDistance: 120
 	ViewAngle: 110
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
   }
@@ -7428,7 +7446,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   ViewAngle: 120
   MaxHealth: 1500
   # XpFactor: 1
-  XpFactor: 11
+  XpFactor: 10
   RightHandJointName: Bip001 R Hand
   ItemsOnEnterGame: CyborgSniperWeapon
   RotateToGround: false
@@ -7465,7 +7483,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   { Child VariableOverride
     SpeedCalm: 0.25
     SpeedAlerted: 1.5
-	SpeedAttack: 1.5
+	SpeedAttack: 1.75
   }
 
   { Child Hints
@@ -7480,13 +7498,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 150
+	VisibleDistance: 130
 	ViewAngle: 110
-	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
   }
 
   { Child StuckSensor
@@ -7503,8 +7521,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AlertVisionMaxSpeed:2
 	AlertAddFromAutoAlert:30
 	MinDistanceToAutoAlert:20
-	NoiseMaxDistance:50
-	NoiseAlertMultiplier:0.3
+	NoiseMaxDistance:80
+	NoiseAlertMultiplier:0.8
   }
 }
 { +Entity Name: AssaultCyborgDamaged, Ref: AssaultCyborg
@@ -7584,8 +7602,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   { Child VariableOverride
     SpeedCalm: 0.2
-    SpeedAlerted: 0.7
-	SpeedAttack: 1.5
+    SpeedAlerted: 1.3
+	SpeedAttack: 2.0
   }
 
   { Child Hints
@@ -7593,14 +7611,14 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 	AttackOptimalDistance: 40
 	SearchAdvanceTime: 1.0
 	SearchWaitTime: 3
-	SearchRandomDistanceMult: 0.5
+	SearchRandomDistanceMult: 1.5
   	FireWeaponDurationMultiplier: 0.3
 	FireWeaponBlendInTime: 0.5
 	UseMeleeAttack: 100
   }
 
   {	Child VisionSensor
-	VisibleDistance: 100
+	VisibleDistance: 110
 	ViewAngle: 110
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
   }
@@ -7645,17 +7663,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   ItemsOnEnterGame: TalonCrossbowWeapon
 
   { Child Hints
-	AttackApproachTarget: 0
-	AttackOptimalDistance: 40
-	SearchAdvanceTime: 1.0
-	SearchWaitTime: 3
-	SearchRandomDistanceMult: 1.5
-  	FireWeaponDurationMultiplier: 0.3
-	FireWeaponBlendInTime: 0.5
 	UseMeleeAttack: 0
-  }
-  {	Child VisionSensor
-	VisibleDistance: 150
   }
 }
 { +Entity Name: TalonAdvancedGreen, Ref: TalonGuardian
@@ -7734,7 +7742,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 100
+	VisibleDistance: 120
 	ViewAngle: 360
   }
 
@@ -7766,7 +7774,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,BA,CV,SV,PlayerBike"
   }
 
   { Child StuckSensor
@@ -7793,7 +7801,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   { Child StuckSensor
@@ -7852,7 +7860,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike"
   }
 
   { Child StuckSensor
@@ -7894,9 +7902,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   { Child VariableOverride
-    SpeedCalm: 0.4
-    SpeedAlerted: 0.6
-	SpeedAttack: 1.0
+    SpeedCalm: 0.6
+    SpeedAlerted: 0.9
+	SpeedAttack: 1.5
   }
 }
 
@@ -7917,9 +7925,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   { Child VariableOverride
-    SpeedCalm: 0.4
-    SpeedAlerted: 0.7
-	SpeedAttack: 1.0
+    SpeedCalm: 0.6
+    SpeedAlerted: 0.9
+	SpeedAttack: 1.6
   }
 }
 
@@ -7965,8 +7973,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxRandom:
   SfxAlertTime: 25.0
   SfxAlert:
-  SfxHurt:
-  SfxDeath:
+  SfxHurt: Enemies/Trader/Trader_SfxHurt
+  SfxDeath: Enemies/Trader/Trader_SfxDeath
 }
 { +Entity Name: SoldierAlienShotgun, Ref: ZiraxMinigun
   MaxHealth: 700
@@ -7981,8 +7989,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxRandom:
   SfxAlertTime: 25.0
   SfxAlert:
-  SfxHurt:
-  SfxDeath:
+  SfxHurt: Enemies/Trader/Trader_SfxHurt
+  SfxDeath: Enemies/Trader/Trader_SfxDeath
 }
 { +Entity Name: SoldierHumanMale2AssaultRifle, Ref: ZiraxMinigun
   MaxHealth: 700
@@ -7997,8 +8005,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxRandom:
   SfxAlertTime: 25.0
   SfxAlert:
-  SfxHurt:
-  SfxDeath:
+  SfxHurt: Player_Male/MaleHurt
+  SfxDeath: Player_Male/MaleDeath
 
   SurfaceCategory: human
 }
@@ -8015,8 +8023,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxRandom:
   SfxAlertTime: 25.0
   SfxAlert:
-  SfxHurt:
-  SfxDeath:
+  SfxHurt: Player_Male/MaleHurt
+  SfxDeath: Player_Male/MaleDeath
 
   SurfaceCategory: human
 }
@@ -8026,7 +8034,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   LootListOnDeath: 101
   Mesh: Enemies/SecurityGuards/SecurityGuardMovingPrefab
   MeshDead: Enemies/SecurityGuards/SecurityGuardMovingDeadPrefab
-  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+  # ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+  ItemsOnEnterGame: AssaultRifleT2
   HeadTransform: Head
   RightHandJointName: R Weapon
 
@@ -8035,8 +8044,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxRandom:
   SfxAlertTime: 25.0
   SfxAlert:
-  SfxHurt:
-  SfxDeath:
+  SfxHurt: Player_Male/MaleHurt
+  SfxDeath: Player_Male/MaleDeath
 
   SurfaceCategory: human
 }
@@ -8046,7 +8055,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   LootListOnDeath: 101
   Mesh: Enemies/SecurityGuards/SecurityGuardMovingPrefab
   MeshDead: Enemies/SecurityGuards/SecurityGuardMovingDeadPrefab
-  ItemsOnEnterGame: ZiraxShotgunPlayer
+  # ItemsOnEnterGame: ZiraxShotgunPlayer
+  ItemsOnEnterGame: Shotgun2
   HeadTransform: Head
   RightHandJointName: R Weapon
 
@@ -8055,8 +8065,8 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxRandom:
   SfxAlertTime: 25.0
   SfxAlert:
-  SfxHurt:
-  SfxDeath:
+  SfxHurt: Player_Male/MaleHurt
+  SfxDeath: Player_Male/MaleDeath
 
   SurfaceCategory: human
 }
@@ -8111,9 +8121,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   } */
 
   { Child VariableOverride
-    SpeedCalm: 0.2
-    SpeedAlerted: 0.3
-	SpeedAttack: 0.6
+    SpeedCalm: 0.25
+    SpeedAlerted: 1.0
+	SpeedAttack: 1.75
   }
 
   { Child Hints
@@ -8129,13 +8139,13 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 80
+	VisibleDistance: 110
 	ViewAngle: 110
-	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+	VisibleTypes: "Player,HV,SV,CV,PlayerBike,PlayerDrone"
   }
 
   {	Child TargetSensor
-    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+    AttackableTypes: "Player,HV,SV,CV,PlayerBike,PlayerDrone"
   }
 
   { Child StuckSensor
@@ -8484,7 +8494,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 80
+	VisibleDistance: 120
 	ViewAngle: 110
 	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
   }
@@ -8736,6 +8746,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   MeshDead: Enemies/AlienAssassin/AlienAssassinInfectedDeadPrefab
   HeadTransform: Head
   Faction: TheLegacy
+  MaxHealth: 750
 }
 { +Entity Name: SoldierAlienInfected, Ref: SoldierAlienAssaultRifle
   MaxHealth: 700
@@ -8749,7 +8760,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Faction: TheLegacy
 }
 { +Entity Name: SoldierHumanMaleInfected, Ref: ZiraxMinigun
-  MaxHealth: 700
+  MaxHealth: 1400
   XpFactor: 11.4
   LootListOnDeath: 101
   Faction: TheLegacy
@@ -8767,7 +8778,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   SfxDeath:
 }
 { +Entity Name: SoldierHumanMale2Infected, Ref: ZiraxMinigun
-  MaxHealth: 700
+  MaxHealth: 1600
   XpFactor: 11.4
   LootListOnDeath: 101
   Faction: TheLegacy
@@ -8789,6 +8800,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   Faction: TheLegacy
   ItemsOnEnterGame: TalonCrossbowWeapon
+  MaxHealth: 1000
 
   { Child Hints
 	UseMeleeAttack: 0
@@ -8798,16 +8810,19 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/TalonGuardian/TalonGuardianGreenInfectedPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianGreenInfectedDeadPrefab
   Faction: TheLegacy
+  MaxHealth: 1200
 }
 { +Entity Name: TalonGuardianInfectedBlue, Ref: TalonGuardian
   Mesh: Enemies/TalonGuardian/TalonGuardianBlueInfectedPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianBlueInfectedDeadPrefab
   Faction: TheLegacy
+  MaxHealth: 1200
 }
 { +Entity Name: TalonGuardianInfectedRed, Ref: TalonGuardian
   Mesh: Enemies/TalonGuardian/TalonGuardianRedInfectedPrefab
   MeshDead: Enemies/TalonGuardian/TalonGuardianRedInfectedDeadPrefab
   Faction: TheLegacy
+  MaxHealth: 1200
 }
 { +Entity Name: ZiraxInfectedBlue, Ref: ZiraxMinigun
   Mesh: Enemies/Zirax/ZiraxBlueInfectedPrefab
@@ -8815,13 +8830,15 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: Bip01_Head
   ItemsOnEnterGame: ZiraxMinigunWeapon
   Faction: TheLegacy
+  MaxHealth: 1000
 }
-{ +Entity Name: ZiraxInfectedGreen, Ref: ZiraxMinigun
+{ +Entity Name: ZiraxInfectedGreen, Ref: ZiraxShotgun
   Mesh: Enemies/Zirax/ZiraxGreenInfectedPrefab
   MeshDead: Enemies/Zirax/ZiraxGreenInfectedDeadPrefab
   HeadTransform: Bip01_Head
   ItemsOnEnterGame: ZiraxMinigunWeapon
   Faction: TheLegacy
+  MaxHealth: 1000
 }
 { +Entity Name: ZiraxInfectedRed, Ref: ZiraxMinigun
   Mesh: Enemies/Zirax/ZiraxRedInfectedPrefab
@@ -8829,6 +8846,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: Bip01_Head
   ItemsOnEnterGame: ZiraxMinigunWeapon
   Faction: TheLegacy
+  MaxHealth: 1000
 }
 { +Entity Name: ZiraxInfectedYellow, Ref: ZiraxMinigun
   Mesh: Enemies/Zirax/ZiraxYellowInfectedPrefab
@@ -8836,20 +8854,23 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   HeadTransform: Bip01_Head
   ItemsOnEnterGame: ZiraxMinigunWeapon
   Faction: TheLegacy
+  MaxHealth: 1000
 }
-{ +Entity Name: ZiraxInfectedPurple, Ref: ZiraxMinigun
+{ +Entity Name: ZiraxInfectedPurple, Ref: ZiraxSniper
   Mesh: Enemies/Zirax/ZiraxPurpleInfectedPrefab
   MeshDead: Enemies/Zirax/ZiraxPurpleInfectedDeadPrefab
   HeadTransform: Bip01_Head
-  ItemsOnEnterGame: ZiraxMinigunWeapon
+  ItemsOnEnterGame: Sniper
   Faction: TheLegacy
+  MaxHealth: 1000
 }
 { +Entity Name: ZiraxInfectedCommander, Ref: ZiraxCommander
   Mesh: Enemies/Zirax/ZiraxCommanderInfectedPrefab
   MeshDead: Enemies/Zirax/ZiraxCommanderInfectedDeadPrefab
   HeadTransform: Bip01_Head
-  ItemsOnEnterGame: ZiraxMinigunWeapon
+  ItemsOnEnterGame: LaserRifle
   Faction: TheLegacy
+  MaxHealth: 2000
 }
 
 
@@ -8863,7 +8884,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/AlienBugs/AlienBug02Prefab
   MeshDead: Enemies/AlienBugs/AlienBug02DeadPrefab
 
-  MaxHealth: 400
+  MaxHealth: 1200
   XpFactor: 6.96
   RotateToGround: true
   RotateSpeedMovement: 360
@@ -8901,7 +8922,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   }
 
   {	Child VisionSensor
-	VisibleDistance: 50
+	VisibleDistance: 70
 	ViewAngle: 180
 	VisibleTypes: "Player,HV,PlayerBike"
   }
@@ -9013,13 +9034,1543 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/AssaultCyborg/ServantCyborgPrefab
   SurfaceCategory: metal
   HeadTransform: Bip01_Head
-  Faction: Cyborgs
-  /* AI properties */
-  AITask-1: TraderTalksTo
 }
 
 { +Entity Name: HWSMedicCyborgStatic, Ref: DamagedCyborgStatic
   Mesh: Enemies/AssaultCyborg/MedicCyborgPrefab
   SurfaceCategory: metal
   HeadTransform: Bip01_Head
+}
+
+{ +Entity Name: HWSEngineerCyborgStatic, Ref: DamagedCyborgStatic
+  Mesh: Enemies/AssaultCyborg/EngineerCyborgPrefab
+  SurfaceCategory: metal
+  HeadTransform: Bip01_Head
+}
+
+
+
+
+# === Reforged Galaxy Test Line ===
+# RG/RE Elite Troops for high level playfields and POIs
+# All use the blue zirax model with a full helmet
+# === ZIRAX ELITE TROOPS ===
+{ +Entity Name: ZiraxEliteSoldier, Ref: AlienTemplateBAI
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  HeadTransform: Bip01_Head
+
+  Prefab: AlienHumanoid
+
+  /* Determines particle effect  */
+  SurfaceCategory: human
+
+  /* General entity properties */
+  ViewAngle: 180
+  MaxHealth: 440
+  # XpFactor: 3
+  XpFactor: 5
+  RightHandJointName: Bip01_R_Hand
+  ItemsOnEnterGame: ZiraxAssaultRiflePlayer
+  RotateToGround: false
+  RotateSpeed: 500
+  RotateSpeedMovement: 500
+
+  /* Sound settings */
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/Zirax/Zirax_SfxRandom
+  SfxAlertTime: 50.0
+  SfxAlert: Enemies/Zirax/Zirax_SfxRandom
+  SfxHurt:  Enemies/Zirax/Zirax_SfxHurt
+  SfxDeath: Enemies/Zirax/Zirax_SfxDeath
+
+  LootListOnDeath: 100
+  FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
+
+  JumpHeight: 1.75
+  StepHeight: 2.5
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands
+  }
+
+
+  { Child VariableOverride
+    SpeedCalm: 0.4
+    SpeedAlerted: 2.0
+	SpeedAttack: 2.25
+  }
+
+  { Child Hints
+	AttackApproachTarget: 40
+	AttackOptimalDistance: 60
+	SearchAdvanceTime: 5.0
+	SearchWaitTime: 6
+	SearchRandomDistanceMult: 2.75
+	FireWeaponBlendInTime: 0.25
+	FireWeaponDurationMultiplier: 2.0
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 150
+	ViewAngle: 180
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
+
+  { Child StuckSensor
+	Use: 0
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 2
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:5 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:3
+	AlertAddFromAutoAlert:40
+	MinDistanceToAutoAlert:50
+	NoiseMaxDistance:100
+	NoiseAlertMultiplier:2.5
+  }
+}
+
+{ +Entity Name: ZiraxElitePlasma, Ref: ZiraxEliteSoldier
+  MaxHealth: 500
+  XpFactor: 6
+  LootListOnDeath: 101
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  ItemsOnEnterGame: ScifiCannon
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 90
+  }
+  {	Child VisionSensor
+	VisibleDistance: 150
+  }
+}
+
+{ +Entity Name: ZiraxEliteShotgun, Ref: ZiraxEliteSoldier
+  MaxHealth: 540
+  XpFactor: 12.0
+  LootListOnDeath: 102
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  ItemsOnEnterGame: ZiraxShotgunPlayer
+
+  { Child VariableOverride
+    SpeedCalm: 0.4
+    SpeedAlerted: 2.00
+	SpeedAttack: 2.5
+  }
+
+  { Child Hints
+	AttackApproachTarget: 90
+	AttackOptimalDistance: 10
+	SearchAdvanceTime: 3.0
+	SearchWaitTime: 0.5
+	SearchRandomDistanceMult: 3.8
+	FireWeaponDurationMultiplier: 0.1
+  }
+
+}
+
+{ +Entity Name: ZiraxEliteMarksman, Ref: ZiraxEliteSoldier
+  MaxHealth: 370
+  XpFactor: 10
+  LootListOnDeath: 104
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  ItemsOnEnterGame: Sniper
+  { Child Hints
+  	FireWeaponDurationMultiplier: 0.3
+	FireWeaponBlendInTime: 0.7
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 100
+  }
+  {	Child VisionSensor
+	VisibleDistance: 150
+	ViewAngle: 100
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
+}
+# ========= Type 2 Drones =========
+#PolarisDrone04Prefab - Ball Drone Large
+#PolarisDrone03Prefab - Model Removed
+#PolarisDrone02Prefab - Fin Drone
+#PolarisDrone01Prefab - Ball Drone Small
+# ========= Type 2 Drones =========
+{ +Entity Name: PolarisRocketDrone
+  EntityType: EnemyDrone
+  Faction: Polaris
+  Mesh: Enemies/Drones/PolarisDrone02Prefab
+  MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
+  PoolCount: 10
+
+  SurfaceCategory: metal
+  ModelType: Custom
+  Prefab: Drone
+  Class: MeshDrone
+  Parent: Drones
+  AvatarController: Custom
+
+  DroneType: BomberDrone
+  ViewAngle: 360
+  ViewRange: 1000
+
+  AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
+
+  /* General properties */
+  HandItem: DroneBaseAttackRocketWeapon
+  ItemsOnEnterGame: DroneBaseAttackRocketWeapon
+  IsEnemy: true
+  MaxHealth: 6000
+  # XpFactor: 1.5
+  XpFactor: 7.0
+
+  WanderSpeed: 10.0
+  ApproachSpeed: 40.0
+  NightWanderSpeed: 10.0
+  NightApproachSpeed: 40.0
+  PanicSpeed: 20.0
+  Speed: 50.0
+
+  SpawnYAdd: 30     /* drones shall always spawn 15meters above ground */
+
+  ParticleOnDeath: drone_explosion02
+  # TimeStayAfterDeath: 150
+  TimeStayAfterDeath: 300
+  LootListOnDeath: 151
+
+  /* Sound Setting */
+  SfxRandomTime: 80.0   /* It will play the roam every [X/2, X] seconds */
+  # SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
+  SfxRandom: Enemies/Drone/SwellsRushesAssortment_start
+
+  SfxAlertTime: 50.0   /* It will play the roam every [X/2, X] seconds*/
+  # SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
+  # SfxHurt:  Enemies/Drone/DroneSmall_SfxHurt
+  # SfxDeath: Enemies/Drone/DroneSmall_SfxDeath
+  SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
+  SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
+
+  # MapIcon: map_EnemyEntityDot
+  MapIcon: map_GV
+
+  AllowUserInstantiate: true
+  HudInfo: false
+
+  { Child VariableOverride
+    SpeedCalm: 10.0
+    SpeedAlerted: 20.0
+	SpeedAttack: 30.0
+  }
+}
+# ========= Advanced Drones =========
+{ +Entity Name: SporeDrone
+  EntityType: EnemyDrone
+  Faction: Alien
+  Mesh: Enemies/Drones/LegacyDroneCrabPrefab
+  MeshDead: Enemies/Drones/LegacyDroneCrabDmgPrefab
+  PoolCount: 10
+
+  SurfaceCategory: metal
+  ModelType: Custom
+  Prefab: Drone
+  Class: MeshDrone
+  Parent: Drones
+  AvatarController: Custom
+
+  DroneType: FastDrone
+  ViewAngle: 360
+  ViewRange: 1500
+
+  /* AI properties */
+  # AITask-1: DroneFindTargetIfHurt
+  # AITask-2: DroneAttackTarget
+  # AITask-3: DroneHuntAfterLostDetection, param1: 50
+  # AITask-4: DroneRangePatrol, param1: 50
+  # AITask-5: DronePathPatrol
+  # AITask-6: DroneSentryPatrol
+
+  AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
+
+  /* General properties */
+  HandItem: pulseLaserDrone
+  ItemsOnEnterGame: pulseLaserDrone
+  IsEnemy: true
+  MaxHealth: 12500
+  XpFactor: 15.0
+
+  WanderSpeed: 50.0
+  ApproachSpeed: 90.0
+  NightWanderSpeed: 60.0
+  NightApproachSpeed: 90.0
+  PanicSpeed: 100.0
+  Speed: 80.0
+
+  SpawnYAdd: 50     /* drones shall always spawn 15meters above ground */
+
+  ParticleOnDeath: drone_explosion02
+  TimeStayAfterDeath: 300
+  LootListOnDeath: 159
+
+  /* Sound Setting */
+  SfxRandomTime: 50.0   /* It will play the roam every [X/2, X] seconds */
+  SfxRandom: Enemies/Drone/SwellsRushesAssortment_start
+
+  SfxAlertTime: 50.0   /* It will play the roam every [X/2, X] seconds*/
+  SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
+  SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
+
+  # MapIcon: map_EnemyEntityDot
+  MapIcon: map_GV
+
+  AllowUserInstantiate: true
+  HudInfo: false
+
+  { Child VariableOverride
+    SpeedCalm: 50.0
+    SpeedAlerted: 60.0
+	SpeedAttack: 70.0
+  }
+}
+# === Arbitrator Aerial Fighter ===
+# Not for practical use. 10+ of these in the air on a planet looks amazing but they can't aim for shit
+# Good for flashy videos and a distraction. Not much else.
+{ +Entity Name: Arbitrator
+  EntityType: EnemyDrone
+  Faction: Zirax
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
+  PoolCount: 10
+
+  SurfaceCategory: metal
+  ModelType: Custom
+  Prefab: Drone
+  Class: MeshDrone
+  Parent: Drones
+  AvatarController: Custom
+
+  DroneType: BomberDrone
+  ViewAngle: 360
+  ViewRange: 1500
+
+  /* AI properties */
+  # AITask-1: DroneFindTargetIfHurt
+  # AITask-2: DroneAttackTarget
+  # AITask-3: DroneHuntAfterLostDetection, param1: 50
+  # AITask-4: DroneRangePatrol, param1: 50
+  # AITask-5: DronePathPatrol
+  # AITask-6: DroneSentryPatrol
+
+  AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
+
+  /* General properties */
+  HandItem: RocketLauncherSSHomingWeapon
+  ItemsOnEnterGame: RocketLauncherSSHomingWeapon
+  IsEnemy: true
+  MaxHealth: 8000
+  XpFactor: 10.0
+
+  WanderSpeed: 50.0
+  ApproachSpeed: 90.0
+  NightWanderSpeed: 60.0
+  NightApproachSpeed: 90.0
+  PanicSpeed: 100.0
+  Speed: 80.0
+
+  SpawnYAdd: 50     /* drones shall always spawn 15meters above ground */
+
+  ParticleOnDeath: drone_explosion02
+  TimeStayAfterDeath: 300
+  LootListOnDeath: 159
+
+  /* Sound Setting */
+  SfxRandomTime: 50.0   /* It will play the roam every [X/2, X] seconds */
+  SfxRandom: Enemies/Drone/SwellsRushesAssortment_start
+
+  SfxAlertTime: 50.0   /* It will play the roam every [X/2, X] seconds*/
+  SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
+  SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
+
+  # MapIcon: map_EnemyEntityDot
+  MapIcon: map_SS
+
+  AllowUserInstantiate: true
+  HudInfo: false
+
+  { Child VariableOverride
+    SpeedCalm: 50.0
+    SpeedAlerted: 60.0
+	SpeedAttack: 70.0
+  }
+}
+# =========== Legacy T2 Troops =============
+# ====== Advanced Base Attack Enemies ======
+{ +Entity Name: LightBomberBase
+  EntityType: EnemyDrone
+  Faction: Zirax
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
+  PoolCount: 10
+
+  SurfaceCategory: metal
+  ModelType: Custom
+  Prefab: Drone
+  Class: MeshDrone
+  Parent: Drones
+  AvatarController: Custom
+
+  DroneType: BomberDrone
+  ViewAngle: 360
+  ViewRange: 1000
+
+  /* AI properties */
+  AITarget-1: DroneDetection, param1: "BA", param2: EntityShipSV
+
+  /* General properties */
+  HandItem: BombLauncherWeapon
+  ItemsOnEnterGame: BombLauncherWeapon
+  IsEnemy: true
+  MaxHealth: 7500
+  # XpFactor: 1.5
+  XpFactor: 15.0
+
+  SpawnYAdd: 25     /* drones shall always spawn 15meters above ground */
+
+  ParticleOnDeath: drone_explosion02
+  # TimeStayAfterDeath: 150
+  TimeStayAfterDeath: 300
+  LootListOnDeath: 160
+
+  /* Sound Setting */
+  SfxRandomTime: 50.0   /* It will play the roam every [X/2, X] seconds */
+  SfxRandom: Enemies/Drone/DroneSmall_SfxRandom
+  # SfxRandom: Enemies/Drone/ROBOTICMechMovement01
+
+  SfxAlertTime: 25.0   /* It will play the roam every [X/2, X] seconds*/
+  SfxAlert: Enemies/Drone/DroneSmall_SfxRandom
+  SfxHurt:  Enemies/Drone/DroneSmall_SfxHurt
+  SfxDeath: Enemies/Drone/DroneSmall_SfxDeath
+  # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  # SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
+  # SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
+
+  # MapIcon: map_EnemyEntityDot
+  MapIcon: map_SS
+
+  AllowUserInstantiate: true
+}
+# ====== Mission NPCs ======
+{ +Entity Name: TalonRenegade, Ref: TalonGuardian
+  Mesh: Enemies/TalonGuardian/BAI/TalonGuardianCrossbowPrefab
+  MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
+  HeadTransform: Bip01_Head
+  RightHandJointName: Bip01_R_Hand
+
+  ItemsOnEnterGame: TalonCrossbowWeapon
+
+  Faction: Zirax
+  ViewAngle: 360
+  Weight: 100
+  MaxHealth: 650
+
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 1.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 1.5
+  	FireWeaponDurationMultiplier: 0.3
+	FireWeaponBlendInTime: 0.5
+	UseMeleeAttack: 0
+  }
+  {	Child VisionSensor
+	VisibleDistance: 150
+  }
+}
+# ======
+{ +Entity Name: FastTransport
+  EntityType: EnemyDrone
+  Faction: Zirax
+  Mesh: Enemies/Drones/DroneTroopTransportAnimatedPrefab
+  MeshDead: Enemies/Drones/DroneTroopTransportDestroyedPrefab
+  PoolCount: 10
+
+  SurfaceCategory: metal
+  ModelType: Custom
+  Prefab: Drone
+  Class: MeshDrone
+  Parent: Drones
+  AvatarController: Custom
+
+  DroneType: BomberDrone
+  ViewAngle: 360
+  ViewRange: 1000
+
+  /* AI properties */
+  AITarget-1: DroneDetection, param1: "BA", param2: EntityShipSV
+
+  /* General properties */
+  HandItem: RocketLauncherSSHomingWeapon
+  ItemsOnEnterGame: RocketLauncherSSHomingWeapon
+  IsEnemy: true
+  MaxHealth: 6000
+  # XpFactor: 1.5
+  XpFactor: 10.0
+
+  SpawnYAdd: 40     /* drones shall always spawn 15meters above ground */
+
+  ParticleOnDeath: drone_explosion02
+  # TimeStayAfterDeath: 150
+  TimeStayAfterDeath: 120
+  LootListOnDeath: 16
+
+  /* Sound Setting */
+  SfxRandomTime: 50.0   /* It will play the roam every [X/2, X] seconds */
+  SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
+
+  SfxAlertTime: 25.0   /* It will play the roam every [X/2, X] seconds*/
+  SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
+  SfxHurt:  Enemies/Drone/DroneLarge_SfxHurt
+  SfxDeath: Enemies/Drone/DroneLarge_SfxDeath
+
+  # MapIcon: map_EnemyEntityDot
+  MapIcon: map_SS
+
+  AllowUserInstantiate: true
+}
+# ====== Hoverbike Spawn ======
+{ Entity Name: CV_Player_S
+  EntityType: HV
+  ModelType: ChunkClusterSV, param1: RG_Hoverbike, param2: 8
+  Prefab: SV
+  Class: ShipHV
+  UseProxy: true
+  Parent: HV
+  Faction: Player
+
+  MapIcon: map_GV
+
+  IsEnemy: false
+
+  MaxHealth: 20000
+  ViewAngle: 180
+  Weight: 70
+
+  AITask-1: TurretFindBestTarget
+  AITarget-1: EntitiesAround
+
+  /* Explosion on death */
+  BlastParticleIndex: 1
+  BlastRadius: 3
+
+  AllowUserInstantiate: false
+}
+
+# ============================================================================================================================================================================
+# ========================================================================================================================== Project Eden Custom NPCs
+# ============================================================================================================================================================================
+
+# ========================================================================================================================== Syndicate and Pirates
+{ +Entity Name: Eden_PirateTemplate, Ref: CivilianTemplate
+  /* Class properties */
+  EntityType: Civilian
+  Faction: Pirates
+  ModelType: NoRagdoll
+  Prefab: AlienHumanoid
+  # Class: Enemy
+  Class: BehaviorAI
+  # Parent: Traders    # hierarchy in scene unity -> Traders
+  Parent: Enemies    # hierarchy in scene unity -> Traders
+  IsEnemy: true
+  AvatarController: Enemy
+  RotateSpeedMovement: 270
+
+  /* Determines particle effect  */
+  SurfaceCategory: alien
+
+  /* General entity properties */
+  ViewAngle: 180
+  Weight: 100
+
+  TimeStayAfterDeath: 120            /* sec */
+  FadingEnabled: true
+
+  AllowUserInstantiate: false
+  PoolCount: 10
+
+  /* AI properties */
+  # AITask-1: FleeOnHurt
+  # AITask-2: Wander, param1: true  /* param1: if set to true use indoor pathing */
+
+
+  WanderSpeed: 0.2
+}
+
+{ +Entity Name: Eden_SyndicateGoon, Ref: Eden_PirateTemplate
+  Mesh: Enemies/Traders/AlienCivilian2Prefab
+
+  EntityType: Civilian
+  Faction: Pirates
+
+  HeadTransform: AlienHead
+
+  SurfaceCategory: alien
+
+  /* General entity properties */
+  ViewAngle: 180
+  MaxHealth: 500
+  XpFactor: 4
+  RightHandJointName: AlienRPalm
+  # ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
+  ItemsOnEnterGame: Eden_SyndicateGoon_Weapon
+  RotateToGround: false
+  RotateSpeed: 24
+
+  /* Sound settings */
+  SfxRandomTime: 150.0     # less frequent than other NPCs
+  SfxRandom: Enemies/AlienCivilian/AlienCivilian_SfxRandom
+  SfxAlertTime: 100.0       # less frequent than other NPCs
+  SfxAlert: Enemies/AlienCivilian/AlienCivilian_SfxRandom
+  SfxHurt:  Enemies/AlienCivilian/AlienCivilian_SfxHurt
+  SfxDeath: Enemies/AlienCivilian/AlienCivilian_SfxDeath
+
+  LootListOnDeath: 75
+  RotateSpeedMovement: 180
+  MotionAnimationSpeedMultiplier: 1.0
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands
+  }
+
+
+  { Child VariableOverride
+    SpeedCalm: 0.1
+    SpeedAlerted: 0.2
+	SpeedAttack: 0.3
+  }
+
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 2.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 0.5
+	FireWeaponBlendInTime: 0.5
+	FireWeaponDurationMultiplier: 5
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 100
+	ViewAngle: 110
+	VisibleTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,PlayerBike"
+  }
+
+  { Child StuckSensor
+	Use: 0
+  }
+
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 2
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:100
+	NoiseAlertMultiplier:0.3
+  }
+}
+
+{ +Entity Name: Eden_SyndicateGoonFat, Ref: Eden_SyndicateGoon
+  Mesh: Enemies/Traders/AlienCivilian2FatPrefab
+  MaxHealth: 400
+  XpFactor: 3
+}
+
+{ +Entity Name: Eden_SyndicateSniper, Ref: ZiraxSniper
+  Mesh: Enemies/Zirax/ZiraxGreenPrefab
+  MeshDead: Enemies/Zirax/ZiraxGreenDeadPrefab
+  MaxHealth: 650
+  XpFactor: 8
+  { Child Hints
+	FireWeaponBlendInTime: 0.5
+	FireWeaponDurationMultiplier: 8
+  }
+}
+
+{ +Entity Name: Eden_SyndicateMinigun, Ref: ZiraxMinigun
+  Mesh: Enemies/Zirax/ZiraxGreenPrefab
+  MeshDead: Enemies/Zirax/ZiraxGreenDeadPrefab
+  MaxHealth: 450
+  XpFactor: 8
+}
+
+{ +Entity Name: Eden_SyndicateShotgun, Ref: ZiraxShotgun
+  Mesh: Enemies/Zirax/ZiraxGreenPrefab
+  MeshDead: Enemies/Zirax/ZiraxGreenDeadPrefab
+  MaxHealth: 500
+  XpFactor: 8
+}
+
+{ +Entity Name: Eden_SyndicateRocket, Ref: ZiraxRocket
+  Mesh: Enemies/Zirax/ZiraxGreenPrefab
+  MeshDead: Enemies/Zirax/ZiraxGreenDeadPrefab
+  MaxHealth: 600
+  XpFactor: 10
+}
+
+{ +Entity Name: Eden_SyndicateCommander, Ref: ZiraxCommander
+  Mesh: Enemies/Zirax/ZiraxCommanderPrefab
+  MeshDead: Enemies/Zirax/ZiraxCommanderDeadPrefab
+  MaxHealth: 4000
+  XpFactor: 35
+  RpFactor: 10
+  {	Child EventAgentSpawner
+	EntityClass: "TurretRobotV2"
+	MaxCountInGroup: 4
+	SpawnNodeName: "WeaponNode"
+  }
+}
+
+# ========================================================================================================================== Cultist
+{ +Entity Name: Eden_CultistOverseer, Ref: Overseer
+  MaxHealth: 3500
+  XpFactor: 35
+  # HandItem: MeleeOverseer
+  HandItem: Eden_CultistOverseer_Weapon
+  RotateSpeed: 500
+  RotateSpeedMovement: 800
+  # MotionAnimationSpeedMultiplier: 1.5
+  MotionAnimationSpeedMultiplier: 0.3
+
+  /* Sound settings */
+  # SfxRandomTime: 50.0
+  SfxRandomTime: 3
+  SfxRandom: Enemies/Overseer/Overseer_SfxRandom
+  SfxAlertTime: 1
+  SfxAlert: Enemies/Overseer/Overseer_SfxRandom
+  SfxHurt:  Enemies/Overseer/Overseer_SfxHurt
+  SfxDeath: Enemies/Overseer/Overseer_SfxDeath
+
+  LootListOnDeath: 19
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  { Child VariableOverride
+    # SpeedCalm: 0.8
+    # SpeedAlerted: 1.5
+    # SpeedAttack: 2.0
+    SpeedCalm: 1.25
+    SpeedAlerted: 2.5
+    SpeedAttack: 3.5
+	SpeedFlee: 25
+	MeleeAttackDistance: 40
+	# MinimalDistanceToTarget: 3.0
+  }
+
+}
+
+{ +Entity Name: Eden_CultistGuardian, Ref: TalonGuardian
+  Mesh: Enemies/TalonGuardian/BAI/TalonGuardianRedPrefab
+  MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
+  HandItem: Eden_CultistGuardian_Weapon
+}
+
+{ +Entity Name: Eden_CultistCrossbow, Ref: TalonGuardianCrossbow
+  Mesh: Enemies/TalonGuardian/BAI/TalonGuardianCrossbowPrefab
+  MeshDead: Enemies/TalonGuardian/TalonGuardianRedDeadPrefab
+  ItemsOnEnterGame: Eden_CultistCrossbow_Weapon
+}
+
+# ========================================================================================================================== Alien Bugs
+{ +Entity Name: Eden_Bug03Spitter, Ref: AlienTemplate # AlienBug01
+  Mesh: Enemies/AlienBugs/AlienBug03Prefab
+  MeshDead: Enemies/AlienBugs/AlienBug03DeadPrefab
+  HeadTransform: Head
+  Faction: Predator
+
+  Prefab: AlienFat
+  IsEnemy: true
+
+  /* Determines particle effect  */
+  SurfaceCategory: alien
+
+  MaxHealth: 5000
+  XpFactor: 16
+  RightHandJointName: WeaponNode
+  ItemsOnEnterGame: Eden_Bug03Spitter_Weapon
+  # HandItem: MeleeAlienBug03
+  RotateToGround: true
+  RotateSpeed: 5
+  RotateSpeedMovement: 90
+
+  /* Sound settings */
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/AlienBugs/AlienBug03/AlienBug03_SfxRandom
+  SfxAlertTime: 25.0
+  SfxAlert: Enemies/AlienBugs/AlienBug03/AlienBug03_SfxRandom
+  SfxHurt:  Enemies/AlienBugs/AlienBug03/AlienBug03_SfxHurt
+  SfxDeath: Enemies/AlienBugs/AlienBug03/AlienBug03_SfxDeath
+
+  LootListOnDeath: 20
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  FadingEnabled: false
+
+  WanderSpeed: 0.02
+  ApproachSpeed: 0.04
+  NightWanderSpeed: 0.02
+  NightApproachSpeed: 0.04
+  PanicSpeed: 0.1
+
+}
+
+# ========================================================================================================================== Abyssal Zirax
+{ +Entity Name: Eden_AbyssalPlasma, Ref: ZiraxMinigun
+  MaxHealth: 2000
+  XpFactor: 25
+  # LootListOnDeath: 101
+  LootListOnDeath: 220
+  Mesh: Enemies/Zirax/ZiraxCommanderPrefab
+  MeshDead: Enemies/Zirax/ZiraxCommanderDeadPrefab
+  ItemsOnEnterGame: Eden_AbyssalPlasma_Weapon
+
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 2.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 0.5
+	FireWeaponBlendInTime: 0.5
+	FireWeaponDurationMultiplier: 4.0
+  }
+}
+
+{ +Entity Name: Eden_AbyssalLaser, Ref: ZiraxMinigun
+  MaxHealth: 1200
+  XpFactor: 10
+  # LootListOnDeath: 101
+  LootListOnDeath: 220
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  ItemsOnEnterGame: Eden_AbyssalLaser_Weapon
+
+  { Child VariableOverride
+    SpeedCalm: 0.4
+    SpeedAlerted: 2.2
+    SpeedAttack: 3.2
+  }
+
+  { Child Hints
+	AttackApproachTarget: 0
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 2
+	SearchWaitTime: 6
+	SearchRandomDistanceMult: 0.5
+	FireWeaponBlendInTime: 0.5
+	FireWeaponDurationMultiplier: 0.5
+  }
+}
+
+{ Entity Name: Eden_AbyssalCryotorch, Ref: ZiraxShotgun
+  MaxHealth: 800
+  XpFactor: 6
+  AllowUserInstantiate: true
+  Mesh: Enemies/Zirax/ZiraxPurplePrefab
+  MeshDead: Enemies/Zirax/ZiraxPurpleDeadPrefab
+  ItemsOnEnterGame: Eden_AbyssalCryotorch_Weapon
+  RotateSpeed: 18
+  RotateSpeedMovement: 200
+  LootListOnDeath: 220
+  AllowInSpawners: true
+
+  { Child VariableOverride
+    SpeedCalm: 1.1
+    SpeedAlerted: 2.2
+    SpeedAttack: 3
+  }
+
+  { Child Hints
+	AttackApproachTarget: 90
+	AttackOptimalDistance: 2
+	SearchAdvanceTime: 0.5
+	SearchWaitTime: 0.5
+	SearchRandomDistanceMult: 0.8
+	FireWeaponDurationMultiplier: 3
+  }
+}
+
+# ========================================================================================================================== Abyssal Robots
+{ +Entity Name: Eden_AbyssalMechanoid, Ref: Mechanoid
+  /* General entity properties */
+  ViewAngle: 120
+  MaxHealth: 1500
+  # XpFactor: 2
+  XpFactor: 12
+  ItemsOnEnterGame: Eden_AbyssalMechanoid_Weapon
+  RightHandJointName: Bip001 L Hand
+  RotateToGround: false
+  RotateSpeed: 6
+
+  /* Determines particle effect  */
+  SurfaceCategory: metal
+  ParticleOnDeath: drone_explosion
+
+  /* Sound settings */
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/Drone/DroneSmall_SfxRandom
+  SfxAlertTime: 25.0
+  SfxAlert: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
+  SfxHurt: Enemies/AssaultCyborg/AssaultCyborg_SfxHurt
+  SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath
+
+  # LootListOnDeath: 220
+  LootListOnDeath: 220
+  FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
+
+  MotionAnimationSpeedMultiplier: 1.3
+
+  /* AI Properties */
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands
+  }
+
+  { Child VariableOverride
+    SpeedCalm: 0.4
+    SpeedAlerted: 0.8
+	SpeedAttack: 1.2
+  }
+
+  { Child Hints
+	AttackApproachTarget: 75
+	AttackOptimalDistance: 35
+	IdleMaxWaitTime: 6
+  }
+
+  {	Child VisionSensor
+	VisibleDistance: 75
+	ViewAngle: 110
+  }
+
+  {	Child StuckSensor
+	Use: 0
+  }
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 10
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:10 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:50
+	NoiseAlertMultiplier:0.3
+  }
+}
+
+# { Entity Name: Eden_AbyssalAssaultMech, Ref: ArmoredGolemOld
+{ Entity Name: Eden_AbyssalAssaultMech, Ref: Mechanoid
+  Mesh: Enemies/AssaultMechPrefab
+  MeshDead: Enemies/AssaultMechDamagedPrefab
+  HeadTransform: Head
+
+  MaxHealth: 35000
+  # XpFactor: 2
+  XpFactor: 100
+  # ItemsOnEnterGame: AssaultMechWeapon
+  ItemsOnEnterGame: Eden_AbyssalAssaultMech_Weapon
+  RightHandJointName: assault_mech_Chest
+  # RightHandJointName: assault_mech_RightForeArmWeapon
+  RotateToGround: false
+  RotateSpeed: 4
+  MotionAnimationSpeedMultiplier: 0.25
+
+  /* General entity properties */
+  ViewAngle: 120
+  WanderSpeed: 0.2
+  ApproachSpeed: 0.5
+  NightWanderSpeed: 0.2
+  NightApproachSpeed: 0.5
+  PanicSpeed: 0.3
+
+  SfxRandomTime: 50.0
+  # SfxRandom: Enemies/ArmoredGolem/SwellsRushesAssortment_start
+  SfxRandom: Enemies/ArmoredGolem/ArmoredGolem_SfxRandom
+
+  SfxAlertTime: 25.0
+  # SfxAlert: Enemies/ArmoredGolem/SwellsRushesAssortment_start
+  SfxAlert: Enemies/ArmoredGolem/ArmoredGolem_SfxRandom
+  # SfxSense: Enemies/ArmoredGolem/SwellsRushesAssortment_start
+
+  # SfxHurt: Enemies/ArmoredGolem/skratch13
+  SfxHurt: Enemies/ArmoredGolem/ArmoredGolem_SfxHurt
+  # SfxDeath: Enemies/ArmoredGolem/SwellsRushesAssortment_dead
+  SfxDeath: Enemies/ArmoredGolem/ArmoredGolem_SfxDeath
+
+  LootListOnDeath: 220
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+}
+
+
+{ +Entity Name: Eden_AbyssalSentry, Ref: TurretRobotV2
+  Mesh: Enemies/Robots/TurretRobotNewPrefab
+  MeshDead: Enemies/Robots/TurretRobotNewDmgPrefab
+  HeadTransform: Head
+
+  Faction: Zirax
+
+  /* General entity properties */
+  MaxHealth: 2500
+  XpFactor: 25
+  # ItemsOnEnterGame: minigunTurretRobot
+  ItemsOnEnterGame: Eden_AbyssalSentry_Weapon
+  RightHandJointName: Gunjoint
+  RotateToGround: true
+
+  WanderSpeed: 0.05
+  ApproachSpeed: 0.15
+  NightWanderSpeed: 0.05
+  NightApproachSpeed: 0.15
+  PanicSpeed: 0.1
+
+  /* Determines particle effect  */
+  SurfaceCategory: metal
+  ParticleOnDeath: drone_explosion
+
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/ArmoredGolem/mechanical_001
+
+  SfxAlertTime: 25.0
+  SfxAlert: Enemies/ArmoredGolem/mechanical_004
+  # SfxSense: Enemies/ArmoredGolem/mechanical_004
+
+  SfxHurt: Enemies/ArmoredGolem/skratch13
+  SfxDeath: Enemies/ArmoredGolem/SwellsRushesAssortment_dead
+
+  LootListOnDeath: 220
+  FadingEnabled: false
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  JumpHeight: 0
+  StepHeight: 0.25
+}
+
+
+{ +Entity Name: Eden_AbyssalSentry2, Ref: Eden_AbyssalSentry
+  Mesh: Enemies/Robots/TurretRobotNewPrefab
+  MeshDead: Enemies/Robots/TurretRobotNewDmgPrefab
+  HeadTransform: Head
+
+  Faction: Zirax
+
+  /* General entity properties */
+  MaxHealth: 25000
+  XpFactor: 50
+  # ItemsOnEnterGame: minigunTurretRobot
+  ItemsOnEnterGame: Eden_AbyssalSentry2_Weapon
+  RightHandJointName: Gunjoint
+  RotateToGround: true
+
+  WanderSpeed: 0
+  ApproachSpeed: 0
+  NightWanderSpeed: 0
+  NightApproachSpeed: 0
+  PanicSpeed: 0
+
+  /* Determines particle effect  */
+  SurfaceCategory: metal
+  ParticleOnDeath: drone_explosion
+
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/ArmoredGolem/mechanical_001
+
+  SfxAlertTime: 25.0
+  SfxAlert: Enemies/ArmoredGolem/mechanical_004
+  # SfxSense: Enemies/ArmoredGolem/mechanical_004
+
+  SfxHurt: Enemies/ArmoredGolem/skratch13
+  SfxDeath: Enemies/ArmoredGolem/SwellsRushesAssortment_dead
+
+  LootListOnDeath: 220
+  FadingEnabled: false
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  JumpHeight: 0
+  StepHeight: 0.25
+}
+
+
+# ========================================================================================================================== Unique mission NPCs
+{ +Entity Name: Eden_SyndicateTarget1, Ref: Eden_SyndicateMinigun
+}
+
+{ +Entity Name: Eden_SyndicateTarget2, Ref: HumanCivilianMale1
+}
+
+{ +Entity Name: Eden_SyndicateTarget3, Ref: Eden_SyndicateGoon
+}
+
+{ +Entity Name: Eden_SyndicateTarget4, Ref: Trader2
+}
+
+{ Entity Name: Eden_AssaultMechT2, Ref: AssaultMech
+  MaxHealth: 10000
+  XpFactor: 35
+  RpFactor: 15
+
+  ItemsOnEnterGame: Eden_AssaultMechT2_Weapon
+  RotateSpeed: 6
+
+  /* General entity properties */
+  # ViewAngle: 120
+  # WanderSpeed: 0.2
+  # ApproachSpeed: 0.5
+  # NightWanderSpeed: 0.2
+  # NightApproachSpeed: 0.5
+  # PanicSpeed: 0.3
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+}
+
+# ========================================================================================================================== Dead Bodies
+# Main template
+{ +Entity Name: Eden_DeadTemplate
+  /* Class properties */
+  EntityType: Civilian
+  Faction: Admin
+  ModelType: NoRagdoll
+  Prefab: AlienHumanoid
+  Class: Enemy
+  Parent: Traders    # hierarchy in scene unity -> Traders
+  IsEnemy: false
+  AvatarController: Enemy
+  RotateSpeedMovement: 0
+
+  /* Determines particle effect  */
+  SurfaceCategory: alien
+
+  /* General entity properties */
+  ViewAngle: 180
+  Weight: 100
+
+  TimeStayAfterDeath: 900            /* sec */
+  FadingEnabled: true
+
+  AllowUserInstantiate: false
+  PoolCount: 10
+
+  /* AI properties */
+  # AITask-1: FleeOnHurt
+  # AITask-2: Wander, param1: true  /* param1: if set to true use indoor pathing */
+
+
+  WanderSpeed: 0
+}
+
+# Use as reference
+{ +Entity Name: Eden_DeadGuard, Ref: Eden_DeadTemplate   #MaleCurvy
+  # Mesh: Enemies/Traders/HumanCivilianWalking1Prefab
+  Mesh: Enemies/SecurityGuards/SecurityGuard2MovingDeadPrefab
+
+  EntityType: Civilian
+  Faction: None
+
+  HeadTransform: Head1_M
+
+
+  SurfaceCategory: human
+
+  /* General entity properties */
+  ViewAngle: 180
+  # MaxHealth: 500
+  MaxHealth: 0
+  XpFactor: 0
+  RightHandJointName: Wrist_R
+  ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
+  RotateToGround: true
+  RotateSpeed: 0
+
+  /* Sound settings */
+  SfxRandomTime: 150.0     # less frequent than other NPCs
+  SfxAlertTime: 100.0       # less frequent than other NPCs
+
+  SfxRandom:
+  # SfxHurt: Player_Male/MaleHurt
+  SfxHurt:
+  # SfxDeath: Player_Male/MaleDeath
+  SfxDeath:
+
+  LootListOnDeath: 1
+  RotateSpeedMovement: 0
+  MotionAnimationSpeedMultiplier: 1.0
+
+  UpdateClusterInfo: true
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+  HudInfo: false
+}
+
+# Stays alive as a dead body
+{ +Entity Name: Eden_TestBody, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/HumanCivilianWalking2Prefab
+  MaxHealth: 100
+  TimeStayAfterDeath: 0
+}
+
+# Alien Civilians
+{ +Entity Name: Eden_DeadAlienCivilian2, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/AlienCivilian2Prefab
+}
+{ +Entity Name: Eden_DeadAlienCivilian3, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/AlienCivilian3Prefab
+}
+{ +Entity Name: Eden_DeadAlienCivilian4, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/AlienCivilian4Prefab
+}
+{ +Entity Name: Eden_DeadAlienCivilian5, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/AlienCivilian5Prefab
+}
+
+# Human
+{ +Entity Name: Eden_DeadSoldierHumanMaleAssaultRifle, Ref: Eden_DeadGuard
+  Mesh: Enemies/SecurityGuards/SecurityGuardMovingPrefab
+  MeshDead: Enemies/SecurityGuards/SecurityGuardMovingDeadPrefab
+}
+{ +Entity Name: Eden_DeadHumanCivilianMale1, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/HumanCivilianWalking1Prefab
+}
+{ +Entity Name: Eden_DeadHumanCivilianMale2, Ref: Eden_DeadGuard  #Male
+  Mesh: Enemies/Traders/HumanCivilianWalking2Prefab
+}
+{ +Entity Name: Eden_DeadHumanCivilianMale3, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/HumanCivilianWalking3Prefab
+}
+{ +Entity Name: Eden_DeadHumanCivilianMale4, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/HumanCivilianWalking4Prefab
+}
+{ +Entity Name: Eden_DeadHumanCivilianFemale1, Ref: Eden_DeadGuard  #Female
+  Mesh: Enemies/Traders/HumanCivilianWalking5Prefab
+}
+{ +Entity Name: Eden_DeadHumanCivilianFemale2, Ref: Eden_DeadGuard #Female
+  Mesh: Enemies/Traders/HumanCivilianWalking6Prefab
+}
+{ +Entity Name: Eden_DeadPilotMale, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/OperatorPilotWalkingPrefab
+}
+{ +Entity Name: Eden_DeadOfficerFemale1, Ref: Eden_DeadGuard #Female
+  Mesh: Enemies/Traders/CommandingOfficerWalkingPrefab
+}
+{ +Entity Name: Eden_DeadOfficerFemale2, Ref: Eden_DeadGuard   #Female
+  Mesh: Enemies/Traders/TacticalOfficerWalkingPrefab
+}
+{ +Entity Name: Eden_DeadOfficerMale1, Ref: Eden_DeadGuard #Male
+  Mesh: Enemies/Traders/CommandingOfficer2WalkingPrefab
+}
+{ +Entity Name: Eden_DeadOfficerMale2, Ref: Eden_DeadGuard
+  Mesh: Enemies/Traders/HumanCivilianWalking7Prefab
+}
+
+
+# ========================================================================================================================== Planetary Drones
+
+# Abyssal Plasma Drone
+{ +Entity Name: Eden_DroneAbyssalPlasma
+  EntityType: EnemyDrone
+  Faction: Zirax
+  /* Mesh: Enemies/Drones/DroneV2Prefab      */
+  /* MeshDead: Enemies/Drones/DroneV2DestroyedPrefab   */
+  Mesh: Enemies/Drones/EnemyDroneBluePrefab
+  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+  PoolCount: 10
+
+  SurfaceCategory: metal
+  ModelType: Custom
+  Prefab: Drone
+  Class: MeshDrone
+  Parent: Drones
+  AvatarController: Custom
+
+  DroneType: FastDrone
+  ViewAngle: 360
+  ViewRange: 1000
+
+  /* AI properties */
+  /* AITask-1: DroneFindTargetIfHurt */
+  /* AITask-2: DroneAttackTarget */
+  /* AITask-3: DroneHuntAfterLostDetection, param1: 50 */
+  /* AITask-4: DroneRangePatrol, param1: 50 */
+  /* AITask-5: DronePathPatrol */
+  /* AITask-6: DroneSentryPatrol */
+
+  #AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
+
+  /* General properties */
+  HandItem: Eden_DroneAbyssalPlasma_Weapon
+  ItemsOnEnterGame: Eden_DroneAbyssalPlasma_Weapon
+  IsEnemy: true
+  MaxHealth: 6000
+  # XpFactor: 1.5
+  XpFactor: 10
+
+  WanderSpeed: 40.0
+  ApproachSpeed: 60.0
+  NightWanderSpeed: 40.0
+  NightApproachSpeed: 60.0
+  PanicSpeed: 40.0
+  Speed: 60.0
+
+  SpawnYAdd: 200     /* drones shall always spawn 15meters above ground */
+
+  ParticleOnDeath: drone_explosion02
+  # TimeStayAfterDeath: 150
+  TimeStayAfterDeath: 300
+  LootListOnDeath: 222
+
+  /* Sound Setting */
+  SfxRandomTime: 50.0   /* It will play the roam every [X/2, X] seconds */
+  SfxRandom: Enemies/Drone/DroneSmall_SfxRandom
+  # SfxRandom: Enemies/Drone/ROBOTICMechMovement01
+
+  SfxAlertTime: 25.0   /* It will play the roam every [X/2, X] seconds*/
+  SfxAlert: Enemies/Drone/DroneSmall_SfxRandom
+  SfxHurt:  Enemies/Drone/DroneSmall_SfxHurt
+  SfxDeath: Enemies/Drone/DroneSmall_SfxDeath
+  # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  # SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
+  # SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
+
+  MapIcon: map_EnemyEntityDot
+
+  AllowUserInstantiate: true
+  HudInfo: false
+
+  { Child VariableOverride
+    SpeedCalm: 40.0
+    SpeedAlerted: 50.0
+	SpeedAttack: 60.0
+  }
+
+}
+
+# Abyssal Laser Drone
+{ +Entity Name: Eden_DroneAbyssalLaser, Ref: Eden_DroneAbyssalPlasma
+
+  Mesh: Enemies/Drones/EnemyDroneBluePrefab
+  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+
+  DroneType: FastDrone
+  MaxHealth: 4000
+  # XpFactor: 1.6
+  XpFactor: 10.2
+
+  HandItem: Eden_DroneAbyssalLaser_Weapon
+  ItemsOnEnterGame: Eden_DroneAbyssalLaser_Weapon
+
+  ParticleOnDeath: drone_explosion02
+
+  LootListOnDeath: 222
+  AllowUserInstantiate: true
+}
+
+# Abyssal Plasma Drone Space
+{ +Entity Name: Eden_DroneAbyssalPlasmaT2, Ref: SpaceDronePlasma
+  Mesh: Enemies/Drones/SpaceDroneLODPrefab
+  MeshDead: Enemies/Drones/SpaceDroneDmgPrefab
+
+  MaxHealth: 20000
+  # XpFactor: 2
+  XpFactor: 36
+
+  DroneType: SpaceDrone
+  HandItem: Eden_DroneAbyssalPlasma_Weapon
+  ItemsOnEnterGame: Eden_DroneAbyssalPlasma_Weapon
+
+  LootListOnDeath: 222
+  AllowUserInstantiate: true
+}
+
+# Abyssal Laser Drone Space
+{ +Entity Name: Eden_DroneAbyssalLaserT2, Ref: SpaceDroneLaser
+  Mesh: Enemies/Drones/SpaceDroneLODPrefab
+  MeshDead: Enemies/Drones/SpaceDroneDmgPrefab
+
+  MaxHealth: 10000
+  # XpFactor: 2
+  XpFactor: 18
+
+  DroneType: SpaceDroneHard
+  HandItem: Eden_DroneAbyssalLaser_Weapon
+  ItemsOnEnterGame: Eden_DroneAbyssalLaser_Weapon
+
+  LootListOnDeath: 222
+  AllowUserInstantiate: true
+}
+
+
+# ========================================================================================================================== Space Drones
+{ +Entity Name: Eden_SpaceDroneProgenitor, Ref: SpaceDronePlasma
+  Mesh: Enemies/Drones/LegacyDroneCrabPrefab
+  MeshDead: Enemies/Drones/LegacyDroneCrabDmgPrefab
+  Faction: Alien
+
+  MaxHealth: 75000
+  # XpFactor: 2
+  XpFactor: 18
+
+  DroneType: SpaceDroneHard
+  HandItem: Eden_SpaceDroneProgenitor_Weapon
+  ItemsOnEnterGame: Eden_SpaceDroneProgenitor_Weapon
+
+  AllowUserInstantiate: true
+
+  TimeStayAfterDeath: 10
+  LootListOnDeath: 1
+
+  # MapIcon: map_EnemyEntityDot
+  MapIcon: map_SS
+}
+
+# ========================================================================================================================== Drone Faction space drones
+{ +Entity Name: Eden_RogueDroneSwarmerLaser, Ref: SpaceDronePlasma
+  Mesh: Enemies/Drones/PolarisDrone02Prefab
+  MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
+  Faction: Alien
+
+  MaxHealth: 4000
+  # XpFactor: 2
+  XpFactor: 10
+  TimeStayAfterDeath: 30
+  LootListOnDeath: 236
+
+  DroneType: SpaceDroneHard
+  HandItem: Eden_RogueDroneSwarmerLaser_Weapon
+  ItemsOnEnterGame: Eden_RogueDroneSwarmerLaser_Weapon
+
+  AllowUserInstantiate: true
+}
+
+{ +Entity Name: Eden_RogueDroneSwarmerIon, Ref: SpaceDronePlasma
+  Mesh: Enemies/Drones/PolarisDrone02Prefab
+  MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
+  Faction: Alien
+
+  MaxHealth: 6000
+  # XpFactor: 2
+  XpFactor: 10
+  TimeStayAfterDeath: 30
+  LootListOnDeath: 236
+
+  DroneType: SpaceDroneHard
+  HandItem: Eden_RogueDroneSwarmerIon_Weapon
+  ItemsOnEnterGame: Eden_RogueDroneSwarmerIon_Weapon
+
+  AllowUserInstantiate: true
+}
+
+
+
+# ========================================================================================================================== Pirate Space Drones
+{ +Entity Name: Eden_SpaceDronePirateGatling, Ref: SpaceDronePlasma
+  Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+
+  MaxHealth: 1500
+  XpFactor: 18
+
+  DroneType: SpaceDroneHard
+  HandItem: Eden_SpaceDronePirateGatling_Weapon
+  ItemsOnEnterGame: Eden_SpaceDronePirateGatling_Weapon
+
+  AllowUserInstantiate: true
+}
+
+{ +Entity Name: Eden_SpaceDronePirateRocket, Ref: Eden_SpaceDronePirateGatling
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
+  MaxHealth: 2000
+  HandItem: Eden_SpaceDronePirateRocket_Weapon
+  ItemsOnEnterGame: Eden_SpaceDronePirateRocket_Weapon
+}
+
+{ +Entity Name: Eden_SpaceDronePirateTorpedo, Ref: Eden_SpaceDronePirateGatling
+  # Mesh: Enemies/Drones/DroneTroopTransportAnimatedPrefab
+  # MeshDead: Enemies/Drones/DroneTroopTransportDestroyedPrefab
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
+  MaxHealth: 4000
+  HandItem: Eden_SpaceDronePirateTorpedo_Weapon
+  ItemsOnEnterGame: Eden_SpaceDronePirateTorpedo_Weapon
+}
+
+{ +Entity Name: Eden_SpaceDroneASCGatling, Ref: Eden_SpaceDronePirateGatling
+  MaxHealth: 3000
+  TimeStayAfterDeath: 10
+}
+
+{ +Entity Name: Eden_SpaceDroneASCRocket, Ref: Eden_SpaceDronePirateGatling
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
+  MaxHealth: 4000
+  HandItem: Eden_SpaceDronePirateRocket_Weapon
+  ItemsOnEnterGame: Eden_SpaceDronePirateRocket_Weapon
+  TimeStayAfterDeath: 10
+}
+
+{ +Entity Name: Eden_SpaceDroneASCTorpedo, Ref: Eden_SpaceDronePirateGatling
+  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
+  MaxHealth: 6000
+  HandItem: Eden_SpaceDronePirateTorpedo_Weapon
+  ItemsOnEnterGame: Eden_SpaceDronePirateTorpedo_Weapon
+
+  TimeStayAfterDeath: 10
+  MapIcon: map_SS
 }
