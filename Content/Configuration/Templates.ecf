@@ -4958,16 +4958,17 @@
   }
 }
 
-#{ +Template Name: PumpkinCookie
-#  CraftTime: 10
-#  Target: FoodP
-#  { Child Inputs
-#    Wheat: 1
-#    Milk: 1
-#    Vegetables: 2
-#    Egg: 1
-#  }
-#}
+{ +Template Name: PumpkinCookie
+  CraftTime: 10
+  OutputCount: 2
+  Target: FoodP
+  { Child Inputs
+    Flour: 1
+    Milk: 1
+    Vegetables: 2
+    Egg: 1
+  }
+}
 
 { +Template Name: FruitPie
   DeconOverride: Stop
@@ -4982,7 +4983,17 @@
   }
 }
 
- # ======================= 
+{ +Template Name: Egg
+  DeconOverride: Stop
+  CraftTime: 30
+  Target: FoodP
+  { Child Inputs
+    PlantProtein: 1
+    Milk: 1
+  }
+}
+
+ # =======================
  #        Sprouts
  # ======================= 
  

@@ -51,6 +51,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 2, Name: Flashlight
   Meshfile: Entities/Items/Tools/flashlight01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
+  MarketPrice: 32, display: true
   Material: metalweapon
   HoldType: 14
   StackSize: 1
@@ -65,6 +66,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 3, Name: Pistol
   Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4BlackPrefab
   PickupToToolbar: true
+  MarketPrice: 40, display: true
   Material: metalweapon
   HoldType: 14
   StackSize: 1
@@ -133,6 +135,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Shotguns/SciFiShotgun1BlackPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 123, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -200,6 +203,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/ScifiMinigun/ScifiMinigunPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 4808, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -317,6 +321,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackT1Prefab
   # Meshfile: Entities/Items/Weapons/PulseRifle/PulseRiflePrefab
   PickupToToolbar: true
+  MarketPrice: 678, display: true
   Material: metalweapon
   HoldType: 15
   StackSize: 1
@@ -396,6 +401,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Snipers/ScifiSniper1Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 108, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -467,6 +473,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/DrillV2/DrillT0Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 156, display: true
   HoldType: 16
   StackSize: 1
   Category: Weapons/Items
@@ -556,6 +563,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Shotguns/SciFiShotgun2BlackPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 4130, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -625,6 +633,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/SciFiGrenadeLauncher/SciFiGrenadeLauncherBlackPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 6871, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -664,12 +673,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
   UnlockCost: 12, display: true
   UnlockLevel: 10, display: true
+  TechTreeParent: GrenadeLauncher
   TechTreeNames: Weapons
 }
 { +Item Id: 11, Name: MultiTool
   Meshfile: Entities/Items/Weapons/MultiToolT1Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 588, display: true
   HoldType: 16
   StackSize: 1
   Category: Weapons/Items
@@ -1109,6 +1120,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   # Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol2BluePrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 2037, display: true
   HoldType: 14
   StackSize: 1
   Category: Weapons/Items
@@ -1188,6 +1200,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   # Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackT1Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 125, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -1261,6 +1274,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle4Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 18156, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -1352,6 +1366,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/ScifiCannon/ScifiCannonPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 16335, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -1450,6 +1465,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Snipers/ScifiSniper3Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 4987, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -1520,6 +1536,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/DrillV2/DrillT2Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 6017, display: true
   HoldType: 16
   StackSize: 1
   Category: Weapons/Items
@@ -1791,6 +1808,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4BlackT2Prefab
   PickupToToolbar: true
   Durability: 500, display: false
+  MarketPrice: 1950, display: true
   Info: "A specialist sidearm with a larger magazine and holosight. It possesses superior stopping power and can operate underwater."", display: true
   DegradationProb: 0.75, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
@@ -1932,6 +1950,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Tools/ChainsawV2Prefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 118, display: true
   HoldType: 16
   StackSize: 1
   Category: Weapons/Items
@@ -1993,6 +2012,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/AssaultRifleEpicPrefab
   # Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2EpicPrefab
   PickupToToolbar: true
+  MarketPrice: 100000, display: true
   Info: bkiEpicWeapon, display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
@@ -2055,6 +2075,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 25, Name: Sniper2Epic, Ref: Sniper2
   Meshfile: Entities/Items/Weapons/Snipers/ScifiSniper3EpicPrefab
   PickupToToolbar: true
+  MarketPrice: 200000, display: true
   Info: bkiEpicWeapon, display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
@@ -2120,6 +2141,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 26, Name: MinigunEpic, Ref: Minigun
   Meshfile: Entities/Items/Weapons/ScifiMinigun/ScifiMinigunEpicPrefab
   PickupToToolbar: true
+  MarketPrice: 250000, display: true
   Info: "An experimental rotary laser cannon developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. It's equipped with a secondary firing mode activated with RMB. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
@@ -2234,6 +2256,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 27, Name: Shotgun2Epic, Ref: Shotgun2
   Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
   PickupToToolbar: true
+  MarketPrice: 250000, display: true
   Info: "An advanced combat shotgun developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
@@ -2295,6 +2318,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle4EpicPrefab
   # HoldType: 16           # no weapon shaking animation
   PickupToToolbar: true
+  MarketPrice: 200000, display: true
   Info: "A superior plasma rifle developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
@@ -2362,6 +2386,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 29, Name: ScifiCannonEpic, Ref: ScifiCannon
   Meshfile: Entities/Items/Weapons/ScifiCannon/ScifiCannonEpicPrefab
   PickupToToolbar: true
+  MarketPrice: 200000, display: true
   Info: "An experimental plasma cannon developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. It's equipped with an Anti-Ship mode that can be activated with RMB. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
@@ -2442,6 +2467,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 30, Name: PistolEpic, Ref: Pistol
   Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4EpicPrefab
   PickupToToolbar: true
+  MarketPrice: 100000, display: true
   Info: "An improved automatic pistol developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 500, display: false
@@ -2502,6 +2528,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { +Item Id: 31, Name: MultiToolT2, Ref: MultiTool
   Meshfile: Entities/Items/Weapons/MultiToolT2Prefab
+  MarketPrice: 2447, display: true
   { Child 0 # "Retrieve Blocks" (= get complete blocks in own structure, do "Salvage" in others)
     Range: 8
 	  ReturnFactor: 0.667, display: true
@@ -2575,6 +2602,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalitem
+  MarketPrice: 377, display: true
   Canhold: false
   HoldType: 0
   StackSize: 10
@@ -2601,6 +2629,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 33, Name: RocketLauncherT2, Ref: RocketLauncher
   Meshfile: Entities/Items/Weapons/SciFiGrenadeLauncher/SciFiGrenadeLauncherT2Prefab
   PickupToToolbar: true
+  MarketPrice: 14460, display: true
   Durability: 100, display: false
   Info: "An improved variant of Rocket Launcher designed to operate using laser-guided microrockets for anti-aircraft engagements where the targets are protected behind armor.", display: true
   #just for display, see ammo "SlowRocketHoming"
@@ -2633,6 +2662,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 34, Name: RocketLauncherEpic, Ref: RocketLauncher
   Meshfile: Entities/Items/Weapons/SciFiGrenadeLauncher/SciFiGrenadeLauncherEpicPrefab
   PickupToToolbar: true
+  MarketPrice: 250000, display: true
   Info: "A refined version of the standard UCH Rocket Launcher developed by the Zirax after examining UCH weapons retrieved from the Titan's Wreckage. The technology to repair this weapon does not exist yet.", display: true
   #just for display, see ammo
   BlastRadius: 3, display: true
@@ -2673,6 +2703,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 35, Name: LaserPistolT2, Ref: LaserPistol
   Meshfile: Entities/Items/Weapons/Pistols/ScifiEnergyPistol3Prefab
   PickupToToolbar: true
+  MarketPrice: 14153, display: true
   # DamageMultiplier_1: 3.5, param1: head, display: DmgMultiplierHead
   # Damage: 100, display: true
   Durability: 500, display: false
@@ -2724,6 +2755,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/AssaultRifleT2Prefab
   # Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackPrefab
   PickupToToolbar: true
+  MarketPrice: 3654, display: true
   Durability: 500, display: false
   DegradationProb: 0.25, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
@@ -2782,6 +2814,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackT2Prefab
   # Meshfile: Entities/Items/Weapons/PulseRifle/PulseRifleT2Prefab
   PickupToToolbar: true
+  MarketPrice: 5998, display: true
   Durability: 500, display: false
   DegradationProb: 0.2, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
@@ -2832,6 +2865,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackEpicPrefab
   # Meshfile: Entities/Items/Weapons/PulseRifle/PulseRifleEpicPrefab
   PickupToToolbar: true
+  MarketPrice: 250000, display: true
   Material: metalweapon
   HoldType: 15
   StackSize: 1
@@ -3107,6 +3141,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/DrillV2/DrillT2EpicPrefab
   StackSize: 1
   DegradationProb: 0.1, type: float, display: false
+  MarketPrice: 300000, display: true
   { Child 0   # Resource Mining
     Damage: 777, display: true
     Range: 9, display: true
@@ -3129,6 +3164,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Tools/TextureColorToolPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 110, display: true
   HoldType: 14
   StackSize: 1
   Category: Weapons/Items
@@ -3167,6 +3203,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 1855, display: true
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
@@ -3224,6 +3261,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   PickupToToolbar: true
   Material: metalweapon
+  MarketPrice: 38836, display: true
   HoldType: 15
   StackSize: 1
   #CustomIcon: StarterTool
@@ -3603,6 +3641,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   /* Meshfile: Entities/Items/Weapons/Projectiles/rocket01Prefab */
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  MarketPrice: 102, display: true
   HoldType: 0
   Canhold: false
   Info: bkiAmmoExplosive, display: true
@@ -3665,6 +3704,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  MarketPrice: 2, display: true
   HoldType: 0
   Canhold: false
   StackSize: 50000
@@ -3680,35 +3720,38 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 0.02, type: float, display: true, formatter: Kilogram
   Volume: 0.01, type: float, display: true, formatter: Liter
-  MarketPrice: 30
+  MarketPrice: 3, display: true
 }
 { +Item Id: 54, Name: 5.8mmBullet, Ref: 50Caliber
   StackSize: 50000
   Mass: 0.02, type: float, display: true, formatter: Kilogram
   Volume: 0.01, type: float, display: true, formatter: Liter
-  MarketPrice: 1
+  MarketPrice: 3, display: true
 }
 { +Item Id: 55, Name: 12.7mmBullet, Ref: 50Caliber
   StackSize: 50000
   Mass: 0.06, type: float, display: true, formatter: Kilogram
   Volume: 0.03, type: float, display: true, formatter: Liter
+  MarketPrice: 10, display: true
 }
 { +Item Id: 56, Name: 15mmBullet, Ref: 50Caliber
   StackSize: 50000
   Mass: 0.2, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  MarketPrice: 1
+  MarketPrice: 3, display: true
 }
 { +Item Id: 57, Name: DrillCharge, Ref: 50Caliber
   StackSize: 50000
   Mass: 1.05, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
+  MarketPrice: 220, display: true
   Info: bkiAmmoFullLoad, display: true
 }
 { +Item Id: 58, Name: ShotgunShells, Ref: 50Caliber
   StackSize: 50000
   Mass: 0.03, type: float, display: true, formatter: Kilogram
   Volume: 0.02, type: float, display: true, formatter: Liter
+  MarketPrice: 7, display: true
 }
 { Item Id: 59, Name: FillerCharge, Ref: 50Caliber
   StackSize: 50000
@@ -3719,26 +3762,31 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 0.15, type: float, display: true, formatter: Kilogram
   Volume: 0.05, type: float, display: true, formatter: Liter
+  MarketPrice: 1231, display: true
 }
 { +Item Id: 61, Name: PulseLaserChargeRifle, Ref: 50Caliber
   StackSize: 50000
   Mass: 0.2, type: float, display: true, formatter: Kilogram
   Volume: 0.06, type: float, display: true, formatter: Liter
+  MarketPrice: 586, display: true
 }
 { +Item Id: 62, Name: MultiCharge, Ref: 50Caliber
   StackSize: 50000
   Mass: 1.05, type: float, display: true, formatter: Kilogram
   Volume: 0.6, type: float, display: true, formatter: Liter
   Info: bkiAmmoFullLoad, display: true
+  MarketPrice: 210, display: true
 }
 { +Item Id: 63, Name: BioFuel, Ref: 50Caliber
   StackSize: 50000
+  Meshfile: Entities/Misc/DummyPrefab
   Info: bkiBioFuel, display: true
   AutoFill: false
   Category: Components
   FuelValue: 10, type: int, display: true, formatter: WattHour
   Mass: 20, type: float, display: true, formatter: Kilogram
   Volume: 10, type: float, display: true, formatter: Liter
+  MarketPrice: 52, display: true
 }
 
 { +Item Id: 64, Name: SciFiCannonPlasmaCharge
@@ -3752,6 +3800,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 4, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
+  MarketPrice: 85, display: true
   { Child 0
     Class: Projectile
     Damage: 687, display: true
@@ -3809,6 +3858,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 1.6, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
+  MarketPrice: 119, display: true
   { Child 0
     Class: Projectile
     Damage: 1254
@@ -3875,6 +3925,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 4, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
+  MarketPrice: 586, display: true
   { Child 0
     Class: Projectile
     Damage: 5000, display: true
@@ -3941,6 +3992,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 2000
   Mass: 4, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
+  MarketPrice: 338, display: true
   { Child 0
     Class: Projectile
     Damage: 10, display: true
@@ -4158,6 +4210,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  MarketPrice: 120, display: true
   Canhold: false
   HoldType: 0
   Category: Components
@@ -4165,13 +4218,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 12, type: float, display: true, formatter: Kilogram
   Volume: 10, type: float, display: true, formatter: Liter
   O2Value: 250, display: true, type: int  /*  O2Value should be multiples of 200 (=base buff value)  */
-  MarketPrice: 4.65
 }
 ## Please do not rename - referenced in code
 { +Item Id: 81, Name: OxygenBottleSmall
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  MarketPrice: 40, display: true
   Canhold: false
   AutoFill: false
   HoldType: 0
@@ -4179,7 +4232,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 1, type: float, display: true, formatter: Kilogram
   Volume: 1.5, type: float, display: true, formatter: Liter
   O2Value: 75, display: false, type: int
-  MarketPrice: 1.40
   Category: Components
   Info: bkiOxygenBottleSmall, display: true
   { Child 0
@@ -4251,6 +4303,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   AllowPlacingAt: Base, display: true
+  MarketPrice: 2833, display: true
   Material: metal
   HoldType: 0
   StackSize: 50000
@@ -4273,6 +4326,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   AllowPlacingAt: SS, display: true
   Material: metal
+  MarketPrice: 3283, display: true
   HoldType: 0
   StackSize: 50000
   Category: BuildingBlocks
@@ -4295,6 +4349,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   AllowPlacingAt: MS, display: true
   Material: metal
+  MarketPrice: 5233, display: true
   HoldType: 0
   StackSize: 50000
   Category: BuildingBlocks
@@ -4318,6 +4373,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   AllowPlacingAt: GV, display: true
   Material: metal
+  MarketPrice: 3283, display: true
   HoldType: 0
   StackSize: 50000
   Category: BuildingBlocks
@@ -4366,7 +4422,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 0.5, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
   O2Value: 35, display: false, type: int
-  MarketPrice: 40
+  MarketPrice: 12, display: true
   Category: Components
   Info: bkiRespiratorCharge, display: true
   { Child 0
@@ -6656,6 +6712,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
   AllowPlacingAt: SS, display: false
+  MarketPrice: 49, display: true
   HoldType: 0
   StackSize: 50000
   Canhold: false
@@ -6663,7 +6720,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.25, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
-  MarketPrice: 14
   { Child 0
     Class: Projectile
     Damage: 1500, display: true
@@ -6731,6 +6787,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Projectiles/sniperBulletPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  MarketPrice: 225, display: true
   AllowPlacingAt: SS, display: false
   HoldType: 0
   Canhold: false
@@ -6739,7 +6796,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.9, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
-  MarketPrice: 298
   { Child 0
     Class: Projectile
     Damage: 2050, display: true
@@ -6800,6 +6856,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Weapons/Projectiles/rocket01Prefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  MarketPrice: 171, display: true
   AllowPlacingAt: SS, display: false
   HoldType: 0
   StackSize: 50000
@@ -6808,7 +6865,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.8, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
-  MarketPrice: 21
   { Child 0
     Class: Projectile
     Damage: 3500, display: true
@@ -6875,9 +6931,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Canhold: false
   Mass: 0.9, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
+  MarketPrice: 4, display: true
   Info: bkiAmmo, display: true
   Category: Weapons/Items
-  MarketPrice: 2
 
   UnlockLevel: 1
   TechTreeNames: Hidden
@@ -6886,6 +6942,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metalweapon
+  MarketPrice: 496, display: true
   AllowPlacingAt: SS, display: false
   HoldType: 0
   StackSize: 50000
@@ -6894,7 +6951,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: bkiAmmo, display: true
   Category: Weapons/Items
-  MarketPrice: 6
 
   UnlockLevel: 1
   TechTreeNames: Hidden
@@ -6909,6 +6965,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   HoldType: 0
   StackSize: 50000
   Canhold: false
+  MarketPrice: 168, display: true
   ShowUser: No
   Mass: 1, type: float, display: true, formatter: Kilogram
   Volume: 1.5, type: float, display: true, formatter: Liter
@@ -7052,7 +7109,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 870, type: float, display: true, formatter: Kilogram
   Volume: 100, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
-  MarketPrice: 537
+  MarketPrice: 383, display: true
   Category: Weapons/Items
   { Child 0
     Class: Projectile
@@ -7124,7 +7181,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 3, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
-  MarketPrice: 100
+  MarketPrice: 1393, display: true
   { Child 0
     Class: Projectile
     Damage: 7000, display: true
@@ -7172,7 +7229,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 17, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
-  MarketPrice: 266
+  MarketPrice: 289, display: true
   { Child 0
     Class: Projectile
     Damage: 11000, display: true
@@ -7243,6 +7300,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 1.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
+  MarketPrice: 252, display: true
   { Child 0
     Class: Projectile
     Damage: 855, display: true
@@ -7312,7 +7370,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.9, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
-  MarketPrice: 14
+  MarketPrice: 49, display: true
   { Child 0
     Class: Projectile
     Damage: 2090, display: true
@@ -7381,8 +7439,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 10.1, type: float, display: true, formatter: Kilogram
   Volume: 3, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
-  MarketPrice: 35
   Category: Weapons/Items
+  MarketPrice: 37, display: true
   { Child 0
     Class: Projectile
     Damage: 4000, display: true
@@ -7451,8 +7509,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 11, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
-  MarketPrice: 37
   Category: Weapons/Items
+  MarketPrice: 84, display: true
   { Child 0
     Class: Projectile
     Damage: 13000, display: true
@@ -7521,7 +7579,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiAmmoExplosive, display: true
   Volume: 9, type: float, display: true, formatter: Liter
   Category: Weapons/Items
-  MarketPrice: 140
+  MarketPrice: 230, display: true
   { Child 0
     Class: Projectile
     Damage: 20000, display: true
@@ -7593,6 +7651,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 1.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
+  MarketPrice: 2786, display: true
   { Child 0
     Class: Projectile
     Damage: 994, display: true
@@ -7636,7 +7695,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: "SS,GV", display: false
   Mass: 10, type: float, display: true, formatter: Kilogram
   Volume: 2.8, type: float, display: true, formatter: Liter
-  MarketPrice: 44
+  MarketPrice: 157, display: true
   { Child 0
     Damage: 2960, display: true
     BlastParticleIndex: 3
@@ -7693,7 +7752,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 { +Item Id: 166, Name: FlakRocketMS, Ref: FlakRocket
   AllowPlacingAt: MS, display: false
-  MarketPrice: 33
+  MarketPrice: 47, display: true
   { Child 0
     Damage: 3000, display: true
     BlastParticleIndex: 3
@@ -7749,7 +7808,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 840, type: float, display: true, formatter: Kilogram
   Volume: 110, type: float, display: true, formatter: Liter
   AllowPlacingAt: MS, display: false
-  MarketPrice: 511
+  MarketPrice: 383, display: true
   { Child 0
     Damage: 20000, display: true
     BlastParticleIndex: 3
@@ -7805,7 +7864,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: Base, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram
   Volume: 3, type: float, display: true, formatter: Liter
-  MarketPrice: 150
+  MarketPrice: 1006, display: true
   { Child 0
     Damage: 20000, display: true
     Range: 748, display: true
@@ -7841,7 +7900,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: Base, display: false
   Mass: 49, type: float, display: true, formatter: Kilogram
   Volume: 19, type: float, display: true, formatter: Liter
-  MarketPrice: 269
+  MarketPrice: 289, display: true
   { Child 0
     Damage: 11626, display: true
     BlastParticleIndex: 3
@@ -7897,7 +7956,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: Base, display: false
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 13, type: float, display: true, formatter: Liter
-  MarketPrice: 52
+  MarketPrice: 84, display: true
   { Child 0
     Damage: 20000, display: true
     BlastParticleIndex: 3
@@ -7960,7 +8019,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 2, type: float, display: true, formatter: Liter
   Info: bkiAmmo, display: true
   Category: Weapons/Items
-  MarketPrice: 6
+  MarketPrice: 1393, display: true
 
   UnlockLevel: 1
   TechTreeNames: Hidden
@@ -7969,6 +8028,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 172, Name: TurretEnemyRocketAmmo, Ref: FastRocketMS
   AllowPlacingAt: Base, display: false
   ShowUser: No
+  MarketPrice: 578, display: true
   { Child 0
     Damage: 4500, display: true
     BlastParticleIndex: 3
@@ -8024,6 +8084,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 173, Name: TurretEnemyArtilleryAmmo, Ref: LargeRocket
   AllowPlacingAt: Base, display: false
   ShowUser: No
+  MarketPrice: 766, display: true
   { Child 0
     Damage: 12750, display: true
     BlastParticleIndex: 4
@@ -8079,7 +8140,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: GV, display: false
   Mass: 2, type: float, display: true, formatter: Kilogram
   Volume: 0.8, type: float, display: true, formatter: Liter
-  MarketPrice: 21
+  MarketPrice: 173, display: true
   { Child 0
     Damage: 2000, display: true
     BlastRadius: 3, display: true
@@ -8144,6 +8205,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.5, type: float, display: true, formatter: Liter
   # Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
+  MarketPrice: 150, display: true
   { Child 0
     Class: Projectile
     Damage: 1320, display: true
@@ -8287,6 +8349,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.5, type: float, display: true, formatter: Liter
   Info: bkiAmmoExplosive, display: true
   Category: Weapons/Items
+  MarketPrice: 100000, display: true
   { Child 0
     Class: Projectile
     Damage: 5000, display: true   # new: because we removed explosion
@@ -8458,7 +8521,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 3.2, type: float, display: true, formatter: Liter
   Info: A dense ore known as Magnetite that consists primarily of iron that can be refined in a Constructor or Furnace., display: true
   XpFactor: 20
-  MarketPrice: 85
+  MarketPrice: 40, display: true
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -8468,7 +8531,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 4.5, type: float, display: true, formatter: Liter
   Info: A mineral-rich ore consisting primarily of Cobalt that can be refined in a Constructor or Furnace., display: true
   XpFactor: 25
-  MarketPrice: 200
+  MarketPrice: 80, display: true
   ShowUser: Yes
 }
 { +Item Id: 203, Name: SiliconOre, Ref: OreTemplate
@@ -8477,7 +8540,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 2, type: float, display: true, formatter: Liter
   Info: A crystalline mineral known as Quartzite. A vital source of pure Silicon when processed in a Constructor or Furnace., display: true
   XpFactor: 30
-  MarketPrice: 100
+  MarketPrice: 50, display: true
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -8487,7 +8550,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 3.4, type: float, display: true, formatter: Liter
   Info: A Neodymium-rich variant of Bastnasite that can be refined into pure Neodymium with a Constructor or Furnace, display: true
   XpFactor: 35
-  MarketPrice: 400
+  MarketPrice: 120, display: true
   ShowUser: Yes
 }
 { +Item Id: 205, Name: CopperOre, Ref: OreTemplate
@@ -8496,7 +8559,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 2.8, type: float, display: true, formatter: Liter
   Info: A copper-rich ore known as Bornite that can be processed into Copper using a Constructor or Furnace., display: true
   XpFactor: 25
-  MarketPrice: 125
+  MarketPrice: 60, display: true
   ShowUser: Yes
   NoRepairInputItem: true  # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -8506,7 +8569,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 2.1, type: float, display: true, formatter: Liter
   Info: A radioactive crystalline mineral rich in Promethium. It can be refined in a constructor into a fine powder and pressed into pellets., display: true
   XpFactor: 30
-  MarketPrice: 15
+  MarketPrice: 250, display: true
   ShowUser: Yes
 }
 { +Item Id: 207, Name: OpticalFiber, Ref: ComponentsTemplate     # former: Cables
@@ -8514,81 +8577,81 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 0.12, type: float, display: true, formatter: Kilogram
   Volume: 0.2, type: float, display: true, formatter: Liter
   Info: A fiberoptic cable used for data transmission and signal relay., display: true
-  MarketPrice: 41
+  MarketPrice: 5, display: true
 }
 { +Item Id: 208, Name: MechanicalComponents, Ref: ComponentsTemplate    # former: MetalComponents
   ShowUser: Yes
   Mass: 0.65, type: float, display: true, formatter: Kilogram
   Volume: 0.24, type: float, display: true, formatter: Liter
   Info: An assortment of smaller metal components used in most mechanical devices., display: true
-  MarketPrice: 34
+  MarketPrice: 4, display: true
 }
 { +Item Id: 209, Name: CapacitorComponent, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 42, type: float, display: true, formatter: Kilogram
   Volume: 9, type: float, display: true, formatter: Liter
   Info: A heavy industrial capacitor module used in some devices to store and output large amounts of energy., display: true
-  MarketPrice: 10385
+  MarketPrice: 946, display: true
 }
 { +Item Id: 210, Name: Computer, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 12, type: float, display: true, formatter: Kilogram
   Volume: 8, type: float, display: true, formatter: Liter
   Info: A dedicated computer hard drive used as the brain of many devices., display: true
-  MarketPrice: 2456
+  MarketPrice: 290, display: true
 }
 { +Item Id: 211, Name: EnergyMatrix, Ref: ComponentsTemplate     #former: ControlPanel
   ShowUser: Yes
   Mass: 17.2, type: float, display: true, formatter: Kilogram
   Volume: 2.1, type: float, display: true, formatter: Liter
-  MarketPrice: 2250
+  MarketPrice: 224, display: true
   Info: An electrical component that interfaces between computer and electrical systems to regulate the throughput of power., display: true
 }
 { +Item Id: 212, Name: Electronics, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 2.86, type: float, display: true, formatter: Kilogram
   Volume: 0.42, type: float, display: true, formatter: Liter
-  MarketPrice: 110
+  MarketPrice: 13, display: true
   Info: An assortment of circuitboards and cables used in every electronic device., display: true
 }
 { +Item Id: 213, Name: FluxCoil, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 39.1, type: float, display: true, formatter: Kilogram
   Volume: 9, type: float, display: true, formatter: Liter
-  MarketPrice: 8125
+  MarketPrice: 585, display: true
   Info: An advanced electromagnetic coil used for generating magnetic fields on a large scale., display: true
 }
 { +Item Id: 214, Name: Motor, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 24.28, type: float, display: true, formatter: Kilogram
   Volume: 3.5, type: float, display: true, formatter: Liter
-  MarketPrice: 1360
+  MarketPrice: 151, display: true
   Info: A highly-efficient electric motor used in many devices with moving parts., display: true
 }
 { +Item Id: 215, Name: Nanotubes, Ref: ComponentsTemplate    # former: Pipes
   ShowUser: Yes
   Mass: 0.57, type: float, display: true, formatter: Kilogram
   Volume: 2.25, type: float, display: true, formatter: Liter
-  MarketPrice: 62
+  MarketPrice: 5, display: true
   Info: Inert carbon-plastic tubes used to transport fluids and as a structural element in lightweight designs., display: true
 }
 { +Item Id: 216, Name: CobaltAlloy, Ref: ComponentsTemplate    # former: ReactorCore
   ShowUser: Yes
   Mass: 6.29, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
-  MarketPrice: 385
+  MarketPrice: 40, display: true
   Info: An HSS steel alloy used in aerospace engineering for its high heat resistance and superior hardness., display: true
 }
 { +Item Id: 217, Name: SteelPlate, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 11.8, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
-  MarketPrice: 110
+  MarketPrice: 12, display: true
   Info: A steel plate with a foamsteel core that provides improved impact resistance and durability., display: true
 }
 { +Item Id: 218, Name: EnergyCell, Ref: ComponentsTemplate
   FuelValue: 30, type: int, display: true, formatter: WattHour
-  MarketPrice: 938
+  MarketPrice: 156, display: true
   ShowUser: Yes
   Info: bkiEnergyCell, display: true
 
@@ -8606,7 +8669,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 5.8, type: float, display: true, formatter: Kilogram
   Volume: 2.5, type: float, display: true, formatter: Liter
-  MarketPrice: 500
+  MarketPrice: 62, display: true
   Info: Silicate-based glass used in windows and optical lenses., display: true
 }
 # deactivated
@@ -8614,14 +8677,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 0.8, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
-  MarketPrice: 48
+  MarketPrice: 12
   Info: Scrap metal that can be melted down in a furnace for raw materials., display: true
 }
 { +Item Id: 221, Name: ErestrumOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/ErestrumOrePrefab
   Mass: 14.36, type: float, display: true, formatter: Kilogram
   Volume: 7.1, type: float, display: true, formatter: Liter
-  MarketPrice: 2400
+  MarketPrice: 140, display: true
   Info: A radioactive mineral comprised of Erestrum. An element unique to the Andromeda Galaxy., display: true
   XpFactor: 45
   ShowUser: Yes
@@ -8630,7 +8693,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Ores/ZascosiumOrePrefab
   Mass: 16.22, type: float, display: true, formatter: Kilogram
   Volume: 7.6, type: float, display: true, formatter: Liter
-  MarketPrice: 2800
+  MarketPrice: 180, display: true
   Info: A rare-earth mineral comprised of Zascosium. An element unique to the Andromeda Galaxy., display: true
   XpFactor: 45
   ShowUser: Yes
@@ -8640,14 +8703,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.25, type: float, display: true, formatter: Liter
   Info: A hazardous powdered form of Magnesium. Easily ignited it burns at over 3000 degrees and used in explosives and incendiary applications., display: true
   ShowUser: Yes
-  MarketPrice: 250
+  MarketPrice: 25, display: true
 }
 { +Item Id: 224, Name: IronIngot, Ref: ComponentsTemplate
   Mass: 5.9, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: An industrial ingot of Iron. The primary building material of all human technology and engineering., display: true
   ShowUser: Yes
-  MarketPrice: 200
+  MarketPrice: 20, display: true
 }
 { +Item Id: 225, Name: CobaltIngot, Ref: ComponentsTemplate
   Mass: 6.68, type: float, display: true, formatter: Kilogram
@@ -8661,42 +8724,42 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: A common material used in everything from insulation to glass., display: true
   ShowUser: Yes
-  MarketPrice: 225
+  MarketPrice: 25, display: true
 }
 { +Item Id: 227, Name: NeodymiumIngot, Ref: ComponentsTemplate
   Mass: 5.26, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: Commonly used in high-strength electromagnets and Neodymium-doped glass lenses used in laser transmitters and weapons., display: true
   ShowUser: Yes
-  MarketPrice: 900
+  MarketPrice: 60, display: true
 }
 { +Item Id: 228, Name: CopperIngot, Ref: ComponentsTemplate
   Mass: 6.71, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: A thermally and electrically conductive metal used in almost every kind of electronic component., display: true
   ShowUser: Yes
-  MarketPrice: 300
+  MarketPrice: 30, display: true
 }
 { +Item Id: 229, Name: PromethiumPellets, Ref: ComponentsTemplate
   Mass: 2.18, type: float, display: true, formatter: Kilogram
   Volume: 0.3, type: float, display: true, formatter: Liter
   Info: Compressed discs of promethium crystal that are used in power cells using thermal and piezoelectric catalysts to generate energy., display: true
   ShowUser: Yes
-  MarketPrice: 150
+  MarketPrice: 25, display: true
 }
 { +Item Id: 230, Name: ErestrumIngot, Ref: ComponentsTemplate
   Mass: 4.65, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: A green-lustred metal similar in some aspects to Beryllium. Its extremely low melting point and magnetic properties makes it ideal for plasma-based applications., display: true
   ShowUser: Yes
-  MarketPrice: 1400
+  MarketPrice: 70, display: true
 }
 { +Item Id: 231, Name: ZascosiumIngot, Ref: ComponentsTemplate
   Mass: 5.36, type: float, display: true, formatter: Kilogram
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: A unique metal that oxides red. Zascosium has high reflectivity when polished and exceptional hardness but is brittle., display: true
   ShowUser: Yes
-  MarketPrice: 1600
+  MarketPrice: 90, display: true
 }
 { +Item Id: 232, Name: CrushedStone, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/CrushedStonePrefab
@@ -8704,20 +8767,20 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 2, type: float, display: true, formatter: Liter
   Info: Chunks of broken stone with trace amounts of several metals., display: true
   XpFactor: 1
-  MarketPrice: 25
+  MarketPrice: 3, display: true
   ShowUser: Yes
 }
 { +Item Id: 233, Name: RockDust, Ref: ComponentsTemplate
   Mass: 2.67, type: float, display: true, formatter: Kilogram
   Volume: 1.25, type: float, display: true, formatter: Liter
   Info: A fine powder made from crushed stone used as a binder in concrete, display: true
-  MarketPrice: 15
+  MarketPrice: 2, display: true
   ShowUser: Yes
 }
 { +Item Id: 234, Name: Oscillator, Ref: ComponentsTemplate     #former: AdvancedCPU
   Mass: 8.27, type: float, display: true, formatter: Kilogram
   Volume: 2.5, type: float, display: true, formatter: Liter
-  MarketPrice: 1880
+  MarketPrice: 168, display: true
   ShowUser: Yes
 }
 { +Item Id: 235, Name: PlasticMaterial, Ref: ComponentsTemplate
@@ -8725,7 +8788,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.12, type: float, display: true, formatter: Liter
   Info: Raw composite that can be refined with igneous stone dust to form Basalt Fiber. A fireproof and lightweight building material., display: true
   ShowUser: Yes
-  MarketPrice: 30
+  MarketPrice: 2, display: true
 }
 { +Item Id: 236, Name: SathiumOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/SathiumOrePrefab
@@ -8733,7 +8796,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 8.4, type: float, display: true, formatter: Liter
   Info: A dense mineral ore rich in exotic metals with high amounts of Sathium. A metal unique to the Andromeda Galaxy., display: true
   XpFactor: 45
-  MarketPrice: 2000
+  MarketPrice: 100, display: true
   ShowUser: Yes
 }
 { +Item Id: 237, Name: SathiumIngot, Ref: ComponentsTemplate
@@ -8741,13 +8804,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: An extremely hard and durable metal similar to Tungsten. Sathium is used in armor plating and radiation shielding., display: true
   ShowUser: Yes
-  MarketPrice: 1000
+  MarketPrice: 50, display: true
 }
 { +Item Id: 238, Name: PowerCoil, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 184.9, type: float, display: true, formatter: Kilogram
   Volume: 24.5, type: float, display: true, formatter: Liter
-  MarketPrice: 63137
+  MarketPrice: 4442, display: true
   Info: An electromagnetic coil array used for building up and releasing huge amounts of power., display: true
 }
 
@@ -8756,7 +8819,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 239, Name: EnergyCellLarge, Ref: ComponentsTemplate
   FuelValue: 150, type: int, display: true, formatter: WattHour
   ShowUser: Yes
-  MarketPrice: 4700
+  MarketPrice: 781, display: true
   Info: bkiEnergyCell, display: true
 
   Mass: 30, type: float, display: true, formatter: Kilogram
@@ -8787,7 +8850,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 10, type: float, display: true, formatter: Liter
   Info: A tank of compressed Hydrogen used as a supercoolant or as fuel for a Fusion Reactor., display: true
   ShowUser: Yes
-  MarketPrice: 166
+  MarketPrice: 115, display: true
 }
 { +Item Id: 242, Name: WoodLogs, Ref: OreTemplate
   Meshfile: Entities/Items/Resources/WoodLogsPrefab
@@ -8795,7 +8858,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 10, type: float, display: true, formatter: Liter
   Info: Fiberous material obtained from trees that can be processed into numerous organic compounds., display: true
   XpFactor: 20
-  MarketPrice: 120
+  MarketPrice: 12, display: true
   ShowUser: Yes
 }
 { +Item Id: 243, Name: WoodPlanks, Ref: ComponentsTemplate
@@ -8803,14 +8866,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 1.5, type: float, display: true, formatter: Liter
   Info: A good old piece of wood you can use to make housing or furniture., display: true
   ShowUser: Yes
-  MarketPrice: 15
+  MarketPrice: 1, display: true
 }
 { +Item Id: 244, Name: Cement, Ref: ComponentsTemplate
   Mass: 16.14, type: float, display: true, formatter: Kilogram
   Volume: 7.55, type: float, display: true, formatter: Liter
   Info: A mix of sand and gravel that when mixed with water will produce Concrete., display: true
   ShowUser: Yes
-  MarketPrice: 105
+  MarketPrice: 10, display: true
 }
 { +Item Id: 245, Name: PentaxidOre, Ref: OreTemplate
   Meshfile: Entities/Items/Ores/PentaxidOrePrefab
@@ -8818,7 +8881,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 11.85, type: float, display: true, formatter: Liter
   Info: A highly radioactive unstable crystal that can be refined into an even more unstable form used in quantum technology., display: true
   XpFactor: 60
-  MarketPrice: 600
+  MarketPrice: 200, display: true
   ShowUser: Yes
 }
 /* Used for PentaxidTank */
@@ -8829,7 +8892,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 2.4, type: float, display: true, formatter: Liter
   Info: Refined Pentaxid Crystals that are highly unstable and can be easily excited into releasing huge quantities of energy., display: true
   ShowUser: Yes
-  MarketPrice: 300
+  MarketPrice: 100, display: true
 }
 { +Item Id: 247, Name: SteelPlateArmored, Ref: ComponentsTemplate
   ShowUser: Yes
@@ -8853,7 +8916,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 1.17, type: float, display: true, formatter: Liter
   Info: A rare mix of igneous rock and native gold that can be refined into pure gold., display: true
   XpFactor: 60
-  MarketPrice: 800
+  MarketPrice: 400, display: true
   ShowUser: Yes
 }
 { +Item Id: 250, Name: GoldIngot, Ref: ComponentsTemplate
@@ -8861,6 +8924,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: Universally accepted as currency., display: true
   ShowUser: Yes
+  MarketPrice: 2000, display: true
 }
 { +Item Id: 251, Name: GoldCoins, Ref: ComponentsTemplate
   # Info: bkiCurrency, display: true
@@ -8874,6 +8938,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 59.4, type: float, display: true, formatter: Kilogram
   Volume: 127.5, type: float, display: true, formatter: Liter
+  MarketPrice: 326, display: true
 }
 ## Please do not rename - referenced in code
 { Item Id: 253, Name: PlayerBike
@@ -8889,6 +8954,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Devices
   MapIcon: map_PlayerBike
   PickupToToolbar: true
+  MarketPrice: 407, display: true
   { Child 0
     Class: PlaceBike
     Range: 5
@@ -8900,7 +8966,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 10, type: float, display: true, formatter: Liter
   Info: The core component used in Automining technology responsible for non-destructive metal extraction., display: true
   ShowUser: Yes
-  MarketPrice: 147647
+  MarketPrice: 32438, display: true
 }
 { +Item Id: 255, Name: PistolKit, Ref: ComponentsTemplate
   Mass: 1.25, type: float, display: true, formatter: Kilogram
@@ -8908,7 +8974,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: A case containing upgrade components for handheld firearms and personal tools., display: true
   StackSize: 50000
   ShowUser: Yes
-  MarketPrice: 10000
+  MarketPrice: 1500, display: true
 }
 { +Item Id: 256, Name: RifleKit, Ref: ComponentsTemplate
   Mass: 2.5, type: float, display: true, formatter: Kilogram
@@ -8924,7 +8990,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: "A case containing compensators for anti-material rifles so they don't break the wielder's shoulder.", display: true
   StackSize: 50000
   ShowUser: Yes
-  MarketPrice: 15000
+  MarketPrice: 2500, display: true
 }
 { +Item Id: 258, Name: ShotgunKit, Ref: ComponentsTemplate
   Mass: 2.5, type: float, display: true, formatter: Kilogram
@@ -8932,14 +8998,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: A case containing replacement barrels and reloader for shotguns., display: true
   StackSize: 50000
   ShowUser: Yes
-  MarketPrice: 15000
+  MarketPrice: 2500, display: true
 }
 { +Item Id: 259, Name: HeavyWeaponKit, Ref: ComponentsTemplate
   Mass: 15, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
   Info: A large container with precision parts for upgrading heavy weapons., display: true
   StackSize: 50000
-  MarketPrice: 20000
+  MarketPrice: 3000, display: true
   ShowUser: Yes
 }
 { +Item Id: 260, Name: LaserKit, Ref: ComponentsTemplate
@@ -8947,14 +9013,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 20, type: float, display: true, formatter: Liter
   Info: A padded case containing a sensitive laser focusing array used in high-powered lasers., display: true
   StackSize: 50000
-  MarketPrice: 17500
+  MarketPrice: 3500, display: true
   ShowUser: Yes
 }
 { +Item Id: 261, Name: PentaxidElement, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 2.21, type: float, display: true, formatter: Kilogram
   Volume: 0.25, type: float, display: true, formatter: Liter
-  MarketPrice: 95
+  MarketPrice: 31, display: true
   Info: Isolated into pure elemental Pentaxium form. This element has measurable levels of exotic matter and is key to all quantum technology., display: true
 }
 
@@ -8965,7 +9031,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 5, type: float, display: true, formatter: Liter
   Info: Frozen water that can be used as coolant or melted into drinkable water., display: true
   XpFactor: 2
-  MarketPrice: 55
+  MarketPrice: 35, display: true
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -8977,7 +9043,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 2.5, type: float, display: true, formatter: Liter
   Info: A mineral variant of Rutile. High in Titanium that can be processed in a Constructor or Furnace., display: true
   XpFactor: 20
-  MarketPrice: 1200
+  MarketPrice: 90, display: true
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -8995,7 +9061,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 3, type: float, display: true, formatter: Liter
   Info: A plate of Titanium metal with a foam metal core for added strength and durability., display: true
   ShowUser: Yes
-  MarketPrice: 375
+  MarketPrice: 28, display: true
 }
 
 { +Item Id: 266, Name: AluminiumOre, Ref: OreTemplate
@@ -9005,7 +9071,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 3.5, type: float, display: true, formatter: Liter
   Info: A sedimentary variant of Bauxite. A source of Aluminium when refined., display: true
   XpFactor: 20
-  MarketPrice: 600
+  MarketPrice: 70, display: true
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -9015,13 +9081,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: Powdered Aluminium metal used in casting electroplating alloying and some incendiary devices., display: true
   ShowUser: Yes
-  MarketPrice: 350
+  MarketPrice: 35, display: true
 }
 
 { +Item Id: 268, Name: AluminiumCoil, Ref: ComponentsTemplate
   Mass: 8.1, type: float, display: true, formatter: Kilogram
   Volume: 2, type: float, display: true, formatter: Liter
-  MarketPrice: 1875
+  MarketPrice: 218, display: true
   Info: A conductive coil of aluminium used in electronics and heating elements., display: true
   ShowUser: Yes
 }
@@ -9032,7 +9098,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 3.5, type: float, display: true, formatter: Liter
   Info: A dense metallic ore of Sperrylite. It's rich in platinum but is toxic due to high arsenic content. Must be processed in a furnace., display: true
   XpFactor: 20
-  MarketPrice: 4000
+  MarketPrice: 400, display: true
   ShowUser: Yes
   NoRepairInputItem: true   # needed since it has flag "BaseItem: true" and would other be considered for repairing in R2T
 }
@@ -9042,7 +9108,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.75, type: float, display: true, formatter: Liter
   Info: A valuable and extremely dense metal used in a variety of applications from catalysts to thruster shielding., display: true
   ShowUser: Yes
-  MarketPrice: 2500
+  MarketPrice: 200, display: true
 }
 
 { +Item Id: 271, Name: PlatinOunce, Ref: ComponentsTemplate
@@ -9050,7 +9116,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.5, type: float, display: true, formatter: Liter
   Info: A folded bar of Platinum Foil. Unfolded it's used in various applications for it's resistance to corrosion and friction., display: true
   ShowUser: Yes
-  MarketPrice: 781
+  MarketPrice: 125, display: true
 }
 
 # Save game break: move down to food items, e.g. Id: 327
@@ -9059,6 +9125,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodDecayTime: 90, display: true, type: int
   FoodDecayedItem: RottenFood
   Info: bkiAnniversaryCake, display: true
+  MarketPrice: 330, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9075,21 +9142,21 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 1.6, type: float, display: true, formatter: Kilogram
   Volume: 0.25, type: float, display: true, formatter: Liter
-  MarketPrice: 250
+  MarketPrice: 29, display: true
   Info: A treated form of Erestrum to keep it in a semifluid state. Used primarily for plasma applications., display: true
 }
 { +Item Id: 279, Name: ZascosiumAlloy, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 7.33, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
-  MarketPrice: 3250
+  MarketPrice: 200, display: true
   Info: An alloy of Zascosium and Erestrum that exhibits both Zascosium's strength with Erestrum's conductivity. Used in superconductors., display: true
 }
 { +Item Id: 280, Name: XenoSubstrate, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 5.4, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
-  MarketPrice: 700
+  MarketPrice: 50, display: true
   Info: Inert alien biomaterial that exhibits both organic and synthetic behaviour with extreme resilience and easy malleability., display: true
 }
 { +Item Id: 281, Name: NCPowder, Ref: ComponentsTemplate
@@ -9097,34 +9164,34 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 0.18, type: float, display: true, formatter: Kilogram
   Volume: 0.15, type: float, display: true, formatter: Liter
   Info: A highly flammable compound used in smokeless propellant charges and ammunition., display: true
-  MarketPrice: 4
+  MarketPrice: 2, display: true
 }
 { +Item Id: 282, Name: SmallOptronicBridge, Ref: ComponentsTemplate
   Mass: 16, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
-  MarketPrice: 77150
+  MarketPrice: 19737, display: true
   ShowUser: Yes
 }
 { +Item Id: 283, Name: SmallOptronicMatrix, Ref: ComponentsTemplate
   Mass: 30, type: float, display: true, formatter: Kilogram
   Volume: 2, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
-  MarketPrice: 119525
+  MarketPrice: 26862, display: true
   ShowUser: Yes
 }
 { +Item Id: 284, Name: LargeOptronicBridge, Ref: ComponentsTemplate
   Mass: 200, type: float, display: true, formatter: Kilogram
   Volume: 3, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
-  MarketPrice: 259087
+  MarketPrice: 50121, display: true
   ShowUser: Yes
 }
 { +Item Id: 285, Name: LargeOptronicMatrix, Ref: ComponentsTemplate
   Mass: 400, type: float, display: true, formatter: Kilogram
   Volume: 5, type: float, display: true, formatter: Liter
   Info: A complex computing component used in advanced CPUs., display: true
-  MarketPrice: 627041
+  MarketPrice: 90627, display: true
   ShowUser: Yes
 }
 
@@ -9152,13 +9219,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: A grilled steak made from processed meat. It looks tasty but I make no guarantees on the flavor., display: true
   FoodDecayTime: 13, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 108, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
     ROF: 1, type: float
     AddHealth: 12, display: HealthValue
     AddStamina: 3, display: StaminaValue
-    AddFood: 60, display: FoodValue
+    AddFood: 52, display: FoodValue
     AddOxygen: 0
 	AddTemperature: 3, display: TemperatureValue
     SfxBegin: UseActions/playerEatingSoft
@@ -9171,6 +9239,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: "It's some kind of unidentifiable meat. I wouldn't recommend eating this raw.", display: true
   FoodDecayTime: 10, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 87, display: true
   Category: Food
   ShowUser: Yes
   { Child 0
@@ -9192,6 +9261,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 74, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 25, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9214,6 +9284,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 30, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 160, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9235,12 +9306,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: Plant fibers that can be processed into a multitude of components from building blocks to ammunition., display: true
   Mass: 0.2, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
-  MarketPrice: 0.22
+  MarketPrice: 1, display: true
 }
 { +Item Id: 306, Name: AkuaWine, Ref: FoodTemplate
   Mass: 1.50, type: float, display: true, formatter: Kilogram
   Volume: 1.1, type: float, display: true, formatter: Liter
   ShowUser: Yes
+  MarketPrice: 62, display: true
   Info: A bottle of Akuan Wine made from Akuan Berries and artificially aged using a Food Processor. None of the class of a real Terran vintage of course., display: true
   { Child 0
     Class: Eat
@@ -9262,6 +9334,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Medical
   Info: bkiMedikit02, display: true
   StackSize: 50000
+  MarketPrice: 1004, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9281,6 +9354,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Medical
   Info: bkiMedikit03, display: true
   StackSize: 50000
+  MarketPrice: 1615, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9309,6 +9383,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: A gland retrieved from an alien creature that scans have identified to have medical uses if processed properly., display: true
   Category: Food
   StackSize: 50000
+  MarketPrice: 25, display: true
   ShowUser: Yes
 }
 { +Item Id: 311, Name: AlienParts03, Ref: FoodTemplate
@@ -9317,6 +9392,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: A hard mollusk-like growth whose body contains enzymes and poisons that can be diluted and processed for medical applications., display: true
   Category: Food
   StackSize: 50000
+  MarketPrice: 71, display: true
   ShowUser: Yes
 }
 { Item Id: 312, Name: AlienParts04, Ref: FoodTemplate
@@ -9332,6 +9408,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 28, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 361, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9351,6 +9428,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 113, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 59, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9369,6 +9447,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 25, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 20, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9390,6 +9469,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodDecayedItem: RottenFood
   Mass: 0.06, type: float, display: true, formatter: Kilogram
   Volume: 0.19, type: float, display: true, formatter: Liter
+  MarketPrice: 15, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9408,9 +9488,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Mass: 0.6, type: float, display: true, formatter: Kilogram
   Volume: 0.5, type: float, display: true, formatter: Liter
   Info: A mystery egg about the size of an Ostrich egg with a red yolk. Probably not a good idea to eat this raw., display: true
-  Category: Ingredients
+  Category: Food
   FoodDecayTime: 32, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 101, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9432,12 +9513,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   FoodDecayTime: 160, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 260, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
     ROF: 1, type: float
     AddHealth: 125, display: HealthValue
-    AddStamina: -20, display: StaminaValue
+    AddStamina: -50, display: StaminaValue
     AddFood: 5, display: FoodValue
     AddOxygen: 0
     Buff: Indigestion
@@ -9453,6 +9535,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 60, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 20, display: true
   StackSize: 50000
   ShowUser: Yes
   { Child 0
@@ -9474,6 +9557,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: A sharp tooth of some unidentified alien creature. It appears to be hollow., display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 10, display: true
   ShowUser: Yes
 }
 # delete when save game break
@@ -9483,14 +9567,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  StackSize: 50000
  FoodDecayTime: 21, display: true, type: int
  FoodDecayedItem: RottenFood
+ MarketPrice: 146, display: true
  # ShowUser: NoButCSV
   ShowUser: Yes
  { Child 0
    Class: Eat
    ROF: 1, type: float
-   AddHealth: 24, display: HealthValue
-   AddStamina: 12, display: StaminaValue
-   AddFood: 182, display: FoodValue
+   AddHealth: 34, display: HealthValue
+   AddStamina: 10, display: StaminaValue
+   AddFood: 76, display: FoodValue
    AddOxygen: 0
 	AddTemperature: 5, display: TemperatureValue
    SfxBegin: UseActions/playerEatingSoft
@@ -9499,20 +9584,20 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 # delete when save game break
 { +Item Id: 322, Name: TexturedPlantProtein, Ref: FoodTemplate
  Info: bkiConsumable, display: true
- Category: Ingredients
- FoodDecayTime: 30, display: true, type: int
+ Category: Food
+ FoodDecayTime: 16, display: true, type: int
  FoodDecayedItem: RottenFood
  ShowUser: NoButCSV
  { Child 0
    Class: Eat
    ROF: 1, type: float
-   AddHealth: 25, display: HealthValue
-   AddStamina: 40, display: StaminaValue
-   AddFood: 20, display: FoodValue
+   AddHealth: 10, display: HealthValue
+   AddStamina: 15, display: StaminaValue
+   AddFood: 28, display: FoodValue
    AddOxygen: 0
-   Buff: Indigestion
-   Buff_chance: 0.05
-   Debuff: PoisonBit, display: EffectiveAgainst
+   # Buff: Indigestion
+   # Buff_chance: 0.05
+   # Debuff: PoisonBit, display: EffectiveAgainst
    SfxBegin: UseActions/playerEatingSoft
  }
 }
@@ -9541,6 +9626,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 60, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 130, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9557,9 +9643,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 # Save game break: move up to components
 { +Item Id: 325, Name: FusionCell, Ref: ComponentsTemplate
   Mass: 75, type: float, display: true, formatter: Kilogram
-  Volume: 7, type: float, display: true, formatter: Liter
+  Volume: 10.5, type: float, display: true, formatter: Liter
   FuelValue: 300, type: int, display: true, formatter: WattHour
-  MarketPrice: 97.5
+  MarketPrice: 1562, display: true
   ShowUser: Yes
   Info: bkiFusionCell, display: true
 
@@ -9576,6 +9662,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 20, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 56, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9584,9 +9671,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddStamina: 25, display: StaminaValue
     AddFood: 24, display: FoodValue
     AddOxygen: 0
-	AddTemperature: -1, display: TemperatureValue
+	AddTemperature: -3, display: TemperatureValue
     Buff: Indigestion
-    Buff_chance: 0.2
+    Buff_chance: 0.1
     Debuff: BadTrip, display: EffectiveAgainst
     SfxBegin: UseActions/playerDrinking
   }
@@ -9598,6 +9685,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Medical
   Info: bkiMedikit01, display: true  #NewRequired
   StackSize: 50000
+  MarketPrice: 2146, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9619,6 +9707,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 48, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 101, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9637,6 +9726,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Medical
   Info: bkiMedikit01, display: true  #NewRequired
   StackSize: 50000
+  MarketPrice: 940, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9646,13 +9736,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddFood: 0
     AddOxygen: 0
     Buff: MedikitApplied
-    Debuff: "OpenWound", display: EffectiveAgainst
+    Debuff: "OpenWound,FractureOpen", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
   }
 }
 { +Item Id: 330, Name: Beer, Ref: FoodTemplate
   Mass: 0.66, type: float, display: true, formatter: Kilogram
   Volume: 0.7, type: float, display: true, formatter: Liter
+  MarketPrice: 125, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9710,6 +9801,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 6, type: float, display: true, formatter: Kilogram
   Volume: 5.2, type: float, display: true, formatter: Liter
+  MarketPrice: 135, display: true
 }
 { +Item Id: 333, Name: RottenFood, Ref: FoodTemplate
   Info: bkiIngredient, display: true
@@ -9717,6 +9809,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 0.2, type: float, display: true, formatter: Kilogram
   Volume: 0.1, type: float, display: true, formatter: Liter
+  MarketPrice: 10, display: true
   ShowUser: Yes
  { Child 0
    Class: Eat
@@ -9736,6 +9829,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 0.01, type: float, display: true, formatter: Kilogram
   Volume: 0.01, type: float, display: true, formatter: Liter
+  MarketPrice: 106, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9757,6 +9851,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 25, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 30, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9796,6 +9891,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 0.02, type: float, display: true, formatter: Kilogram
   Volume: 0.02, type: float, display: true, formatter: Liter
+  MarketPrice: 240, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9815,6 +9911,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   StackSize: 50000
   ShowUser: Yes
+  MarketPrice: 112, display: true
 }
 
 # Delete when save game break
@@ -9842,6 +9939,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 24, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 75, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9850,8 +9948,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddStamina: 50, display: StaminaValue
     AddFood: 35, display: FoodValue
     AddOxygen: 0
-    Buff: Indigestion
-    Buff_chance: 0.15
+    # Buff: Indigestion
+    # Buff_chance: 0.15
     SfxBegin: UseActions/playerEatingSoft
   }
 }
@@ -9861,15 +9959,17 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Medical
   Info: bkiBandages, display: true
   StackSize: 50000
+  MarketPrice: 72, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
-    ROF: 10, type: float
-    AddHealth: 85
+    ROF: 1, type: float
+    AddHealth: 0
     AddStamina: 0
     AddFood: 0
     AddOxygen: 0
-    Debuff: "OpenWound,BrokenLeg,FractureClosed,FractureOpen", display: EffectiveAgainst
+    Buff: MedikitBandages
+    Debuff: "OpenWound,BrokenLeg,FractureClosed", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
   }
 }
@@ -9878,12 +9978,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 25, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 500, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
     ROF: 1, type: float
     AddHealth: 500, display: HealthValue
-    AddStamina: -20, display: StaminaValue
+    AddStamina: -40, display: StaminaValue
     AddFood: -50, display: FoodValue
     AddOxygen: 0
     Buff: Indigestion
@@ -9896,6 +9997,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 36, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 34, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9915,6 +10017,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 33, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 25, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9933,6 +10036,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 427, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -9952,13 +10056,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.50, type: float, display: true, formatter: Liter
   Info: bkiConsumable, display: true
   Category: Food
+  MarketPrice: 1371, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
     ROF: 1, type: float
     AddHealth: 50, display: HealthValue
     AddStamina: 10, display: StaminaValue
-    AddFood: 300, display: FoodValue
+    AddFood: 380, display: FoodValue
     AddOxygen: 0
   #  Buff: Indigestion
   #  Buff_chance: 0.01
@@ -9973,6 +10078,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 24, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 25, display: true
   StackSize: 50000
   ShowUser: Yes
   { Child 0
@@ -9994,8 +10100,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 30, type: float, display: true, formatter: Kilogram
   Volume: 20, type: float, display: true, formatter: Liter
+  MarketPrice: 180, display: true
   ShowUser: Yes
-  MarketPrice: 6.50
   { Child 0
     Class: Eat
     ROF: 1, type: float
@@ -10004,7 +10110,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddFood: 0, display: FoodValue
 	AddTemperature: -10, display: TemperatureValue
     AddOxygen: -5
-    Debuff: Fire, display: EffectiveAgainst
+    Debuff: "Fire,Dehydration", display: EffectiveAgainst
     Buff: Indigestion
     Buff_chance: 0.3
     SfxBegin: UseActions/playerDrinking
@@ -10017,6 +10123,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
   Mass: 1, type: float, display: true, formatter: Kilogram
   Volume: 1, type: float, display: true, formatter: Liter
+  MarketPrice: 10, display: true
   { Child 0
     Class: Eat
     ROF: 1, type: float
@@ -10025,7 +10132,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddFood: 0
     AddOxygen: 0
 	AddTemperature: -8, display: TemperatureValue
-    Debuff: "Hangover,Fire", display: EffectiveAgainst
+    Debuff: "Hangover,Fire,Dehydration", display: EffectiveAgainst
     SfxBegin: UseActions/playerDrinking
   }
 }
@@ -10035,6 +10142,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  Category: Ingredients
  FoodDecayTime: 30, display: true, type: int
  FoodDecayedItem: RottenFood
+  MarketPrice: 12, display: true
  ShowUser: NoButCSV
  { Child 0
    Class: Eat
@@ -10053,6 +10161,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 15, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 30, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10098,13 +10207,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  Category: Ingredients
  FoodDecayTime: 25, display: true, type: int
  FoodDecayedItem: RottenFood
+  MarketPrice: 15, display: true
  ShowUser: NoButCSV
  { Child 0
    Class: Eat
    ROF: 1, type: float
    AddHealth: 10, display: HealthValue
    AddStamina: 25, display: StaminaValue
-   AddFood: 50, display: FoodValue
+   AddFood: 30, display: FoodValue
    AddOxygen: 0
    SfxBegin: UseActions/playerEatingFruit
  }
@@ -10113,6 +10223,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiIngredient, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 46, display: true
   ShowUser: Yes
 }
 { +Item Id: 356, Name: AlienSpikeLemon, Ref: FoodTemplate
@@ -10122,6 +10233,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 200, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 76, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10145,6 +10257,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 20, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 400, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10165,6 +10278,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  Category: Ingredients
  FoodDecayTime: 35, display: true, type: int
  FoodDecayedItem: RottenFood
+  MarketPrice: 45, display: true
  ShowUser: NoButCSV
  { Child 0
    Class: Eat
@@ -10184,6 +10298,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 35, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 20, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10201,6 +10316,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  Category: Food
  FoodDecayTime: 150, display: true, type: int
  FoodDecayedItem: RottenFood
+  MarketPrice: 37, display: true
  ShowUser: Yes
 }
 
@@ -10211,6 +10327,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 98, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 308, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10228,6 +10345,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 106, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 177, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10247,6 +10365,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 307, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 175, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10266,6 +10385,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 282, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 401, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10285,6 +10405,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 25, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 20, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10306,6 +10427,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 56, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 445, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10324,6 +10446,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 176, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10346,13 +10469,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 69, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 149, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
     ROF: 0.5, type: float
     AddHealth: 11, display: HealthValue
     AddStamina: 11, display: StaminaValue
-    AddFood: 35, display: FoodValue
+    AddFood: 70, display: FoodValue
     AddOxygen: 0
     SfxBegin: UseActions/playerEatingSoft
   }
@@ -10370,13 +10494,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 166, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 140, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
     ROF: 1, type: float
     AddHealth: 8, display: HealthValue
     AddStamina: 2, display: StaminaValue
-    AddFood: 47, display: FoodValue
+    AddFood: 48, display: FoodValue
     AddOxygen: 0
     SfxBegin: UseActions/playerEatingSoft
   }
@@ -10388,6 +10513,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 24, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 143, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10407,6 +10533,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 78, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 280, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10426,21 +10553,22 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
  Category: Food
  FoodDecayTime: 97, display: true, type: int
  FoodDecayedItem: RottenFood
- ShowUser: NoButCSV
+ ShowUser: Yes
  { Child 0
    Class: Eat
-   ROF: 1, type: float
+   ROF: 0.5, type: float
    AddHealth: 15, display: HealthValue
    AddStamina: 15, display: StaminaValue
-   AddFood: 37, display: FoodValue
+   AddFood: 57, display: FoodValue
    AddOxygen: 0
-	AddRadiation: -1, display: RadiationValue
+#	AddRadiation: -1, display: RadiationValue
    SfxBegin: UseActions/playerEatingCrunchy
  }
 }
 { +Item Id: 375, Name: PowerBar, Ref: FoodTemplate
   Info: bkiConsumable, display: true
   FoodDecayTime: 90, display: true, type: int
+  MarketPrice: 62, display: true
   Category: Food
   FoodDecayedItem: RottenFood
   ShowUser: Yes
@@ -10448,8 +10576,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Eat
     ROF: 1, type: float
     AddHealth: 0
-    AddStamina: 20
-    AddFood: 45, display: FoodValue
+    AddStamina: 20, display: StaminaValue
+    AddFood: 40, display: FoodValue
     AddOxygen: 0
  #  AddTemperature: -2, display: TemperatureValue
  #   Debuff: PoisonFood, display: EffectiveAgainst
@@ -10463,6 +10591,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 35, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 25, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10482,6 +10611,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 20, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 107, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10500,6 +10630,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiEnergyPills, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 68, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10520,6 +10651,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 106, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10528,7 +10660,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddStamina: 0
     AddFood: 0
     AddOxygen: 0
-    Debuff: "DermalBurn,Frostbite,Necrosis", display: EffectiveAgainst
+    Debuff: "DermalBurn,Necrosis,Frostbite", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
   }
 }
@@ -10539,6 +10671,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Medical
   StackSize: 50000
   ShowUser: Yes
+  MarketPrice: 151, display: true
   { Child 0
     Class: Eat
     ROF: 1, type: float
@@ -10558,6 +10691,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 95, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 330, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10576,6 +10710,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 34, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10594,6 +10729,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Food
   StackSize: 50000
+  MarketPrice: 75, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10602,8 +10738,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddStamina: 57, display: StaminaValue
     AddFood: 0
     AddOxygen: 0
-    AddTemperature: 8, display: TemperatureValue
-    Debuff: "Hangover,BadTrip", display: EffectiveAgainst
+    AddTemperature: 6, display: TemperatureValue
+    Debuff: "Hangover,BadTrip,Indigestion,Dehydration", display: EffectiveAgainst
     SfxBegin: UseActions/playerDrinking
   }
 }
@@ -10614,6 +10750,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Ingredients
   FoodDecayTime: 60, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 30, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10636,6 +10773,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   FoodDecayTime: 80, display: true, type: int
   FoodDecayedItem: RottenFood
+  MarketPrice: 50, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10646,7 +10784,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddOxygen: 0
     AddTemperature: -3, display: TemperatureValue
     SfxBegin: UseActions/playerDrinking
-    Debuff: Hangover, display: EffectiveAgainst
+    Debuff: "Hangover,Dehydration", display: EffectiveAgainst
   }
 }
 { +Item Id: 386, Name: VegetableJuice, Ref: FoodTemplate
@@ -10656,6 +10794,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 70, display: true, type: int
   StackSize: 50000
+  MarketPrice: 50, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10665,7 +10804,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddFood: 0
     AddOxygen: 0
     AddTemperature: -3, display: TemperatureValue
-    Debuff: Hangover, display: EffectiveAgainst
+    Debuff: "Hangover,Dehydration", display: EffectiveAgainst
     SfxBegin: UseActions/playerDrinking
   }
 }
@@ -10673,6 +10812,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 137, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10690,6 +10830,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 118, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10706,13 +10847,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 195, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
     ROF: 1, type: float
     AddHealth: -10
     AddStamina: 0
-    AddFood: -50
+    AddFood: -25
     AddOxygen: 0
     Debuff: "PoisonBit,PoisonFood,Intoxication,Indigestion", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
@@ -10724,6 +10866,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 166, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10742,6 +10885,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 427, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10758,6 +10902,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiConsumable, display: true
   Category: Medical
   StackSize: 50000
+  MarketPrice: 573, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10776,6 +10921,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 50000
   Mass: 0.02, type: float, display: true, formatter: Kilogram
   Volume: 0.02, type: float, display: true, formatter: Liter
+  MarketPrice: 952, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10796,6 +10942,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Food
   FoodDecayTime: 80, display: true, type: int
   StackSize: 50000
+  MarketPrice: 50, display: true
   ShowUser: Yes
   { Child 0
     Class: Eat
@@ -10805,6 +10952,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AddFood: 0
     AddOxygen: 0
     AddTemperature: -3, display: TemperatureValue
+    Debuff: "Dehydration", display: EffectiveAgainst
     SfxBegin: UseActions/playerDrinking
   }
 }
@@ -10840,7 +10988,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 1, type: float
     AddHealth: 0
     AddStamina: 0
-    AddFood: 12
+    AddFood: 14, display: FoodValue
     AddOxygen: 0
   #  Debuff: Indigestion, display: EffectiveAgainst
   #  Buff_chance: 0.025
@@ -10853,6 +11001,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 0.5, type: float, display: true, formatter: Liter
   Info: bkiConsumable, display: true
   Category: Food
+  MarketPrice: 50, display: true
  # FoodDecayTime: 200, display: true, type: int
  # FoodDecayedItem: RottenFood
   ShowUser: Yes
@@ -12690,6 +12839,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 600, Name: ArmorLight
   Class: Armor
   RecipeName: LightArmor
+  MarketPrice: 250, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metal
@@ -12727,6 +12877,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 601, Name: ArmorMedium
   Class: Armor
   RecipeName: MediumArmor
+  MarketPrice: 13350, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metal
@@ -12760,6 +12911,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 602, Name: ArmorHeavy
   Class: Armor
   RecipeName: HeavyArmor
+  MarketPrice: 35437, display: true
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Material: metal
@@ -12794,6 +12946,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 ## Please do not rename - referenced in code
 { Item Id: 603, Name: ArmorLightEpic, Ref: ArmorLight
   RecipeName: LightArmorEpic
+  MarketPrice: 2577, display: true
   Info: Light Armor reinforced with enhanced elements with increased protection and durability., display: true
   Mass: 25, type: float, display: false, formatter: Kilogram
   Volume: 24, type: float, display: true, formatter: Liter
@@ -12823,6 +12976,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 ## Please do not rename - referenced in code
 { Item Id: 604, Name: ArmorMediumEpic, Ref: ArmorMedium
   RecipeName: MediumArmorEpic
+  MarketPrice: 33375, display: true
   Info: Medium Armor reinforced with enhanced elements with increased protection and durability., display: true
   VolumeCapacity: 2999500, type: float, display: true, formatter: Liter
 
@@ -12855,6 +13009,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 ## Please do not rename - referenced in code
 { +Item Id: 605, Name: ArmorHeavyEpic, Ref: ArmorHeavy
   RecipeName: HeavyArmorEpic
+  MarketPrice: 70062, display: true
   VolumeCapacity: 3999500, type: float, display: true, formatter: Liter
   Info: Heavy Armor reinforced with enhanced elements with increased protection and durability., display: true
 
@@ -12899,6 +13054,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
 }
 { +Item Id: 621, Name: ArmorBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   Armor: 50, type: int, display: true
   Heat: -3, type: int, display: true
   Cold: -2, type: int, display: true
@@ -12915,6 +13071,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 622, Name: JetpackBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   JetpackFac: -0.25, type: float, display: true
 
   Volume: 2.25, type: float, display: true, formatter: Liter
@@ -12922,6 +13079,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 623, Name: MultiBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   Armor: 15, type: int, display: true
   Oxygen: 25, type: int, display: true
   Radiation: 1, type: int, display: true
@@ -12940,6 +13098,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 624, Name: OxygenBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   Armor: -10, type: int, display: true
   Oxygen: 150, type: int, display: true
   PowerFac: -0.03, type: float, display: true
@@ -12950,6 +13109,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 625, Name: InsulationBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   Heat: 40, type: int, display: true
   Cold: 20, type: int, display: true
 
@@ -12958,6 +13118,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 626, Name: MobilityBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   Armor: -25, type: int, display: true
   PowerFac: 0.15, type: float, display: true
   SpeedFac: 0.15, type: float, display: true
@@ -12971,6 +13132,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 627, Name: RadiationBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   Radiation: 3, type: int, display: true
   PowerFac: -0.02, type: float, display: true
   SpeedFac: -0.05, type: float, display: true
@@ -12980,6 +13142,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { +Item Id: 628, Name: EVABoost, Ref: ArmorBoostTemplate
+  MarketPrice: 2715, display: true
   Armor: -80, type: int, display: true
   Heat: -15, type: int, display: true
   Cold: 190, type: int, display: true
@@ -12992,6 +13155,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 14.5, type: float, display: true, formatter: Liter
 }
 { +Item Id: 629, Name: TransportationBoost, Ref: ArmorBoostTemplate
+  MarketPrice: 5000, display: true
   VolumeCapacity: 10000000, type: float, display: true, formatter: Liter
   Mass: 55.1, type: float, display: false, formatter: Kilogram
   Volume: 19.4, type: float, display: true, formatter: Liter
@@ -13004,6 +13168,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 # Epic Armor Booster
 { Item Id: 650, Name: ArmorBoostEpic, Ref: ArmorBoost
+  MarketPrice: 10000, display: true
   Armor: 100, type: int, display: true
   Heat: -6, type: int, display: true
   Cold: -6, type: int, display: true
@@ -13014,10 +13179,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { Item Id: 651, Name: JetpackBoostEpic, Ref: JetpackBoost
   JetpackFac: -0.26, type: float, display: true
+  MarketPrice: 10000
 
   ShowUser: Yes
 }
 { Item Id: 652, Name: MultiBoostEpic, Ref: MultiBoost
+  MarketPrice: 10000, display: true
   Armor: 25, type: int, display: true
   Oxygen: 50, type: int, display: true
   Radiation: 3, type: int, display: true
@@ -13035,17 +13202,20 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { Item Id: 653, Name: OxygenBoostEpic, Ref: OxygenBoost
+  MarketPrice: 10000, display: true
   Oxygen: 250, type: int, display: true
 
   ShowUser: No
 }
 { Item Id: 654, Name: InsulationBoostEpic, Ref: InsulationBoost
+  MarketPrice: 10000, display: true
   Heat: 75, type: int, display: true
   Cold: 40, type: int, display: true
 
   ShowUser: Yes
 }
 { Item Id: 655, Name: MobilityBoostEpic, Ref: MobilityBoost
+  MarketPrice: 10000, display: true
   PowerFac: 0.2, type: float, display: true
   SpeedFac: 0.2, type: float, display: true
   StaminaFac: -0.3, type: float, display: true
@@ -13055,7 +13225,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { Item Id: 656, Name: RadiationBoostEpic, Ref: ArmorBoostTemplate
-  MarketPrice: 250000
+  MarketPrice: 10000, display: true
   Radiation: 15, type: int, display: true
   PowerFac: -0.02, type: float, display: true
   SpeedFac: -0.05, type: float, display: true
@@ -13065,6 +13235,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { Item Id: 657, Name: EVABoostEpic, Ref: EVABoost
+  MarketPrice: 10000, display: true
   Armor: -40, type: int, display: true
   Cold: 300, type: int, display: true
 
@@ -13086,6 +13257,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 1
   Category: Weapons/Items
   IsNightVisionItem: true
+  MarketPrice: 851, display: true
 }
 { +Item Id: 701, Name: OreScanner
   # Class: ArmorBoost
@@ -13105,6 +13277,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   UnlockLevel: 3, display: true
   TechTreeParent: RadarSuitT1
   TechTreeNames: Tools
+  MarketPrice: 415, display: true
 }
 
 { +Item Id: 702, Name: RadarSuitT1
@@ -13120,8 +13293,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   StackSize: 1
   Category: Weapons/Items
   IsRadarItem: true
-  Range: 1250, type: int, display: true
-  RangeSpace: 5000, type: int, display: true
+  Range: 1000, type: int, display: true
+  RangeSpace: 4000, type: int, display: true
+  MarketPrice: 0
 
   UnlockCost: 0, display: true
   UnlockLevel: 1, display: true
@@ -13139,7 +13313,16 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 { Item Id: 703, Name: RadarSuitDebug, Ref: RadarSuitT1
-  Range: 2500, type: int, display: true
+  Range: 25000, type: int, display: true
+  { Child 0
+    ROF: 1, type: float
+    Class: RadarScan
+    Range: 25000
+    RangeSpace: 50000
+    DiscoveryFac: 0.50
+    ShowObjectTime: 120
+    AllowAt: "UnderWater, Planet, Space"
+  }
 
   UnlockCost: 0
   UnlockLevel: 20
@@ -13160,8 +13343,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     ROF: 5, type: float
     Class: RadarScan
-    Range: 2500
-    RangeSpace: 10000
+    Range: 2000
+    RangeSpace: 8000
     DiscoveryFac: 0.12
     ShowObjectTime: 30
     AmmoCapacity: 0, display: false
@@ -13184,10 +13367,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     ROF: 5, type: float
     Class: RadarScan
-    Range: 3500
-    RangeSpace: 14000
+    Range: 2500
+    RangeSpace: 8000
     DiscoveryFac: 0.12
-    ShowObjectTime: 30
+    ShowObjectTime: 60
     AmmoCapacity: 0, display: false
     AmmoType: AmmoInfinite, display: true
     AmmoUnlimited: true
@@ -13208,8 +13391,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     ROF: 5, type: float
     Class: RadarScan
-    Range: 6000
-    RangeSpace: 24000
+    Range: 4000
+    RangeSpace: 12000
     DiscoveryFac: 0.12
     ShowObjectTime: 30
     AmmoCapacity: 0, display: false
@@ -13298,18 +13481,122 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 /* CATEGORIE: New Weapon Items id 800 - 1000 */
 
-{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer, Ref: AssaultRifleT2
+{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPlyPrefab
   ShowUser: No
+  Durability: 400, display: false
+  DegradationProb: 0.6, type: float, display: false
+  RepairDisabled: true, display: true
+  PickupToToolbar: true
+  Material: metalweapon
+  MarketPrice: 6000, display: true
+  HoldType: 15
+  StackSize: 1
+  #CustomIcon: AssaultRifleDebug
+  CustomIcon: ZiraxAssaultRiflePlayer
+  Category: Weapons/Items
+  Info: A zirax heavy assault rifle. It appears to be compatible with standard rifle rounds but it's not going to be possible to repair it., display: true
+  Mass: 6.2, type: float, display: true, formatter: Kilogram
+  Volume: 4.75, type: float, display: true, formatter: Liter
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+  { Child 0
+    Class: Ranged
+    AllowRemote: false
+    ROF: 0.1, type: float, display: true, formatter: ROF
+    Range: 184, display: false
+    NoiseStrength: 120, display: false
+    CameraShake: 2
+    Automatic: true, display: true
+    BulletSpread: 0.12, display: true
+    Recoil: 0.41, display: true
+    Damage: 59, display: true
+    AmmoCapacity: 50, display: true
+    AmmoType: 5.8mmBullet, display: true
+    ReloadDelay: 3.75, display: true
+    Buff: "OpenWound"
+    Buff_chance: 0.08
+    # SfxBegin: Weapons/Player/Misc/Single/ak47_fire
+    #SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
+    #SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
+    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
+    SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
+    SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
+    SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
+    SfxNoAmmo: Weapons/Misc/AK47DryFire01
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    PfxMuzzle: MuzzleFlash1
+    Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 1
+
+    DamageMultiplier_1: 2.5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood|hullarmored|hullcombat
+    DamageMultiplier_3: 0, param1: shield
+  }
+  { Child 1
+    Class: Zoom
+	ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew03
+    ZoomOut: 40
+    ZoomIn: 40
+  }
 
   UnlockCost: 0
   UnlockLevel: 25
   TechTreeParent: ""
   TechTreeNames: Hidden
 }
-{ +Item Id: 801, Name: ZiraxShotgunPlayer, Ref: Shotgun2
+{ +Item Id: 801, Name: ZiraxShotgunPlayer
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxShotgunPlyPrefab
   ShowUser: No
+  PickupToToolbar: true
+  Material: metalweapon
+  MarketPrice: 6000, display: true
+  HoldType: 15
+  StackSize: 1
+  # CustomIcon: RocketLauncherDebug
+  CustomIcon: ZiraxShotgunPlayer
+  Category: Weapons/Items
+  Info: A standard-issue zirax shotgun. It seems to be compatible with regular shotgun ammunition but won't be repairable., display: true
+  Mass: 11.2, type: float, display: true, formatter: Kilogram
+  Volume: 5.1, type: float, display: true, formatter: Liter
+  Durability: 80, display: false
+  DegradationProb: 0.9, type: float, display: false
+  RepairDisabled: true, display: true
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  { Child 0
+    Class: Ranged
+    AllowRemote: false
+    ROF: 1, type: float, display: true, formatter: ROF
+    Range: 70, display: false
+    NoiseStrength: 190, display: false
+    CameraShake: 4
+    Automatic: true
+    BulletsPerShot: 7
+    BulletSpread: 0.4
+    RaySpread: 1, display: true
+    Recoil: 1.68, display: true
+    Damage: 120, display: true
+    AmmoCapacity: 6, display: true
+    AmmoType: ShotgunShells, display: true
+    ReloadDelay: 4.5, display: true
+    Buff: "OpenWound,Mutilation"
+    Buff_chance: "0.1,0.03"
+    SfxBegin: Weapons/Player/Shotgun/w1200_fire
+    SfxNoAmmo: Weapons/Misc/PumpgunDryFire02
+    SfxReload: Weapons/Player/Reload/RifleReloadSlow
+    PfxMuzzle: MuzzleFlash4
+
+    DamageMultiplier_1: 2.0, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0.015, param1: wood       # able to destroy trees
+    DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat
+    DamageMultiplier_4: 0.4, param1: metal       # able to destroy door
+    DamageMultiplier_6: 0, param1: shield
+  }
+  { Child 1
+    Class: Zoom
+    ZoomOut: 40
+    ZoomIn: 40
+    RedDot: true
+  }
 
   UnlockCost: 0
   UnlockLevel: 25
@@ -13333,71 +13620,149 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: No
 }
 { +Item Id: 1001, Name: RawDiamond, Ref: TradingGoodsTemplate
+  MarketPrice: 400, display: true
+  Info: Raw uncut diamonds made of carbon. Is used in jewellery and industrial processes., display: true
   ShowUser: Yes
 }
 { +Item Id: 1002, Name: LuxuryGoods, Ref: TradingGoodsTemplate
+  MarketPrice: 600, display: true
+  Info: A container of various high-priced items from jewellery to designer clothing., display: true
   ShowUser: Yes
+  Mass: 90, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1003, Name: Fertilizer, Ref: TradingGoodsTemplate
+  MarketPrice: 300, display: true
+  Info: Chemical fertilizer used in commercial farming complexes and plantations., display: true
   ShowUser: Yes
+  Mass: 85, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1004, Name: Liquors, Ref: TradingGoodsTemplate
-  MarketPrice: 350
+  MarketPrice: 250, display: true
+  Info: A case of alcohol packed up for shipping., display: true
+  Mass: 70, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
   ShowUser: Yes
 }
 { +Item Id: 1005, Name: Narcotics, Ref: TradingGoodsTemplate
+  MarketPrice: 250, display: true
+  Info: A cargo container full of medical ingredients and drugs., display: true
+  Mass: 20, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
   ShowUser: Yes
 }
 { +Item Id: 1006, Name: Robotics, Ref: TradingGoodsTemplate
+  MarketPrice: 500, display: true
+  Info: Complex robotic components used in numerous machines and devices., display: true
   ShowUser: Yes
+  Mass: 765, type: float, display: true, formatter: Kilogram
+  Volume: 100, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1007, Name: Optronics, Ref: TradingGoodsTemplate
+  MarketPrice: 1000, display: true
+  Info: Optical electronic components including precision-lenses and scanning equipment., display: true
   ShowUser: Yes
+  Mass: 285, type: float, display: true, formatter: Kilogram
+  Volume: 100, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1008, Name: Leather, Ref: TradingGoodsTemplate
-  MarketPrice: 260
+  MarketPrice: 250, display: true
+  Info: Processed leather products ready to be made into quality items., display: true
   ShowUser: Yes
+  Mass: 45, type: float, display: true, formatter: Kilogram
+  Volume: 80, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1009, Name: ToxicWaste, Ref: TradingGoodsTemplate
+  MarketPrice: 200, display: true
+  Info: A barrel of unlabeled toxic waste. It could be radioactive or raw sewage., display: true
   ShowUser: Yes
+  Mass: 170, type: float, display: true, formatter: Kilogram
+  Volume: 100, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1010, Name: AlienOrganism, Ref: TradingGoodsTemplate
+  MarketPrice: 90, display: true
   ShowUser: Yes
+  Mass: 38, type: float, display: true, formatter: Kilogram
+  Volume: 20, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1011, Name: AncientRelics, Ref: TradingGoodsTemplate
+  MarketPrice: 12500, display: true
   ShowUser: Yes
+  Mass: 166, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1012, Name: Coolant, Ref: TradingGoodsTemplate
+  MarketPrice: 350, display: true
+  Info: A container of water treated with a variety of chemicals used as coolant in engines and reactors., display: true
   ShowUser: Yes
+  CustomIcon: WaterJug
+  Mass: 85, type: float, display: true, formatter: Kilogram
+  Volume: 75, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1013, Name: Chemicals, Ref: TradingGoodsTemplate
+  MarketPrice: 500, display: true
   ShowUser: Yes
+  Info: A container of chemicals. The label is coded so the contents are unreadable., display: true
+  CustomIcon: Fertilizer
+  Mass: 120, type: float, display: true, formatter: Kilogram
+  Volume: 100, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1014, Name: Filters, Ref: TradingGoodsTemplate
-  MarketPrice: 25
+  MarketPrice: 106, display: true
+  Info: Air Filters used in air reprocessing and terraforming operations., display: true
   ShowUser: Yes
+  Mass: 25, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1015, Name: SpareParts, Ref: TradingGoodsTemplate
-  MarketPrice: 500
+  MarketPrice: 300, display: true
+  Info: Replacement mechanical parts for some kind of device., display: true
   ShowUser: Yes
+  Mass: 193, type: float, display: true, formatter: Kilogram
+  Volume: 50, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1016, Name: ScienceEquipment, Ref: TradingGoodsTemplate
+  MarketPrice: 1200, display: true
+  Info: Advanced scanning equipment and lab supplies., display: true
   ShowUser: Yes
+  Mass: 307, type: float, display: true, formatter: Kilogram
+  Volume: 100, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1017, Name: MutatedSubstance, Ref: TradingGoodsTemplate
+  MarketPrice: 500, display: true
+  Info: A biocontainer with an unknown alien substance inside., display: true
   ShowUser: Yes
+  Mass: 45, type: float, display: true, formatter: Kilogram
+  Volume: 20, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1018, Name: TechnicalArtifact, Ref: TradingGoodsTemplate
+  MarketPrice: 4000, display: true
   ShowUser: Yes
+  Info: Some kind of data storage device of Progenitor origin. It's unusually heavy for its size., display: true
+  Mass: 40, type: float, display: true, formatter: Kilogram
+  Volume: 8, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1019, Name: ToxicLiquid, Ref: TradingGoodsTemplate
+  MarketPrice: 350, display: true
+  Info: A container of corrosive chemicals left over from pentaxid processing., display: true
   ShowUser: Yes
+  Mass: 250, type: float, display: true, formatter: Kilogram
+  Volume: 160, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1020, Name: AlphaVirus, Ref: TradingGoodsTemplate
+  MarketPrice: 1000, display: true
+  Info: A biocontainer with raw Legacy Virus inside., display: true
   ShowUser: Yes
+  Mass: 35, type: float, display: true, formatter: Kilogram
+  Volume: 20, type: float, display: true, formatter: Liter
 }
 { +Item Id: 1021, Name: Tablet, Ref: TradingGoodsTemplate
+  MarketPrice: 200, display: true
+  Info: Data pad with a locked interface requiring a code., display: true
   ShowUser: Yes
+  Mass: 0.8, type: float, display: true, formatter: Kilogram
+  Volume: 1.2, type: float, display: true, formatter: Liter
 }
 # ========================================= Temporary Trading Goods ==========================
 { +Item Id: 1100, Name: MeleeTalonGuardianCharged, Ref: TradingGoodsTemplate
@@ -13650,3 +14015,4 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: UseActions/playerDrinking
   }
 }
+
