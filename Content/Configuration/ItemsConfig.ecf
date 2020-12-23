@@ -6719,10 +6719,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 
     Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BlastDamage: "BlastDamage + Player.Skills['BlastDamage']"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FigtherBlastDamage']"
     Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
     Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgility']/50)"
 
   UnlockLevel: 1
   TechTreeNames: Hidden
@@ -13625,3 +13625,28 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 # =============================================================================
+
+
+{ +Item Id: 1603, Name: Coffee, Ref: FoodTemplate
+  Mass: 0.5, type: float, display: true, formatter: Kilogram
+  Volume: 0.5, type: float, display: true, formatter: Liter
+  CustomIcon: Coffee
+  Info: A nice hot cup of holiday coffee. This particular blend of coffee is only made around this time of year., display: true
+  Category: Food
+  StackSize: 2000
+  MarketPrice: 132, display: true
+  ShowUser: Yes
+  { Child 0
+    Class: Eat
+    ROF: 1, type: float
+    AddHealth: 20, display: HealthValue
+    AddStamina: 29, display: StaminaValue
+    AddFood: 18, display: FoodValue
+    AddOxygen: 0
+    AddTemperature: 8, display: TemperatureValue
+    Debuff: "Hangover,Stunned", display: EffectiveAgainst
+    Buff: "Caffeinated,Indigestion"
+    Buff_chance: "1,0.05"
+    SfxBegin: UseActions/playerDrinking
+  }
+}

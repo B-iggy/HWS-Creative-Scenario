@@ -4782,6 +4782,15 @@
     Vegetables: 2
   }
 }
+{ +Template Name: Coffee
+  CraftTime: 25
+  Target: FoodP
+  { Child Inputs
+    NaturalStimulant: 2
+	Milk: 1
+	WaterBottle: 1
+  }
+}
 { +Template Name: AnniversaryCake
   DeconOverride: Stop
   CraftTime: 27
