@@ -6727,9 +6727,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
     BlastDamage: 750, display: true
-    Speed: 300, display: true
+    Speed: 700, display: true
     Range: 475, display: true
-    SpeedSpace: 385, display: true
+    SpeedSpace: 1400, display: true
     RangeSpace: 950, display: true
     HomingSpeed: 0.2
     Ballistic: false
@@ -6805,9 +6805,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 100, display: false
     # Buff: "FractureOpen,BrokenLeg,OpenWound,Mutilation"
     # Buff_chance: "0.3,0.5,0.7,0.2"
-    Speed: 425, display: true
+    Speed: 1000, display: true
     Range: 525, display: true
-    SpeedSpace: 525, display: true
+    SpeedSpace: 2000, display: true
     RangeSpace: 1036, display: true
     Ballistic: false
 
@@ -6874,7 +6874,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamage: 1750, display: true
     Speed: 77, display: true
     Range: 577, display: true
-    SpeedSpace: 107, display: true
+    SpeedSpace: 154, display: true
     RangeSpace: 1155, display: true
     Ballistic: false
     # Buff: "FractureOpen,OpenWound,BrokenLeg"
@@ -7236,9 +7236,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
     BlastDamage: 5500, display: true
-    Speed: 170, display: true
+    Speed: 600, display: true
     Range: 650, display: true
-    SpeedSpace: 300, display: true
+    SpeedSpace: 1200, display: true
     RangeSpace: 1200, display: true
     HomingSpeed: 2.3
     Ballistic: false
@@ -7377,10 +7377,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 7
     BlastRadius: 3, display: true
     BlastDamage: 1045, display: true
-    Speed: 385, display: true
+    Speed: 700, display: true
     Range: 657, display: true
-    SpeedSpace: 435, display: true
-    RangeSpace: 1000, display: true
+    SpeedSpace: 500, display: true
+    RangeSpace: 1400, display: true
     HomingSpeed: 0.1
     Ballistic: false
     # Buff: "Stunned,DermalBurn,RadiationBurn,IncreaseRadiation"
@@ -7447,9 +7447,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
     BlastDamage: 4000, display: true
-    Speed: 650, display: true
+    Speed: 700, display: true
     Range: 754, display: true
-    SpeedSpace: 750, display: true
+    SpeedSpace: 1400, display: true
     RangeSpace: 1108, display: true
     HomingSpeed: 2.7
     Ballistic: false
@@ -7517,9 +7517,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 7
     BlastRadius: 3, display: true
     BlastDamage: 6500, display: true
-    Speed: 400, display: true
+    Speed: 500, display: true
     Range: 675, display: true
-    SpeedSpace: 475, display: true
+    SpeedSpace: 1000, display: true
     RangeSpace: 1100, display: true
     HomingSpeed: 0.3
     Ballistic: false
@@ -7586,9 +7586,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
     BlastDamage: 10000, display: true
-    Speed: 105, display: true
+    Speed: 150, display: true
     Range: 666, display: true
-    SpeedSpace: 150, display: true
+    SpeedSpace: 300, display: true
     RangeSpace: 970, display: true
     HomingSpeed: 0.30
     Ballistic: false
@@ -7701,9 +7701,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
     BlastDamage: 2072, display: true
-    Speed: 160, display: true
+    Speed: 300, display: true
     Range: 495, display: true
-    SpeedSpace: 225, display: true
+    SpeedSpace: 600, display: true
     RangeSpace: 990, display: true
     HomingSpeed: 3.7
     Ballistic: false
@@ -7758,9 +7758,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
     BlastDamage: 3000, display: true
-    Speed: 625, display: true
+    Speed: 700, display: true
     Range: 700, display: true
-    SpeedSpace: 735, display: true
+    SpeedSpace: 1400, display: true
     RangeSpace: 1200, display: true
     HomingSpeed: 3.5
     Ballistic: false
@@ -7815,9 +7815,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastRadius: 4, display: true
     BlastDamage: 20000, display: true
     HomingSpeed: 1.0
-    Speed: 165, display: true
+    Speed: 200, display: true
     Range: 700, display: true
-    SpeedSpace: 210, display: true
+    SpeedSpace: 400, display: true
     RangeSpace: 1100, display: true
     Ballistic: false
 
@@ -7869,8 +7869,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 20000, display: true
     Range: 748, display: true
     RangeSpace: 1050, display: true
-    Speed: 750, display: true
-    SpeedSpace: 810, display: true
+    Speed: 850, display: true
+    SpeedSpace: 1700, display: true
     Ballistic: false
     # Buff: "DermalBurn,RadiationBurn,IncreaseRadiation"
     # Buff_chance: "0.5,0.2,0.3"
@@ -7906,9 +7906,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
     BlastDamage: 8138, display: true
-    Speed: 150, display: true
+    Speed: 500, display: true
     Range: 715, display: true
-    SpeedSpace: 240, display: true
+    SpeedSpace: 1000, display: true
     RangeSpace: 1130, display: true
     HomingSpeed: 3.1
     Ballistic: false
@@ -7962,9 +7962,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
     BlastDamage: 20000, display: true
-    Speed: 400, display: true
+    Speed: 450, display: true
     Range: 751, display: true
-    SpeedSpace: 485, display: true
+    SpeedSpace: 900, display: true
     RangeSpace: 1150, display: true
     HomingSpeed: 0.4
     Ballistic: false
@@ -8034,9 +8034,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
     BlastDamage: 3150, display: true
-    Speed: 150, display: true
+    Speed: 200, display: true
     Range: 632, display: true
-    SpeedSpace: 240, display: true
+    SpeedSpace: 600, display: true
     RangeSpace: 1200, display: true
     HomingSpeed: 2.5
     Ballistic: false
@@ -8092,7 +8092,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamage: 12750, display: true
     Speed: 165, display: true
     Range: 633, display: true
-    SpeedSpace: 215, display: true
+    SpeedSpace: 350, display: true
     RangeSpace: 1250, display: true
     Ballistic: false
     # Buff: "BrokenLeg,Stunned,Mutilation"
@@ -8145,9 +8145,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 2000, display: true
     BlastRadius: 3, display: true
     BlastDamage: 1000, display: true
-    Speed: 185, display: true
+    Speed: 500, display: true
     Range: 658, display: true
-    SpeedSpace: 235, display: true
+    SpeedSpace: 1000, display: true
     RangeSpace: 954, display: true
     HomingSpeed: 2.3
     Ballistic: false
@@ -11951,9 +11951,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 12
     BlastRadius: 2, display: true
     BlastDamage: 800, display: true
-    Speed: 300
+    Speed: 400
     Range: 800
-    SpeedSpace: 600
+    SpeedSpace: 800
     RangeSpace: 900
     Ballistic: false
 
