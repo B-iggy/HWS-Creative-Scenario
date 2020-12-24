@@ -4788,9 +4788,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
-    DamageMultiplier_4: 0.5, param1: metal
-    DamageMultiplier_5: 0.5, param1: metallight
-    DamageMultiplier_6: 0.5, param1: metalhard
+    DamageMultiplier_4: 1, param1: metal
+    DamageMultiplier_5: 1, param1: metallight
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 1, param1: hull
     DamageMultiplier_8: 1, param1: hullarmored
     DamageMultiplier_9: 1, param1: hullcombat
@@ -5145,9 +5145,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
-    DamageMultiplier_4: 0.5, param1: metal
-    DamageMultiplier_5: 0.5, param1: metallight
-    DamageMultiplier_6: 0.5, param1: metalhard
+    DamageMultiplier_4: 1, param1: metal
+    DamageMultiplier_5: 1, param1: metallight
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 1, param1: hull
     DamageMultiplier_8: 1, param1: hullarmored
     DamageMultiplier_9: 1, param1: hullcombat
@@ -7131,7 +7131,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_3: 10, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 10, param1: hull
     DamageMultiplier_8: 10, param1: hullarmored
     DamageMultiplier_9: 10, param1: hullcombat
@@ -7149,7 +7149,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_3: 10, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
-    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_6: 5, param1: metalhard
     BlastDamageMultiplier_7: 10, param1: hull
     BlastDamageMultiplier_8: 10, param1: hullarmored
     BlastDamageMultiplier_9: 10, param1: hullcombat
@@ -7600,7 +7600,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_3: 10, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 10, param1: hull
     DamageMultiplier_8: 10, param1: hullarmored
     DamageMultiplier_9: 10, param1: hullcombat
@@ -7618,7 +7618,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_3: 10, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
-    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_6: 5, param1: metalhard
     BlastDamageMultiplier_7: 10, param1: hull
     BlastDamageMultiplier_8: 10, param1: hullarmored
     BlastDamageMultiplier_9: 10, param1: hullcombat
@@ -7671,7 +7671,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 1, param1: hull
     DamageMultiplier_8: 1, param1: hullarmored
     DamageMultiplier_9: 1, param1: hullcombat
@@ -7826,7 +7826,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_3: 10, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 10, param1: hull
     DamageMultiplier_8: 10, param1: hullarmored
     DamageMultiplier_9: 10, param1: hullcombat
@@ -7844,7 +7844,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastDamageMultiplier_3: 10, param1: alien
     BlastDamageMultiplier_4: 1, param1: metal
     BlastDamageMultiplier_5: 1, param1: metallight
-    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_6: 5, param1: metalhard
     BlastDamageMultiplier_7: 10, param1: hull
     BlastDamageMultiplier_8: 10, param1: hullarmored
     BlastDamageMultiplier_9: 10, param1: hullcombat
@@ -7878,9 +7878,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
-    DamageMultiplier_4: 0.5, param1: metal
-    DamageMultiplier_5: 0.5, param1: metallight
-    DamageMultiplier_6: 0.5, param1: metalhard
+    DamageMultiplier_4: 1, param1: metal
+    DamageMultiplier_5: 1, param1: metallight
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 1, param1: hull
     DamageMultiplier_8: 1, param1: hullarmored
     DamageMultiplier_9: 1, param1: hullcombat
@@ -8436,11 +8436,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # Buff_chance: "0.5,0.2,0.3"
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_2: 5, param1: body
     DamageMultiplier_3: 1, param1: alien
     DamageMultiplier_4: 1, param1: metal
     DamageMultiplier_5: 1, param1: metallight
-    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_6: 5, param1: metalhard
     DamageMultiplier_7: 1, param1: hull
     DamageMultiplier_8: 1, param1: hullarmored
     DamageMultiplier_9: 1, param1: hullcombat
@@ -14098,14 +14098,42 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Buff: "FractureOpen,BrokenLeg,Mutilation"
     Buff_chance: "0.4,0.5,0.1"
 
-    DamageMultiplier_1: 0.75, param1: head|body
-    DamageMultiplier_2: 0, param1: stone|dirt
-    DamageMultiplier_3: 10, param1: rock    # can destroy rocks
-    DamageMultiplier_4: 0, param1: shield
-    BlastDamageMultiplier_1: 0.9, param1: head|body
-    BlastDamageMultiplier_2: 0, param1: stone|dirt|wood
-    BlastDamageMultiplier_3: 0, param1: shield
-    BlastDamageMultiplier_4: 0, param1: hull|hullarmored|hullcombat|metaldevice|concrete
+    DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 10, param1: body
+    DamageMultiplier_3: 10, param1: alien
+    DamageMultiplier_4: 5, param1: metal
+    DamageMultiplier_5: 5, param1: metallight
+    DamageMultiplier_6: 5, param1: metalhard
+    DamageMultiplier_7: 1, param1: hull
+    DamageMultiplier_8: 1, param1: hullarmored
+    DamageMultiplier_9: 1, param1: hullcombat
+    DamageMultiplier_10: 1, param1: concrete
+    DamageMultiplier_11: 0, param1: dirt
+    DamageMultiplier_12: 1, param1: stone
+    DamageMultiplier_13: 1, param1: wood
+    DamageMultiplier_14: 1, param1: woodblock
+    DamageMultiplier_15: 1, param1: plants
+    DamageMultiplier_16: 1, param1: rock
+    DamageMultiplier_17: 0.5, param1: shield
+    DamageMultiplier_18: 0.5, param1: plastic
+    BlastDamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
+    BlastDamageMultiplier_2: 10, param1: body
+    BlastDamageMultiplier_3: 10, param1: alien
+    BlastDamageMultiplier_4: 5, param1: metal
+    BlastDamageMultiplier_5: 5, param1: metallight
+    BlastDamageMultiplier_6: 5, param1: metalhard
+    BlastDamageMultiplier_7: 1, param1: hull
+    BlastDamageMultiplier_8: 1, param1: hullarmored
+    BlastDamageMultiplier_9: 1, param1: hullcombat
+    BlastDamageMultiplier_10: 1, param1: concrete
+    BlastDamageMultiplier_11: 0, param1: dirt
+    BlastDamageMultiplier_12: 1, param1: stone
+    BlastDamageMultiplier_13: 1, param1: wood
+    BlastDamageMultiplier_14: 1, param1: woodblock
+    BlastDamageMultiplier_15: 1, param1: plants
+    BlastDamageMultiplier_16: 1, param1: rock
+    BlastDamageMultiplier_17: 0.5, param1: shield
+    BlastDamageMultiplier_18: 0.5, param1: plastic
   }
 
   UnlockLevel: 1
