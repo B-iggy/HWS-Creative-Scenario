@@ -4875,22 +4875,9 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 ###########################
 # Obsolete - remove when save game break
-{ Entity Name: ZiraxMale, Ref: ZiraxShotgun
+{ Entity Name: ZiraxMale, Ref: ZiraxMinigun
   AllowUserInstantiate: false
-  Mesh: Enemies/Zirax/ZiraxYellowPrefab
-  MeshDead: Enemies/Zirax/ZiraxYellowDeadPrefab
-  ItemsOnEnterGame: FlamethrowerOLD
-  LootListOnDeath: 105
-  AllowInSpawners: true
-
-  { Child Hints
-	AttackApproachTarget: 80
-	AttackOptimalDistance: 5
-	SearchAdvanceTime: 3.0
-	SearchWaitTime: 0.5
-	SearchRandomDistanceMult: 0.8
-	FireWeaponDurationMultiplier: 3.5
-  }
+  AllowInSpawners: false
 }
 
 { Entity Name: ZiraxLeader, Ref: ZiraxLaser
