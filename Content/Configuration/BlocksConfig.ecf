@@ -3564,7 +3564,7 @@ HullCombatSmallBlocks
   Place: Free
   ReturnFactor: 0.5, display: true
 
-  EnergyIn: 5000, type: int, display: true, formatter: Watt
+  EnergyIn: 4000, type: int, display: true, formatter: Watt
   EnergyInIdle: 200, type: int, display: true, formatter: Watt
 }
 { +Block Id: 323, Name: TurretMSPulseLaserRetract, Ref: TurretTemplate
@@ -3668,7 +3668,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "5,4,5", display: true      # disallow on S MS
   Mass: 62800, type: float, display: true, formatter: Kilogram
   Volume: 7700, type: float, display: true, formatter: Liter      # max volume
-  EnergyIn: 150, type: int, display: true, formatter: Watt
+  EnergyIn: 140, type: int, display: true, formatter: Watt
   HitPoints: 23200, type: int, display: true
   RotSpeed: 60, type: int, display: true
   CPUIn: 21600, type: int, display: true
@@ -4082,7 +4082,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 11
   BlastRadius: 2
   BlastDamage: 50
-  EnergyIn: 30, type: int, display: true, formatter: Watt
+  EnergyIn: 25, type: int, display: true, formatter: Watt
   CPUIn: 1100, type: int, display: true
   HitPoints: 550, type: int, display: true
   RotSpeed: 140, type: int, display: true
@@ -5078,7 +5078,7 @@ HullCombatSmallBlocks
   IsActivateable: true
   IsIgnoreLC: true
   HitPoints: 250, type: int, display: true
-  EnergyOut: 1300, type: int, display: true, formatter: Watt
+  EnergyOut: 1500, type: int, display: true, formatter: Watt
   CPUIn: 100, type: int, display: true
   Category: Devices
   BlastParticleIndex: 2
@@ -5280,7 +5280,7 @@ HullCombatSmallBlocks
   IsOxygenTight: false, display: true
   Info: bkiFridge, display: true
   Category: Devices
-  EnergyIn: 10, type: int, display: true, formatter: Watt
+  EnergyIn: 7, type: int, display: true, formatter: Watt
   BlastParticleIndex: 4
   BlastRadius: 1
   BlastDamage: 50
@@ -5621,7 +5621,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 4
   BlastRadius: 4
   BlastDamage: 350
-  EnergyIn: 50, type: int, display: true, formatter: Watt
+  EnergyIn: 45, type: int, display: true, formatter: Watt
   CPUIn: 1300, type: int, display: true
   HitPoints: 770, type: int, display: true
   # Damage: 54, display: true
@@ -6077,7 +6077,7 @@ HullCombatSmallBlocks
   Mass: 2361, type: float, display: true, formatter: Kilogram
   HitPoints: 500, type: int, display: true
   ThrusterForce: 7200, type: int, display: true, formatter: Newton
-  EnergyIn: 700, type: int, display: true, formatter: Watt
+  EnergyIn: 600, type: int, display: true, formatter: Watt
   EnergyDynamicGroup: Thruster
   CPUIn: 5336, type: int, display: true
   Category: Devices
@@ -10198,7 +10198,7 @@ HullCombatSmallBlocks
 
   UnlockCost: 25, display: true
   UnlockLevel: 20, display: true
-  TechTreeParent: TurretMSRocketBlocks
+  TechTreeParent: WeaponMS03
   TechTreeNames: Capital Vessel
 }
 # Pulse Laser
@@ -10235,7 +10235,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 1
   BlastRadius: 5
   BlastDamage: 500
-  EnergyIn: 250, type: int, display: true, formatter: Watt
+  EnergyIn: 200, type: int, display: true, formatter: Watt
   CPUIn: 7200, type: int, display: true
   HitPoints: 5000, type: int, display: true
   # Damage: 53, display: true
@@ -10246,7 +10246,7 @@ HullCombatSmallBlocks
 
   UnlockCost: 27, display: true
   UnlockLevel: 25, display: true
-  TechTreeParent: WeaponMS01
+  TechTreeParent: WeaponMS03
   TechTreeNames: Capital Vessel
 }
 { +Block Id: 648, Name: TurretGVMinigun
@@ -15877,7 +15877,7 @@ HullCombatSmallBlocks
 }
 { +Block Id: 1034, Name: GeneratorMST2, Ref: GeneratorMS
   Model: @models/Blocks/Mothership/generatorMST2Prefab
-  EnergyOut: 200000, type: int, display: true, formatter: Watt
+  EnergyOut: 190000, type: int, display: true, formatter: Watt
   MarketPrice: 178940, display: true
   CPUIn: 22500, type: int, display: true
   SizeInBlocks: "6,2,2", display: true
