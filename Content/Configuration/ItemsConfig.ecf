@@ -119,9 +119,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 0.5, param1: plastic
 
     Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/1000)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -187,6 +188,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage'] + 10"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/500)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -257,6 +264,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage'] - 5"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/500)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/90)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/50)"
 
      RadialText: Stabilizer - ON # add text
      RadialDesc: Compensators reduce the strain on the wielder for easy handling but less damage output # add text
@@ -381,6 +394,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage'] - 4"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/500)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/70)"
   }
   { Child 1
     Class: Zoom
@@ -454,6 +473,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.1, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/50)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/80)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/50)"
   }
   { Child 1
     Class: Zoom
@@ -616,6 +641,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
 
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/500)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/110)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/50)"
+
   }
   { Child 1
     Class: Zoom
@@ -663,6 +694,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxReload: Weapons/Player/Reload/RifleReloadSlow
     # SfxReload: Weapons/Player/RocketLauncher/M203InsertGranade01
     PfxMuzzle: SniperMuzzleFire
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage'] - 4"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/500)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/70)"
   }
   { Child 1
     Class: Zoom
@@ -1170,6 +1207,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.1, param1: rock
     DamageMultiplier_17: 5, param1: shield
     DamageMultiplier_18: 5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/500)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/70)"
   }
   { Child 1
     Class: Zoom
@@ -1259,6 +1302,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage'] - 5"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/70)"
   }
   { Child 1
     Class: Zoom
@@ -1333,6 +1382,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 10, param1: shield
     DamageMultiplier_18: 5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
 
   # { Child 0
@@ -1451,6 +1506,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 250, param1: shield
     DamageMultiplier_18: 5, param1: plastic
 
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/70)"
+
 	RadialText: Anti Shield Mode # add text
     RadialDesc: At the cost of Rate of Fire your plasma shots become Ultra Effective against Shields in a single Beam
     RadialIcon: Radial_Upgrade
@@ -1518,6 +1579,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.1, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/100)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/90)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -1847,6 +1914,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -2053,6 +2126,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/500)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/115)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/130)"
   }
   { Child 1
     Class: Zoom
@@ -2118,6 +2197,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.1, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/105)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/90)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/130)"
   }
   { Child 1
     Class: Zoom
@@ -2189,10 +2274,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
 
-    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
+    Mod.Damage: "Damage + Player.Skills['FighterDamage'] - 3"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
 
      RadialText: Stabilizer - ON # add text
      RadialDesc: Compensators reduce the strain on the wielder for easy handling but less damage output # add text
@@ -2297,6 +2383,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/250)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/140)"
   }
   { Child 1
     Class: Zoom
@@ -2365,6 +2457,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 20, param1: shield
     DamageMultiplier_18: 10, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/105)"
   }
   { Child 1
     Class: Zoom
@@ -2450,6 +2548,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 500, param1: shield
     DamageMultiplier_18: 0, param1: plastic
 
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage'] + 5"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
+
 	RadialText: Anti Shield Mode # add text
     RadialDesc: At the cost of Rate of Fire your plasma shots become Ultra Effective against Shields in a single Beam
     RadialIcon: Radial_Upgrade
@@ -2508,6 +2612,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/360)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/140)"
   }
   { Child 1
     Class: Zoom
@@ -2645,6 +2755,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoCapacity: 1, display: true
     AmmoType: SlowRocketHoming, display: true
     ReloadDelay: 5.3, display: true
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -2682,6 +2798,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 12, display: true
     AmmoCapacity: 7, display: true
     AmmoType: SlowRocketHoming, display: true
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/200)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/10)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -2738,6 +2860,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 0.1, param1: rock
     DamageMultiplier_17: 10, param1: shield
     DamageMultiplier_18: 10, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/100)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -2796,6 +2924,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/350)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -2848,6 +2982,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/200)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/130)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/120)"
   }
   { Child 1
     Class: Zoom
@@ -2921,6 +3061,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 0.1, param1: shield
     DamageMultiplier_18: 0.5, param1: plastic
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/260)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   { Child 1
     Class: Zoom
@@ -3231,7 +3377,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # Buff: "Fire,DermalBurn"
     # Buff_chance: "1,1"
     Automatic: true
-    Damage: 10, display: true
+    Damage: 15, display: true
     Radius: 3
     AmmoCapacity: 30, display: true
     AmmoType: FlameThrowerCanister, display: true
@@ -3248,6 +3394,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxStop: Weapons/Player/Drill/Mute
     SfxReload: UseActions/oxygen_tank_release_air
     # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/100)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
 
   UnlockCost: 4500, display: true
@@ -3293,6 +3445,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
     SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
     PfxMuzzle: SniperMuzzleLaserRed
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    # Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
 
   UnlockCost: 0
@@ -4805,9 +4963,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_18: 10, param1: plastic
 
     Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgile']/50)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/100)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/50)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
   # { Child 0
     # Class: LauncherSS
@@ -6775,10 +6934,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 
     Mod.Damage: "Damage + Player.Skills['FighterDamage']"
-    Mod.BlastDamage: "BlastDamage + Player.Skills['FigtherBlastDamage']"
-    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterAccuracy']/100)"
-    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterControl']/100)"
-    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterAgility']/50)"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/100)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/50)"
+    Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
 
   UnlockLevel: 1
   TechTreeNames: Hidden
@@ -9791,6 +9950,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
     SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
     PfxMuzzle: SniperMuzzleFireLarge
+
+    Mod.Damage: "Damage + Player.Skills['FighterDamage']"
+    Mod.BlastDamage: "BlastDamage + Player.Skills['FighterBlastDamage']"
+    # Mod.BulletSpread: "Math.Max(0.01, BulletSpread - Player.Skills['FighterBulletSpread']/300)"
+    Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - Player.Skills['FighterReloadDelay']/100)"
+    # Mod.Recoil: "Math.Max(0.01, Recoil - Player.Skills['FighterRecoil']/100)"
   }
 }
 
@@ -14148,7 +14313,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   AllowPlacingAt: MS, display: false
   CustomIcon: LightRocketCV
   HoldType: 0
-  StackSize: 2000
+  StackSize: 50000
   Canhold: false
   Mass: 24, type: float, display: true, formatter: Kilogram
   Volume: 3.9, type: float, display: true, formatter: Liter
@@ -14156,7 +14321,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   { Child 0
     Class: Projectile
-    Damage: 1315, display: true
+    Damage: 5000, display: true
     NoiseStrength: 100, display: false
     BlastParticleIndex: 8
     BlastRadius: 2, display: true

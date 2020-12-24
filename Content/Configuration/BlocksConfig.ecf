@@ -1593,6 +1593,9 @@ HullCombatSmallBlocks
   RangeAU: 100, display: true
   RangeLY: 100, display: true
 
+  Mod.RangeAU: "RangeAU + Player.Skills['PilotAURange']"
+  Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange'] + 10"
+
   Radiation: 100, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 150, display: true
 
@@ -2033,6 +2036,9 @@ HullCombatSmallBlocks
   CostPerLY: 2, display: true
   RangeAU: 50, display: true
   RangeLY: 77, display: true
+
+  Mod.RangeAU: "RangeAU + Player.Skills['PilotAURange']"
+  Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange'] + 10"
 
   Radiation: 25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 90, display: true
@@ -11804,8 +11810,8 @@ HullCombatSmallBlocks
   Radiation: 25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 40, display: true
 
-  Mod.RangeAU: "RangeAU + Player.Skills['RangeAU']"
-  Mod.RangeLY: "RangeLY + Player.Skills['RangeLY']"
+  Mod.RangeAU: "RangeAU + Player.Skills['PilotAURange']"
+  Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange'] + 10"
 
   UnlockCost: 15, display: true
   UnlockLevel: 10, display: true
@@ -21004,6 +21010,9 @@ HullCombatSmallBlocks
   UnlockLevel: 10, display: true
   # TechTreeParent: PentaxidTankSV
   TechTreeNames: Small Vessel
+
+  Mod.RangeAU: "RangeAU + Player.Skills['PilotAURange']"
+  Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange'] + 10"
 }
 
 { +Block Id: 1436, Name: LandClaimDevice

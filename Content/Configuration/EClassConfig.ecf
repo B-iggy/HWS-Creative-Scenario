@@ -4683,7 +4683,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 ###########################
 # TEST ZIRAX - follows player without shooting
 { Entity Name: ZiraxTest, Ref: ZiraxMinigun
-  MaxHealth: 800
+  MaxHealth: 100000
   XpFactor: 6
   LootListOnDeath: 103
   Mesh: Enemies/Zirax/ZiraxYellowPrefab
