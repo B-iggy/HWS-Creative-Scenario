@@ -3329,6 +3329,29 @@
   }
 }
 
+{ +Template Name: GrenadeLauncher
+  CraftTime: 30 #B1 10 FragGrenade
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    MechanicalComponents: 18
+	SteelPlate: 4
+    Electronics: 4
+	Nanotubes: 10
+  }
+}
+
+{ +Template Name: FragGrenade
+  OutputCount: 6 #B1 10
+  CraftTime: 5
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 1
+	PlasticMaterial: 6
+    PromethiumPellets: 3
+    MagnesiumPowder: 6
+  }
+}
+
 { +Template Name: RocketLauncher
   CraftTime: 30 #B1 10 SlowRocket
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
@@ -3817,6 +3840,16 @@
   }
 }
 
+{ +Template Name: LightRocketCV
+  OutputCount: 10 #B1 10 used by "WeaponMS03"
+  CraftTime: 5
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    TitanPlates: 5
+    PromethiumPellets: 25
+    MagnesiumPowder: 20
+  }
+}
 
 /* HV Turrets */
 /* Turrets for HV */
@@ -4124,6 +4157,19 @@
     PentaxidElement: 10
     PlasticMaterial: 5
     PromethiumPellets: 5
+  }
+}
+
+{ +Template Name: WeaponMS03 #"Rocket Launcher"
+  CraftTime: 30 #D1 CV 20 uses "FastRocket"
+  Target: AdvC
+  { Child Inputs
+    ZascosiumAlloy: 48
+    Electronics: 52
+	MechanicalComponents: 50
+    Oscillator: 28
+    PowerCoil: 4
+	TitanPlates: 72
   }
 }
 

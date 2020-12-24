@@ -13991,6 +13991,195 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 # =============================================================================
 
+{ +Item Id: 1502, Name: RocketPodMSWeapon
+  Meshfile: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  ShowUser: NoButCSV  # reported by HWS
+  Canhold: false
+  CustomIcon: WeaponSV05
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 500
+  Mass: 521, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  { Child 0
+    Class: LauncherSS
+    AllowAt: Space
+    ROF: 0.3, type: float, display: true, formatter: ROF
+	IsShootThroughCrosshair: false
+    Range: 450, display: false
+    RangeSpace: 800, display: false
+    AmmoCapacity: 10, display: true
+    AmmoType: LightRocketCV, display: true
+    Automatic: true
+    NoiseStrength: 200, display: false
+    AutoReload: true
+    CheckObstructed: true
+    ReloadDelay: 10, display: true
+    # SfxBegin: Weapons/LauncherWeapons/weapon_missile_006
+    # SfxBegin: Weapons/Turret/missle_fire
+    SfxBegin: Weapons/LauncherWeapons/weapon_missile_005
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_002
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+
+{ +Item Id: 1561, Name: GrenadeLauncher #T1
+  Meshfile: Entities/Items/Weapons/SciFiGrenadeLauncher/SciFiGrenadeLauncherBlackPrefab
+  PickupToToolbar: true
+  Material: metalweapon
+  MarketPrice: 277, display: true
+  #CustomIcon: RocketLauncher
+  CustomIcon: GrenadeLauncher
+  HoldType: 15
+  StackSize: 1
+  Category: Weapons/Items
+  Info: A UCH multiple-grenade launcher designed to use 40mm Frag Grenades against enemy entrenchments., display: true
+  Mass: 12.3, type: float, display: true, formatter: Kilogram
+  Volume: 25, type: float, display: true, formatter: Liter
+  Durability: 60, display: false
+  DegradationProb: 1, type: float, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  { Child 0
+    Class: LauncherSS
+    AllowRemote: false
+    ROF: 2.0, type: float, display: true, formatter: ROF
+    Range: 0, display: false
+    NoiseStrength: 50, display: false
+    Recoil: 5.2, display: true
+    CameraShake: 3
+    AmmoCapacity: 6, display: true
+    AmmoType: FragGrenade, display: true
+    ReloadDelay: 7.5, display: true
+	SfxBegin: Weapons/Enemies/Talon/CrossbowShot
+	# SfxBegin: Weapons/SS/Railgun/FuturisticGunSound02
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Reload/HeavyWeaponReloadNormal
+    PfxMuzzle: fire_muzzle_pistol
+  }
+  { Child 1
+    Class: Zoom
+    ZoomOut: 40
+    ZoomIn: 40
+    RedDot: true
+  }
+
+  UnlockCost: 9, display: true
+  UnlockLevel: 7, display: true
+  TechTreeNames: Weapons
+}
+
+{ +Item Id: 1600, Name: FragGrenade
+  Meshfile: Entities/Items/Weapons/Projectiles/sniperBulletPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  CustomIcon: FragGrenade
+  Material: metalweapon
+  MarketPrice: 51, display: true
+  HoldType: 0
+  StackSize: 2000
+  Canhold: false
+  ShowUser: Yes
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  Volume: 1.2, type: float, display: true, formatter: Liter
+  Info: 40mm anti-personnel frag grenades for use with standard-issue UCH Grenade Launchers., display: true
+  Category: Weapons/Items
+  { Child 0
+    Class: Projectile
+    Damage: 25
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 500, display: true
+    Speed: 35
+    Range: 45
+    SpeedSpace: 40
+    RangeSpace: 100
+    Ballistic: true
+    Buff: "FractureOpen,BrokenLeg,Mutilation"
+    Buff_chance: "0.4,0.5,0.1"
+
+    DamageMultiplier_1: 0.75, param1: head|body
+    DamageMultiplier_2: 0, param1: stone|dirt
+    DamageMultiplier_3: 10, param1: rock    # can destroy rocks
+    DamageMultiplier_4: 0, param1: shield
+    BlastDamageMultiplier_1: 0.9, param1: head|body
+    BlastDamageMultiplier_2: 0, param1: stone|dirt|wood
+    BlastDamageMultiplier_3: 0, param1: shield
+    BlastDamageMultiplier_4: 0, param1: hull|hullarmored|hullcombat|metaldevice|concrete
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
+# CV Rocket Launcher Ammo
+{ +Item Id: 1602, Name: LightRocketCV
+  Meshfile: Entities/Items/Weapons/Projectiles/rocket01Prefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Material: metalweapon
+  MarketPrice: 128, display: true
+  AllowPlacingAt: MS, display: false
+  CustomIcon: LightRocketCV
+  HoldType: 0
+  StackSize: 2000
+  Canhold: false
+  Mass: 24, type: float, display: true, formatter: Kilogram
+  Volume: 3.9, type: float, display: true, formatter: Liter
+  Info: A variant of the SGM-220 designed for ship-to-ship bombardments. It has a reinforced shell to achieve higher penetration at lower explosive damage., display: true
+  Category: Weapons/Items
+  { Child 0
+    Class: Projectile
+    Damage: 1315, display: true
+    NoiseStrength: 100, display: false
+    BlastParticleIndex: 8
+    BlastRadius: 2, display: true
+    BlastDamage: 525, display: true
+    Speed: 105, display: true
+    Range: 295, display: true
+    SpeedSpace: 250, display: true
+    RangeSpace: 800, display: true
+    Ballistic: true
+
+    DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 1, param1: body
+    DamageMultiplier_3: 1, param1: alien
+    DamageMultiplier_4: 1, param1: metal
+    DamageMultiplier_5: 1, param1: metallight
+    DamageMultiplier_6: 1, param1: metalhard
+    DamageMultiplier_7: 1, param1: hull
+    DamageMultiplier_8: 1, param1: hullarmored
+    DamageMultiplier_9: 1, param1: hullcombat
+    DamageMultiplier_10: 10, param1: concrete
+    DamageMultiplier_11: 0, param1: dirt
+    DamageMultiplier_12: 10, param1: stone
+    DamageMultiplier_13: 10, param1: wood
+    DamageMultiplier_14: 10, param1: woodblock
+    DamageMultiplier_15: 10, param1: plants
+    DamageMultiplier_16: 10, param1: rock
+    DamageMultiplier_17: 1, param1: shield
+    DamageMultiplier_18: 0.5, param1: plastic
+    BlastDamageMultiplier_1: 1, param1: head
+    BlastDamageMultiplier_2: 1, param1: body
+    BlastDamageMultiplier_3: 1, param1: alien
+    BlastDamageMultiplier_4: 1, param1: metal
+    BlastDamageMultiplier_5: 1, param1: metallight
+    BlastDamageMultiplier_6: 1, param1: metalhard
+    BlastDamageMultiplier_7: 1, param1: hull
+    BlastDamageMultiplier_8: 1, param1: hullarmored
+    BlastDamageMultiplier_9: 1, param1: hullcombat
+    BlastDamageMultiplier_10: 10, param1: concrete
+    BlastDamageMultiplier_11: 0, param1: dirt
+    BlastDamageMultiplier_12: 10, param1: stone
+    BlastDamageMultiplier_13: 10, param1: wood
+    BlastDamageMultiplier_14: 10, param1: woodblock
+    BlastDamageMultiplier_15: 10, param1: plants
+    BlastDamageMultiplier_16: 10, param1: rock
+    BlastDamageMultiplier_17: 1, param1: shield
+    BlastDamageMultiplier_18: 0.5, param1: plastic
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
 
 { +Item Id: 1603, Name: Coffee, Ref: FoodTemplate
   Mass: 0.5, type: float, display: true, formatter: Kilogram
@@ -14016,3 +14205,216 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
+
+
+# ========================================================================================================================== Rogue Drone Space Weapons
+
+{ +Item Id: 1737, Name: Eden_TurretTorpedo_Weapon
+  Meshfile: @models/Blocks/Turrets/ModularTurret1/SingleMissileTurretBluePrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  ShowUser: NoButCSV  # reported by HWS
+  Canhold: false
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 500
+  Mass: 8500, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  { Child 0
+    Class: LauncherSS
+    AllowAt: "Space,Planet"
+    ROF: 30, type: float, display: true, formatter: ROF
+    Range: 800, display: false
+    RangeSpace: 2000, display: false
+    AmmoCapacity: 1, display: true
+    AmmoType: Eden_TurretTorpedo_Ammo, display: true
+    # AmmoUnlimited: true
+    NoiseStrength: 100, display: false
+    ReloadDelay: 4, display: true
+    SfxBegin: Weapons/Turret/missle_fire
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+
+{ +Item Id: 1738, Name: Eden_TurretTorpedo_Ammo, Ref: FastRocketMS
+  Meshfile: Entities/Items/Weapons/Projectiles/RocketLargePrefab
+  # Meshfile: Entities/Items/Weapons/Projectiles/rocket01Prefab
+  AllowPlacingAt: "Base,MS", display: false
+  ShowUser: No
+  { Child 0
+    Damage: 20000
+    BlastParticleIndex: 8
+    BlastRadius: 4, display: true
+    BlastDamage: 30000, display: true
+    Speed: 40
+    Range: 800
+    SpeedSpace: 80
+    RangeSpace: 2000
+    HomingSpeed: 5
+    Ballistic: false
+
+    DamageMultiplier_1: 0.05, param1: head|body
+    DamageMultiplier_2: 0.01, param1: stone|dirt
+    DamageMultiplier_3: 0.01,   param1: rock    # can destroy rocks
+    DamageMultiplier_4: 0.3,   param1: shield
+    BlastDamageMultiplier_1: 0.05, param1: head|body
+    BlastDamageMultiplier_2: 0.2, param1: stone|dirt
+    BlastDamageMultiplier_3: 0,   param1: shield
+  }
+}
+
+{ +Item Id: 1768, Name: Eden_RogueDroneSwarmerLaser_Weapon, Ref: rocketlauncherDroneSmall
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  ShowUser: NoButCSV
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.35, type: float
+    Range: 1000
+    AmmoType: Eden_RogueDroneSwarmerLaser_Ammo, display: true
+    SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+  }
+}
+{ +Item Id: 1769, Name: Eden_RogueDroneSwarmerLaser_Ammo
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotRedAlien
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 335, display: true
+    # BlastParticleIndex: 12
+    BlastParticleIndex: 7
+    BlastRadius: 0, display: true
+    BlastDamage: 0, display: true
+    Speed: 850
+    Range: 1100
+    Ballistic: false
+
+    DamageMultiplier_1: 1, param1: hullarmored
+    DamageMultiplier_2: 1, param1: hullcombat
+    DamageMultiplier_3: 0.35, param1: shield
+    BlastDamageMultiplier_1: 0, param1: shield
+  }
+}
+
+{ +Item Id: 1770, Name: Eden_RogueDroneSwarmerIon_Weapon, Ref: rocketlauncherDroneSmall
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  ShowUser: NoButCSV
+  { Child 0
+    Class: LauncherSS
+    ROF: 1, type: float
+    Range: 1000
+    AmmoType: Eden_RogueDroneSwarmerIon_Ammo, display: true
+    SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+  }
+}
+{ +Item Id: 1771, Name: Eden_RogueDroneSwarmerIon_Ammo
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotYellowAlien
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 600, display: true
+    # BlastParticleIndex: 12
+    BlastParticleIndex: 7
+    BlastRadius: 0, display: true
+    BlastDamage: 0, display: true
+    Speed: 1200
+    Range: 1100
+    Ballistic: false
+
+    DamageMultiplier_1: 1, param1: hullarmored
+    DamageMultiplier_2: 1, param1: hullcombat
+    DamageMultiplier_3: 2, param1: shield
+    BlastDamageMultiplier_1: 0, param1: shield
+  }
+}
+{ +Item Id: 1774, Name: Eden_SpaceDronePirateGatling_Weapon
+  Meshfile: Entities/Enemies/Drones/Weapons/rocketlauncherDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Ranged
+    IsShootThroughCrosshair: true
+    ROF: 0.1, type: float, display: true, formatter: ROF
+    Range: 450, display: false
+    RangeSpace: 800, display: false
+    Automatic: true
+    Damage: 160, display: true
+    AmmoCapacity: 300, display: true
+    AmmoType: 15mmBullet, display: true
+    NoiseStrength: 100, display: false
+    AutoReload: true
+    CheckObstructed: true
+    ReloadDelay: 2, display: true # adapt sound
+    SfxBegin: Weapons/Player/Minigun/minigun_start
+    SfxLoop: Weapons/Player/Minigun/minigun_loop
+    SfxStop: Weapons/Player/Minigun/minigun_end
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: SideAutoMuzzleFire
+    Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 1
+
+    DamageMultiplier_1: 0.5, param1: head|body
+	DamageMultiplier_2: 0.09, param1: wood       # able to destroy trees
+    DamageMultiplier_3: 0, param1: dirt|stone|rock
+    DamageMultiplier_4: 0.1, param1: shield
+  }
+}
+
+{ +Item Id: 1775, Name: Eden_SpaceDronePirateRocket_Weapon, Ref: rocketlauncherDroneSmall
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  ShowUser: NoButCSV
+  { Child 0
+    Class: LauncherSS
+    ROF: 1, type: float
+    Range: 650
+    AmmoType: FastRocket, display: true
+    SfxBegin: Weapons/Turret/missle_fire
+  }
+}
+
+{ +Item Id: 1776, Name: Eden_SpaceDronePirateTorpedo_Weapon, Ref: rocketlauncherDroneSmall
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  ShowUser: NoButCSV
+  { Child 0
+    Class: LauncherSS
+    ROF: 15, type: float
+    Range: 1400
+    AmmoType: Eden_SpaceDronePirateTorpedo_Ammo, display: true
+    SfxBegin: Weapons/Turret/missle_fire
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+
+{ +Item Id: 1777, Name: Eden_SpaceDronePirateTorpedo_Ammo, Ref: Eden_TurretTorpedo_Ammo
+  { Child 0
+    Damage: 10000
+    BlastParticleIndex: 8
+    BlastRadius: 4, display: true
+    BlastDamage: 10000, display: true
+    Speed: 40
+    Range: 600
+    SpeedSpace: 80
+    RangeSpace: 1600
+    HomingSpeed: 0
+    Ballistic: false
+
+    DamageMultiplier_1: 0.05, param1: head|body
+    DamageMultiplier_2: 0.01, param1: stone|dirt
+    DamageMultiplier_3: 0.01,   param1: rock    # can destroy rocks
+    DamageMultiplier_4: 0.3,   param1: shield
+    BlastDamageMultiplier_1: 0.05, param1: head|body
+    BlastDamageMultiplier_2: 0.2, param1: stone|dirt
+    BlastDamageMultiplier_3: 0,   param1: shield
+  }
+}

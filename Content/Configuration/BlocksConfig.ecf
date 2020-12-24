@@ -5779,11 +5779,52 @@ HullCombatSmallBlocks
 { Block Id: 441, Name: InteriorBlock03, Ref: Hull
   Texture: "12,29,15,15,15,15"
 }
-# Obsolete but dont delete
-#{ Block Id: 442, Name: InteriorLight, Ref: Hull
-#  Texture: 14
-#  ShowUser: NoButCSV    # reported by HWS
-#}
+
+# ========== CV Rocket Launcher ==========
+{ +Block Id: 442, Name: WeaponMS03
+  Class: Weapon
+  IndexName: WeaponShip
+  Group: cpgWeapon
+  Material: metalhard
+  MarketPrice: 43705, display: true
+  Shape: ModelEntity
+  ShowBlockName: true
+  CustomIcon: WeaponSV05
+  WeaponItem: RocketPodMSWeapon
+  # Model: @models/Blocks/WeaponsShip/WeaponSSMissileRetractPrefab
+  Model: @models/Blocks/WeaponsShip/WeaponSSMissilePrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+
+  # IsTextureable: true   # !!!
+  IsGPUInstance: false  # !!!
+  Texture: 50
+  SoundOpen: UseActions/WeaponOpenClose
+  SoundClose: UseActions/WeaponOpenClose
+  IsActivateable: true
+  # IsRetractable: true, display: true
+
+  Place: WeaponDir
+  AllowPlacingAt: "MS", display: true
+  SizeInBlocks: "1,3,1", display: true
+  Volume: 2400, type: float, display: true, formatter: Liter
+  Mass: 12521, type: float, display: true, formatter: Kilogram
+  Info: A heavy rocket battery for ship-to-ship combat, display: true
+  Category: Weapons/Items
+  BlockColor: "110,110,110"
+  StackSize: 500
+  MaxCount: 12, type: int, display: true
+  BlastParticleIndex: 8
+  BlastRadius: 9
+  BlastDamage: 5800
+  EnergyIn: 150, type: int, display: true, formatter: Watt
+  CPUIn: 25000, type: int, display: true
+  HitPoints: 3000, type: int, display: true
+
+  UnlockCost: 20, display: true
+  UnlockLevel: 15, display: true
+  TechTreeParent: TurretMSRocketBlocks
+  TechTreeNames: Capital Vessel
+}
 # Obsolete but dont delete
 #{ Block Id: 443, Name: RampTop, Ref: Hull
 #  Texture: 13
