@@ -3409,9 +3409,9 @@
 
   /* General entity properties */
   ViewAngle: 180
-  MaxHealth: 10
+  MaxHealth: 100000000
   # XpFactor: 1
-  XpFactor: 3
+  XpFactor: 0
   RightHandJointName: AlienRPalm
   ItemsOnEnterGame: "MeleePlayer,TraderWeapon"
   HandItem: MeleeTalonGuardian

@@ -5511,6 +5511,7 @@
 { +Template Name: LaserKit
   CraftTime: 2
   Target: ""
+  BaseItem: true
   { Child Inputs
     ZascosiumAlloy: 10
 	GlassPlate: 2
