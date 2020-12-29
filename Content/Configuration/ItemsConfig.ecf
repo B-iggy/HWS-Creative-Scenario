@@ -14260,8 +14260,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SpeedSpace: 40
     RangeSpace: 100
     Ballistic: true
-    Buff: "FractureOpen,BrokenLeg,Mutilation"
-    Buff_chance: "0.4,0.5,0.1"
 
     DamageMultiplier_1: 10, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 10, param1: body
