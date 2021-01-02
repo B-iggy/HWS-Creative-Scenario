@@ -14108,6 +14108,60 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Hidden
 }
 
+# The decal gun puts decals on structures
+# Use RMB to switch between selecting existing decals, adding new decals and removing delals
+# LeftShift + Scrollwheel:               scales decal
+# LeftControl + Scrollwheel:             rotates decal
+# LeftShift + LeftControl + Scrollwheel: change decal distance it snaps to a wall
+#{ +Item Id: 1203, Name: DecalGunDebug
+#  Meshfile: Entities/Items/Tools/ColorToolPrefab
+#  PickupToToolbar: true
+#  Material: metalweapon
+#  HoldType: 14
+#  StackSize: 1
+#  Category: Weapons/Items
+#
+#  Mass: 2.1, type: float, display: true, formatter: Kilogram
+#  Volume: 1, type: float, display: true, formatter: Liter
+#
+#  RadialMenu: true
+#
+#  { Child 0
+#    Class: Decal
+#    DecalMode: Select
+#
+#    RadialText: "Select Decal"
+#    RadialDesc: "Select and move an existing decal"
+#  }
+#
+#  { Child 1
+#    Class: Decal
+#    DecalMode: Place
+#    # See SharedData/Content/Prefabs/decalsdef.txt: you can define guns for different groups
+#    DecalGroup: Group_1
+#
+#    RadialText: "Add Decal 1"
+#    RadialDesc: "Place a new decal from group 1"
+#  }
+#
+#  { Child 2
+#    Class: Decal
+#    DecalMode: Place
+#    DecalGroup: Group_2
+#
+#    RadialText: "Add Decal 2"
+#    RadialDesc: "Place a new decal from group 2"
+#  }
+#
+#  { Child 3
+#    Class: Decal
+#    DecalMode: Remove
+#
+#    RadialText: "Remove Decal"
+#    RadialDesc: "Point and click at a decal to remove it"
+#  }
+#}
+
 
 # ========================================= SPECIAL ITEMS  ==========================
 { +Item Id: 1300, Name: KeyCardBlack, Ref: TradingGoodsTemplate

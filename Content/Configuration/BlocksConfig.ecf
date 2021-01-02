@@ -1511,8 +1511,383 @@ HullCombatSmallBlocks
 }
 
 
-# FREE 135-242
+# FREE 135-223
 
+{ +Block Id: 224, Name: HWSBlockFireworkBees
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkBees
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 225, Name: HWSBlockFireworkComet2
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkComet2
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 226, Name: HWSBlockFireworkComet
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkComet
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 227, Name: HWSBlockFireworkCrossover
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkCrossover
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 228, Name: HWSBlockFireworkGeorgine
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkGeorgine
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 229, Name: HWSBlockFireworkGold
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkGold
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 230, Name: HWSBlockFireworkMine2
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkMine2
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 231, Name: HWSBlockFireworkMine
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkMine
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 232, Name: HWSBlockFireworkMinion
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkMinion
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 233, Name: HWSBlockFireworkOsier
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkOsier
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 234, Name: HWSBlockFireworkPalm
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkPalm
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 235, Name: HWSBlockFireworkPion
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkPion
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 236, Name: HWSBlockFireworkRainbow
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkRainbow
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 237, Name: HWSBlockFireworkRedPion
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkRedPion
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 238, Name: HWSBlockFireworkScarlet
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkScarlet
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 239, Name: HWSBlockFireworkViolet
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkViolet
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 240, Name: HWSBlockFireworkWhiteFlares
+  CustomIcon: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkWhiteFlares
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
+
+{ +Block Id: 241, Name: HWSBlockFireworkBlocks
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/HWSBlockFireworkBees
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  ChildBlocks: "HWSBlockFireworkBees,HWSBlockFireworkComet2,HWSBlockFireworkComet,HWSBlockFireworkCrossover,HWSBlockFireworkGeorgine,HWSBlockFireworkGold,HWSBlockFireworkMine,HWSBlockFireworkMine2,HWSBlockFireworkMinion,HWSBlockFireworkOsier,HWSBlockFireworkPalm,HWSBlockFireworkPion,HWSBlockFireworkRainbow,HWSBlockFireworkRedPion,HWSBlockFireworkScarlet,HWSBlockFireworkViolet,HWSBlockFireworkWhiteFlares"
+}
 
 { +Block Id: 242, Name: MediaControlBlock
   Info: bkiDecalsControlBlock, display: true
@@ -1529,7 +1904,6 @@ HullCombatSmallBlocks
   BlockColor: "7,170,170"
   AllowPlacingAt: "Base,MS,SS,GV", display: true
   IsAccessible: true, type: bool
-  IsActivateableInCP: true
   IsLockable: true
   TemplateRoot: HullLargeBlocks
   PickupTarget: SteelPlate

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2181835021
+CRC: 3339003205
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f408f2291f10f58df76b67a669a82bb2
+    Hash: 80c8dc05bf0458f2fe0c74a829a840a8
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f15947db40187737b37350c852350ef3
+    Hash: 8e891449b40bdd2dc916def88e8f2ce2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -27,6 +27,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 8396afed7c1a1d5498e6e8b2a5f94443, type: 3}
 - Class: 114
@@ -40,43 +42,87 @@ ClassTypes:
 - Class: 205
   Script: {instanceID: 0}
 Assets:
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkViolet.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.001.asset
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Meshes/Cube.002.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/ElementalStone.asset
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Materials/Spikes.asset
 - Assets/BlockModels/BigFlower/AlienFlora/Models/BigFlower.fbx
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Textures/FireworkBox.png
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.004.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.004.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.007.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Light.png
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkRainbow.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.002.asset
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkWhiteFlares.prefab
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkComet2.prefab
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkMine2.prefab
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/water.png
 - Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Color.png
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkComet.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Textures/FireworkRocket2.png
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Parent.png
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkScarlet.prefab
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Darkness.png
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Fire.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Textures/FireworkBox.jpg
 - Assets/BlockModels/HWSBlockSpikeTrap/HWSBlockSpikeTrap.prefab
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Textures/Foundation.png
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.003.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.003.asset
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Meshes/Cube.001.asset
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Materials/SpikesFoundation.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Earth.asset
 - Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Emissive.png
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkGold.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Textures/FireworkRocket4.png
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Textures/FireworkRocket3.png
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Textures/Earth.png
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.002.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.008.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.006.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.005.asset
 - Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Occlusion.png
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Textures/FireworkRocket5.png
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkPalm.prefab
 - Assets/BlockModels/BigFlower/AlienFlora/Models/EmpShader-Example Block Colored.shader
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.004.asset
 - Assets/BlockModels/BigFlower/BigFlowerPrefab2.prefab
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkBees.prefab
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Light.asset
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkRedPion.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/WoodBox.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.005.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.010.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.prefab
 - Assets/BlockModels/BigFlower/AlienFlora/Textures/BigFlower/BigFlower_Normal.png
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.006.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.asset
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkOsier.prefab
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Textures/SpikesFoundation.png
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.prefab
 - Assets/BlockModels/white.jpg
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.007.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.005.asset
 - Assets/BlockModels/HWSBlockSpikeTrap/Import/HWSBlockSpikeTrap.Textures/Spikes.png
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkCrossover.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.001.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Darkness.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Textures/FireworkRocket1.png
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.008.asset
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkPion.prefab
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Materials/Water.asset
 - Assets/BlockModels/BigFlower/AlienFlora/Materials/Particle.mat
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkMine.prefab
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Materials/Material.002.asset
+- Assets/BlockModels/HWSBlockFirework/Import/HWSBlockFireworkBlocks.Meshes/Cube.006.asset
 - Assets/BlockModels/HWSBlockElementalStone/Import/HWSBlockElementalStone.Meshes/Cone.001.asset
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkGeorgine.prefab
 - Assets/BlockModels/HWSBlockElementalStone/HWSBlockElementalStone.prefab
+- Assets/BlockModels/HWSBlockFirework/HWSBlockFireworkMinion.prefab
 - Assets/BlockModels/BigFlower/AlienFlora/Materials/BigFlower_MAT.mat
 Dependencies:
 - C:/Program Files (x86)/Steam/steamapps/common/Empyrion - Galactic Survival/BlockModelsAndSuitPropsModding/Bundles/suitpropsext
