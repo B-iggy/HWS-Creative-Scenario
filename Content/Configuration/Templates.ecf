@@ -5556,6 +5556,7 @@
 
 { +Template Name: WeaponSVTorpedoLauncher
   CraftTime: 90 #D1 20  uses "M77 Torpedo"
+  DeconOverride: Stop
   Target: AdvC
   { Child Inputs
     ZascosiumAlloy: 32
@@ -5572,6 +5573,7 @@
 { +Template Name: AmmoSVTorpedo
   OutputCount: 1 #D1 20 for "M77 Torpedo Launcher"
   CraftTime: 30
+  DeconOverride: Stop
   Target: "AdvC"
   { Child Inputs
     SteelPlate: 10
@@ -5585,6 +5587,7 @@
 { +Template Name: WeaponSVAntimatterCannon
   CraftTime: 90
   Target: AdvC
+  DeconOverride: Stop
   { Child Inputs
     ZascosiumAlloy: 32
     ErestrumIngot: 10
@@ -5601,6 +5604,7 @@
 { +Template Name: AmmoSVAntimatterCannon
   OutputCount: 10
   CraftTime: 15
+  DeconOverride: Stop
   Target: "AdvC"
   { Child Inputs
     PentaxidElement: 30
@@ -5611,6 +5615,7 @@
 
 { +Template Name: WeaponCVTorpedoLauncher
   CraftTime: 90 #D1 20  uses "L77 Torpedo"
+  DeconOverride: Stop
   Target: AdvC
   { Child Inputs
     ZascosiumAlloy: 70
@@ -5626,6 +5631,7 @@
 
 { +Template Name: AmmoCVTorpedo
   OutputCount: 2 #D1 20 for "L77 Torpedo Launcher"
+  DeconOverride: Stop
   CraftTime: 60
   Target: "AdvC"
   { Child Inputs
