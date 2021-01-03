@@ -1165,6 +1165,7 @@
 
 { +Template Name: CoreNoCPU
   CraftTime: 700 #A1 1
+  BaseItem: true
   Target: ""
   { Child Inputs
     SteelPlate: 6
@@ -1197,12 +1198,11 @@
   CraftTime: 100 #A2 1
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 12
+    SteelPlate: 18
     Electronics: 12
     Computer: 10
-    OpticalFiber: 16
-    TitanRods: 10
-    EnergyMatrix: 5
+    OpticalFiber: 6
+    FluxCoil: 1
   }
 }
 { +Template Name: CPUExtenderHVT3
@@ -1214,7 +1214,7 @@
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 4
-    SmallOptronicBridge: 3
+    SmallOptronicBridge: 2
   }
 }
 { +Template Name: CPUExtenderHVT4
@@ -1227,28 +1227,27 @@
     OpticalFiber: 12
     FluxCoil: 4
     PowerCoil: 2
-    SmallOptronicBridge: 4
-    SmallOptronicMatrix: 4
+    SmallOptronicBridge: 2
+    SmallOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderSVT2
   CraftTime: 140 #A2 1
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 12
-    Electronics: 8
+    SteelPlate: 18
+    Electronics: 12
     Computer: 10
-    OpticalFiber: 18
-    TitanRods: 20
-    EnergyMatrix: 5
+    OpticalFiber: 6
+    FluxCoil: 2
   }
 }
 { +Template Name: CPUExtenderSVT3
   CraftTime: 300 #A3 1
   Target: "LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 24
-    Electronics: 16
+    SteelPlate: 36
+    Electronics: 24
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 8
@@ -1259,14 +1258,14 @@
   CraftTime: 500 #A4 1
   Target: "AdvC"
   { Child Inputs
-    SteelPlateArmored: 24
-    Electronics: 60
+    SteelPlate: 24
+    Electronics: 16
     Computer: 20
     OpticalFiber: 12
     FluxCoil: 8
     PowerCoil: 2
-    SmallOptronicBridge: 4
-    SmallOptronicMatrix: 4
+    SmallOptronicBridge: 3
+    SmallOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderCVT2
@@ -1278,7 +1277,6 @@
     Computer: 10
     OpticalFiber: 6
     FluxCoil: 4
-    EnergyMatrix: 3
   }
 }
 { +Template Name: CPUExtenderCVT3
@@ -1298,14 +1296,13 @@
   Target: "AdvC"
   { Child Inputs
     SteelPlateArmored: 36
-    Electronics: 60
+    Electronics: 24
     Computer: 20
     OpticalFiber: 12
-    ZascosiumAlloy: 24
     FluxCoil: 14
     PowerCoil: 6
-    LargeOptronicBridge: 4
-    LargeOptronicMatrix: 4
+    LargeOptronicBridge: 3
+    LargeOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderBAT2
@@ -1317,7 +1314,6 @@
     Computer: 10
     OpticalFiber: 6
     FluxCoil: 4
-    EnergyMatrix: 4
   }
 }
 { +Template Name: CPUExtenderBAT3
@@ -1342,8 +1338,8 @@
     OpticalFiber: 12
     FluxCoil: 14
     PowerCoil: 6
-    LargeOptronicBridge: 4
-    LargeOptronicMatrix: 4
+    LargeOptronicBridge: 3
+    LargeOptronicMatrix: 2
   }
 }
  # ======================= 
@@ -3845,9 +3841,9 @@
   CraftTime: 5
   Target: "LargeC,AdvC"
   { Child Inputs
-    TitanPlates: 5
+    TitanPlates: 7
     PromethiumPellets: 25
-    MagnesiumPowder: 20
+    MagnesiumPowder: 30
   }
 }
 

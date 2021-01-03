@@ -14378,9 +14378,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     BlastParticleIndex: 8
     BlastRadius: 2, display: true
     BlastDamage: 525, display: true
-    Speed: 105, display: true
+    Speed: 210, display: true
     Range: 295, display: true
-    SpeedSpace: 250, display: true
+    SpeedSpace: 500, display: true
     RangeSpace: 800, display: true
     Ballistic: true
 
