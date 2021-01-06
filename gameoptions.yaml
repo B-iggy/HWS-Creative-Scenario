@@ -2,6 +2,7 @@ Options:
 - ValidFor:
   - SP
   - Survival
+  - Freedom
   DecayTime: 6
   WipeTime: 360
   ProtectTime: 25
@@ -34,6 +35,7 @@ Options:
 - ValidFor:
   - MP
   - Survival
+  - Freedom
   DecayTime: 6
   WipeTime: 360
   ProtectTime: 25
