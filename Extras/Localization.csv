@@ -32,7 +32,7 @@ AmmoSVAntimatterCannon,Antimatter Charge,Antimaterie Ladung,
 WeaponSVTorpedoLauncher,M77 Torpedo Launcher,M77 Torpedo Schacht,
 AmmoSVTorpedo,M77 Torpedo,M77 Torpedo,
 WeaponCVTorpedoLauncher,L77 Torpedo Launcher,L77 Torpedo Schacht,
-AmmoCVTorpedo,L77 Torpedo,L77 Torpedo,
+AmmoCVTorpedo,[c][FFF300]L77 Torpedo[-][/c],[c][FFF300]L77 Torpedo[-][/c],
 TurretHVLaser,Laser Turret,Laser Geschützturm,
 AmmoTurretHVLaser,Ls.Charge II HV,Ls.Ladung II BG,
 PentaxidSeedCrystal,Pentaxid Seed Crystal,Pentaxid - Keim,,,,,,,,,,,,,,,
@@ -70,7 +70,7 @@ lpsHWSEGSHQTeleporter,EGS got you covered: A Public Teleporter at the EGS HQ,EGS
 lpsHWSEGSHQMissions,Play 36 rewarding Missions at the EGS HQ,Spiele 36 lohnenswerte Missionen beim EGS HQ,
 lpsHWSEGSHQElementalStone,The Elemental Stone in the EGS HQ - friend or enemy?,Der Elementare Stein im EGS HQ - Freund oder Feind?,
 lpsHWSConnect,"Manage your structures, your player and more over a website - https://connect.hws.global","Check deine Strukturen, deinen Spieler und mehr via a website - https://connect.hws.global"
-lpsHWSStarFragment,"Will the HWS Community find all HWS Star Fragments, decode them and expand the Universe?","Wird die HWS Community alle HWS Star Fragmente finden, entschlüsseln und das Universum vergrößern?"
+lpsHWSStarFragment,"Will the HWS Community find all HWS Star Fragments, return the Elemental Power and expand the Universe?","Wird die HWS Community alle HWS Star Fragmente finden, entschlüsseln und das Universum vergrößern?"
 lpsHWSPatreon,"Enjoy playing on HWS? Support me at https://patreon.com/hws to keep HWS running - special HWS Patron content included","Gefällt es dir auf HWS? Unterstütz mich auf https://patreon.com/hws damit HWS am Leben bleibt - HWS Patron Boni inklusive."
 lpsHWSTEAM,"Need a job? Become a T.E.A.M. Agent for the EGS Company","Arbeitslos? Werde T.E.A.M. Agent in der EGS Company"
 
@@ -79,9 +79,45 @@ bkiHWSHelmetPatron,"HWS Patron Exclusive Skin Helmet. Get yours at [c][019245][u
 HWSNecklaceElementalPower,[c][fdb100]Elemental Power[-][/c],[c][019245]Elementare Macht[-][/c]
 bkiHWSNecklaceElementalPower,You activated a HWS Star Fragment and got rewarded with the Elemental Power. Protect it with your life and bring it back to the Elemental Stone in the EGS HQ to expand the Universe,Du hast ein HWS Sternfragment aktiviert und wurdest mit der Elementaren Macht belohnt. Beschütze es mit deinem Leben und bring es zurück zum Elementen Stein im EGS Hauptquartier, um das Universum zu erweitern
 
-HWSBlockSpikeTrap,Spike Trap Block, Stachel Fallen Block
+HWSBlockSpikeTrap,Spike Trap Block123, Stachel Fallen Block
 
 HWSMedicCyborgStatic,RexXxuS Clone X7,
+HWSCyborgServant,Series X Clones,
+HWSEngineerCyborgStatic,Representative of Cyborgs,
+
+RocketPodMSWeapon,Heavy Rocket Launcher,Schwerer Raketenwerfer,Lance-roquettes,Lanciarazzi,Lanzamisiles,Lança-foguetes,Lança-Foguetes,Wyrzutnia Rakiet,Ракетная установка,ロケットランチャー,火箭发射器 (主力舰),火箭發射器,로켓 발사기,Roketatar,Εκτοξευτής Ρουκετών,Raketlanceerder,Đầu phóng tên lửa
+WeaponMS03,Heavy Rocket Launcher,Schwerer Raketenwerfer,Lance-roquettes,Lanciarazzi,Lanzamisiles,Lança-foguetes,Lança-Foguetes,Wyrzutnia Rakiet,Ракетная установка,ロケットランチャー,火箭发射器 (主力舰),火箭發射器,로켓 발사기,Roketatar,Εκτοξευτής Ρουκετών,Raketlanceerder,Đầu phóng tên lửa
+LightRocketCV,[c][FFF300]125mm Unguided Missile[-][/c],[c][FFF300]125mm Ungelenkte Rakete[-][/c],[c][FFF300]Fusée non guidée de 125 mm[-][/c],[c][FFF300]Razzo non guidato da 125 mm[-][/c],[c][FFF300]Cohete no guiado de 125 mm[-][/c],,,,,,,,,,,,
+FlakRocketMS,[c][FFF300]Flak Shell CV,[c][FFF300]Flak Geschoss GR[-][/c],[c][FFF300]Obus Flak CV[-][/c],[c][FFF300]Munizioni AntiAeree NC[-][/c],[c][FFF300]Munición antiaérea (NC)[-][/c],[c][FFF300]Escudo Flak NC[-][/c],[c][FFF300]Munição de Anti-Aéreo NM[-][/c],[c][FFF300]Flak pocisk CV[-][/c],[c][FFF300]Зенитный снаряд БС[-][/c],[c][FFF300]対空弾CV[-][/c],[c][FFF300]高射炮弹 (主力舰)[-][/c],[c][FFF300]主力飛船高射炮彈[-][/c],[c][FFF300]플랙 셸 CV[-][/c],[c][FFF300]Uçaksavar Mermisi AG[-][/c],[c][FFF300]Αντιαεροπορικό Κέλυφος CV[-][/c],[c][FFF300]Flak granaat CV[-][/c],[c][FFF300]Đạn pháo phòng không CV[-][/c]
+PulseLaserChargeMS,[c][FFF300]Ls.Charge CV[-][/c],[c][FFF300]Ls.Ladung GR[-][/c],[c][FFF300]Charge laser CV[-][/c],[c][FFF300]Carica Laser NC[-][/c],[c][FFF300]Carga láser (NC)[-][/c],[c][FFF300]CargaLs. NC[-][/c],[c][FFF300]Carga de Ls. - NM[-][/c],[c][FFF300]Ls. ogniwo CV[-][/c],[c][FFF300]Лаз. заряд БС[-][/c],[c][FFF300]パルスチャージ(CV)[-][/c],[c][FFF300]脉冲激光电池 (主力舰)[-][/c],[c][FFF300]主力飛船鐳射充能[-][/c],[c][FFF300]Ls.충전 CV[-][/c],[c][FFF300]Lazer Şarjı AG[-][/c],[c][FFF300]Γεμιστήρας Λέιζερ CV[-][/c],[c][FFF300]Ls.accu CV[-][/c],
+PulseLaserChargeMSWeapon,[c][FFF300]Ls.Charge II CV[-][/c],[c][FFF300]Ls.Ladung II GR[-][/c],[c][FFF300]Charge laser II CV[-][/c],[c][FFF300]Carica Laser II NC[-][/c],[c][FFF300]Carga láser II (NC)[-][/c],[c][FFF300]CargaLs. II NC[-][/c],[c][FFF300]Carga de Ls. II NM[-][/c],[c][FFF300]Ls. ogniwo II CV[-][/c],[c][FFF300]Лаз. заряд II БС[-][/c],[c][FFF300]パルスチャージMK2(CV)[-][/c],[c][FFF300]巨型脉冲激光电池 (主力舰)[-][/c],[c][FFF300]主力飛船鐳射充能II[-][/c],[c][FFF300]Ls.충전 II CV[-][/c],[c][FFF300]Lazer Şarjı II AG[-][/c],[c][FFF300]Γεμιστήρας Λέιζερ II CV[-][/c],[c][FFF300]Ls.accu II CV[-][/c],
+TurretMSPlasmaCharge,[c][FFF300]Pl.Charge CV[-][/c],[c][FFF300]PK Ladung GR[-][/c],[c][FFF300]Charge PI CV[-][/c],[c][FFF300]Carica al Plasma NC[-][/c],[c][FFF300]Carga de plasma (NC)[-][/c],[c][FFF300]CargaPl. NC[-][/c],[c][FFF300]Carga de Canhão Pl - NM[-][/c],[c][FFF300]Pl. ogniwo CV[-][/c],[c][FFF300]Пл. заряд БС[-][/c],[c][FFF300]プラズマチャージ(CV)[-][/c],[c][FFF300]等离子炮电池 (主力舰)[-][/c],[c][FFF300]主力飛船等離子充能[-][/c],[c][FFF300]Pl.충전 CV[-][/c],[c][FFF300]Plazma Şarjı AG[-][/c],[c][FFF300]Γεμιστήρας Πλάσματος CV[-][/c],[c][FFF300]Pl.accu CV[-][/c],
+FastRocketMS,[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150mm Z-RAK[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]Missile a Ricerca (150mm)[-][/c],[c][FFF300]Misil Buscador (150mm)[-][/c],[c][FFF300]H-MSL 150 mm[-][/c],[c][FFF300]H-MSL 150mm[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150 мм ракета с ГСН[-][/c],[c][FFF300]追尾型ミサイル(150mm)[-][/c],[c][FFF300]150mm巨型火箭弹 (制导)[-][/c],[c][FFF300]150mm H-導彈[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150mm G-Füze[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150mm H-MSL[-][/c],
+LargeRocketMS,[c][FFF300]160mm MSL[-][/c],[c][FFF300]160mm RAK[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]Missile 160mm[-][/c],[c][FFF300]Misil (160mm)[-][/c],[c][FFF300]MSL 160 mm[-][/c],[c][FFF300]Míssil 160mm[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]160 мм ракета[-][/c],[c][FFF300]ミサイル(160mm)[-][/c],[c][FFF300]160mm巨型火箭弹 (主力舰)[-][/c],[c][FFF300]160mm 導彈[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]160mm Füze[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]160mm MSL[-][/c],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -19,6 +19,23 @@ https://docs.google.com/spreadsheets/u/1/d/1uxoPbrFKitNpAbOTHwXrMG4Ms1bHQsd1jzPt
 
 ## How to use?
 
+### Method 1 (recommended)
+⚠ WARNING: It is your responsibility to not use any outdated (broken) version of this Scenario!
+
+1. [Subscribe this Scenario in the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2355482829) to get always the latest version.
+
+### Method 2 (recommended)
+⚠ WARNING: If you use this method you have to update yourself every time a new update got released!
+⚠ WARNING: It is your responsibility to not use any outdated (broken) version of this Scenario!
+
+1. Install [git](https://git-scm.com/downloads) on your Computer
+2. [Clone](https://github.com/B-iggy/HWS-Creative-Scenario.git) this project in your C:\Program Files (x86)\Steam\steamapps\common\Empyrion - Galactic Survival\Content\Scenarios folder
+3. Do regular pulls if an update got released
+
+### Method 3 (not recommended)
+⚠ WARNING: If you use this method you have to update yourself every time a new update got released!
+⚠ WARNING: It is your responsibility to not use any outdated (broken) version of this Scenario! 
+
 1. [Download the master zip](https://github.com/B-iggy/HWS-Creative-Scenario/archive/master.zip)
 2. Close Empyrion if not already
 3. Unzip the master.zip in your here: C:\Program Files (x86)\Steam\steamapps\common\Empyrion - Galactic Survival\Content\Scenarios
@@ -37,7 +54,7 @@ I credit Vermillion and Ravien for his Reforged Galaxy Config from which I might
 
 Pull requests are welcome, if you describe what your goal of your change is and how it could benefit the gameplay on HWS.
 
-Feedback about the HWS Config files are most welcome in form of ["Issues"](https://github.com/B-iggy/HWS-Creative-Scenario/issues). That way I can relate directly on the proper Config part and reference your "Issue" Feedback in a commit.
+Constructive feedback about the HWS Config files are most welcome in form of ["Issues"](https://github.com/B-iggy/HWS-Creative-Scenario/issues). That way I can relate directly on the proper Config part and reference your "Issue" Feedback in a commit.
 
 ## Known problems
 

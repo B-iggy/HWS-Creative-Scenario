@@ -1,4 +1,6 @@
-HWS Config Scenario
+HWS Creative Scenario
 For testing HWS Configs in a test Scenario to build ships etc. for HWS.
+! Make always sure to update to latest version !
+
 More information at:
 https://forum.empyrion-homeworld.net/t/hws-config-effectiveness-weapon-system-ews/9161
