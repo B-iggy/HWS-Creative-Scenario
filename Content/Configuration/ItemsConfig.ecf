@@ -13028,7 +13028,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.66, type: float, display: true  # better: 0.5
   SpeedFac: 0.85, type: float, display: true  # better: 0.5
   JumpFac: 0.67, type: float, display: true
-  JetpackFac: 1.20, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
+  JetpackFac: 2.0, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
   FoodFac: 1.44, type: float, display: true /*calculations are based on 70 minutes*/
   StaminaFac: 1.21, type: float, display: true /*calculations are based on 20 stamina per second while running*/
   NrSlots: 2, type: int, display: true
@@ -13066,7 +13066,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.53, type: float, display: true # better: 0.2
   SpeedFac: 0.75, type: float, display: true # better: 0.2
   JumpFac: 0.55, type: float, display: true
-  JetpackFac: 1.44, type: float, display: true
+  JetpackFac: 1.95, type: float, display: true
   FoodFac: 1.73, type: float, display: true
   StaminaFac: 1.33, type: float, display: true
   NrSlots: 3, type: int, display: true
@@ -13100,7 +13100,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.43, type: float, display: true  # better: 0.085
   SpeedFac: 0.6, type: float, display: true  # better: 0.085
   JumpFac: 0.45, type: float, display: true
-  JetpackFac: 1.73, type: float, display: true
+  JetpackFac: 1.9, type: float, display: true
   FoodFac: 2.5, type: float, display: true
   StaminaFac: 1.46, type: float, display: true
   NrSlots: 4, type: int, display: true
@@ -13128,7 +13128,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.75, type: float, display: true  # better: 0.5
   SpeedFac: 0.90, type: float, display: true  # better: 0.5
   JumpFac: 0.87, type: float, display: true
-  JetpackFac: 1.30, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
+  JetpackFac: 1.85, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
   FoodFac: 1.58, type: float, display: true /*calculations are based on 70 minutes*/
   StaminaFac: 1.25, type: float, display: true /*calculations are based on 20 stamina per second while running*/
   NrSlots: 2, type: int, display: true
@@ -13155,7 +13155,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.3, type: float, display: true  # better: 0.085
   SpeedFac: 0.5, type: float, display: true  # better: 0.085
   JumpFac: 0.3, type: float, display: true
-  JetpackFac: 1.0, type: float, display: true
+  JetpackFac: 1.8, type: float, display: true
   FoodFac: 0.5, type: float, display: true
   StaminaFac: 0.7, type: float, display: true
 
@@ -13237,7 +13237,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { +Item Id: 622, Name: JetpackBoost, Ref: ArmorBoostTemplate
   MarketPrice: 5000, display: true
-  JetpackFac: -0.25, type: float, display: true
+  JetpackFac: -0.1, type: float, display: true
 
   Volume: 2.25, type: float, display: true, formatter: Liter
   Mass: 4.25, type: float, display: true, formatter: Kilogram
@@ -13343,7 +13343,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   ShowUser: Yes
 }
 { Item Id: 651, Name: JetpackBoostEpic, Ref: JetpackBoost
-  JetpackFac: -0.26, type: float, display: true
+  JetpackFac: -0.2, type: float, display: true
   MarketPrice: 10000
 
   ShowUser: Yes
@@ -13636,7 +13636,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.7, type: float, display: true  # better: 0.085
   SpeedFac: 0.9, type: float, display: true  # better: 0.085
   JumpFac: 0.7, type: float, display: true
-  JetpackFac: 1.1, type: float, display: true
+  JetpackFac: 1.75, type: float, display: true
   FoodFac: 0.9, type: float, display: true
   StaminaFac: 1.1, type: float, display: true
 
