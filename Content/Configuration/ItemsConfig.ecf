@@ -13027,7 +13027,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FallDamageFac: 0.40, type: float, display: true
   PowerFac: 0.66, type: float, display: true  # better: 0.5
   SpeedFac: 0.85, type: float, display: true  # better: 0.5
-  JumpFac: 0.67, type: float, display: true
+  JumpFac: 1.5, type: float, display: true
   JetpackFac: 2.0, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
   FoodFac: 1.44, type: float, display: true /*calculations are based on 70 minutes*/
   StaminaFac: 1.21, type: float, display: true /*calculations are based on 20 stamina per second while running*/
@@ -13065,7 +13065,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FallDamageFac: 0.60, type: float, display: true
   PowerFac: 0.53, type: float, display: true # better: 0.2
   SpeedFac: 0.75, type: float, display: true # better: 0.2
-  JumpFac: 0.55, type: float, display: true
+  JumpFac: 1.0, type: float, display: true
   JetpackFac: 1.95, type: float, display: true
   FoodFac: 1.73, type: float, display: true
   StaminaFac: 1.33, type: float, display: true
@@ -13099,7 +13099,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FallDamageFac: 0.7, type: float, display: true
   PowerFac: 0.43, type: float, display: true  # better: 0.085
   SpeedFac: 0.6, type: float, display: true  # better: 0.085
-  JumpFac: 0.45, type: float, display: true
+  JumpFac: 0.5, type: float, display: true
   JetpackFac: 1.9, type: float, display: true
   FoodFac: 2.5, type: float, display: true
   StaminaFac: 1.46, type: float, display: true
@@ -13128,7 +13128,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PowerFac: 0.75, type: float, display: true  # better: 0.5
   SpeedFac: 0.90, type: float, display: true  # better: 0.5
   JumpFac: 0.87, type: float, display: true
-  JetpackFac: 1.85, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
+  JetpackFac: 2.0, type: float, display: true /*no armor : 2.5 units removed per tick.  armor : 5* JetpackFac per tick*/
   FoodFac: 1.58, type: float, display: true /*calculations are based on 70 minutes*/
   StaminaFac: 1.25, type: float, display: true /*calculations are based on 20 stamina per second while running*/
   NrSlots: 2, type: int, display: true
@@ -13154,12 +13154,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FallDamageFac: 0.3, type: float, display: true
   PowerFac: 0.3, type: float, display: true  # better: 0.085
   SpeedFac: 0.5, type: float, display: true  # better: 0.085
-  JumpFac: 0.3, type: float, display: true
+  JumpFac: 1.5, type: float, display: true
   JetpackFac: 1.8, type: float, display: true
   FoodFac: 0.5, type: float, display: true
   StaminaFac: 0.7, type: float, display: true
 
-  NrSlots: 1, type: int, display: true
+  NrSlots: 3, type: int, display: true
 
   Mass: 18, type: float, display: false, formatter: Kilogram
   Volume: 4, type: float, display: true, formatter: Liter
@@ -13187,11 +13187,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FallDamageFac: 0.7, type: float, display: true
   PowerFac: 0.7, type: float, display: true  # better: 0.085
   SpeedFac: 0.9, type: float, display: true  # better: 0.085
-  JumpFac: 0.7, type: float, display: true
-  JetpackFac: 1.1, type: float, display: true
+  JumpFac: 1.0, type: float, display: true
+  JetpackFac: 1.75, type: float, display: true
   FoodFac: 0.9, type: float, display: true
   StaminaFac: 1.1, type: float, display: true
-  NrSlots: 0, type: int, display: true
+  NrSlots: 4, type: int, display: true
 
   Mass: 100, type: float, display: false, formatter: Kilogram
   Volume: 60, type: float, display: true, formatter: Liter
@@ -13237,7 +13237,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { +Item Id: 622, Name: JetpackBoost, Ref: ArmorBoostTemplate
   MarketPrice: 5000, display: true
-  JetpackFac: -0.1, type: float, display: true
+  JetpackFac: -0.15, type: float, display: true
 
   Volume: 2.25, type: float, display: true, formatter: Liter
   Mass: 4.25, type: float, display: true, formatter: Kilogram
@@ -13626,7 +13626,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   VolumeCapacity: 4999500, type: float, display: true, formatter: Liter
   Info: bkiHWSEventHalloweenArmor, display: true
 
-  Durability: 1000, display: true
+  Durability: 1500, display: true
   Oxygen: 1000, type: int, display: true
   Armor: 1000, type: int, display: true
   Heat: 500, type: int, display: true
@@ -13635,12 +13635,12 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FallDamageFac: 0.7, type: float, display: true
   PowerFac: 0.7, type: float, display: true  # better: 0.085
   SpeedFac: 0.9, type: float, display: true  # better: 0.085
-  JumpFac: 0.7, type: float, display: true
-  JetpackFac: 1.75, type: float, display: true
+  JumpFac: 1.5, type: float, display: true
+  JetpackFac: 1.7, type: float, display: true
   FoodFac: 0.9, type: float, display: true
   StaminaFac: 1.1, type: float, display: true
 
-  NrSlots: 4, type: int, display: true
+  NrSlots: 5, type: int, display: true
   SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, RadiationBoostEpic, MobilityBoostEpic"
 }
 
