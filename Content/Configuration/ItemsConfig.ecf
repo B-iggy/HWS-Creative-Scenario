@@ -13626,7 +13626,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   VolumeCapacity: 4999500, type: float, display: true, formatter: Liter
   Info: bkiHWSEventHalloweenArmor, display: true
 
-  Durability: 1500, display: true
+  Durability: 2000, display: true
   Oxygen: 1000, type: int, display: true
   Armor: 1000, type: int, display: true
   Heat: 500, type: int, display: true
@@ -13640,7 +13640,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   FoodFac: 0.9, type: float, display: true
   StaminaFac: 1.1, type: float, display: true
 
-  NrSlots: 5, type: int, display: true
+  NrSlots: 4, type: int, display: true
   SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, EVABoost, TransportationBoost,InsulationBoostEpic, ArmorBoostEpic, JetpackBoostEpic, MultiBoostEpic, RadiationBoostEpic, MobilityBoostEpic"
 }
 
