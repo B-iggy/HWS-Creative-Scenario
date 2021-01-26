@@ -13593,7 +13593,7 @@ HullCombatSmallBlocks
   ShowUser: No
   AllowWander: true
   DoorClosesOnPower: false
-  IsPhysicsColliders: false    /* ramps are too thin and also might pose problems when SV/HV are on the ramp while physics colliders are on */
+  IsPhysicsColliders: true    /* ramps are too thin and also might pose problems when SV/HV are on the ramp while physics colliders are on */
   Voxelize: false     # do not allow to place blocks inside of bounding box
 }
 
@@ -21155,7 +21155,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   AllowPlacingAt: "Base,MS", display: true
   ShowUser: Yes
-  ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, CubeSliced, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
+  ChildShapes: "Cube, CubeHalf, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, RampRoundFTriple, RampRoundF, SmallCornerRoundB, SmallCornerRoundA, SphereHalf, Cone, ConeB, CutCornerC, CubeSliced, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA"
   BlockColor: "27,44,65,255"
   { Child Map
     Color: "27,44,65,255"

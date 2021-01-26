@@ -4,7 +4,7 @@
 # MarketPrice: = sets the price per unit for use with 'Key: StationInterface' for POIs; if different items are used in the same context (like 3 types of energy cells for "Fuel" the item with the lowest cost per fuel content is used automatically)
 /* Categories:
 Ingredients: Base material without a template (ie picked up in the world)
-Components: Processed material with a template 
+Components: Processed material with a template
 */
 
 # Weapon Hold Types:
@@ -13,11 +13,11 @@ Components: Processed material with a template
 # HoldType: 15   Rifle
 # HoldType: 16   Rifle + weaker shoot animation (Survival Tool, Multitool, Drill)
 
-/* Categories: 
+/* Categories:
 > Sufficient condition given in Templates.ecf
 > Necessary condition that an item appears in a certain device
-Food: FoodP and SurvC 
-Medical: FoodP and SurvC   
+Food: FoodP and SurvC
+Medical: FoodP and SurvC
 Ingredients: FoodP
 Weapons/Items: SurvC, SmallC, LargeC, AdvC
 Components: SurvC, SmallC, LargeC, AdvC
@@ -36,7 +36,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 # AllowRemote: true / false     /* allow / disallow in player drone. per default it is: true */
 # AmmoCapacity: max is 500 for all turret and mounted weapons
-# Durability: max is 5000 for all handheld weapons and tools 
+# Durability: max is 5000 for all handheld weapons and tools
 # AutoReload: true > per default it is set to "true"
 
 /* CATEGORIE: PLAYER WEAPONS AND TOOLS id 1 - 99 */
@@ -76,7 +76,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 1, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 1.0, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
     AllowRemote: true
@@ -84,7 +84,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.2, type: float, display: true, formatter: ROF
     Range: 110, display: false
     NoiseStrength: 40, display: false
-    CameraShake: 1  
+    CameraShake: 1
     Automatic: false
     BulletSpread: 0.2, display: true
     Recoil: 0.5, display: true
@@ -145,10 +145,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 4.5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 1.0, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
-    AllowRemote: false   
+    AllowRemote: false
     ROF: 1, type: float, display: true, formatter: ROF
     Range: 60, display: false
     NoiseStrength: 180, display: false
@@ -219,11 +219,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 30, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 0.08, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   RadialMenu: true
   { Child 0
     Class: Ranged
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 0.1, type: float, display: true, formatter: ROF
     Range: 150, display: false
     NoiseStrength: 200, display: false
@@ -344,18 +344,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 0.125, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
     Class: Ranged
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 0.1, type: float, display: true, formatter: ROF
     Range: 170, display: false
-    Automatic: true, display: true  
+    Automatic: true, display: true
     BulletSpread: 0.1, display: true
     Recoil: 0.4, display: true
     Damage: 59, display: true
-    NoiseStrength: 50, display: false   
-    CameraShake: 1  
+    NoiseStrength: 50, display: false
+    CameraShake: 1
     AmmoCapacity: 25, display: true
     AmmoType: 5.8mmBullet, display: true
     ReloadDelay: 3.1, display: true
@@ -429,14 +429,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 9, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 1.25, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 0.5, type: float, display: true, formatter: ROF
     Range: 303, display: false
     NoiseStrength: 150, display: false
-    CameraShake: 2   
+    CameraShake: 2
     Automatic: false
     BulletSpread: 0.03, display: true
     Recoil: 1.1, display: true
@@ -507,10 +507,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: bkiDrill, display: true
   Durability: 500, display: false
   DegradationProb: 0.03, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   ShowUser: No
   # RadialMenu: true
-  { Child 0       # Resource mining and Rock drilling 
+  { Child 0       # Resource mining and Rock drilling
     Class: Driller
 	DrillMode: 3
     DecoMode: true
@@ -522,8 +522,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 300
     Radius: 1.75
     Range: 5, display: false
-    NoiseStrength: 50, display: false  
-    CameraShake: 0    
+    NoiseStrength: 50, display: false
+    CameraShake: 0
     IgnoreAtmo: true
     Automatic: true
     AmmoCapacity: 750, display: true
@@ -532,18 +532,18 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 3.1, display: true
     Bullet_use_per_shot: 0.25
     Particles: digger     # particle effect shown at impact
-    ParticleTransform: Muzzle/Particle1  # particle effect shown at muzzle  
+    ParticleTransform: Muzzle/Particle1  # particle effect shown at muzzle
     SfxBegin: Weapons/Player/Drill/Drilling_1
     SfxLoop: Weapons/Player/Drill/Drilling_2
     SfxStop: Weapons/Player/Drill/Drilling_3
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
-	
+
     DamageMultiplier_1: 0, param1: woodblock|concrete|hull|hullarmored|hullcombat|metal|metalhard|shield
     DamageMultiplier_2: 0, param1: wood   # no tree cutting
-	
+
     RadialText: rdlResourceMining
-    RadialDesc: rdlResourceMiningManualTxt 
+    RadialDesc: rdlResourceMiningManualTxt
     RadialIcon: Radial_ResourceMining
   }
   # { Child 1
@@ -553,8 +553,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # AllowAt: "UnderWater, Planet, Space"
     # ROF: 0.5, type: float
     # Range: 2.5
-    # NoiseStrength: 50, display: false 
-    # CameraShake: 0    
+    # NoiseStrength: 50, display: false
+    # CameraShake: 0
     # IgnoreAtmo: true
     # Automatic: true
     # InfoPopup: true
@@ -570,11 +570,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # SfxLoop: Weapons/Player/Drill/Drilling_2
     # SfxStop: Weapons/Player/Drill/Drilling_3
     # SfxReload: Weapons/Player/Reload/RifleReloadNormal
-	
+
     # DamageMultiplier_1: 0, param1: woodblock|concrete|hull|hullarmored|hullcombat|metal|metalhard|shield
-    # DamageMultiplier_2: 0, param1: dirt|stone|wood   
+    # DamageMultiplier_2: 0, param1: dirt|stone|wood
     # DamageMultiplier_3: 20,   param1: rock  # for rock drilling
-	
+
     # RadialText: rdlStoneRemoval
     # RadialDesc: rdlStoneRemovalTxt
     # RadialIcon: Radial_StoneRemoval
@@ -597,14 +597,14 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Volume: 5.5, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 0.75, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 0.85, type: float, display: true, formatter: ROF
     Range: 66, display: false
     NoiseStrength: 180, display: false
-    CameraShake: 3  
+    CameraShake: 3
     Automatic: false
     BulletsPerShot: 8
     BulletSpread: 0.2
@@ -670,22 +670,22 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Category: Weapons/Items
   # Info: bkiWeaponHandheld, display: true
   Mass: 25, type: float, display: true, formatter: Kilogram
-  Volume: 45, type: float, display: true, formatter: Liter  
+  Volume: 45, type: float, display: true, formatter: Liter
   #just for display - BlastRadius and BlastDamage is controlled by "SlowRocket"
   BlastRadius: 3, display: true
   BlastDamage: 500, display: true
   Durability: 100, display: false
   DegradationProb: 1, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: LauncherSS
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 3.7, type: float, display: true, formatter: ROF
     Damage: 1100, display: true
     Range: 200, display: false
     NoiseStrength: 190, display: false
     Recoil: 7, display: true
-    CameraShake: 3  
+    CameraShake: 3
     AmmoCapacity: 6, display: true
     AmmoType: SlowRocket, display: true
     ReloadDelay: 4.5, display: true
@@ -730,8 +730,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AllowAt: "UnderWater, Planet, Space"
     ROF: 0.5, type: float, display: false, formatter: ROF
     Range: 5
-    NoiseStrength: 10, display: false  
-    CameraShake: 0    
+    NoiseStrength: 10, display: false
+    CameraShake: 0
     IgnoreAtmo: true
     Automatic: true
     Damage: 120
@@ -743,7 +743,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: MultiCharge, display: true
     UseSingleMagazine: true
     ReloadDelay: 3.0, display: true
-    ParticleTransform: Muzzle/Particle1  # particle effect shown at muzzle      
+    ParticleTransform: Muzzle/Particle1  # particle effect shown at muzzle
     SfxBegin: Weapons/Player/Tools/WeaponLightning_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
@@ -769,7 +769,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_17: 1, param1: shield
     DamageMultiplier_18: 250, param1: plastic
 
-    RadialText: rdlDisassemble 
+    RadialText: rdlDisassemble
     RadialDesc: rdlDisassembleTxt
     RadialIcon: Radial_Disassemble
   }
@@ -778,8 +778,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AllowAt: "UnderWater, Planet, Space"
     Range: 5
     # Recoil: 0.2, display: true
-    NoiseStrength: 10, display: false  
-    CameraShake: 0    
+    NoiseStrength: 10, display: false
+    CameraShake: 0
     IgnoreAtmo: true
     ROF: 0.1, type: float
     RepairPoints: 10 # TODO: test this
@@ -789,7 +789,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: MultiCharge
     UseSingleMagazine: true
     ReloadDelay: 3.0
-    ParticleTransform: Muzzle/Particle2  # particle effect shown at muzzle    
+    ParticleTransform: Muzzle/Particle2  # particle effect shown at muzzle
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
@@ -804,8 +804,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: ExchangeBlockEx
 	AllowAt: "UnderWater, Planet, Space"
     Range: 5
-    NoiseStrength: 10, display: false  
-    CameraShake: 0      
+    NoiseStrength: 10, display: false
+    CameraShake: 0
 	IgnoreAtmo: true
     ROF: 1.0, type: float
     AmmoCapacity: 250
@@ -826,13 +826,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Focused_blockname_12: "Window_crc1x1, Window_crc1x1Inv"
     Focused_blockname_13: "Window_crsd1x1, Window_crsd1x1Inv"
     Focused_blockname_14: "Window_3side1x1, Window_3side1x1Inv"
-    Focused_blockname_15: "Window_L1x1, Window_L1x1Inv"		
-    Focused_blockname_16: "Window_crctw1x1, Window_crctw1x1Inv"	
-    Focused_blockname_17: "Window_creA1x1, Window_creA1x1Inv"	
-    Focused_blockname_18: "Window_creB1x1, Window_creB1x1Inv"	
-    Focused_blockname_19: "Window_crl1x1, Window_crl1x1Inv"		
-    Focused_blockname_20: "Window_crse1x1, Window_crse1x1Inv"	
-    Focused_blockname_21: "Window_cc1x1, Window_cc1x1Inv"		
+    Focused_blockname_15: "Window_L1x1, Window_L1x1Inv"
+    Focused_blockname_16: "Window_crctw1x1, Window_crctw1x1Inv"
+    Focused_blockname_17: "Window_creA1x1, Window_creA1x1Inv"
+    Focused_blockname_18: "Window_creB1x1, Window_creB1x1Inv"
+    Focused_blockname_19: "Window_crl1x1, Window_crl1x1Inv"
+    Focused_blockname_20: "Window_crse1x1, Window_crse1x1Inv"
+    Focused_blockname_21: "Window_cc1x1, Window_cc1x1Inv"
     Focused_blockname_22: "Window_v1x1Thick, Window_v1x1ThickInv"
     Focused_blockname_23: "Window_v1x2Thick, Window_v1x2ThickInv"
     Focused_blockname_24: "Window_v2x2Thick, Window_v2x2ThickInv"
@@ -847,13 +847,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Focused_blockname_33: "Window_crc1x1Thick, Window_crc1x1ThickInv"
     Focused_blockname_34: "Window_crsd1x1Thick, Window_crsd1x1ThickInv"
     Focused_blockname_35: "Window_3side1x1Thick, Window_3side1x1ThickInv"
-    Focused_blockname_36: "Window_L1x1Thick, Window_L1x1ThickInv"	
-    Focused_blockname_37: "Window_crctw1x1Thick, Window_crctw1x1ThickInv"	
-    Focused_blockname_38: "Window_creA1x1Thick, Window_creA1x1ThickInv"	
-    Focused_blockname_39: "Window_creB1x1Thick, Window_creB1x1ThickInv"	
-    Focused_blockname_40: "Window_crl1x1Thick, Window_crl1x1ThickInv"		
-    Focused_blockname_41: "Window_crse1x1Thick, Window_crse1x1ThickInv"	
-    Focused_blockname_42: "Window_cc1x1Thick, Window_cc1x1ThickInv"			
+    Focused_blockname_36: "Window_L1x1Thick, Window_L1x1ThickInv"
+    Focused_blockname_37: "Window_crctw1x1Thick, Window_crctw1x1ThickInv"
+    Focused_blockname_38: "Window_creA1x1Thick, Window_creA1x1ThickInv"
+    Focused_blockname_39: "Window_creB1x1Thick, Window_creB1x1ThickInv"
+    Focused_blockname_40: "Window_crl1x1Thick, Window_crl1x1ThickInv"
+    Focused_blockname_41: "Window_crse1x1Thick, Window_crse1x1ThickInv"
+    Focused_blockname_42: "Window_cc1x1Thick, Window_cc1x1ThickInv"
     Focused_blockname_43: "Wing6x9a, Wing6x9b, Wing6x9c, Wing6x9d, Wing6x9e"
     Focused_blockname_44: "Wing9x6a, Wing9x6b, Wing9x6c, Wing9x6d, Wing9x6e"
     Focused_blockname_45: "Wing12x9a, Wing12x9b, Wing12x9c, Wing12x9d, Wing12x9e"
@@ -920,8 +920,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 	  AllowAt: "UnderWater, Planet, Space"
     Range: 5
     # Recoil: 0.2, display: true
-    NoiseStrength: 10, display: false  
-    CameraShake: 0     
+    NoiseStrength: 10, display: false
+    CameraShake: 0
 	  IgnoreAtmo: true
     ROF: 0.4, type: float
     RepairPoints: 10
@@ -930,7 +930,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: MultiCharge
     UseSingleMagazine: true
     ReloadDelay: 3.0
-    ParticleTransform: Muzzle/Particle2    # particle effect shown at muzzle  
+    ParticleTransform: Muzzle/Particle2    # particle effect shown at muzzle
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
@@ -945,8 +945,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 	  AllowAt: "UnderWater, Planet, Space"
     Range: 5
     # Recoil: 0.2, display: true
-    NoiseStrength: 10, display: false  
-    CameraShake: 0     
+    NoiseStrength: 10, display: false
+    CameraShake: 0
 	  IgnoreAtmo: true
     ROF: 0.4, type: float
     RepairPoints: 10
@@ -955,7 +955,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     AmmoType: MultiCharge
     UseSingleMagazine: true
     ReloadDelay: 3.0
-    ParticleTransform: Muzzle/Particle2    # particle effect shown at muzzle  
+    ParticleTransform: Muzzle/Particle2    # particle effect shown at muzzle
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
@@ -972,25 +972,25 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ROF: 0.5, type: float, display: false, formatter: ROF
     Range: 5
     # Recoil: 0.2, display: true
-    NoiseStrength: 10, display: false  
-    CameraShake: 0      
+    NoiseStrength: 10, display: false
+    CameraShake: 0
     IgnoreAtmo: true
     Automatic: true
     Damage: 120
     Radius: 3
     Demolish: True
-    ReturnFactor: 0.333 
+    ReturnFactor: 0.333
     # Bullet_use_per_shot: 2
     AmmoCapacity: 250
     AmmoType: MultiCharge
     UseSingleMagazine: true
     ReloadDelay: 3.0
-    ParticleTransform: Muzzle/Particle3      # particle effect shown at muzzle  
+    ParticleTransform: Muzzle/Particle3      # particle effect shown at muzzle
     SfxBegin: Weapons/Player/Tools/WeaponLightning_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     # ParticleTransform: ""     /* do NOT show a particle effect */
-	
+
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
     DamageMultiplier_3: 250, param1: alien
@@ -1009,9 +1009,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_16: 1, param1: rock
     DamageMultiplier_17: 1, param1: shield
     DamageMultiplier_18: 250, param1: plastic
-	
+
     RadialText: rdlDeconstruct
-    RadialDesc: rdlDeconstructTxt 
+    RadialDesc: rdlDeconstructTxt
     RadialIcon: Radial_Deconstruct
   }
 
@@ -1050,9 +1050,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxLoop: Weapons/Player/Filler/ENGINEDeepSlow_loop
     SfxStop: Weapons/Player/Filler/ENGINEDeepSlow_end
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
-	
+
     DamageMultiplier_1: 0, param1: woodblock|concrete|hull|hullarmored|hullcombat|metal|metalhard|shield
-    DamageMultiplier_2: 0, param1: wood   
+    DamageMultiplier_2: 0, param1: wood
   }
   { Child 1
     Class: Driller
@@ -1061,7 +1061,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     FlattenTerrain: true
     ROF: 0.5, type: float
     Range: 5.5
-    NoiseStrength: 10, display: false   
+    NoiseStrength: 10, display: false
     IgnoreAtmo: true
     Automatic: true
     Damage: 20
@@ -1074,9 +1074,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
     SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop
     /* ParticleTransform: Muzzle/Particle2   */
-	
+
     DamageMultiplier_1: 0, param1: woodblock|concrete|hull|hullarmored|hullcombat|metal|metalhard|shield
-    DamageMultiplier_2: 0, param1: dirt|stone|wood   
+    DamageMultiplier_2: 0, param1: dirt|stone|wood
   }
 }
 # not used anymore FREE
@@ -1110,13 +1110,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Focused_blockname_12: "Window_crc1x1, Window_crc1x1Inv"
     Focused_blockname_13: "Window_crsd1x1, Window_crsd1x1Inv"
     Focused_blockname_14: "Window_3side1x1, Window_3side1x1Inv"
-    Focused_blockname_15: "Window_L1x1, Window_L1x1Inv"		
-    Focused_blockname_16: "Window_crctw1x1, Window_crctw1x1Inv"	
-    Focused_blockname_17: "Window_creA1x1, Window_creA1x1Inv"	
-    Focused_blockname_18: "Window_creB1x1, Window_creB1x1Inv"	
-    Focused_blockname_19: "Window_crl1x1, Window_crl1x1Inv"		
-    Focused_blockname_20: "Window_crse1x1, Window_crse1x1Inv"	
-    Focused_blockname_21: "Window_cc1x1, Window_cc1x1Inv"		
+    Focused_blockname_15: "Window_L1x1, Window_L1x1Inv"
+    Focused_blockname_16: "Window_crctw1x1, Window_crctw1x1Inv"
+    Focused_blockname_17: "Window_creA1x1, Window_creA1x1Inv"
+    Focused_blockname_18: "Window_creB1x1, Window_creB1x1Inv"
+    Focused_blockname_19: "Window_crl1x1, Window_crl1x1Inv"
+    Focused_blockname_20: "Window_crse1x1, Window_crse1x1Inv"
+    Focused_blockname_21: "Window_cc1x1, Window_cc1x1Inv"
     Focused_blockname_22: "Window_v1x1Thick, Window_v1x1ThickInv"
     Focused_blockname_23: "Window_v1x2Thick, Window_v1x2ThickInv"
     Focused_blockname_24: "Window_v2x2Thick, Window_v2x2ThickInv"
@@ -1131,13 +1131,13 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Focused_blockname_33: "Window_crc1x1Thick, Window_crc1x1ThickInv"
     Focused_blockname_34: "Window_crsd1x1Thick, Window_crsd1x1ThickInv"
     Focused_blockname_35: "Window_3side1x1Thick, Window_3side1x1ThickInv"
-    Focused_blockname_36: "Window_L1x1Thick, Window_L1x1ThickInv"	
-    Focused_blockname_37: "Window_crctw1x1Thick, Window_crctw1x1ThickInv"	
-    Focused_blockname_38: "Window_creA1x1Thick, Window_creA1x1ThickInv"	
-    Focused_blockname_39: "Window_creB1x1Thick, Window_creB1x1ThickInv"	
-    Focused_blockname_40: "Window_crl1x1Thick, Window_crl1x1ThickInv"		
-    Focused_blockname_41: "Window_crse1x1Thick, Window_crse1x1ThickInv"	
-    Focused_blockname_42: "Window_cc1x1Thick, Window_cc1x1ThickInv"			
+    Focused_blockname_36: "Window_L1x1Thick, Window_L1x1ThickInv"
+    Focused_blockname_37: "Window_crctw1x1Thick, Window_crctw1x1ThickInv"
+    Focused_blockname_38: "Window_creA1x1Thick, Window_creA1x1ThickInv"
+    Focused_blockname_39: "Window_creB1x1Thick, Window_creB1x1ThickInv"
+    Focused_blockname_40: "Window_crl1x1Thick, Window_crl1x1ThickInv"
+    Focused_blockname_41: "Window_crse1x1Thick, Window_crse1x1ThickInv"
+    Focused_blockname_42: "Window_cc1x1Thick, Window_cc1x1ThickInv"
     Focused_blockname_43: "Wing6x9a, Wing6x9b, Wing6x9c, Wing6x9d, Wing6x9e"
     Focused_blockname_44: "Wing9x6a, Wing9x6b, Wing9x6c, Wing9x6d, Wing9x6e"
     Focused_blockname_45: "Wing12x9a, Wing12x9b, Wing12x9c, Wing12x9d, Wing12x9e"
@@ -1169,11 +1169,11 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   { Child 0
     Class: Ranged
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 0.35, type: float, display: true, formatter: ROF
     Range: 90, display: false
-    NoiseStrength: 20, display: false 
-    CameraShake: 1  
+    NoiseStrength: 20, display: false
+    CameraShake: 1
     IgnoreAtmo: true, display: true
     Automatic: true
     BulletSpread: 0, display: true
@@ -1185,9 +1185,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: Weapons/Player/LaserPistol/LaserPistol
     SfxNoAmmo: Weapons/Misc/G36DryFire
     SfxReload: Weapons/Player/Reload/PistolReloadNormal
-    PfxMuzzle: SniperMuzzleLaserBlue	
+    PfxMuzzle: SniperMuzzleLaserBlue
     Tracer: Weapons/Projectiles/TracerLaserShotBlue
-    TracerPerBullet: 1	
+    TracerPerBullet: 1
 
     DamageMultiplier_1: 1, param1: head, display: DmgMultiplierHead
     DamageMultiplier_2: 1, param1: body
@@ -14048,10 +14048,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   Durability: 2400, display: false
   DegradationProb: 0.0, type: float, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire     
-  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+
   ShowUser: No
-  
+
   { Child 0
     ROF: 0.15, type: float, display: true, formatter: ROF
     Range: 1000, display: false
@@ -14077,10 +14077,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 1
     Class: DestroyBlocks
     Damage: 150, display: true
-    PfxMuzzle: 
-    Tracer: 
-	
-	DamageMultiplier_1: 10, param1: metal|metalhard 
+    PfxMuzzle:
+    Tracer:
+
+	DamageMultiplier_1: 10, param1: metal|metalhard
     DamageMultiplier_2: 20, param1: hull|hullarmored|hullcombat|concrete|woodblock
     DamageMultiplier_3: 0, param1: stone|dirt
   }
@@ -14089,15 +14089,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     # ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew
     # ZoomOut: 40
     # ZoomIn: 10
-  # }  
+  # }
   UnlockCost: 0
   UnlockLevel: 20
   TechTreeNames: Hidden
 }
-{ Item Id: 1202, Name: DrillDebug123, Ref: DrillT2   
-  
+{ Item Id: 1202, Name: DrillDebug123, Ref: DrillT2
+
   ShowUser: No
-  
+
   { Child 0
     Range: 12, display: false
     Damage: 80
@@ -14203,7 +14203,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Info: Don't write anything here, display: true
   Category: Components
   MarketPrice: 100
-  
+
   StackSize: 1
   ShowUser: Yes
 }
