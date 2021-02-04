@@ -4198,7 +4198,7 @@ HullCombatSmallBlocks
   Volume: 4015, type: float, display: true, formatter: Liter
   StackSize: 50000
   Category: Devices
-  Voxelize: false    # block uses an animation
+  OccupySizeInBlocks: true    # block uses an animation
   BlockColor: "26,50,90"
   HitPoints: 100, type: int, display: true
   EnergyIn: 10, type: int, display: true, formatter: Watt
@@ -7353,7 +7353,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 1
   BlastRadius: 15
   BlastDamage: 15000
-  Voxelize: false
+  OccupySizeInBlocks: true
 
   Radiation: 15, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
   Temperature: 1080, display: true
@@ -11394,7 +11394,7 @@ HullCombatSmallBlocks
   EnergyDynamicGroup: Thruster
   CPUIn: 4680, type: int, display: true
   Category: Devices
-  Voxelize: false     # do not allow to place blocks in the middle
+  OccupySizeInBlocks: true     # do not allow to place blocks in the middle
 
   BlastParticleIndex: 1
   BlastRadius: 8
@@ -13594,7 +13594,7 @@ HullCombatSmallBlocks
   AllowWander: true
   DoorClosesOnPower: false
   IsPhysicsColliders: true    /* ramps are too thin and also might pose problems when SV/HV are on the ramp while physics colliders are on */
-  Voxelize: false     # do not allow to place blocks inside of bounding box
+  OccupySizeInBlocks: true     # do not allow to place blocks inside of bounding box
 }
 
 # obsolete - do not remove
@@ -15923,7 +15923,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,3,3", display: true
   # Volume: 900, type: float, display: true, formatter: Liter
   Mass: 245, type: float, display: true, formatter: Kilogram
-  Voxelize: false     # Problem with placing hull blocks on top (see Mantis 05555)
+  OccupySizeInBlocks: true     # Problem with placing hull blocks on top (see Mantis 05555)
   IsLockable: true
   IsOxygenTight: false, display: true
   MaxCount: 2, type: int, display: true
@@ -16923,7 +16923,7 @@ HullCombatSmallBlocks
   Mass: 240, type: float, display: true, formatter: Kilogram
   HitPoints: 280, type: int, display: true
   AllowPlacingAt: "SS,GV", display: true
-  Voxelize: false     # Problem with placing hull blocks on top (see Mantis 05555)
+  OccupySizeInBlocks: true     # Problem with placing hull blocks on top (see Mantis 05555)
   IsLockable: true
   IsOxygenTight: false, display: true
   IsIgnoreLC: true
@@ -22353,7 +22353,7 @@ HullCombatSmallBlocks
   HitPoints: 80, type: int, display: true
   Mass: 40, type: float, display: true, formatter: Kilogram
   BlockColor: "110,110,110"
-  # Voxelize: false    # shape has no collider so don't voxelize it
+  # OccupySizeInBlocks: true    # shape has no collider so don't voxelize it
 }
 { +Block Id: 1502, Name: ForcefieldEmitter1x2, Ref: ForcefieldEmitter1x1
   Model: @models/Blocks/Mothership/ForcefieldEmitter1x2Prefab
@@ -26126,7 +26126,7 @@ HullCombatSmallBlocks
   IsActivatedOnPlace: false
   IsAccessible: true, type: bool
   IsDuplicateable: false
-  Voxelize: false     # do not allow to place blocks inside the bounding box
+  OccupySizeInBlocks: true     # do not allow to place blocks inside the bounding box
   MaxCount: 1, type: int, display: true
   ForceMaxCount: true
   AllowPlacingAt: Base, display: true
