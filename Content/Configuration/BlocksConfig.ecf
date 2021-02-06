@@ -2450,7 +2450,7 @@ HullCombatSmallBlocks
   EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 10000, type: int, display: true
   BlastParticleIndex: 9
-  BlastRadius: 9
+  BlastRadius: 4
   BlastDamage: 2500
 
   ShowUser: Yes
@@ -2600,7 +2600,7 @@ HullCombatSmallBlocks
   FuelAccept: "EnergyCell, EnergyCellLarge, EnergyCellHydrogen, FusionCell, BioFuel"
   FuelCapacity: 2400, type: int, display: true
   BlastParticleIndex: 8
-  BlastRadius: 10
+  BlastRadius: 5
   BlastDamage: 2500
 
   Radiation: 1.25, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
@@ -2623,7 +2623,7 @@ HullCombatSmallBlocks
   Volume: 180, type: float, display: true, formatter: Liter
   Info: bkiFuelTank, display: true
   CPUIn: 675, type: int, display: true
-  BlastRadius: 10
+  BlastRadius: 5
   BlastDamage: 5000
 
   Radiation: 1.4, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
@@ -3224,7 +3224,7 @@ HullCombatSmallBlocks
 
 
   BlastParticleIndex: 10
-  BlastRadius: 10
+  BlastRadius: 5
   BlastDamage: 1000
 
   UnlockCost: 11, display: true
@@ -4054,7 +4054,7 @@ HullCombatSmallBlocks
   CPUIn: 21600, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateSlow
   BlastParticleIndex: 9
-  BlastRadius: 9
+  BlastRadius: 4
   BlastDamage: 2800
 }
 { +Block Id: 328, Name: NPCAlienTemplate
@@ -6194,7 +6194,7 @@ HullCombatSmallBlocks
   StackSize: 500
   MaxCount: 12, type: int, display: true
   BlastParticleIndex: 8
-  BlastRadius: 9
+  BlastRadius: 4
   BlastDamage: 5800
   EnergyIn: 150, type: int, display: true, formatter: Watt
   CPUIn: 25000, type: int, display: true
@@ -6515,7 +6515,7 @@ HullCombatSmallBlocks
   CPUIn: 133400, type: int, display: true
   Category: Devices
   BlastParticleIndex: 1
-  BlastRadius: 12
+  BlastRadius: 6
   BlastDamage: 8500
 
   Radiation: 8, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
@@ -6818,7 +6818,7 @@ HullCombatSmallBlocks
   IsActivateable: true
 
   BlastParticleIndex: 1
-  BlastRadius: 10
+  BlastRadius: 5
   BlastDamage: 15000
 
   UnlockCost: 14, display: true
@@ -7351,7 +7351,7 @@ HullCombatSmallBlocks
   CPUIn: 533600, type: int, display: true
   Category: Devices
   BlastParticleIndex: 1
-  BlastRadius: 15
+  BlastRadius: 7
   BlastDamage: 15000
   OccupySizeInBlocks: true
 
@@ -8453,7 +8453,7 @@ HullCombatSmallBlocks
   IsActivateable: true
   Category: Weapons/Items
   BlastParticleIndex: 1
-  BlastRadius: 8
+  BlastRadius: 4
   BlastDamage: 3500
   HitPoints: 10000, type: int, display: true
   RotSpeed: 150, type: int, display: true
@@ -10565,8 +10565,8 @@ HullCombatSmallBlocks
   StackSize: 50000
   MaxCount: 4, type: int, display: true
   BlastParticleIndex: 1
-  BlastRadius: 9
-  BlastDamage: 8500
+  BlastRadius: 4
+  BlastDamage: 5000
   EnergyIn: 100, type: int, display: true, formatter: Watt
   CPUIn: 4800, type: int, display: true
   HitPoints: 7000, type: int, display: true
@@ -11397,7 +11397,7 @@ HullCombatSmallBlocks
   OccupySizeInBlocks: true     # do not allow to place blocks in the middle
 
   BlastParticleIndex: 1
-  BlastRadius: 8
+  BlastRadius: 4
   BlastDamage: 650
 
   UnlockCost: 15, display: true
@@ -11417,7 +11417,7 @@ HullCombatSmallBlocks
   ThrusterForce: 11040, type: int, display: true, formatter: Newton
   EnergyIn: 425, type: int, display: true, formatter: Watt
   CPUIn: 6750, type: int, display: true
-  BlastRadius: 9
+  BlastRadius: 4
   BlastDamage: 800
 
   UnlockCost: 15, display: true
@@ -11436,7 +11436,7 @@ HullCombatSmallBlocks
   ThrusterForce: 15290, type: int, display: true, formatter: Newton
   EnergyIn: 500, type: int, display: true, formatter: Watt
   CPUIn: 8870, type: int, display: true
-  BlastRadius: 10
+  BlastRadius: 5
   BlastDamage: 900
 
   UnlockCost: 25, display: true
@@ -12080,7 +12080,7 @@ HullCombatSmallBlocks
   O2Capacity: 1000, type: int, display: true
   O2Accept: "OxygenBottleLarge,OxygenBottleSmall,RespiratorCharge"
   BlastParticleIndex: 9
-  BlastRadius: 8
+  BlastRadius: 4
   BlastDamage: 800
 
   UnlockCost: 0, display: true
@@ -12172,8 +12172,8 @@ HullCombatSmallBlocks
   UpgradeTo: WarpDriveT2, display: true
 
   BlastParticleIndex: 1
-  BlastRadius: 9
-  BlastDamage: 15000
+  BlastRadius: 4
+  BlastDamage: 10000
 
   ItemPerAU: PentaxidCrystal, display: true
   CostPerAU: 1, display: true
@@ -12305,7 +12305,7 @@ HullCombatSmallBlocks
   HitPoints: 150, type: int, display: true
 
   BlastParticleIndex: 1
-  BlastRadius: 7
+  BlastRadius: 3
   BlastDamage: 3250
 
   UnlockCost: 4, display: true
@@ -16267,7 +16267,7 @@ HullCombatSmallBlocks
   StackSize: 50000
 
   BlastParticleIndex: 1
-  BlastRadius: 15
+  BlastRadius: 7
   BlastDamage: 30000
 
   UnlockCost: 20, display: true
@@ -16289,7 +16289,7 @@ HullCombatSmallBlocks
   HitPoints: 80, type: int, display: true
   FuelCapacity: 12000, type: int, display: true
   BlastParticleIndex: 1
-  BlastRadius: 11
+  BlastRadius: 5
   BlastDamage: 7500
 
   Radiation: 2.8, display: RadiationLevel    # Radiation (= Radiation Protection) already exists for Player Armor
@@ -17154,7 +17154,7 @@ HullCombatSmallBlocks
   FuelAccept: "EnergyCell, EnergyCellLarge, FusionCell, BioFuel"
 
   BlastParticleIndex: 8
-  BlastRadius: 9
+  BlastRadius: 4
   BlastDamage: 500
 
   UnlockCost: 15, display: true
@@ -18140,7 +18140,7 @@ HullCombatSmallBlocks
   StackSize: 50000
   MaxCount: 2, type: int, display: true
   BlastParticleIndex: 1
-  BlastRadius: 9
+  BlastRadius: 4
   BlastDamage: 2800
   EnergyIn: 100, type: int, display: true, formatter: Watt
   CPUIn: 22600, type: int, display: true
@@ -20757,7 +20757,7 @@ HullCombatSmallBlocks
   Volume: 480, type: float, display: true, formatter: Liter
   HitPoints: 350, type: int, display: true
   BlastParticleIndex: 10
-  BlastRadius: 7
+  BlastRadius: 3
   BlastDamage: 8000
   AttackTimeout: 40
 
@@ -24905,7 +24905,7 @@ HullCombatSmallBlocks
   EnergyIn: 10, type: int, display: true, formatter: Watt
   AllowPlacingAt: "Base,MS", display: true
   BlastParticleIndex: 1
-  BlastRadius: 7
+  BlastRadius: 4
   BlastDamage: 7500
   LootList: 70
 

@@ -3506,7 +3506,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 3000
     NoiseStrength: 1000, display: false
     BlastParticleIndex: 3
-    BlastRadius: 9, display: true
+    BlastRadius: 4, display: true
     BlastDamage: 30000, display: true
     Speed: 10, display: true
     Range: 650, display: true
@@ -4771,7 +4771,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 10000, display: true
     NoiseStrength: 1000, display: false
     BlastParticleIndex: 3
-    BlastRadius: 9, display: true
+    BlastRadius: 4, display: true
     BlastDamage: 70000, display: true
     Speed: 10, display: true
     Range: 577, display: true
@@ -4914,6 +4914,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 { +Item Id: 102, Name: PulseLaserSSWeapon
   Meshfile: @models/Blocks/WeaponsShip/WeaponSSLaserPrefab
   DropMeshfile: Entities/Misc/BagSmallPrefab
+  Crosshair: @crosshairs/default_ship
   ShowUser: NoButCSV  # reported by HWS
   Canhold: false
   Material: metalweapon
@@ -6813,6 +6814,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 { +Item Id: 143, Name: DrillAttachmentSVT2Weapon, Ref: DrillAttachmentWeapon
+  CustomIcon: DrillAttachmentT2
   { Child 0
     Class: Driller
 	DrillMode: 1
@@ -7203,7 +7205,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Projectile
     Damage: 450, display: true
     BlastParticleIndex: 3
-    BlastRadius: 3, display: true
+    BlastRadius: 1, display: true
     BlastDamage: 225, display: true
     Speed: 200, display: true
     Range: 500
@@ -7274,7 +7276,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Projectile
     Damage: 29750, display: true
     BlastParticleIndex: 4
-    BlastRadius: 4, display: true
+    BlastRadius: 3, display: true
     BlastDamage: 29750, display: true
     HomingSpeed: 0.9
     Speed: 165, display: true
@@ -7743,7 +7745,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Projectile
     Damage: 20000, display: true
     BlastParticleIndex: 3
-    BlastRadius: 4, display: true
+    BlastRadius: 3, display: true
     BlastDamage: 10000, display: true
     Speed: 150, display: true
     Range: 666, display: true
@@ -7971,7 +7973,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Damage: 20000, display: true
     BlastParticleIndex: 3
-    BlastRadius: 4, display: true
+    BlastRadius: 3, display: true
     BlastDamage: 20000, display: true
     HomingSpeed: 1.0
     Speed: 200, display: true
@@ -8247,7 +8249,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Damage: 12750, display: true
     BlastParticleIndex: 4
-    BlastRadius: 4, display: true
+    BlastRadius: 3, display: true
     BlastDamage: 12750, display: true
     Speed: 165, display: true
     Range: 633, display: true
@@ -14271,6 +14273,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 277, display: true
   #CustomIcon: RocketLauncher
   CustomIcon: GrenadeLauncher
+  Crosshair: @crosshairs/crosshair_grenade_launcher
   HoldType: 15
   StackSize: 1
   Category: Weapons/Items
