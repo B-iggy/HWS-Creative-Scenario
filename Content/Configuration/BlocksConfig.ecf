@@ -13595,6 +13595,7 @@ HullCombatSmallBlocks
   DoorClosesOnPower: false
   IsPhysicsColliders: true    /* ramps are too thin and also might pose problems when SV/HV are on the ramp while physics colliders are on */
   OccupySizeInBlocks: true     # do not allow to place blocks inside of bounding box
+  Voxelize: false
 }
 
 # obsolete - do not remove
