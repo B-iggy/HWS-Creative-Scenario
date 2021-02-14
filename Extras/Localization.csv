@@ -78,6 +78,8 @@ HWSHelmetPatron,[c][fdb100]HWS Patron Helmet Skin[-][/c],[c][019245]HWS Patron H
 bkiHWSHelmetPatron,"HWS Patron Exclusive Skin Helmet. Get yours at [c][019245][u]https://patreon.com[/u][-][/c]. Thank you so much supporting me!","HWS Patron Exklusiver Skin Helm. Schnapp dir deinen auf [c][019245][u]https://patreon.com[/u][-][/c]. Vielen lieben Dank das du mich unterstützt!"
 HWSNecklaceElementalPower,[c][fdb100]Elemental Power[-][/c],[c][019245]Elementare Macht[-][/c]
 bkiHWSNecklaceElementalPower,You activated a HWS Star Fragment and got rewarded with the Elemental Power. Protect it with your life and bring it back to the Elemental Stone in the EGS HQ to expand the Universe,Du hast ein HWS Sternfragment aktiviert und wurdest mit der Elementaren Macht belohnt. Beschütze es mit deinem Leben und bring es zurück zum Elementen Stein im EGS Hauptquartier, um das Universum zu erweitern
+HWSValentinesDayGlasses,[c][fdb100]HWS Valentines Day Glasses Skin[-][/c],[c][019245]HWS Valentins Tag Brillen Skin[-][/c]
+bkiHWSValentinesDayGlasses,"HWS Patron Exclusive Skin Glasses. Activate the Love Zoom with Right Click hold and mousewheel scroll. Get yours at [c][019245][u]https://patreon.com[/u][-][/c]. Thank you so much supporting me!","HWS Patron Exklusiver Skin Brille. Aktivier den Liebes Zoom mit Rechtsklick halten und Mausrad scrollen. Schnapp dir deinen auf [c][019245][u]https://patreon.com[/u][-][/c]. Vielen lieben Dank das du mich unterstützt!"
 
 HWSBlockSpikeTrap,Spike Trap Block, Stachel Fallen Block
 
@@ -95,8 +97,9 @@ TurretMSPlasmaCharge,[c][FFF300]Pl.Charge CV[-][/c],[c][FFF300]PK Ladung GR[-][/
 FastRocketMS,[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150mm Z-RAK[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]Missile a Ricerca (150mm)[-][/c],[c][FFF300]Misil Buscador (150mm)[-][/c],[c][FFF300]H-MSL 150 mm[-][/c],[c][FFF300]H-MSL 150mm[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150 мм ракета с ГСН[-][/c],[c][FFF300]追尾型ミサイル(150mm)[-][/c],[c][FFF300]150mm巨型火箭弹 (制导)[-][/c],[c][FFF300]150mm H-導彈[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150mm G-Füze[-][/c],[c][FFF300]150mm H-MSL[-][/c],[c][FFF300]150mm H-MSL[-][/c],
 LargeRocketMS,[c][FFF300]160mm MSL[-][/c],[c][FFF300]160mm RAK[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]Missile 160mm[-][/c],[c][FFF300]Misil (160mm)[-][/c],[c][FFF300]MSL 160 mm[-][/c],[c][FFF300]Míssil 160mm[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]160 мм ракета[-][/c],[c][FFF300]ミサイル(160mm)[-][/c],[c][FFF300]160mm巨型火箭弹 (主力舰)[-][/c],[c][FFF300]160mm 導彈[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]160mm Füze[-][/c],[c][FFF300]160mm MSL[-][/c],[c][FFF300]160mm MSL[-][/c],
 
-
-
+HWSValentinesCake,HWS Valentines Cake,HWS Valentins Kuchen
+HWSValentinesRecipe,HWS Valentines Recipe,HWS Valentins Rezept
+bkiHWSValentinesRecipe,Use this special ingredient for your Valentines Cake. You can find more of it in the Valentines Mission in the EGS HQ,Nutze dieses besondere Zutat für deinen Valentins Kuchen. Finde mehr davon in der Valentins Mission im EGS HQ
 
 
 
