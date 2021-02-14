@@ -3507,7 +3507,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 1000, display: false
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
-    BlastDamage: 30000, display: true
+    BlastDamage: 22500, display: true
     Speed: 10, display: true
     Range: 650, display: true
     SpeedSpace: 15, display: true
@@ -4772,7 +4772,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 1000, display: false
     BlastParticleIndex: 3
     BlastRadius: 4, display: true
-    BlastDamage: 70000, display: true
+    BlastDamage: 75000, display: true
     Speed: 10, display: true
     Range: 577, display: true
     SpeedSpace: 15, display: true
@@ -7032,7 +7032,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     NoiseStrength: 100, display: false
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 1750, display: true
+    BlastDamage: 1166, display: true
     Speed: 77, display: true
     Range: 577, display: true
     SpeedSpace: 154, display: true
@@ -7276,8 +7276,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Projectile
     Damage: 29750, display: true
     BlastParticleIndex: 4
-    BlastRadius: 3, display: true
-    BlastDamage: 29750, display: true
+    BlastRadius: 4, display: true
+    BlastDamage: 14875, display: true
     HomingSpeed: 0.9
     Speed: 165, display: true
     Range: 787, display: true
@@ -7395,8 +7395,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Projectile
     Damage: 11000, display: true
     BlastParticleIndex: 3
-    BlastRadius: 4, display: true
-    BlastDamage: 5500, display: true
+    BlastRadius: 3, display: true
+    BlastDamage: 3666, display: true
     Speed: 600, display: true
     Range: 650, display: true
     SpeedSpace: 1200, display: true
@@ -7745,7 +7745,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Class: Projectile
     Damage: 20000, display: true
     BlastParticleIndex: 3
-    BlastRadius: 3, display: true
+    BlastRadius: 4, display: true
     BlastDamage: 10000, display: true
     Speed: 150, display: true
     Range: 666, display: true
@@ -7861,7 +7861,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Damage: 2960, display: true
     BlastParticleIndex: 3
     BlastRadius: 3, display: true
-    BlastDamage: 2072, display: true
+    BlastDamage: 986, display: true
     Speed: 300, display: true
     Range: 495, display: true
     SpeedSpace: 600, display: true
@@ -7973,8 +7973,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Damage: 20000, display: true
     BlastParticleIndex: 3
-    BlastRadius: 3, display: true
-    BlastDamage: 20000, display: true
+    BlastRadius: 4, display: true
+    BlastDamage: 10000, display: true
     HomingSpeed: 1.0
     Speed: 200, display: true
     Range: 700, display: true
@@ -8065,8 +8065,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Damage: 11626, display: true
     BlastParticleIndex: 3
-    BlastRadius: 4, display: true
-    BlastDamage: 8138, display: true
+    BlastRadius: 3, display: true
+    BlastDamage: 3875, display: true
     Speed: 500, display: true
     Range: 715, display: true
     SpeedSpace: 1000, display: true
@@ -8249,8 +8249,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Damage: 12750, display: true
     BlastParticleIndex: 4
-    BlastRadius: 3, display: true
-    BlastDamage: 12750, display: true
+    BlastRadius: 4, display: true
+    BlastDamage: 6375, display: true
     Speed: 165, display: true
     Range: 633, display: true
     SpeedSpace: 350, display: true
@@ -8305,7 +8305,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   { Child 0
     Damage: 2000, display: true
     BlastRadius: 3, display: true
-    BlastDamage: 1000, display: true
+    BlastDamage: 666, display: true
     Speed: 500, display: true
     Range: 658, display: true
     SpeedSpace: 1000, display: true
@@ -13964,20 +13964,37 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   PropHead: SantaClausHat
   ShowUser: Yes
 }
+
 { +Item Id: 1152, Name: SnowmanHead, Ref: SuitPropsTemplate
   Info: bkiSnowmanHead, display: true
   PropHead: SnowmanHead
   ShowUser: Yes
 }
+
 { +Item Id: 1153, Name: HWSHelmetPatron, Ref: SuitPropsTemplate
   Info: bkiHWSHelmetPatron, display: true
   PropHead: HWSHelmetPatron
   ShowUser: Yes
 }
+
 { +Item Id: 1154, Name: HWSNecklaceElementalPower, Ref: SuitPropsTemplate
   Info: bkiHWSNecklaceElementalPower, display: true
   PropHead: HWSNecklaceElementalPower
   ShowUser: Yes
+}
+
+{ +Item Id: 1155, Name: HWSValentinesDayGlasses, Ref: SuitPropsTemplate
+  Info: bkiHWSValentinesDayGlasses, display: true
+  PropHead: HWSValentinesDayGlasses
+  ShowUser: Yes
+  Category: Deco Blocks
+  Crosshair: @crosshairs/crosshair_valentines_day_glasses
+
+  { Child 1
+    Class: Zoom
+    ZoomOut: 40
+    ZoomIn: 3
+  }
 }
 
 # ========================================= STATUS EFFECT TEST ==========================
@@ -14122,6 +14139,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Meshfile: Entities/Items/Tools/ColorToolPrefab
   PickupToToolbar: true
   Material: metalweapon
+  CustomIcon: ColorTool
   HoldType: 14
   StackSize: 1
   Category: Weapons/Items
@@ -14310,6 +14328,36 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   UnlockCost: 9, display: true
   UnlockLevel: 7, display: true
   TechTreeNames: Weapons
+}
+
+
+{ +Item Id: 1598, Name: HWSValentinesRecipe, Ref: FoodTemplate
+  Mass: 0.17, type: float, display: true, formatter: Kilogram
+  Volume: 0.7, type: float, display: true, formatter: Liter
+  Category: Food
+  Info: bkiHWSValentinesRecipe, display: true
+  MarketPrice: 70000, display: true
+  ShowUser: Yes
+}
+
+
+{ +Item Id: 1599, Name: HWSValentinesCake, Ref: FoodTemplate
+  Mass: 0.7, type: float, display: true, formatter: Kilogram
+  Volume: 0.70, type: float, display: true, formatter: Liter
+  Info: bkiConsumable, display: true
+  Category: Food
+  FoodDecayTime: 100, display: true, type: int
+  FoodDecayedItem: RottenFood
+  MarketPrice: 7000, display: true
+  ShowUser: Yes
+  { Child 0
+    Class: Eat
+    ROF: 1, type: float
+    AddHealth: 10000, display: HealthValue
+    AddStamina: 500, display: StaminaValue
+    AddFood: 500, display: FoodValue
+    SfxBegin: UseActions/playerEatingCrunchy
+  }
 }
 
 { +Item Id: 1600, Name: FragGrenade

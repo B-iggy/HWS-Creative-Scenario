@@ -4862,6 +4862,18 @@
   }
 }
 
+{ +Template Name: HWSValentinesCake
+  DeconOverride: Stop
+  CraftTime: 77
+  Target: FoodP
+  { Child Inputs
+    Milk: 10
+    Flour: 500
+    Sugarcane: 50
+    HWSValentinesRecipe: 100
+  }
+}
+
 { +Template Name: Sandwich
   DeconOverride: Stop
   OutputCount: 4
