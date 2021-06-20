@@ -19,3 +19,9 @@ Factions.ecf
 *.bin
 Content/Configuration/GalaxyConfig.ecf
 Content/Configuration/BlockShapesWindow.ecf
+hws_eclassmodels
+hws_eclassmodels.manifest
+hws_itemmodels
+hws_itemmodels.manifest
+hws_projectiles
+hws_projectiles.manifest

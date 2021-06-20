@@ -151,29 +151,9 @@
   }
 }
 
-{ +Template Name: XenoSubstrate
-  BaseItem: true 
-  CraftTime: 5
-  Target: ""
-  { Child Inputs
-  }
-}
-
  # =======================
  #  Hidden Templates
  # =======================
-
-{ +Template Name: RawDiamond
-  DeconOverride: Stop
-  OutputCount: 1
-  BaseItem: true
-  CraftTime: 300
-  Target: ""
-  { Child Inputs
-  }
-}
-
-
 
  # =======================
  #  Money and Payment Ingots 
@@ -5702,4 +5682,3 @@
     HWSEventHalloweenPumpkinShell: 100
   }
 }
-
