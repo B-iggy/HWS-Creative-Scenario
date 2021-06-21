@@ -64,7 +64,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Tools
 }
 { +Item Id: 3, Name: Pistol
-  Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4BlackPrefab
+  Meshfile: Entities/Items/Weapons/Pistols/ProjectilePistolPrefab
+  # Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4BlackPrefab
   PickupToToolbar: true
   MarketPrice: 40, display: true
   Material: metalweapon
@@ -133,7 +134,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Weapons
 }
 { +Item Id: 4, Name: Shotgun
-  Meshfile: Entities/Items/Weapons/Shotguns/SciFiShotgun1BlackPrefab
+  Meshfile: Entities/Items/Weapons/Shotguns/Shotgun1Prefab
+  # Meshfile: Entities/Items/Weapons/Shotguns/SciFiShotgun1BlackPrefab
   PickupToToolbar: true
   Material: metalweapon
   MarketPrice: 123, display: true
@@ -1239,7 +1241,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   TechTreeNames: Weapons
 }
 { +Item Id: 15, Name: AssaultRifle    # T1
-  Meshfile: Entities/Items/Weapons/Rifles/AssaultRiflePrefab
+  Meshfile: Entities/Items/Weapons/Rifles/AssaultRifle1Prefab
+  # Meshfile: Entities/Items/Weapons/Rifles/AssaultRiflePrefab
   # Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackT1Prefab
   PickupToToolbar: true
   Material: metalweapon
@@ -3307,7 +3310,8 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 
 { +Item Id: 41, Name: TextureColorTool
-  Meshfile: Entities/Items/Tools/TextureColorToolPrefab
+  # Meshfile: Entities/Items/Tools/TextureColorToolPrefab
+  Meshfile: Entities/Items/Tools/ColorTextureToollPrefab
   PickupToToolbar: true
   Material: metalweapon
   MarketPrice: 110, display: true
@@ -11818,6 +11822,20 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   }
 }
 
+{ +Item Id: 549, Name: MeleeHunter, Ref: MeleeTemplate
+  HoldType: 20
+  { Child 0
+    Class: Melee
+    ROF: 0, type: float
+    Range: 3.0
+    Damage: 5000
+    SfxBegin: Enemies/Raptor/Raptor_SfxAttack
+    Buff: "OpenWound,FractureOpen"
+    Buff_chance: "0.5,0.2"
+  }
+}
+
+
 /* Ranged 550-599 */
 { +Item Id: 550, Name: minigunDroneSmall
   Meshfile: Entities/Enemies/Drones/Weapons/minigunDronePrefab
@@ -13648,129 +13666,837 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 
 /* CATEGORIE: New Weapon Items id 800 - 1000 */
 
-{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer
+{ +Item Id: 800, Name: ZiraxAssaultRiflePlayer , Ref: AssaultRifleT2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPlyPrefab
   ShowUser: No
-  Durability: 400, display: false
-  DegradationProb: 0.6, type: float, display: false
-  RepairDisabled: true, display: true
-  PickupToToolbar: true
-  Material: metalweapon
-  MarketPrice: 6000, display: true
-  HoldType: 15
-  StackSize: 1
-  #CustomIcon: AssaultRifleDebug
-  CustomIcon: ZiraxAssaultRiflePlayer
-  Category: Weapons/Items
-  Info: A zirax heavy assault rifle. It appears to be compatible with standard rifle rounds but it's not going to be possible to repair it., display: true
-  Mass: 6.2, type: float, display: true, formatter: Kilogram
-  Volume: 4.75, type: float, display: true, formatter: Liter
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
   { Child 0
-    Class: Ranged
-    AllowRemote: false
-    ROF: 0.1, type: float, display: true, formatter: ROF
-    Range: 184, display: false
-    NoiseStrength: 120, display: false
-    CameraShake: 2
-    Automatic: true, display: true
-    BulletSpread: 0.12, display: true
-    Recoil: 0.41, display: true
-    Damage: 59, display: true
-    AmmoCapacity: 50, display: true
-    AmmoType: 5.8mmBullet, display: true
-    ReloadDelay: 3.75, display: true
-    Buff: "OpenWound"
-    Buff_chance: 0.08
-    # SfxBegin: Weapons/Player/Misc/Single/ak47_fire
-    #SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
-    #SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
-    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
-    SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
-    SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
-    SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
-    SfxNoAmmo: Weapons/Misc/AK47DryFire01
-    SfxReload: Weapons/Player/Reload/RifleReloadNormal
-    PfxMuzzle: MuzzleFlash1
-    Tracer: Weapons/Projectiles/TracerOrange1
-    TracerPerBullet: 1
-
-    DamageMultiplier_1: 2.5, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood|hullarmored|hullcombat
-    DamageMultiplier_3: 0, param1: shield
+    Range: 120, display: false
+    IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
+    AmmoUnlimited: true
   }
-  { Child 1
-    Class: Zoom
-	ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew03
-    ZoomOut: 40
-    ZoomIn: 40
-  }
-
   UnlockCost: 0
   UnlockLevel: 25
   TechTreeParent: ""
   TechTreeNames: Hidden
 }
-{ +Item Id: 801, Name: ZiraxShotgunPlayer
+{ +Item Id: 801, Name: ZiraxShotgunPlayer , Ref: AssaultRifleT2
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxShotgunPlyPrefab
   ShowUser: No
+  { Child 0
+    Range: 120, display: false
+    IgnoreAtmo: true     # Ground NPC must ignore atmo - otherwise no particle is visible
+    AmmoUnlimited: true
+  }
+  UnlockCost: 0
+  UnlockLevel: 25
+  TechTreeParent: ""
+  TechTreeNames: Hidden
+}
+{ +Item Id: 802, Name: TalonCrossbowPlayer
+  Meshfile: Entities/Items/Weapons/Crossbow/TalonCrossbowPlayerPrefab
+  CustomIcon: TalonCrossbowWeaponCharged
   PickupToToolbar: true
   Material: metalweapon
-  MarketPrice: 6000, display: true
+  MarketPrice: 5200, display: true
   HoldType: 15
   StackSize: 1
-  # CustomIcon: RocketLauncherDebug
-  CustomIcon: ZiraxShotgunPlayer
   Category: Weapons/Items
-  Info: A standard-issue zirax shotgun. It seems to be compatible with regular shotgun ammunition but won't be repairable., display: true
-  Mass: 11.2, type: float, display: true, formatter: Kilogram
-  Volume: 5.1, type: float, display: true, formatter: Liter
-  Durability: 80, display: false
-  DegradationProb: 0.9, type: float, display: false
-  RepairDisabled: true, display: true
+  Info: bkiWeaponHandheldIgnoringAtmo, display: true
+  Mass: 6, type: float, display: true, formatter: Kilogram
+  Volume: 4, type: float, display: true, formatter: Liter
+  Durability: 1000, display: false
+  DegradationProb: 0.05, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  OverrideTradingConstraints: true # even if other constraints exist allow trading this item
   { Child 0
     Class: Ranged
     AllowRemote: false
-    ROF: 1, type: float, display: true, formatter: ROF
-    Range: 70, display: false
-    NoiseStrength: 190, display: false
-    CameraShake: 4
-    Automatic: true
-    BulletsPerShot: 7
-    BulletSpread: 0.4
-    RaySpread: 1, display: true
-    Recoil: 1.68, display: true
-    Damage: 120, display: true
-    AmmoCapacity: 6, display: true
-    AmmoType: ShotgunShells, display: true
-    ReloadDelay: 4.5, display: true
-    Buff: "OpenWound,Mutilation"
-    Buff_chance: "0.1,0.03"
-    SfxBegin: Weapons/Player/Shotgun/w1200_fire
-    SfxNoAmmo: Weapons/Misc/PumpgunDryFire02
-    SfxReload: Weapons/Player/Reload/RifleReloadSlow
-    PfxMuzzle: MuzzleFlash4
+    ROF: 0.6, type: float, display: true, formatter: ROF
+    Range: 280, display: false
+    NoiseStrength: 50, display: false
+    CameraShake: 0
+    BulletSpread: 0, display: true
+    Recoil: 0, display: true
+    IgnoreAtmo: true, display: true
+    Automatic: true, display: true
+    Damage: 250, display: true
+    AmmoCapacity: 40, display: true
+    AmmoType: PulseLaserChargeRifle, display: true
+    ReloadDelay: 3.0, display: true
+    ParticleTransform: Muzzle/Particle1
+    SfxBegin: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_start
+    SfxLoop: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_loop
+    SfxStop: Weapons/EnergyWeapons/Automatic/BLASTERComplexFireTriggerDigitalDischarge_end
+    # SfxBegin: Weapons/Player/LaserRifle/BLASTERComplexFireTriggerDigitalDischarge
+    SfxNoAmmo: Weapons/Misc/G36DryFire
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    #PfxMuzzle: SniperMuzzleLaserRed
+    Tracer: Weapons/Projectiles/TracerLaserShotRed
+    TracerPerBullet: 1
 
-    DamageMultiplier_1: 2.0, param1: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 0.015, param1: wood       # able to destroy trees
-    DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat
-    DamageMultiplier_4: 0.4, param1: metal       # able to destroy door
-    DamageMultiplier_6: 0, param1: shield
+    DamageMultiplier_1: 3.5, param1: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, param1: dirt|stone|rock|wood|hullarmored|hullcombat
+    DamageMultiplier_3: 0.005, param1: shield
   }
   { Child 1
     Class: Zoom
+    ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew02
     ZoomOut: 40
     ZoomIn: 40
     RedDot: true
   }
-
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
 }
+/* CATEGORIE: New Drone Weapon Items id 850 - 900 */
+{ +Item Id: 850, Name: rocketlauncherDroneLarge
+  Meshfile: Entities/Enemies/Drones/Weapons/GunMountInvisiblePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 3.5, type: float
+    Range: 300      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoCapacity: 25
+    AmmoUnlimited: true
+    AmmoType: rocketDroneLarge, display: true
+    ReloadDelay: 3
+    SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 851, Name: rocketDroneLarge
+  Meshfile: Entities/Items/Weapons/Projectiles/rocket02Prefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 100, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 500, display: true
+    Speed: 30
+    Range: 360
+    Ballistic: false
 
+    DamageMultiplier_1: 0.5, param1: head|body
+	DamageMultiplier_2: 3, param1: metal
+    DamageMultiplier_3: 25, param1: metalhard|concrete|woodblock|hull
+    DamageMultiplier_4: 60, param1: hullarmored|hullcombat
+    DamageMultiplier_5: 0, param1: stone|dirt
+    DamageMultiplier_6: 0.1, param1: shield
+    BlastDamageMultiplier_1: 0.5, param1: head|body
+    BlastDamageMultiplier_2: 0.05, param1: stone|dirt
+    BlastDamageMultiplier_3: 0, param1: shield
+  }
+}
+{ +Item Id: 852, Name: rocketlauncherDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/GunMountInvisiblePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 3.5, type: float
+    Range: 1500      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoCapacity: 25
+    AmmoUnlimited: true
+    AmmoType: rocketDroneSpace, display: true
+    ReloadDelay: 3
+    SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 853, Name: rocketDroneSpace
+  Meshfile: Entities/Items/Weapons/Projectiles/rocket02Prefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 250, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 500, display: true
+    Speed: 165
+    Range: 635
+    SpeedSpace: 210
+    RangeSpace: 1500
+    Ballistic: false
+
+    DamageMultiplier_1: 0.5, param1: head|body
+	DamageMultiplier_2: 3, param1: metal
+    DamageMultiplier_3: 25, param1: metalhard|concrete|woodblock|hull
+    DamageMultiplier_4: 60, param1: hullarmored|hullcombat
+    DamageMultiplier_5: 0, param1: stone|dirt
+    DamageMultiplier_6: 0.1, param1: shield
+    BlastDamageMultiplier_1: 0.5, param1: head|body
+    BlastDamageMultiplier_2: 0.05, param1: stone|dirt
+    BlastDamageMultiplier_3: 0, param1: shield
+  }
+}
+{ +Item Id: 854, Name: artillerylauncherDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/GunMountInvisiblePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 6, type: float
+    Range: 1600      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoCapacity: 5
+    AmmoUnlimited: true
+    AmmoType: artilleryrocketDroneSpace, display: true
+    ReloadDelay: 13
+    SfxBegin: Weapons/MS/Turret/Cannon_2
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 855, Name: artilleryrocketDroneSpace
+  Meshfile: Entities/Items/Weapons/Projectiles/rocket02Prefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 10000, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 4, display: true
+    BlastDamage: 10000, display: true
+    Speed: 165
+    Range: 635
+    SpeedSpace: 210
+    RangeSpace: 1600
+    Ballistic: false
+
+    DamageMultiplier_1: 0.05, param1: head|body
+    DamageMultiplier_2: 0.01, param1: stone|dirt
+    DamageMultiplier_3: 10,   param1: rock    # can destroy rocks
+    DamageMultiplier_4: 0.067,   param1: shield
+    BlastDamageMultiplier_1: 0.05, param1: head|body
+    BlastDamageMultiplier_2: 0.05, param1: stone|dirt
+    BlastDamageMultiplier_3: 0,   param1: shield
+  }
+}
+{ +Item Id: 856, Name: laserDroneSmall
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.6, type: float
+    Range: 500
+    AmmoType: laserchargeDroneSmall, display: true
+    AmmoCapacity: 25
+    ReloadDelay: 3
+    AmmoUnlimited: true
+    SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    # PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 857, Name: laserchargeDroneSmall
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotRedAlien
+  /* Meshfile: Entities/Items/Weapons/Projectiles/LaserImpulseRed01LongPrefab   */
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 60, display: true
+    BlastParticleIndex: 12
+    BlastRadius: 2, display: true
+    BlastDamage: 800, display: true
+    Speed: 200
+    Range: 800
+    Ballistic: false
+
+    DamageMultiplier_1: 3, param1: hullarmored
+    DamageMultiplier_2: 3, param1: hullcombat
+    DamageMultiplier_3: 2, param1: shield
+    BlastDamageMultiplier_1: 0, param1: shield
+  }
+}
+{ +Item Id: 858, Name: laserDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.6, type: float
+    Range: 500
+    AmmoType: laserchargeDroneSpace, display: true
+    AmmoCapacity: 25
+    ReloadDelay: 3
+    AmmoUnlimited: true
+    SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    # PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 859, Name: laserchargeDroneSpace
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotRedAlien
+  /* Meshfile: Entities/Items/Weapons/Projectiles/LaserImpulseRed01LongPrefab   */
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 60, display: true
+    BlastParticleIndex: 12
+    BlastRadius: 2, display: true
+    BlastDamage: 800, display: true
+    Speed: 200
+    Range: 800
+    Ballistic: false
+
+    DamageMultiplier_1: 3, param1: hullarmored
+    DamageMultiplier_2: 3, param1: hullcombat
+    DamageMultiplier_3: 2, param1: shield
+    BlastDamageMultiplier_1: 0, param1: shield
+  }
+}
+{ +Item Id: 860, Name: laserboltDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.6, type: float
+    Range: 500
+    AmmoType: laserboltcharge, display: true
+    AmmoCapacity: 25
+    ReloadDelay: 3
+    AmmoUnlimited: true
+    SfxBegin: Weapons/SS/LaserSS/weapon_laser_001
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    # PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 861, Name: laserboltcharge
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotRedAlien
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 60, display: true
+    BlastParticleIndex: 12
+    BlastRadius: 2, display: true
+    BlastDamage: 800, display: true
+    Speed: 200
+    Range: 800
+    Ballistic: false
+
+    DamageMultiplier_1: 3, param1: hullarmored
+    DamageMultiplier_2: 3, param1: hullcombat
+    DamageMultiplier_3: 2, param1: shield
+    BlastDamageMultiplier_1: 0, param1: shield
+  }
+}
+{ +Item Id: 862, Name: plasmaDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/plasmaDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 2, type: float
+    Range: 300      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoType: plasmachargeDroneSpace, display: true
+    AmmoCapacity: 25
+    AmmoUnlimited: true
+    ReloadDelay: 3
+    SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 863, Name: plasmachargeDroneSpace
+  Meshfile: Entities/Items/Weapons/Projectiles/PlasmaProjectilePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 75, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 500, display: true
+    Speed: 70
+    Range: 700
+    Ballistic: false
+    DamageMultiplier_1: 0.5, param1: head|body
+    DamageMultiplier_2: 3, param1: metal
+    DamageMultiplier_3: 25, param1: metalhard|concrete|woodblock|hull
+    DamageMultiplier_4: 60, param1: hullarmored|hullcombat
+    DamageMultiplier_5: 0, param1: stone|dirt
+    DamageMultiplier_6: 0.1, param1: shield
+    BlastDamageMultiplier_1: 0.5, param1: head|body
+    BlastDamageMultiplier_2: 0.05, param1: stone|dirt
+    BlastDamageMultiplier_3: 0, param1: shield
+  }
+}
+{ +Item Id: 864, Name: plasmalauncherDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/GunMountInvisiblePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 6, type: float
+    Range: 1600      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoCapacity: 5
+    AmmoUnlimited: true
+    AmmoType: plasmarocket, display: true
+    ReloadDelay: 13
+    SfxBegin: Weapons/MS/Turret/Cannon_2
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 865, Name: plasmarocket
+  Meshfile: Entities/Items/Weapons/Projectiles/PlasmaProjectilePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 10000, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 4, display: true
+    BlastDamage: 10000, display: true
+    Speed: 165
+    Range: 635
+    SpeedSpace: 210
+    RangeSpace: 1600
+    Ballistic: false
+
+    DamageMultiplier_1: 0.05, param1: head|body
+    DamageMultiplier_2: 0.01, param1: stone|dirt
+    DamageMultiplier_3: 10,   param1: rock    # can destroy rocks
+    DamageMultiplier_4: 0.067,   param1: shield
+    BlastDamageMultiplier_1: 0.05, param1: head|body
+    BlastDamageMultiplier_2: 0.05, param1: stone|dirt
+    BlastDamageMultiplier_3: 0,   param1: shield
+  }
+}
+{ +Item Id: 866, Name: mortarlauncherDroneLarge
+  Meshfile: Entities/Enemies/Drones/Weapons/GunMountInvisiblePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 3.5, type: float
+    Range: 300      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoCapacity: 25
+    AmmoUnlimited: true
+    AmmoType: mortargrenade, display: true
+    ReloadDelay: 3
+    SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 867, Name: mortargrenade
+  Meshfile: Entities/Items/Weapons/Projectiles/rocket02Prefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 100, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 500, display: true
+    Speed: 30
+    Range: 360
+    Ballistic: true
+
+    DamageMultiplier_1: 0.5, param1: head|body
+	DamageMultiplier_2: 3, param1: metal
+    DamageMultiplier_3: 25, param1: metalhard|concrete|woodblock|hull
+    DamageMultiplier_4: 60, param1: hullarmored|hullcombat
+    DamageMultiplier_5: 0, param1: stone|dirt
+    DamageMultiplier_6: 0.1, param1: shield
+    BlastDamageMultiplier_1: 0.5, param1: head|body
+    BlastDamageMultiplier_2: 0.05, param1: stone|dirt
+    BlastDamageMultiplier_3: 0, param1: shield
+  }
+}
+{ +Item Id: 868, Name: cannonheatDroneSmall
+  Meshfile: Entities/Enemies/Drones/Weapons/cannonDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Ranged
+    ROF: 0.75, type: float
+    Range: 300      /* Drone will attack from: Range*WeaponRangeFactor */
+    Automatic: true
+    Damage: 45
+    AmmoCapacity: 200
+    AmmoUnlimited: true
+    AmmoType: highexplosiveantitank, display: true
+    ReloadDelay: 3.1
+    SfxBegin: Weapons/Player/Misc/Single/Cannon_2_short
+    SfxLoop: Misc/MuteSound
+    SfxStop: Misc/MuteSound
+    TracerPerBullet: 1
+  }
+}
+{ +Item Id: 869, Name: highexplosiveantitank
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Material: metalweapon
+  HoldType: 0
+  MarketPrice: 1, display: true
+  Canhold: false
+  StackSize: 4000
+  Info: bkiAmmo, display: true
+  Category: Weapons/Items
+  Mass: 0.01, type: float, display: true, formatter: Kilogram
+  Volume: 0.01, type: float, display: true, formatter: Liter
+}
+{ +Item Id: 870, Name: empcannonDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/plasmaDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.5, type: float
+    Range: 900      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoCapacity: 25
+    AmmoUnlimited: true
+    AmmoType: empcharge, display: true
+    ReloadDelay: 3
+    SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
+    # PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 871, Name: empcharge
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotYellowAlien
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 450, display: true   # new: because we removed explosion
+    BlastParticleIndex: 0
+  #  BlastRadius: 3
+  #  BlastDamage: 200
+    Speed: 750
+    Range: 650
+    SpeedSpace: 810
+    RangeSpace: 875
+    Ballistic: false
+
+    DamageMultiplier_1: 0, param1: head|body
+    DamageMultiplier_2: 0, param1: stone|dirt|rock
+    DamageMultiplier_3: 2, param1: shield
+	DamageMultiplier_4: 0.5, param1: dirt|stone|rock|wood|metal|metalhard|hull|hullarmored|hullcombat
+    BlastDamageMultiplier_1: 0.25, param1: head|body
+    BlastDamageMultiplier_2: 0.4, param1: stone|dirt
+    BlastDamageMultiplier_3: 0.1, param1: rock
+    BlastDamageMultiplier_4: 0, param1: shield
+  }
+}
+{ +Item Id: 872, Name: swarmrocketlauncherDroneSpace
+  Meshfile: Entities/Enemies/Drones/Weapons/GunMountInvisiblePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 3.5, type: float
+    Range: 1500      /* Drone will attack from: Range*WeaponRangeFactor */
+    AmmoCapacity: 25
+    AmmoUnlimited: true
+    AmmoType: swarmrocket, display: true
+    ReloadDelay: 3
+    SfxBegin: Weapons/SS/RocketHumanSS/flak88_fire03
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: rocketlauncherMSMuzzleFire
+  }
+}
+{ +Item Id: 873, Name: swarmrocket
+  Meshfile: Entities/Items/Weapons/Projectiles/rocket02Prefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 250, display: true
+    BlastParticleIndex: 3
+    BlastRadius: 3, display: true
+    BlastDamage: 500, display: true
+    Speed: 165
+    Range: 635
+    SpeedSpace: 210
+    RangeSpace: 1500
+    Ballistic: false
+
+    DamageMultiplier_1: 0.5, param1: head|body
+	DamageMultiplier_2: 3, param1: metal
+    DamageMultiplier_3: 25, param1: metalhard|concrete|woodblock|hull
+    DamageMultiplier_4: 60, param1: hullarmored|hullcombat
+    DamageMultiplier_5: 0, param1: stone|dirt
+    DamageMultiplier_6: 0.1, param1: shield
+    BlastDamageMultiplier_1: 0.5, param1: head|body
+    BlastDamageMultiplier_2: 0.05, param1: stone|dirt
+    BlastDamageMultiplier_3: 0, param1: shield
+  }
+}
+{ +Item Id: 874, Name: chargedrailgunDroneLarge
+  Meshfile: Entities/Enemies/Drones/Weapons/GunMountInvisiblePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 1, type: float, display: true, formatter: ROF
+    Range: 525, display: false
+    RangeSpace: 800, display: false
+    AmmoCapacity: 20, display: true
+    AmmoType: chargedrailgunbullet, display: true
+    Automatic: true
+    NoiseStrength: 100, display: false
+    AutoReload: true
+    CheckObstructed: true
+    ReloadDelay: 4, display: true    # adapt sound
+    SfxBegin: Weapons/ProjectileWeapons/weapon_railgun_004
+    /* SfxBegin: Weapons/SS/Railgun/FuturisticGunSound02   */
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: SniperMuzzleFireLarge
+  }
+}
+{ +Item Id: 875, Name: chargedrailgunbullet
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Canhold: false
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 1555 , display: true
+    BlastParticleIndex: 3
+    BlastRadius: 0
+    BlastDamage: 0
+    NoiseStrength: 100, display: false
+    Speed: 425
+    Range: 525
+    SpeedSpace: 525
+    RangeSpace: 850
+    Ballistic: false
+
+    DamageMultiplier_1: 0.5, param1: head|body
+    DamageMultiplier_2: 0.01, param1: stone|dirt
+    DamageMultiplier_3: 10,   param1: rock    # can destroy rocks
+    DamageMultiplier_4: 0.2,   param1: shield
+    BlastDamageMultiplier_1: 0.5, param1: head|body
+    BlastDamageMultiplier_2: 0, param1: stone|dirt
+  }
+}
+{ +Item Id: 876, Name: antiprotonLauncherDroneLarge
+  Meshfile: Entities/Enemies/Drones/Weapons/laserSpaceDronePrefab
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 1
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.5, type: float, display: true, formatter: ROF
+    AllowAt: "Planet,Space"
+    Range: 650, display: false
+    RangeSpace: 1300, display: false
+    # Damage: 2000, display: true
+    AmmoCapacity: 500, display: false       # no need to display since unlimited ammo
+    AmmoType: antiprotoncharge, display: true
+    # AmmoUnlimited: true
+    Automatic: true
+    NoiseStrength: 100, display: false
+    ReloadDelay: 0.6, display: true
+    SfxBegin: Weapons/EnergyWeapons/weapon_laser_009
+    /* SfxBegin: Weapons/SS/RocketAlienSS/BLASTERComplexFireTriggerPowerfulRelease   */
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    # PfxMuzzle: turretMuzzleFire
+    # ParticleTransform: Muzzle/Particle1
+  }
+}
+{ +Item Id: 877, Name: antiprotoncharge
+  Meshfile: Entities/Items/Weapons/Projectiles/LaserShotRedAlien
+  Material: metalweapon
+  HoldType: 0
+  StackSize: 25
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Projectile
+    Damage: 2000, display: true   # new: because we removed explosion
+    BlastParticleIndex: 0
+  #  BlastRadius: 3
+  #  BlastDamage: 200
+    Speed: 750
+    Range: 650
+    SpeedSpace: 810
+    RangeSpace: 1300
+    Ballistic: false
+
+    DamageMultiplier_1: 0.25, param1: head|body
+    DamageMultiplier_2: 0, param1: stone|dirt|rock
+    DamageMultiplier_3: 0.1, param1: shield
+    BlastDamageMultiplier_1: 0.25, param1: head|body
+    BlastDamageMultiplier_2: 0.4, param1: stone|dirt
+    BlastDamageMultiplier_3: 0.1, param1: rock
+    BlastDamageMultiplier_4: 0, param1: shield
+  }
+  }
+
+# === High Tier sphere turret weapon and ammo (900-950) ===
+{ +Item Id: 900, Name: TurretEnemyLaserWeaponBlack, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargeBlack, display: true
+  }
+}
+{ +Item Id: 901, Name: TurretEnemyLaserChargeBlack, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketBlackPrefab
+}
+{ +Item Id: 902, Name: TurretEnemyLaserWeaponBlue, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargeBlue, display: true
+  }
+}
+{ +Item Id: 903, Name: TurretEnemyLaserChargeBlue, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketBluePrefab
+}
+{ +Item Id: 904, Name: TurretEnemyLaserWeaponCyan, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargeCyan, display: true
+  }
+}
+{ +Item Id: 905, Name: TurretEnemyLaserChargeCyan, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketCyanPrefab
+}
+{ +Item Id: 906, Name: TurretEnemyLaserWeaponGreen, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargeGreen, display: true
+  }
+}
+{ +Item Id: 907, Name: TurretEnemyLaserChargeGreen, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketGreenPrefab
+}
+{ +Item Id: 908, Name: TurretEnemyLaserWeaponOrange, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargeOrange, display: true
+  }
+}
+{ +Item Id: 909, Name: TurretEnemyLaserChargeOrange, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketOrangePrefab
+}
+{ +Item Id: 910, Name: TurretEnemyLaserWeaponPurple, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargePurple, display: true
+  }
+}
+{ +Item Id: 911, Name: TurretEnemyLaserChargePurple, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketPurplePrefab
+}
+{ +Item Id: 912, Name: TurretEnemyLaserWeaponRed, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargeRed, display: true
+  }
+}
+{ +Item Id: 913, Name: TurretEnemyLaserChargeRed, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketRedPrefab
+}
+{ +Item Id: 914, Name: TurretEnemyLaserWeaponYellow, Ref: TurretEnemyLaserWeaponT2
+  { Child 0
+    AmmoType: TurretEnemyLaserChargeYellow, display: true
+  }
+}
+{ +Item Id: 915, Name: TurretEnemyLaserChargeYellow, Ref: TurretEnemyLaserChargeT2
+  Meshfile: Entities/Items/Weapons/Projectiles/AlienRocketYellowPrefab
+}
 /* CATEGORIE: Commodity Trade Items id 1000 - 1100 */
 
 { +Item Id: 1000, Name: TradingGoodsTemplate
@@ -13863,7 +14589,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 350, display: true
   Info: A container of water treated with a variety of chemicals used as coolant in engines and reactors., display: true
   ShowUser: Yes
-  CustomIcon: WaterJug
   Mass: 85, type: float, display: true, formatter: Kilogram
   Volume: 75, type: float, display: true, formatter: Liter
 }
@@ -13871,7 +14596,6 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 500, display: true
   ShowUser: Yes
   Info: A container of chemicals. The label is coded so the contents are unreadable., display: true
-  CustomIcon: Fertilizer
   Mass: 120, type: float, display: true, formatter: Kilogram
   Volume: 100, type: float, display: true, formatter: Liter
 }
@@ -14520,5 +15244,3 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     SfxBegin: UseActions/playerDrinking
   }
 }
-
-

@@ -1511,7 +1511,29 @@ HullCombatSmallBlocks
 }
 
 
-# FREE 135-223
+# FREE 135-222
+
+# https://gist.github.com/cortvi/094f5233be6db0492b386cb494aa709a
+{ +Block Id: 223, Name: CaptureTheFlag
+  IsTextureable: true
+  IsColorable: true
+  Model: @hwsmodels/CaptureTheFlag
+  ShowUser: Yes
+  Shape: ModelEntity
+  Material: metal, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowedInBlueprint: false, display: true
+  AllowPlacingAt: "Base,Terrain", display: true
+  SizeInBlocks: "1,4,3", display: true
+  #ModelOffset: "0,1,0"
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 50000
+  BlockColor: "110,110,110"
+  Category: BuildingBlocks
+  IsActivateable: true
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+}
 
 { +Block Id: 224, Name: HWSBlockFireworkBees
   CustomIcon: HWSBlockFireworkBlocks
@@ -1524,7 +1546,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1545,7 +1567,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1566,7 +1588,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1587,7 +1609,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1608,7 +1630,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1629,7 +1651,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1650,7 +1672,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1671,7 +1693,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1692,7 +1714,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1713,7 +1735,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1734,7 +1756,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1755,7 +1777,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1776,7 +1798,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1797,7 +1819,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1818,7 +1840,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1839,7 +1861,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1860,7 +1882,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -1880,7 +1902,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -3670,7 +3692,12 @@ HullCombatSmallBlocks
     OnHarvest: AlienPlant05Harvested
   	OnDeath: PlantDead
   }
-  Material: plants, display: true
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
+  Material: plants
   Shape: Deco
   IsDeco: true
   IsPlant: true
@@ -3692,6 +3719,11 @@ HullCombatSmallBlocks
   { Child CropsGrown
     OnHarvest: AlienPlant07Harvested
     OnDeath: PlantDead
+  }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
 }
 { Block Id: 300, Name: AlienPlant08
@@ -6929,7 +6961,12 @@ HullCombatSmallBlocks
     OnHarvest: OpuntiaCactusHarvested
     Dead: PlantDead
   }
-  Material: plants, display: true
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
+  Material: plants
   Shape: Deco
   IsDeco: true
   IsPlant: true
@@ -6986,7 +7023,12 @@ HullCombatSmallBlocks
   { Child CropsGrown
     OnHarvest: DesertPlant20Harvested
   }
-  Material: plants, display: true
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
+  Material: plants
   Shape: Deco
   IsDeco: true
   IsPlant: true
@@ -7120,6 +7162,11 @@ HullCombatSmallBlocks
     OnHarvest: Hydrilla2Harvested
     OnDeath: PlantDead
   }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
   Collide: "bullet,rocket,melee,sight"
   Material: plants, display: true
   Shape: Deco
@@ -7148,8 +7195,8 @@ HullCombatSmallBlocks
   ShowUser: No
   SizeInBlocks: "3,4,3"
   { Child DropOnDestroy
-    Item: WoodLogs
-    Count: "1,3"
+    Item: Fiber
+    Count: "6,8"
     Prob: 1
   }
 }
@@ -7805,7 +7852,12 @@ HullCombatSmallBlocks
     OnHarvest: CobraLeavesPlantHarvested
     OnDeath: PlantDead
   }
-  Material: plants, display: true
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
+  Material: plants
   Shape: Deco
   IsDeco: true
   IsTerrainDecoration: true
@@ -7851,9 +7903,11 @@ HullCombatSmallBlocks
   Collide: "bullet,rocket,melee,sight"
   Model: @models2/Environment/Plants/FractalFlora/PixieStalksPrefab
   ShowUser: No
-  # { Child DropOnDestroy
-    # Count: 0
-  # }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
 }
 { Block Id: 526, Name: ScalyPods
   Class: CropsGrown
@@ -8645,6 +8699,11 @@ HullCombatSmallBlocks
     OnHarvest: CattailWinterHarvested
     OnDeath: PlantDead
   }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
   Collide: "bullet,rocket,melee,sight"
   Material: plants, display: true
   Shape: Deco
@@ -8662,6 +8721,11 @@ HullCombatSmallBlocks
   { Child CropsGrown
     OnHarvest: SnakeweedHarvested
     OnDeath: PlantDead
+  }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
   Collide: "bullet,rocket,melee,sight"
   Material: plants, display: true
@@ -9035,7 +9099,9 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/FractalFlora/CornDogBushPrefab
   ShowUser: No
   { Child DropOnDestroy
-    Count: 0
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
 }
 { Block Id: 576, Name: DimpleDome
@@ -9131,7 +9197,9 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/FractalFlora/PixieStalksSnowPrefab
   ShowUser: No
   { Child DropOnDestroy
-    Count: 0
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
 }
 { Block Id: 581, Name: RocksGrey03Snow
@@ -11705,7 +11773,12 @@ HullCombatSmallBlocks
     OnHarvest: InsanityPepperStageNoFruit
     OnDeath: PlantDead2
   }
-  Material: plants, display: true
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
+  Material: plants
   Shape: ModelEntity
   Model: @models2/Entities/Farming/Misc/InsanityPepperStage3Prefab
   PickupTarget: InsanityPepperStage1
@@ -12324,7 +12397,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,3,1"
   ShowUser: No
   { Child DropOnDestroy
-    Item: WoodLogs
+    Item: Fiber
     Count: "1,2"
     Prob: 1
   }
@@ -12488,8 +12561,8 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,3,1"
   Collide: "bullet,rocket,melee,sight"
   { Child DropOnDestroy
-    Item: WoodLogs
-    Count: "1,3"
+    Item: Fiber
+    Count: "2,3"
     Prob: 1
   }
 }
@@ -12499,7 +12572,7 @@ HullCombatSmallBlocks
   SizeInBlocks: "1,3,1"
   Collide: "bullet,rocket,melee,sight"
   { Child DropOnDestroy
-    Item: WoodLogs
+    Item: Fiber
     Count: "1,2"
     Prob: 1
   }
@@ -12831,6 +12904,11 @@ HullCombatSmallBlocks
     OnHarvest: SeaWeed02-04Harvested
     OnDeath: PlantDead
   }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "2"
+    Prob: 1
+  }
   Model: @models2/Environment/Plants/UnderwaterPlants/SeaWeed02-04Prefab
 }
 { Block Id: 751, Name: FingerSponge03-01, Ref: CoralStone03-05
@@ -12876,6 +12954,11 @@ HullCombatSmallBlocks
   IsPlant: true
   Model: @models2/Environment/Plants/FractalFlora/SucculentTreePrefab
   ShowUser: No
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "3,5"
+    Prob: 1
+  }
 }
 { Block Id: 755, Name: AntlerTree
   Material: wood, display: true
@@ -13425,7 +13508,7 @@ HullCombatSmallBlocks
   ShowBlockName: true
   Place: Free
   AllowedInBlueprint: false, display: true
-  AllowPlacingAt: "Base,MS,SS,HV", display: true
+  AllowPlacingAt: "Base,MS,SS,GV", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"
   StackSize: 50000
@@ -14004,8 +14087,8 @@ HullCombatSmallBlocks
   ShowUser: No
   SizeInBlocks: "1,2,1"
   { Child DropOnDestroy
-    Item: WoodLogs
-    Count: "1,2"
+    Item: Fiber
+    Count: "3,5"
     Prob: 1
   }
 }
@@ -14161,8 +14244,8 @@ HullCombatSmallBlocks
   ShowUser: No
   SizeInBlocks: "1,2,1"
   { Child DropOnDestroy
-    Item: WoodLogs
-    Count: "1,2"
+    Item: Fiber
+    Count: "2,4"
     Prob: 1
   }
 }
@@ -14204,7 +14287,7 @@ HullCombatSmallBlocks
   ShowUser: No
   SizeInBlocks: "1,3,1"
   { Child DropOnDestroy
-    Item: WoodLogs
+    Item: Fiber
     Count: "1,2"
     Prob: 1
   }
@@ -14224,8 +14307,8 @@ HullCombatSmallBlocks
   ShowUser: No
   SizeInBlocks: "1,3,1"
   { Child DropOnDestroy
-    Item: WoodLogs
-    Count: "1,2"
+    Item: Fiber
+    Count: "3,5"
     Prob: 1
   }
 }
@@ -15245,7 +15328,12 @@ HullCombatSmallBlocks
     OnHarvest: Cactus1Harvested
     OnDeath: PlantDead
   }
-  Material: plants, display: true
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
+  Material: plants
   Shape: Deco
   IsDeco: true
   IsPlant: true
@@ -15260,6 +15348,11 @@ HullCombatSmallBlocks
   IsPlant: true
   Model: @models2/Environment/Plants/SpeedTrees/Cactus2Prefab
   ShowUser: No
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
 }
 { Block Id: 957, Name: Cactus3, Ref: Cactus2
   Model: @models2/Environment/Plants/SpeedTrees/Cactus3Prefab
@@ -15950,7 +16043,12 @@ HullCombatSmallBlocks
     OnHarvest: ElderberryBushHarvested
     OnDeath: PlantDead
   }
-  Material: woodsoft, display: true
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
+  Material: woodsoft
   Shape: Deco
   IsTerrainDecoration: true
   IsDeco: true
@@ -15959,11 +16057,6 @@ HullCombatSmallBlocks
   # DecoParticle: chinesebanyan    # removed particle effect since it triggers when harvested
   ShowUser: No
   SizeInBlocks: "3,4,3"
-  { Child DropOnDestroy
-    Item: WoodLogs
-    Count: "1,3"
-    Prob: 1
-  }
 }
 { +Block Id: 1011, Name: ShutterDoor1x1
   Class: Door
@@ -16426,6 +16519,11 @@ HullCombatSmallBlocks
   IsPlant: true
   Model: @models2/Environment/Plants/SpeedTrees/AkuaFernPrefab
   ShowUser: No
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
 }
 { Block Id: 1045, Name: AkuaPlant
   Material: woodhard, display: true
@@ -17762,7 +17860,7 @@ HullCombatSmallBlocks
   SoundClose: UseActions/HangarDoor
   PlayerTriggersOpen: true
   AllowWander: true
-  ChildBlocks: "BlastShutterDoors1x1x1, BlastShutterDoors2x1x1"
+  ChildBlocks: "BlastShutterDoors1x1x1, BlastShutterDoors2x1x1, BlastShutterDoors3x1x1, BlastShutterDoors4x1x1, BlastShutterDoors5x1x1, BlastShutterDoors6x1x1, BlastShutterDoors7x1x1, BlastShutterDoors8x1x1, BlastShutterDoors9x1x1, BlastShutterDoors10x1x1, BlastShutterDoors11x1x1, BlastShutterDoors12x1x1, BlastShutterDoors13x1x1"
 
   UnlockCost: 13, display: true
   UnlockLevel: 12, display: true
@@ -17795,7 +17893,6 @@ HullCombatSmallBlocks
   SoundOpen: UseActions/HangarDoor
   SoundClose: UseActions/HangarDoor
   PlayerTriggersOpen: true
-  AllowWander: true
 }
 { Block Id: 1138, Name: BlastShutterDoors2x1x1, Ref: BlastShutterDoors1x1x1
   Model: @models/Blocks/Mothership/BlastShutterDoors2x1x1Prefab
@@ -18296,6 +18393,11 @@ HullCombatSmallBlocks
   { Child CropsGrown
     OnHarvest: ElderberryStage3NoFruit
     OnDeath: PlantDead2
+  }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "4"
+    Prob: 1
   }
   # ShowUser: NoButCSV             # reported by HWS
   PickupTarget: ElderberryStage1
@@ -20252,7 +20354,9 @@ HullCombatSmallBlocks
   Model: @models2/Environment/Plants/FractalFlora/CornDogBushSnowPrefab
   ShowUser: No
   { Child DropOnDestroy
-    Count: 0
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
 }
 { +Block Id: 1338, Name: ReceptionTableCorner, Ref: DecoTemplate
@@ -20321,7 +20425,9 @@ HullCombatSmallBlocks
   SizeInBlocks: "3,4,3"
   XpFactor: 0.25
   { Child DropOnDestroy
-    Count: 0
+    Item: Fiber
+    Count: "2,3"
+    Prob: 1
   }
 }
 { Block Id: 1347, Name: OnionFlower, Ref: Mushroom01
@@ -20383,6 +20489,11 @@ HullCombatSmallBlocks
   # BigDecorationRadius: 2
   Model: @models2/Environment/Plants/FreeTerrainAssets/Bush01Prefab
   ShowUser: No
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "4,5"
+    Prob: 1
+  }
 }
 { Block Id: 1354, Name: Bush02, Ref: Bush01
   Model: @models2/Environment/Plants/FreeTerrainAssets/Bush02Prefab
@@ -20418,6 +20529,7 @@ HullCombatSmallBlocks
   IsUsingCPUSystem: false
   AllowedInBlueprint: false, display: true
   BlockColor: "0,15,100"
+  TemplateRoot: CorePlayerAdmin
 
   UnlockCost: 0
   UnlockLevel: 1
@@ -20506,6 +20618,11 @@ HullCombatSmallBlocks
   { Child CropsGrown
     OnHarvest: SnakeweedStage1
     OnDeath: PlantDead
+  }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
   # ShowUser: NoButCSV    # reported by HWS
   XpFactor: 0.25
@@ -21098,6 +21215,7 @@ HullCombatSmallBlocks
   Faction: Player
   BlockColor: "220,212,0"
   IsKeepContainers: false
+  TemplateRoot: CoreNPCcpu
 }
 
 { +Block Id: 1402, Name: CoreNoCPU, Ref: Core
@@ -21108,6 +21226,7 @@ HullCombatSmallBlocks
   AllowedInBlueprint: false, display: true
   BlockColor: "0,220,220"
   TechTreeNames: ""
+  TemplateRoot: CoreNoCPU
 
 }
 
@@ -22621,6 +22740,11 @@ HullCombatSmallBlocks
     OnHarvest: CobraLeavesPlantStage1
     OnDeath: PlantDead
   }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
   PickupTarget: CobraLeavesPlantStage1
   ShowUser: Yes
 }
@@ -22630,6 +22754,11 @@ HullCombatSmallBlocks
     Next: AlienPlant07
     GrowthRate: 25
     FertileLevel: 1
+  }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
   Model: @models2/Environment/Plants/AlienVegetation/AlienPlant07HarvestedPrefab
 }
@@ -22904,9 +23033,17 @@ HullCombatSmallBlocks
   TechTreeParent: CloneChamber
   TechTreeNames: "Base,Capital Vessel"
 }
-
-# available free 1572
-
+{ +Block Id: 1572, Name: ToiletModern, Ref: DecoTemplate
+  Model: @models2/Entities/Decorations/HomeSweetHome/BathroomToiletNewPrefab
+  Class: PassengerSeat
+  BlockColor: "220,220,220"
+  Group: cpgEquipment
+  IsAccessible: true, type: bool
+  IsLockable: true
+  DebuffNamesActivate: "Indigestion,Hangover,BadTrip", display: EffectiveAgainst
+  SfxBuffActivate: UseActions/BlockToilet
+  ShowUser: Yes
+}
 { Block Id: 1573, Name: PulpitFungusHarvested, Ref: PulpitFungus
   Class: PlantGrowing
   { Child PlantGrowing
@@ -22922,6 +23059,11 @@ HullCombatSmallBlocks
     Next: BigFlower
     GrowthRate: 25
     FertileLevel: 1
+  }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1,2"
+    Prob: 1
   }
   Model: @models2/Environment/Plants/AlienFlora/BigFlowerHarvestedPrefab
 }
@@ -23408,6 +23550,11 @@ HullCombatSmallBlocks
     OnHarvest: CoffeePlantStage4
     OnDeath: PlantDead2
   }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
+  }
   # ShowUser: No
   PickupTarget: CoffeePlantStage1  # disassemble
   TemplateRoot: CoffeePlantStage2  # deconstruct - to avoid exploit
@@ -23493,6 +23640,11 @@ HullCombatSmallBlocks
   { Child CropsGrown
     OnHarvest: BigFlowerStage4
     OnDeath: PlantDead2
+  }
+  { Child DropOnDestroy
+    Item: Fiber
+    Count: "1"
+    Prob: 1
   }
   # ShowUser: No
   PickupTarget: BigFlowerStage1  # disassemble
@@ -27997,7 +28149,592 @@ HullCombatSmallBlocks
 { +Block Id: 2047, Name: HullCombatExtendedSmall6, Ref: HullCombatFullSmall
   ChildShapes: "WallMediumDouble, RampBDouble, SmallCornerRoundB2, CubeSteppedEdge, CubeQuarterEdge, CubeHalfRamp, CubeHalfCubeConnector, CornerSmallCMediumLow, WallLowDouble, CubeRoundConnectorAMedium, CubeRoundConnectorALow, CornerSmallBMediumLow, WallSlopedBold, CylinderCubeConnector, CylinderCubeHalfConnector, CylinderWallConnector"
 }
+# =================================================================================
+# ================================ Non-ID Blocks ==================================
+# =================================================================================
+{ Block Name: BlastShutterDoors3x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors3x1x1Prefab
+  SizeInBlocks: "1,1,4", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors4x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors4x1x1Prefab
+  SizeInBlocks: "1,1,5", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors5x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors5x1x1Prefab
+  SizeInBlocks: "1,1,6", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors6x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors6x1x1Prefab
+  SizeInBlocks: "1,1,7", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors7x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors7x1x1Prefab
+  SizeInBlocks: "1,1,8", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors8x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors8x1x1Prefab
+  SizeInBlocks: "1,1,9", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors9x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors9x1x1Prefab
+  SizeInBlocks: "1,1,10", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors10x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors10x1x1Prefab
+  SizeInBlocks: "1,1,11", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors11x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors11x1x1Prefab
+  SizeInBlocks: "1,1,12", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors12x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors12x1x1Prefab
+  SizeInBlocks: "1,1,13", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: BlastShutterDoors13x1x1, Ref: BlastShutterDoors1x1x1
+  Model: @models/Blocks/Mothership/BlastShutterDoors13x1x1Prefab
+  SizeInBlocks: "1,1,14", display: true
+  Mass: 7290, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 3200, type: int, display: true
+}
+{ Block Name: TalonFoodProcessor
+  Material: woodblock
+  AllowedInBlueprint: false, display: true
+  CustomIcon: TribalCauldron
+  Model: @models2/Entities/Decorations/TribalAssets/TribalCauldronPrefab
+  SizeInBlocks: "1,1,1", display: true
+  Class: FoodProcessorV2
+  IndexName: Constructor
+  MarketPrice: 2894, display: true
+  Group: cpgFoodProcessor
+  DontDecayFood: true   /* now this loot container is a fridge */
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  DropInventoryEntity: DropContainer
+  Place: Free
+  AllowPlacingAt: "Base", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Volume: 80, type: float, display: true, formatter: Liter
+  Mass: 120, type: float, display: true, formatter: Kilogram
+  IsActivateable: true
+  IsActivateableInCP: true
+  IsLockable: true
+  IsOxygenTight: false, display: true
+  Info: bkiFoodProcessor, display: true
+  # ModelOffset: "0,0.5,0"
+  StackSize: 1000
+  BlockColor: "110,110,110"
+  Category: Devices
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  CPUIn: 0, type: int, display: true
+  EnergyInIdle: 0, type: int, display: true, formatter: Watt
+  EnergyDynamicGroup: Constructor
+  HitPoints: 125, type: int, display: true
+  BlastParticleIndex: 4
+  BlastRadius: 1
+  BlastDamage: 30
+  ShowUser: No
+}
+{ Block Name: TalonBarrels
+  Material: woodblock
+  AllowedInBlueprint: false, display: true
+  CustomIcon: TribalBarrels
+  DropInventoryEntity: DropContainer
+  LootList: 56
+  VolumeCapacity: 750, type: float, display: true, formatter: Liter
+  Model: @models2/Entities/Decorations/TribalAssets/TribalBarrelsPrefab
+  SizeInBlocks: "1,1,1", display: true
+  Mass: 200, type: float, display: true, formatter: Kilogram
+  CPUIn: 0, type: int, display: true
+  AllowPlacingAt: "Base", display: true
+  Class: Container
+  IndexName: Container
+  Group: cpgCargoBox
+  Shape: ModelEntity
+  ShowBlockName: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Place: Free
+  SizeInBlocksLocked: "Base,MS"      # scaled small on SV, GV
+  Volume: 20, type: float, display: true, formatter: Liter
+  BlockColor: "110,110,110"
+  Info: bkiContainer, display: true
+  # ModelOffset: "0,0.5,0"
+  StackSize: 1000
+  /* IsAccessible: false, type: bool    */
+  IsActivateableInCP: true
+  IsLockable: true
+  Category: Devices
+  EnergyIn: 1, type: int, display: true, formatter: Watt
+  HitPoints: 125, type: int, display: true
+  BlastParticleIndex: 4
+  BlastDamage: 10
+  ShowUser: No
+}
 
+{ Block Name: TalonBox, Ref: TalonBarrels
+  Material: woodblock
+  AllowedInBlueprint: false, display: true
+  CustomIcon: TribalBox
+  DropInventoryEntity: DropContainer
+  LootList: 56
+  VolumeCapacity: 100, type: float, display: true, formatter: Liter
+  Model: @models2/Entities/Decorations/TribalAssets/TribalBoxPrefab
+  SizeInBlocks: "1,1,1", display: true
+  ShowUser: No
+}
+{ Block Name: TalonFurnace
+  Material: woodblock
+  AllowedInBlueprint: false, display: true
+  CustomIcon: TribalHearth
+  Model: @models2/Entities/Decorations/TribalAssets/TribalHearthPrefab
+  SizeInBlocks: "1,1,2", display: true
+  Class: Furnace
+  IndexName: Constructor
+  Group: cpgConstructor
+  MarketPrice: 7500, display: true
+  Shape: ModelEntity
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  DropInventoryEntity: DropContainer
+  Place: Free
+  Info: bkiFurnace, display: true
+  AllowPlacingAt: Base, display: true
+  SizeInBlocksLocked: "Base,MS"
+  IsActivateable: true
+  IsActivateableInCP: true
+  IsLockable: true
+  IsOxygenTight: false, display: true
+  # ModelOffset: "0,0.5,0"
+  SymType: 4
+  StackSize: 250
+  BlockColor: "110,110,110"
+  Category: Devices
+  Mass: 31825, type: float, display: true, formatter: Kilogram
+  Volume: 4320, type: float, display: true, formatter: Liter
+  EnergyIn: 2500, type: int, display: true, formatter: Watt
+  CPUIn: 0, type: int, display: true
+  EnergyInIdle: 1, type: int, display: true, formatter: Watt
+  EnergyDynamicGroup: Constructor
+  HitPoints: 350, type: int, display: true
+
+  BlastParticleIndex: 11
+  BlastRadius: 2
+  BlastDamage: 80
+
+  Temperature: 150, display: true
+  ShowUser: No
+}
+{ Block Name: PlayerRespawnPOI
+  CustomIcon: EntitySpawnerPlateThin
+  Info: bkiNoInfo, display: true
+  Model: @models/Blocks/Misc/EntitySpawnerPlateThinPrefab
+  #Collide: "bullet,rocket,melee,sight"     /* for AI pathfinding: do not consider this block as collide with movements */
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  IndexName: SpawnPoint
+  Group: cpgTransportation
+  Category: Devices
+  Material: wood
+  Shape: ModelEntity
+  MarketPrice: 700, display: true
+  ShowBlockName: true
+  Place: Free
+  AllowPlacingAt: "Base", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base"
+  Volume: 1, type: float, display: true, formatter: Liter
+  Mass: 1, type: float, display: true, formatter: Kilogram
+  # IsLockable: true
+  IsOxygenTight: false, display: true
+  StackSize: 1000
+  BlockColor: "110,110,110"
+
+  EnergyIn: 0, type: int, display: true, formatter: Watt
+  BlastParticleIndex: 0
+  BlastRadius: 0
+  BlastDamage: 0
+
+  #BuffNamesActivate: "Resurrected", display: Activates
+  #DebuffNamesActivate: "WellFed,Rested", display: Deactivates
+
+  ShowUser: No
+  AllowedInBlueprint: false, display: true
+}
+=====   Posters Deco ========
+{ Block Name: PosterARest
+  Model: @models2/Entities/Decorations/Posters/aRestPosterPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  RepairToTemplate: false, display: true
+  MarketPrice: 1899, display: true
+  Material: metallight
+  Shape: ModelEntity
+  ShowBlockName: true
+  Place: Free
+  Category: Deco Blocks
+  # PickupTarget: PosterARest
+  AllowPlacingAt: "Base,MS", display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  Info: bkiPosterARest, display: true
+  IsOxygenTight: false, display: true
+  StackSize: 1000
+  Mass: 0, type: float, display: true, formatter: Kilogram
+  Volume: 0, type: float, display: true, formatter: Liter
+  CPUIn: 0, type: int, display: true
+  # ShowUser: No
+}
+{ Block Name: PosterBiker, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/BikerPosterPrefab
+  Info: bkiPosterBiker, display: true
+}
+{ Block Name: PosterBoyband, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/BoybandPosterPrefab
+  Info: bkiNoInfo, display: true
+  ShowUser: No
+}
+{ Block Name: PosterDontHide, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/DontHidePosterPrefab
+  Info: bkiPosterDontHide, display: true
+}
+{ Block Name: PosterForeignWorld, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/ForeignWorldPosterPrefab
+  Info: bkiPosterForeignWorld, display: true
+}
+{ Block Name: PosterJump, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/JumpPosterPrefab
+  Info: bkiPosterJump, display: true
+}
+{ Block Name: PosterNewWorld, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/NewWorldPosterPrefab
+  Info: bkiPosterNewWorld, display: true
+}
+{ Block Name: PosterSoleDesert, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/SoleDesertPosterPrefab
+  Info: bkiPosterSoleDesert, display: true
+}
+{ Block Name: PosterStranger, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/StrangerPosterPrefab
+  Info: bkiPosterStranger, display: true
+}
+{ Block Name: PosterSurvivor, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/SurvivorPosterPrefab
+  Info: bkiPosterSurvivor, display: true
+}
+{ Block Name: PosterTakingABreak, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/TakeingaBreakPosterPrefab
+  Info: bkiPosterTakingABreak, display: true
+}
+{ Block Name: PosterTalon, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/TalonPosterPrefab
+  Info: bkiPosterTalon, display: true
+}
+{ Block Name: PosterTrader, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/TraderPosterPrefab
+  Info: bkiPosterTrader, display: true
+}
+{ Block Name: PosterZiraxAlienWorld, Ref: PosterARest
+  Model: @models2/Entities/Decorations/Posters/ZiraxAlienWorldPosterPrefab
+  Info: bkiPosterZiraxAlienWorld, display: true
+}
+# === Heavy Windows with ornaments ===
+{ Block Name: HeavyWindowDetailedBlocks
+  Material: hullcombat
+  CustomIcon: HeavyWindowDetailedCT2COR
+  Shape: Invisible
+  MarketPrice: 2155, display: true
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Place: Free
+  Info: bkiBlockGroup, display: true
+  IsOxygenTight: true, display: true
+  IsAccessible: false, type: bool
+  Category: BuildingBlocks
+  ChildBlocks: "HeavyWindowDetailedA,HeavyWindowDetailedACL,HeavyWindowDetailedACR,HeavyWindowDetailedAO,HeavyWindowDetailedAT,HeavyWindowDetailedATCL,HeavyWindowDetailedATCR,HeavyWindowDetailedATO,HeavyWindowDetailedBT,HeavyWindowDetailedBX,HeavyWindowDetailedBXT,HeavyWindowDetailedBXCL,HeavyWindowDetailedCL,HeavyWindowDetailedCCL,HeavyWindowDetailedCCR,HeavyWindowDetailedCOL,HeavyWindowDetailedCTL,HeavyWindowDetailedCTOL,HeavyWindowDetailedCTCOL,HeavyWindowDetailedCTCOR,HeavyWindowDetailedCT2L,HeavyWindowDetailedCT2OL,HeavyWindowDetailedCT2COL,HeavyWindowDetailedCT2COR"
+  Collide: Transparent
+
+  TemplateRoot: HeavyWindowDetailedBlocks
+  AllowPlacingAt: "Base,MS", display: true
+  HitPoints: 1500, type: int, display: true
+  Mass: 880, type: float, display: true, formatter: Kilogram
+  Volume: 80, type: float, display: true, formatter: Liter
+  StackSize: 1000
+
+  UnlockCost: 0
+  UnlockLevel: 1
+  TechTreeNames: ""
+}
+{ Block Name: HeavyWindowDetailedA
+  Material: hullcombat
+  Shape: ModelEntity
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedAPrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  #Mesh-Damage-1: Mesh/D0
+  #Mesh-Damage-2: Mesh/D1
+  #Mesh-Damage-3: Mesh/D2
+  #Mesh-Damage-4: Mesh/D3
+  IsTextureable: true   # !!!
+  IsGPUInstance: false  # !!!
+  Texture: 50
+  Place: Free
+  IsAccessible: false, type: bool
+  IsOxygenTight: true, display: true
+  Category: BuildingBlocks
+  BlockColor: "110,110,110"
+  Collide: Transparent
+  TemplateRoot: HeavyWindowDetailedBlocks
+  AllowPlacingAt: "Base,MS", display: false
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  HitPoints: 1500, type: int, display: true
+  Mass: 880, type: float, display: true, formatter: Kilogram
+  # ShowUser: NoButCSV             # inverted versions should not be display in H menu but should show up in EAH tool
+}
+{ Block Name: HeavyWindowDetailedACL, Ref: HeavyWindowDetailedA        #Requires Mirror  R
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedACLPrefab
+  MirrorTo: HeavyWindowDetailedACR
+}
+{ Block Name: HeavyWindowDetailedACR, Ref: HeavyWindowDetailedA        #Requires Mirror L
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedACRPrefab
+  MirrorTo: HeavyWindowDetailedACL
+}
+{ Block Name: HeavyWindowDetailedAO, Ref: HeavyWindowDetailedA
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedAOPrefab
+  SymType: 1
+}
+{ Block Name: HeavyWindowDetailedAT, Ref: HeavyWindowDetailedA
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedATPrefab
+  SymType: 1
+}
+{ Block Name: HeavyWindowDetailedATCL, Ref: HeavyWindowDetailedA        #Requires Mirror  R
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedATCLPrefab
+  MirrorTo: HeavyWindowDetailedATCR
+}
+{ Block Name: HeavyWindowDetailedATCR, Ref: HeavyWindowDetailedA        #Requires Mirror  L
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedATCRPrefab
+  MirrorTo: HeavyWindowDetailedATCL
+}
+{ Block Name: HeavyWindowDetailedATO, Ref: HeavyWindowDetailedA
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedATOPrefab
+  SymType: 1
+}
+{ Block Name: HeavyWindowDetailedBT, Ref: HeavyWindowDetailedA
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedBTPrefab
+  SymType: 1
+}
+{ Block Name: HeavyWindowDetailedBX, Ref: HeavyWindowDetailedA
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedBXPrefab
+  SymType: 1
+}
+{ Block Name: HeavyWindowDetailedBXT, Ref: HeavyWindowDetailedA
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedBXTPrefab
+  SymType: 1
+}
+{ Block Name: HeavyWindowDetailedBXCL, Ref: HeavyWindowDetailedA        #Requires Mirror R
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedBXCLPrefab
+  MirrorTo: HeavyWindowDetailedBXCR
+}
+{ Block Name: HeavyWindowDetailedBXCR, Ref: HeavyWindowDetailedA        #only mirror; not required for selection
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedBXCRPrefab
+  MirrorTo: HeavyWindowDetailedBXCL
+  ShowUser: No
+}
+{ Block Name: HeavyWindowDetailedCL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCLPrefab
+  MirrorTo: HeavyWindowDetailedCR
+}
+{ Block Name: HeavyWindowDetailedCR, Ref: HeavyWindowDetailedA        #only mirror; not required for selection
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCRPrefab
+  MirrorTo: HeavyWindowDetailedCL
+  ShowUser: No
+}
+{ Block Name: HeavyWindowDetailedCCL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCCLPrefab
+  MirrorTo: HeavyWindowDetailedCCR
+}
+{ Block Name: HeavyWindowDetailedCCR, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCCRPrefab
+  MirrorTo: HeavyWindowDetailedCCL
+}
+{ Block Name: HeavyWindowDetailedCOL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCOLPrefab
+  MirrorTo: HeavyWindowDetailedCOR
+}
+{ Block Name: HeavyWindowDetailedCOR, Ref: HeavyWindowDetailedA        #only mirror; not required for selection
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCORPrefab
+  MirrorTo: HeavyWindowDetailedCOL
+  ShowUser: No
+}
+{ Block Name: HeavyWindowDetailedCTL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCTLPrefab
+  MirrorTo: HeavyWindowDetailedCTR
+}
+{ Block Name: HeavyWindowDetailedCTR, Ref: HeavyWindowDetailedA        #only mirror; not required for selection
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCTRPrefab
+  MirrorTo: HeavyWindowDetailedCTL
+  ShowUser: No
+}
+{ Block Name: HeavyWindowDetailedCTOL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCTOLPrefab
+  MirrorTo: HeavyWindowDetailedCTOR
+}
+{ Block Name: HeavyWindowDetailedCTOR, Ref: HeavyWindowDetailedA        #only mirror; not required for selection
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCTORPrefab
+  MirrorTo: HeavyWindowDetailedCTOL
+  ShowUser: No
+}
+{ Block Name: HeavyWindowDetailedCTCOL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCTCOLPrefab
+  MirrorTo: HeavyWindowDetailedCTCOR
+}
+{ Block Name: HeavyWindowDetailedCTCOR, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCTCORPrefab
+  MirrorTo: HeavyWindowDetailedCTCOL
+}
+{ Block Name: HeavyWindowDetailedCT2L, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCT2LPrefab
+  MirrorTo: HeavyWindowDetailedCT2R
+}
+{ Block Name: HeavyWindowDetailedCT2R, Ref: HeavyWindowDetailedA        #only mirror; not required for selection
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCT2RPrefab
+  MirrorTo: HeavyWindowDetailedCT2L
+  ShowUser: No
+}
+{ Block Name: HeavyWindowDetailedCT2OL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCT2OLPrefab
+  MirrorTo: HeavyWindowDetailedCT2OR
+}
+{ Block Name: HeavyWindowDetailedCT2OR, Ref: HeavyWindowDetailedA        #only mirror; not required for selection
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCT2ORPrefab
+  MirrorTo: HeavyWindowDetailedCT2OL
+  ShowUser: No
+}
+{ Block Name: HeavyWindowDetailedCT2COL, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCT2COLPrefab
+  MirrorTo: HeavyWindowDetailedCT2COR
+}
+{ Block Name: HeavyWindowDetailedCT2COR, Ref: HeavyWindowDetailedA        #Requires Mirror
+  Model: @models/Blocks/Windows/Heavy/HeavyWindowDetailedCT2CORPrefab
+  MirrorTo: HeavyWindowDetailedCT2COL
+}
+# === High Tier sphere turret types (wip!)===
+{ +Block Name: TurretEnemyBlack, Ref: TurretAlien            #Random; not assigned to faction yet
+  Info: bkiTurretEnemyColored, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyBlackPrefab
+  WeaponItem: TurretEnemyLaserWeaponBlack
+}
+{ +Block Name: TurretEnemyBlue, Ref: TurretAlien            #Plasma; not assigned to faction yet
+  Info: bkiTurretEnemyColored, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyBluePrefab
+  WeaponItem: TurretEnemyLaserWeaponBlue
+}
+{ +Block Name: TurretEnemyCyan, Ref: TurretAlien            #Random; not assigned to faction yet
+  Info: bkiTurretEnemyColored, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyCyanPrefab
+  WeaponItem: TurretEnemyLaserWeaponCyan
+}
+{ +Block Name: TurretEnemyGreen, Ref: TurretAlien            #Random; Tresari faction
+  Info: bkiTurretEnemyColored, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyGreenPrefab
+  WeaponItem: TurretEnemyLaserWeaponGreen
+}
+{ +Block Name: TurretEnemyOrange, Ref: TurretAlien            #Random; not assigned to faction yet
+  Info: bkiTurretEnemyColored, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyOrangePrefab
+  WeaponItem: TurretEnemyLaserWeaponOrange
+}
+{ +Block Name: TurretEnemyPurple, Ref: TurretAlien            #Darkmatter; TESCH faction
+  Info: bkiTurretEnemyTESCH, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyPurplePrefab
+  WeaponItem: TurretEnemyLaserWeaponPurple
+}
+{ +Block Name: TurretEnemyRed, Ref: TurretAlien             #Laser; not assigned to faction yet
+  Info: bkiTurretEnemyColored, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyRedPrefab
+  WeaponItem: TurretEnemyLaserWeaponRed
+}
+{ +Block Name: TurretEnemyYellow, Ref: TurretAlien            #EMP; not assigned to faction yet
+  Info: bkiTurretEnemyColored, display: true
+  Model: @models/Blocks/Turrets/TurretEnemyYellowPrefab
+  WeaponItem: TurretEnemyLaserWeaponYellow
+}
+# Tier-ed Teleporters
+{ +Block Name: TeleporterBAT1
+  Info: bkiTeleporterBA, display: true
+  Class: Teleporter
+  MarketPrice: 2200, display: true
+  Group: cpgTransportation
+  Category: Devices
+  IndexName: Teleporter
+  CustomIcon: TeleporterBA
+  # AllowedInBlueprint: false, display: true
+  Material: metal
+  Shape: ModelEntity
+  ShowBlockName: true
+  Model: @models/Blocks/Misc/TeleporterPrefab
+  Mesh-Damage-1: Mesh/D0
+  Mesh-Damage-2: Mesh/D1
+  Mesh-Damage-3: Mesh/D2
+  Mesh-Damage-4: Mesh/D3
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  Place: Free
+  # TemplateRoot: HullLargeBlocks
+  # PickupTarget: SteelPlate
+  BlockColor: "110,110,110"
+  IsActivateable: true
+  IsLockable: true
+  IsOxygenTight: false, display: true
+  AllowPlacingAt: Base, display: true
+  SizeInBlocks: "1,1,1", display: true
+  SizeInBlocksLocked: "Base,MS"
+  StackSize: 1000
+  Mass: 320, type: float, display: true, formatter: Kilogram
+  EnergyIn: 1200, type: int, display: true, formatter: Watt
+  CPUIn: 350, type: int, display: true
+  Volume: 200, type: float, display: true, formatter: Liter
+  HitPoints: 350, type: int, display: true
+  BlastParticleIndex: 4
+  BlastRadius: 3
+  BlastDamage: 80
+
+  RangeLY: 1 # a value of 0 allows to teleport only within the current sector
+
+  #UnlockCost: 20, display: true
+  #UnlockLevel: 15, display: true
+  # TechTreeParent: PentaxidTank
+  #TechTreeNames: Base
+
+  ShowUser: No
+}
 # ================================ HULL SHAPES TEST ===================================
 
 
@@ -28034,3 +28771,45 @@ HullCombatSmallBlocks
 ### ====================
 ### Test Area
 ### ====================
+
+# { +Block Name: Bäume
+#   CustomIcon: Baum
+#   Material: woodhard
+#   Shape: Invisible
+#   MarketPrice: 40000, display: true
+#   DropMeshfile: Entities/Misc/BagSmallPrefab
+#   AllowPlacingAt: Terrain, display: true
+#   Place: Free
+#   Info: Setzbare Bäume, display: true
+#   SizeInBlocksLocked: Terrain
+#   StackSize: 50000
+#   IsAccessible: false, type: bool
+#   ModelOffset: "0,-0.5,0"
+#   Category: Deco Blocks
+#   ChildBlocks: "Baum1, Palme1"
+# }
+# { +Block Name: Baum1
+#   CustomIcon: Baum1
+#   Material: woodhard
+#   Shape: ModelEntity
+#   Model: @models2/Environment/Plants/SpeedTrees/AlienOakPrefab
+#   Place: Free
+#   AllowPlacingAt: Terrain, display: true
+#   SizeInBlocks: "3,7,3"
+#   SizeInBlocksLocked: Terrain
+#   HitPoints: 5, type: int, display: true
+#   Info: Ein schöner Baum, display: true
+#   IsAccessible: false, type: bool
+#   ModelOffset: "0,-0.5,0"
+#   TemplateRoot: Bäume
+#   { Child DropOnDestroy
+#     Item: WoodLogs
+#     Count: "5,12"
+#     Prob: 1
+#   }
+# }
+# { +Block Name: Palme1, Ref: Baum1
+#   CustomIcon: Palme1
+#   Model: @models2/Environment/Plants/SpeedTrees/hGreenPrefab
+#   SizeInBlocks: "1,3,1"
+# }

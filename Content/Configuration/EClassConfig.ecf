@@ -9545,3 +9545,362 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
   AllowUserInstantiate: true
 }
+
+# ===============================
+# DRONES -  NEW (v1.x)
+# ===============================
+
+/* Classification: Drone [PrimaryFaction][TypeOfWeapon][SubtypeWeapon] */
+
+{ +Entity Name: DroneTemplate
+  Faction: Zirax
+  Mesh: Enemies/Drones/EnemyDroneRedPrefab
+  MeshDead: Enemies/Drones/EnemyDroneDamagedPrefab
+
+  Class: MeshDrone
+  DroneType: FastDrone
+
+  EntityType: EnemyDrone
+  ModelType: Custom
+  Prefab: Drone
+  Parent: Drones
+  AvatarController: Custom
+  PoolCount: 10
+  IsEnemy: true
+
+  SurfaceCategory: metal
+
+  HandItem: rocketlauncherDroneZiraxRocketLight
+  ItemsOnEnterGame: rocketlauncherDroneZiraxRocketLight
+
+  MaxHealth: 950
+  XpFactor: 7.2
+
+  ViewAngle: 360
+  ViewRange: 1000
+  # Weight: 100
+
+  LootListOnDeath: 151
+
+  /* AI properties */
+  /* AITask-1: DroneFindTargetIfHurt */
+  /* AITask-2: DroneAttackTarget */
+  /* AITask-3: DroneHuntAfterLostDetection, param1: 50 */
+  /* AITask-4: DroneRangePatrol, param1: 50 */
+  /* AITask-5: DronePathPatrol */
+  /* AITask-6: DroneSentryPatrol */
+
+  #AITarget-1: DroneDetection, param1: "Player,BA,SV,HV,CV", param2: EntityShipSV
+
+  SpawnYAdd: 15     /* drones shall always spawn 15meters above ground */
+
+  #WanderSpeed: 0.3
+  #ApproachSpeed: 1.3
+  #NightWanderSpeed: 0.3
+  #NightApproachSpeed: 1.3
+  #PanicSpeed: 1.8
+
+  ParticleOnDeath: drone_explosion02
+  TimeStayAfterDeath: 300
+
+  /* Sound Setting */
+  SfxRandomTime: 50.0   /* It will play the roam every [X/2, X] seconds */
+  SfxRandom: Enemies/Drone/DroneSmall_SfxRandom
+  # SfxRandom: Enemies/Drone/ROBOTICMechMovement01
+  SfxAlertTime: 25.0   /* It will play the roam every [X/2, X] seconds*/
+  SfxAlert: Enemies/Drone/DroneSmall_SfxRandom
+  SfxHurt:  Enemies/Drone/DroneSmall_SfxHurt
+  SfxDeath: Enemies/Drone/DroneSmall_SfxDeath
+  # SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  # SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
+  # SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
+
+  MapIcon: map_EnemyEntityDot
+
+  AllowUserInstantiate: true
+  HudInfo: false
+}
+{ +Entity Name: DroneSpaceTemplate
+  Faction: Zirax
+  Mesh: Enemies/Drones/SpaceDroneLODPrefab
+  MeshDead: Enemies/Drones/SpaceDroneDmgPrefab
+
+  Class: DroneSpace
+  DroneType: SpaceDrone
+
+  EntityType: EnemyDrone
+  ModelType: Custom
+  Prefab: Drone
+  Parent: EntityPhysics
+  AvatarController: Custom
+  PoolCount: 10
+  IsEnemy: true
+
+  SurfaceCategory: metal
+
+  HandItem: plasmaSpaceDrone
+  ItemsOnEnterGame: plasmaSpaceDrone
+
+  MaxHealth: 1500
+  XpFactor: 8
+
+  ViewAngle: 360
+  # ViewRange: 1000    Note : ViewRange is not defined here rather in DroneProperties
+  # Weight: 100
+
+  LootListOnDeath: 42
+
+  /* AI properties */
+  /*AITask-1: DroneFindTargetIfHurt*/
+  /*AITask-2: DroneAttackTarget*/
+  /*    AITask-2: DroneHuntAfterLostDetection, param1: 10  */
+  /*AITask-3: DroneHuntAfterLostDetection, param1: 50*/
+  /*AITask-4: DroneRangePatrol, param1: 50*/
+  /*AITask-5: DronePathPatrol*/
+  /*AITask-6: DroneSentryPatrol*/
+
+  /*AITarget-1: DroneDetection, param1: "Player,Turret,SV,CV", param2: EntityShip*/
+
+  /* Sound Setting */
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/Drone/SwellsRushesAssortment_start
+  SfxAlertTime: 25.0
+  SfxAlert: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  # SfxSense: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+  SfxHurt: Enemies/Drone/ROBOTICShortBurst40StutterOut
+  SfxDeath: Enemies/Drone/ROBOTICTransformationSweep01Down
+
+  ParticleOnDeath: drone_explosion02
+  TimeStayAfterDeath: 300
+
+  MapIcon: map_EnemyEntityDot
+  HudInfo: false
+
+  AllowUserInstantiate: true
+}
+{ +Entity Name: DroneSmallZiraxEMP, Ref: DroneTemplate
+  HandItem: stunDroneSmall
+  ItemsOnEnterGame: stunDroneSmall
+  MaxHealth: 250
+  XpFactor: 0.6
+  LootListOnDeath: 150
+}
+{ +Entity Name: DroneSmallZiraxMinigun, Ref: DroneTemplate
+  HandItem: minigunDroneSmall
+  ItemsOnEnterGame: minigunDroneSmall
+  MaxHealth: 350
+  XpFactor: 1
+  LootListOnDeath: 151
+}
+{ +Entity Name: DroneSmallZiraxCannon, Ref: DroneTemplate
+  HandItem: cannonDroneSmall
+  ItemsOnEnterGame: cannonDroneSmall
+  MaxHealth: 400
+  XpFactor: 1.1
+  LootListOnDeath: 152
+}
+{ +Entity Name: DroneSmallZiraxRocket, Ref: DroneTemplate
+  HandItem: rocketlauncherDroneSmall
+  ItemsOnEnterGame: rocketlauncherDroneSmall
+  MaxHealth: 650
+  XpFactor: 1.4
+  LootListOnDeath: 151
+}
+{ +Entity Name: DroneLargeZiraxMinigun, Ref: DroneTemplate
+  Mesh: Enemies/Drones/EnemyDroneV2Prefab
+  MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
+  SurfaceCategory: metal
+  DroneType: SlowDrone
+  HandItem: minigunDroneLarge
+  ItemsOnEnterGame: minigunDroneLarge
+  MaxHealth: 5000
+  XpFactor: 8.7
+  LootListOnDeath: 158
+  SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
+  SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
+  SfxHurt:  Enemies/Drone/DroneLarge_SfxHurt
+  SfxDeath: Enemies/Drone/DroneLarge_SfxDeath
+}
+{ +Entity Name: DroneLargeZiraxRocket, Ref: DroneTemplate
+  Mesh: Enemies/Drones/EnemyDroneV2Prefab
+  MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
+  SurfaceCategory: metal
+  DroneType: SlowDrone
+  HandItem: rocketlauncherDroneLarge
+  ItemsOnEnterGame: rocketlauncherDroneLarge
+  MaxHealth: 7000
+  XpFactor: 8.7
+  LootListOnDeath: 158
+  SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
+  SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
+  SfxHurt:  Enemies/Drone/DroneLarge_SfxHurt
+  SfxDeath: Enemies/Drone/DroneLarge_SfxDeath
+}
+{ +Entity Name: DroneSpaceZiraxRocket, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+  HandItem: rocketlauncherDroneSpace
+  ItemsOnEnterGame: rocketlauncherDroneSpace
+  MaxHealth: 2000
+  XpFactor: 8.7
+  LootListOnDeath: 42
+}
+{ +Entity Name: DroneSpaceZiraxArtillery, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/SpaceDroneLODPrefab
+  HandItem: artillerylauncherDroneSpace
+  ItemsOnEnterGame: artillerylauncherDroneSpace
+  MaxHealth: 2000
+  XpFactor: 8.7
+  LootListOnDeath: 42
+}
+#Polaris
+{ +Entity Name: DroneSmallPolarisLaser, Ref: DroneTemplate
+  Mesh: Enemies/Drones/PolarisDrone02SmallPrefab
+  MeshDead: Enemies/Drones/PolarisDrone02SmallDestroyedPrefab
+  SurfaceCategory: metal
+  HandItem: laserDroneSmall
+  ItemsOnEnterGame: laserDroneSmall
+  MaxHealth: 500
+  XpFactor: 8.7
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneSpacePolarisLaser, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/PolarisDrone02Prefab
+  MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
+  Faction: Polaris
+  MaxHealth: 3000
+  DroneType: SpaceDroneHard
+  HandItem: laserDroneSpace
+  ItemsOnEnterGame: laserDroneSpace
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneSpacePolarisLaserBolt, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/PolarisDrone02Prefab
+  MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
+  Faction: Polaris
+  MaxHealth: 3000
+  XpFactor: 18
+  DroneType: SpaceDroneHard
+  HandItem: laserboltDroneSpace
+  ItemsOnEnterGame: laserboltDroneSpace
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneSmallTraderPlasma, Ref: DroneTemplate
+  Mesh: Enemies/Drones/EnemyDroneBluePrefab
+  MaxHealth: 1100
+  XpFactor: 8.6
+  Faction: Trader
+  HandItem: plasmaDroneSmall
+  ItemsOnEnterGame: plasmaDroneSmall
+  #LootListOnDeath: 153
+}
+{ +Entity Name: DroneSpaceTraderPlasma, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/PolarisDrone04Prefab
+  MeshDead: Enemies/Drones/PolarisDrone04DestroyedPrefab
+  Faction: Trader
+  MaxHealth: 3000
+  XpFactor: 18
+  DroneType: SpaceDroneHard
+  HandItem: plasmaDroneSpace
+  ItemsOnEnterGame: plasmaDroneSpace
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneSpaceTraderPlasmaRocket, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/PolarisDrone04Prefab
+  MeshDead: Enemies/Drones/PolarisDrone04DestroyedPrefab
+  Faction: Trader
+  MaxHealth: 3000
+  XpFactor: 18
+  DroneType: SpaceDroneHard
+  HandItem: plasmalauncherDroneSpace
+  ItemsOnEnterGame: plasmalauncherDroneSpace
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneSmallPiratesCannon, Ref: DroneTemplate
+  Mesh: Enemies/Drones/PolarisDrone02SmallBatteredPrefab
+  MaxHealth: 1100
+  XpFactor: 8.6
+  Faction: Pirates
+  HandItem: cannonheatDroneSmall
+  ItemsOnEnterGame: cannonheatDroneSmall
+  #LootListOnDeath: 153
+}
+{ +Entity Name: DroneLargePiratesMortar, Ref: DroneTemplate
+  Mesh: Enemies/Drones/EnemyDroneV2Prefab
+  MeshDead: Enemies/Drones/EnemyDroneV2DmgPrefab
+  Faction: Pirates
+  SurfaceCategory: metal
+  DroneType: SlowDrone
+  HandItem: mortarlauncherDroneLarge
+  ItemsOnEnterGame: mortarlauncherDroneLarge
+  MaxHealth: 7000
+  XpFactor: 8.7
+  LootListOnDeath: 158
+  SfxRandom: Enemies/Drone/DroneLarge_SfxRandom
+  SfxAlert: Enemies/Drone/DroneLarge_SfxRandom
+  SfxHurt:  Enemies/Drone/DroneLarge_SfxHurt
+  SfxDeath: Enemies/Drone/DroneLarge_SfxDeath
+}
+{ +Entity Name: DroneSpacePiratesEMP, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/PolarisDrone04BatteredPrefab
+  MeshDead: Enemies/Drones/PolarisDrone04DestroyedPrefab
+  Faction: Pirates
+  MaxHealth: 3000
+  XpFactor: 18
+  DroneType: SpaceDroneHard
+  HandItem: empcannonDroneSpace
+  ItemsOnEnterGame: empcannonDroneSpace
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneSpacePiratesSwarmRocket, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/PolarisDrone02BatteredPrefab
+  MeshDead: Enemies/Drones/PolarisDrone02DestroyedPrefab
+  Faction: Pirates
+  MaxHealth: 3000
+  XpFactor: 18
+  DroneType: SpaceDroneHard
+  HandItem: swarmrocketlauncherDroneSpace
+  ItemsOnEnterGame: swarmrocketlauncherDroneSpace
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneLargeKrielRailgun, Ref: DroneTemplate
+  Mesh: Enemies/Drones/KrielDronePrefab
+  MeshDead: Enemies/Drones/KrielDroneDmgPrefab
+  MaxHealth: 1100
+  XpFactor: 8.6
+  Faction: Kriel
+  HandItem: chargedrailgunDroneLarge
+  ItemsOnEnterGame: chargedrailgunDroneLarge
+  #LootListOnDeath: 153
+}
+{ +Entity Name: DroneSpaceKrielRailgun, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/KrielDronePrefab
+  MeshDead: Enemies/Drones/KrielDroneDmgPrefab
+  Faction: Kriel
+  MaxHealth: 3000
+  XpFactor: 18
+  DroneType: SpaceDroneHard
+  HandItem: chargedrailgunDroneLarge
+  ItemsOnEnterGame: chargedrailgunDroneLarge
+  # LootListOnDeath: 158
+}
+{ +Entity Name: DroneLargeLegacyAntiProton, Ref: DroneTemplate
+  Mesh: Enemies/Drones/LegacyDroneCrabPrefab
+  MeshDead: Enemies/Drones/LegacyDroneCrabDmgPrefab
+  MaxHealth: 1100
+  XpFactor: 8.6
+  Faction: TheLegacy
+  HandItem: antiprotonLauncherDroneLarge
+  ItemsOnEnterGame: antiprotonLauncherDroneLarge
+  #LootListOnDeath: 153
+}
+{ +Entity Name: DroneSpaceLegacyAntiProton, Ref: DroneSpaceTemplate
+  Mesh: Enemies/Drones/LegacyDroneCrabPrefab
+  MeshDead: Enemies/Drones/LegacyDroneCrabDmgPrefab
+  Faction: TheLegacy
+  MaxHealth: 3000
+  XpFactor: 18
+  DroneType: SpaceDroneHard
+  HandItem: antiprotonLauncherDroneLarge
+  ItemsOnEnterGame: antiprotonLauncherDroneLarge
+  # LootListOnDeath: 158
+}
