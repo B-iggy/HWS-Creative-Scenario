@@ -37,7 +37,7 @@ EnergyOut: 1, type: int, display: true, formatter: Watt  Value is given in kW */
 # BlockSizeScale: 2 (=SV/HV) or 8 (=CV/BA) with this Mass and HitPoints will be scaled according to its voxels
 # Voxelize: determines whether a block is voxelized in small cubes to not occupy a full voxel space (Default Voxelize: true)
 # IsAntiInfantryWeapon: true   = Device properties (DMG, HP) are only computed for Infantry and Entity Attack-Defense values, but not for Artillery AD
-# IsKeepContainers: true   = ONLY USE FOR CORES. If set to true, pre-placed items will be saved with the blueprint and be available as loot in their specific location. Do ONLY use with NPC cores.  
+# IsKeepContainers: true   = ONLY USE FOR CORES. If set to true, pre-placed items will be saved with the blueprint and be available as loot in their specific location. Do ONLY use with NPC cores.
 
 /*   Symmetry Types
 SymType 1: Shape is symmetrical like a QuarterRound block (points towards z-axis) - DEFAULT
@@ -5380,7 +5380,7 @@ HullCombatSmallBlocks
 # # TechTreeParent: WeaponSV04
 # # TechTreeNames: Small Vessel
 #}
- 
+
 #{ +Block Id: 415, Name: CommodityConsole
 #  AllowedInBlueprint: false, display: true
 #  Class: TraderNPC
